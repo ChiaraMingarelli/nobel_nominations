@@ -9,6 +9,8 @@ Note: The archive only contains data through 50 years ago (currently through 197
 Note: Economics is not included — The Sveriges Riksbank Prize in Economic Sciences in Memory
       of Alfred Nobel was established in 1968 (first awarded 1969) by Sweden's central bank,
       not by Alfred Nobel's will, and its nomination records are not part of the public archive.
+Note: The archive has known data gaps (e.g., 1973 Physics laureates are missing). These gaps
+      are in the Nobel Prize Nomination Archive itself, not this application.
 """
 
 import streamlit as st
@@ -2191,6 +2193,7 @@ def main():
     **Limitations:**
     - Archive data is only available through 1974 (50-year secrecy rule)
     - **Economics is not included** — The "Sveriges Riksbank Prize in Economic Sciences in Memory of Alfred Nobel" was established in 1968 by Sweden's central bank on its 300th anniversary, not by Alfred Nobel's original 1895 bequest. Its nomination records are not part of the public archive.
+    - **Known data gaps in the archive** — Some years have incomplete or missing records (e.g., the 1973 Physics laureates Josephson, Esaki, and Giaever do not appear in the archive). These gaps are in the Nobel Prize Nomination Archive itself, not this application.
     - Some historical records may be incomplete
     - Web scraping may be rate-limited
     """)
