@@ -2048,142 +2048,57 @@ def main():
             or is still protected (nominators who are still living).
             """)
 
-            col_nn1, col_nn2 = st.columns(2)
-            with col_nn1:
-                nn_category = st.selectbox(
-                    "Category",
-                    options=['all'] + [k for k in CATEGORIES.keys() if k != 'all'],
-                    format_func=lambda x: 'All Categories' if x == 'all' else x.title(),
-                    key="nn_category"
-                )
-            with col_nn2:
-                nn_top_n = st.number_input(
-                    "Top N nominees to show",
-                    min_value=5,
-                    max_value=20,
-                    value=10,
-                    key="nn_top_n"
-                )
-
-            col_nn_year1, col_nn_year2 = st.columns(2)
-            with col_nn_year1:
-                nn_year_from = st.number_input("From Year", min_value=1901, max_value=1974, value=1901, key="nn_year_from")
-            with col_nn_year2:
-                nn_year_to = st.number_input("To Year", min_value=1901, max_value=1974, value=1974, key="nn_year_to")
-
             # Check for precomputed N.N. data
-            nn_key = f"nn_data_{nn_category}"
-            if nn_key in precomputed:
-                st.success("Precomputed N.N. data available")
-                use_precomputed_nn = st.checkbox("Use precomputed N.N. data", value=True, key="use_precomputed_nn")
+            nn_key = "nn_data"
+            if nn_key in precomputed and precomputed[nn_key].get('total', 0) > 0:
+                nn_data = precomputed[nn_key]
+                total = nn_data.get('total', 0)
+
+                st.success(f"Found {total} anonymous (N.N.) nominations")
+
+                # Summary metrics
+                col1, col2 = st.columns(2)
+                with col1:
+                    st.metric("Total N.N. Nominations", total)
+                with col2:
+                    st.metric("Categories", len(nn_data.get('by_category', {})))
+
+                # Tabs for visualizations
+                tab1, tab2 = st.tabs(["By Year", "By Category"])
+
+                with tab1:
+                    st.subheader("N.N. Nominations Over Time")
+                    fig_year = create_nn_year_plot(nn_data)
+                    if fig_year:
+                        st.pyplot(fig_year)
+                        add_download_buttons(fig_year, "nn_by_year", "year")
+                        plt.close(fig_year)
+
+                    # Year data table
+                    if nn_data.get('by_year'):
+                        year_df = pd.DataFrame([
+                            {'Year': y, 'N.N. Nominations': c}
+                            for y, c in sorted(nn_data['by_year'].items())
+                        ])
+                        st.dataframe(year_df, hide_index=True)
+
+                with tab2:
+                    st.subheader("N.N. Nominations by Category")
+                    fig_cat = create_nn_category_plot(nn_data)
+                    if fig_cat:
+                        st.pyplot(fig_cat)
+                        add_download_buttons(fig_cat, "nn_by_category", "cat")
+                        plt.close(fig_cat)
+
+                    # Category data table
+                    if nn_data.get('by_category'):
+                        cat_df = pd.DataFrame([
+                            {'Category': c, 'N.N. Nominations': n}
+                            for c, n in sorted(nn_data['by_category'].items(), key=lambda x: x[1], reverse=True)
+                        ])
+                        st.dataframe(cat_df, hide_index=True)
             else:
-                use_precomputed_nn = False
-
-            col_nn_btn1, col_nn_btn2 = st.columns(2)
-            with col_nn_btn1:
-                get_nn_btn = st.button("Analyze N.N. Nominations", type="primary", key="get_nn_btn")
-            with col_nn_btn2:
-                save_nn_btn = st.button("Compute & Save N.N. Data", key="save_nn_btn")
-
-            if get_nn_btn or save_nn_btn:
-                if nn_year_from > nn_year_to:
-                    st.error("'From Year' must be less than or equal to 'To Year'")
-                else:
-                    if use_precomputed_nn and nn_key in precomputed and get_nn_btn:
-                        st.info("Using precomputed data...")
-                        nn_data = precomputed[nn_key]
-                    else:
-                        progress_bar = st.progress(0)
-                        status_text = st.empty()
-                        status_text.text("Searching for anonymous (N.N.) nominations... This may take a while.")
-
-                        def update_nn_progress(pct):
-                            progress_bar.progress(pct)
-
-                        nn_data = get_nn_nominations(
-                            nn_category if nn_category != 'all' else '',
-                            nn_year_from,
-                            nn_year_to,
-                            progress_callback=update_nn_progress
-                        )
-
-                        progress_bar.empty()
-                        status_text.empty()
-
-                        if save_nn_btn and nn_data['total_count'] > 0:
-                            precomputed[nn_key] = nn_data
-                            save_precomputed_stats(precomputed)
-                            st.success(f"Saved N.N. data for {nn_category.title() if nn_category != 'all' else 'All Categories'}")
-
-                    if nn_data and nn_data.get('total_count', nn_data.get('total', 0)) > 0:
-                        total = nn_data.get('total_count', nn_data.get('total', 0))
-                        st.success(f"Found {total} anonymous nominations")
-
-                        # Summary metrics
-                        col1, col2, col3 = st.columns(3)
-                        with col1:
-                            st.metric("Total N.N. Nominations", total)
-                        with col2:
-                            st.metric("Categories", len(nn_data.get('by_category', {})))
-                        with col3:
-                            st.metric("Unique Nominees", len(nn_data.get('nominees', {})) or len(nn_data.get('top_nominees', [])))
-
-                        # Tabs for different visualizations
-                        tab1, tab2, tab3 = st.tabs(["By Year", "By Category", "Top Nominees"])
-
-                        with tab1:
-                            st.subheader("N.N. Nominations Over Time")
-                            fig_year = create_nn_year_plot(nn_data)
-                            if fig_year:
-                                st.pyplot(fig_year)
-                                add_download_buttons(fig_year, "nn_by_year", "year")
-                                plt.close(fig_year)
-
-                            # Year data table
-                            if nn_data.get('by_year'):
-                                year_df = pd.DataFrame([
-                                    {'Year': y, 'N.N. Nominations': c}
-                                    for y, c in sorted(nn_data['by_year'].items())
-                                ])
-                                st.dataframe(year_df, hide_index=True)
-
-                        with tab2:
-                            st.subheader("N.N. Nominations by Category")
-                            fig_cat = create_nn_category_plot(nn_data)
-                            if fig_cat:
-                                st.pyplot(fig_cat)
-                                add_download_buttons(fig_cat, "nn_by_category", "cat")
-                                plt.close(fig_cat)
-
-                            # Category data table
-                            if nn_data.get('by_category'):
-                                cat_df = pd.DataFrame([
-                                    {'Category': c, 'N.N. Nominations': n}
-                                    for c, n in sorted(nn_data['by_category'].items(), key=lambda x: x[1], reverse=True)
-                                ])
-                                st.dataframe(cat_df, hide_index=True)
-
-                        with tab3:
-                            st.subheader(f"Top {nn_top_n} Nominees from Anonymous Nominators")
-                            fig_nominees = create_nn_top_nominees_plot(nn_data, top_n=nn_top_n)
-                            if fig_nominees:
-                                st.pyplot(fig_nominees)
-                                add_download_buttons(fig_nominees, "nn_top_nominees", "nominees")
-                                plt.close(fig_nominees)
-
-                            # Nominees table
-                            if nn_data.get('top_nominees'):
-                                nominees_df = pd.DataFrame([
-                                    {
-                                        'Name': n['name'],
-                                        'N.N. Nominations': n['count'],
-                                        'Categories': ', '.join([f"{k}: {v}" for k, v in n.get('categories', {}).items()])
-                                    }
-                                    for n in nn_data['top_nominees'][:nn_top_n]
-                                ])
-                                st.dataframe(nominees_df, hide_index=True, width='stretch')
-                    else:
-                        st.warning("No anonymous (N.N.) nominations found in the specified range.")
+                st.info("N.N. nomination data not yet available. N.N. nominations appear in years 1968-1974, primarily in Physics and Chemistry.")
 
     # Footer
     st.markdown("---")
