@@ -2043,9 +2043,15 @@ def main():
         else:  # Anonymous Nominators (N.N.)
             st.subheader("Anonymous Nominators (N.N.)")
             st.markdown("""
-            Explore nominations made by anonymous nominators, marked as **N.N.** (*Nomen Nescio* - "name unknown")
-            in the Nobel Prize archive. These represent nominations where the nominator's identity was not disclosed
-            or is still protected (nominators who are still living).
+            **N.N.** (*Nomen Nescio* - "name unknown") marks nominations where the nominator's identity is protected.
+
+            **Key facts:**
+            - When a nominator is **still alive**, their name is replaced with "N.N." but the rest of the nomination is kept
+            - N.N. nominations appear **only in Physics and Chemistry** because these archives are governed by the Royal Swedish Academy of Sciences, which has stricter privacy statutes
+            - The **first N.N. nominations appear in 1968** — nominators from earlier years (1901–1967) have mostly passed away, so their names are now public
+            - The archive is subject to a **50-year secrecy rule**, meaning nomination data is only released after 50 years
+
+            Source: [Nobel Prize Nomination Archive Manual](https://www.nobelprize.org/nomination/archive/manual.php)
             """)
 
             # Check for precomputed N.N. data
