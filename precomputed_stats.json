@@ -4351,5 +4351,21 @@
         "Peace": 49
       }
     }
-  ]
+  ],
+  "nn_data": {
+    "by_year": {
+      "1968": 4,
+      "1969": 2,
+      "1971": 8,
+      "1972": 16,
+      "1973": 21,
+      "1974": 11
+    },
+    "by_category": {
+      "Physics": 53,
+      "Chemistry": 9
+    },
+    "total": 62,
+    "note": "Data from partial scan (IDs 20000-30000). More N.N. nominations may exist."
+  }
 }

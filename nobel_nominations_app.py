@@ -951,6 +951,63 @@ def add_download_buttons(fig, filename_base: str, key_suffix: str = ""):
         )
 
 
+def create_nn_year_plot(nn_data: dict):
+    """Create a bar plot of N.N. nominations by year."""
+    if not nn_data.get('by_year'):
+        return None
+
+    years = sorted(nn_data['by_year'].keys())
+    counts = [nn_data['by_year'][y] for y in years]
+
+    fig, ax = plt.subplots(figsize=(10, 5))
+    ax.bar([str(y) for y in years], counts, color='#5B76B5', edgecolor='black', alpha=0.8)
+    ax.set_xlabel("Year", fontsize=12)
+    ax.set_ylabel("Number of N.N. Nominations", fontsize=12)
+    ax.set_title("Anonymous (N.N.) Nominations by Year", fontsize=14)
+    plt.xticks(rotation=45)
+
+    # Add count labels on bars
+    for i, (year, count) in enumerate(zip(years, counts)):
+        ax.text(i, count + 0.3, str(count), ha='center', va='bottom', fontsize=10, fontweight='bold')
+
+    ax.set_ylim(0, max(counts) * 1.15)
+    plt.tight_layout()
+    return fig
+
+
+def create_nn_category_plot(nn_data: dict):
+    """Create a bar plot of N.N. nominations by category."""
+    if not nn_data.get('by_category'):
+        return None
+
+    cat_colors = {
+        'Physics': '#5B76B5',
+        'Chemistry': '#E6A04B',
+        'Medicine': '#6BAF6B',
+        'Literature': '#9B6B9B',
+        'Peace': '#B56B6B',
+    }
+
+    categories = list(nn_data['by_category'].keys())
+    counts = [nn_data['by_category'][c] for c in categories]
+    colors = [cat_colors.get(c, '#888888') for c in categories]
+
+    fig, ax = plt.subplots(figsize=(8, 5))
+    bars = ax.bar(categories, counts, color=colors, edgecolor='black')
+
+    ax.set_ylabel("Number of N.N. Nominations", fontsize=12)
+    ax.set_title("Anonymous (N.N.) Nominations by Category", fontsize=14)
+
+    # Add count labels
+    for bar, count in zip(bars, counts):
+        ax.text(bar.get_x() + bar.get_width()/2, bar.get_height() + 0.5,
+                str(count), ha='center', va='bottom', fontsize=11, fontweight='bold')
+
+    ax.set_ylim(0, max(counts) * 1.15)
+    plt.tight_layout()
+    return fig
+
+
 def get_nominations_to_win_stats(category: str, year_from: int, year_to: int, progress_callback=None) -> list:
     """
     Get statistics on how many nominations laureates received before winning.
@@ -1083,7 +1140,7 @@ def main():
         st.sidebar.subheader("Statistics Type")
         stats_type = st.sidebar.radio(
             "Select analysis",
-            ["Nominations to Win", "Compare Categories", "Top Non-Winners", "Compare Non-Winners"],
+            ["Nominations to Win", "Compare Categories", "Top Non-Winners", "Compare Non-Winners", "Anonymous Nominators (N.N.)"],
             label_visibility="collapsed"
         )
     
@@ -1846,6 +1903,68 @@ def main():
                                 st.error("Could not generate comparison plot.")
                         else:
                             st.error("No data available for selected categories.")
+
+        else:  # Anonymous Nominators (N.N.)
+            st.subheader("Anonymous Nominators (N.N.)")
+            st.markdown("""
+            Nominations where the nominator's identity is protected. **N.N.** (*Nomen Nescio* - "name unknown")
+            is used in the archive to mask the names of nominators who are still living.
+            """)
+
+            # Check for precomputed N.N. data
+            nn_key = "nn_data"
+            if nn_key in precomputed and precomputed[nn_key].get('total', 0) > 0:
+                nn_data = precomputed[nn_key]
+
+                st.success(f"Found {nn_data['total']} anonymous (N.N.) nominations")
+
+                # Summary metrics
+                col1, col2, col3 = st.columns(3)
+                with col1:
+                    st.metric("Total N.N. Nominations", nn_data['total'])
+                with col2:
+                    years = list(nn_data.get('by_year', {}).keys())
+                    if years:
+                        st.metric("First Appeared", min(years))
+                with col3:
+                    st.metric("Categories", len(nn_data.get('by_category', {})))
+
+                # Tabs for visualizations
+                tab1, tab2 = st.tabs(["By Year", "By Category"])
+
+                with tab1:
+                    st.subheader("N.N. Nominations Over Time")
+                    fig_year = create_nn_year_plot(nn_data)
+                    if fig_year:
+                        st.pyplot(fig_year)
+                        add_download_buttons(fig_year, "nn_by_year", "year")
+                        plt.close(fig_year)
+
+                    # Year data table
+                    if nn_data.get('by_year'):
+                        year_df = pd.DataFrame([
+                            {'Year': y, 'N.N. Nominations': c}
+                            for y, c in sorted(nn_data['by_year'].items())
+                        ])
+                        st.dataframe(year_df, hide_index=True)
+
+                with tab2:
+                    st.subheader("N.N. Nominations by Category")
+                    fig_cat = create_nn_category_plot(nn_data)
+                    if fig_cat:
+                        st.pyplot(fig_cat)
+                        add_download_buttons(fig_cat, "nn_by_category", "cat")
+                        plt.close(fig_cat)
+
+                    # Category data table
+                    if nn_data.get('by_category'):
+                        cat_df = pd.DataFrame([
+                            {'Category': c, 'N.N. Nominations': n}
+                            for c, n in sorted(nn_data['by_category'].items(), key=lambda x: -x[1])
+                        ])
+                        st.dataframe(cat_df, hide_index=True)
+            else:
+                st.info("N.N. nomination data not yet precomputed. N.N. nominations are found in years 1968-1974, primarily in Physics and Chemistry.")
 
     # Footer
     st.markdown("---")
