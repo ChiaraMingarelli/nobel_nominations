@@ -5,6 +5,12 @@ Nobel Prize Nomination Archive Explorer
 A Streamlit app to query nomination counts from the Nobel Prize archive.
 Supports the five original Nobel Prize categories: Physics, Chemistry, Medicine, Literature, Peace.
 
+Author: Chiara Mingarelli
+        Yale University
+        chiara.mingarelli@yale.edu
+
+This code was written with the assistance of Claude (Anthropic).
+
 Note: The archive only contains data through 50 years ago (currently through 1974).
 Note: Economics is not included — The Sveriges Riksbank Prize in Economic Sciences in Memory
       of Alfred Nobel was established in 1968 (first awarded 1969) by Sweden's central bank,
