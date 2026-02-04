@@ -1,0 +1,4355 @@
+{
+  "physics": [
+    {
+      "Name": "Henri A Becquerel",
+      "Prize Category": "Physics",
+      "Year Won": 1903,
+      "Nominations Before Win": 10,
+      "Total Nominations": 10,
+      "First Nominated": 1901,
+      "Years Nominated": 2,
+      "ID": "802"
+    },
+    {
+      "Name": "Philipp E.A. v.  Lenard",
+      "Prize Category": "Physics",
+      "Year Won": 1905,
+      "Nominations Before Win": 13,
+      "Total Nominations": 15,
+      "First Nominated": 1901,
+      "Years Nominated": 4,
+      "ID": "5373"
+    },
+    {
+      "Name": "Wilhelm C R\u00f6ntgen",
+      "Prize Category": "Physics",
+      "Year Won": 1901,
+      "Nominations Before Win": 16,
+      "Total Nominations": 21,
+      "First Nominated": 1901,
+      "Years Nominated": 0,
+      "ID": "8006"
+    },
+    {
+      "Name": "Gabriel  Lippmann",
+      "Prize Category": "Physics",
+      "Year Won": 1908,
+      "Nominations Before Win": 23,
+      "Total Nominations": 23,
+      "First Nominated": 1901,
+      "Years Nominated": 7,
+      "ID": "5533"
+    },
+    {
+      "Name": "Guglielmo  Marconi",
+      "Prize Category": "Physics",
+      "Year Won": 1909,
+      "Nominations Before Win": 13,
+      "Total Nominations": 15,
+      "First Nominated": 1901,
+      "Years Nominated": 8,
+      "ID": "5901"
+    },
+    {
+      "Name": "Max K Planck",
+      "Prize Category": "Physics",
+      "Year Won": 1918,
+      "Nominations Before Win": 68,
+      "Total Nominations": 74,
+      "First Nominated": 1907,
+      "Years Nominated": 11,
+      "ID": "7283"
+    },
+    {
+      "Name": "Johannes D van der Waals",
+      "Prize Category": "Physics",
+      "Year Won": 1910,
+      "Nominations Before Win": 9,
+      "Total Nominations": 9,
+      "First Nominated": 1901,
+      "Years Nominated": 9,
+      "ID": "9528"
+    },
+    {
+      "Name": "Heike  Kamerlingh Onnes",
+      "Prize Category": "Physics",
+      "Year Won": 1913,
+      "Nominations Before Win": 23,
+      "Total Nominations": 23,
+      "First Nominated": 1909,
+      "Years Nominated": 4,
+      "ID": "4701"
+    },
+    {
+      "Name": "Pieter  Zeeman",
+      "Prize Category": "Physics",
+      "Year Won": 1902,
+      "Nominations Before Win": 3,
+      "Total Nominations": 3,
+      "First Nominated": 1901,
+      "Years Nominated": 1,
+      "ID": "10386"
+    },
+    {
+      "Name": "Albert A Michelson",
+      "Prize Category": "Physics",
+      "Year Won": 1907,
+      "Nominations Before Win": 4,
+      "Total Nominations": 4,
+      "First Nominated": 1904,
+      "Years Nominated": 3,
+      "ID": "6266"
+    },
+    {
+      "Name": "Pierre  Curie",
+      "Prize Category": "Physics",
+      "Year Won": 1903,
+      "Nominations Before Win": 8,
+      "Total Nominations": 8,
+      "First Nominated": 1902,
+      "Years Nominated": 1,
+      "ID": "2053"
+    },
+    {
+      "Name": "John W Strutt, Lord Rayleigh",
+      "Prize Category": "Physics",
+      "Year Won": 1904,
+      "Nominations Before Win": 20,
+      "Total Nominations": 20,
+      "First Nominated": 1902,
+      "Years Nominated": 2,
+      "ID": "8852"
+    },
+    {
+      "Name": "Charles E Guillaume",
+      "Prize Category": "Physics",
+      "Year Won": 1920,
+      "Nominations Before Win": 11,
+      "Total Nominations": 11,
+      "First Nominated": 1902,
+      "Years Nominated": 18,
+      "ID": "3710"
+    },
+    {
+      "Name": "Hendrik A Lorentz",
+      "Prize Category": "Physics",
+      "Year Won": 1902,
+      "Nominations Before Win": 10,
+      "Total Nominations": 16,
+      "First Nominated": 1902,
+      "Years Nominated": 0,
+      "ID": "5636"
+    },
+    {
+      "Name": "Joseph J Thomson",
+      "Prize Category": "Physics",
+      "Year Won": 1906,
+      "Nominations Before Win": 23,
+      "Total Nominations": 24,
+      "First Nominated": 1902,
+      "Years Nominated": 4,
+      "ID": "9247"
+    },
+    {
+      "Name": "Ferdinand C Braun",
+      "Prize Category": "Physics",
+      "Year Won": 1909,
+      "Nominations Before Win": 5,
+      "Total Nominations": 5,
+      "First Nominated": 1905,
+      "Years Nominated": 4,
+      "ID": "1298"
+    },
+    {
+      "Name": "Wilhelm  Wien",
+      "Prize Category": "Physics",
+      "Year Won": 1911,
+      "Nominations Before Win": 6,
+      "Total Nominations": 9,
+      "First Nominated": 1907,
+      "Years Nominated": 4,
+      "ID": "10170"
+    },
+    {
+      "Name": "Albert  Einstein",
+      "Prize Category": "Physics",
+      "Year Won": 1921,
+      "Nominations Before Win": 47,
+      "Total Nominations": 66,
+      "First Nominated": 1910,
+      "Years Nominated": 11,
+      "ID": "2728"
+    },
+    {
+      "Name": "Nils G Dal\u00e9n",
+      "Prize Category": "Physics",
+      "Year Won": 1912,
+      "Nominations Before Win": 1,
+      "Total Nominations": 1,
+      "First Nominated": 1912,
+      "Years Nominated": 0,
+      "ID": "2114"
+    },
+    {
+      "Name": "Jean B Perrin",
+      "Prize Category": "Physics",
+      "Year Won": 1926,
+      "Nominations Before Win": 47,
+      "Total Nominations": 47,
+      "First Nominated": 1913,
+      "Years Nominated": 13,
+      "ID": "7136"
+    },
+    {
+      "Name": "Robert A Millikan",
+      "Prize Category": "Physics",
+      "Year Won": 1923,
+      "Nominations Before Win": 17,
+      "Total Nominations": 19,
+      "First Nominated": 1916,
+      "Years Nominated": 7,
+      "ID": "6292"
+    },
+    {
+      "Name": "William Henry  Bragg",
+      "Prize Category": "Physics",
+      "Year Won": 1915,
+      "Nominations Before Win": 6,
+      "Total Nominations": 6,
+      "First Nominated": 1914,
+      "Years Nominated": 1,
+      "ID": "1276"
+    },
+    {
+      "Name": "Max  von Laue",
+      "Prize Category": "Physics",
+      "Year Won": 1914,
+      "Nominations Before Win": 2,
+      "Total Nominations": 5,
+      "First Nominated": 1914,
+      "Years Nominated": 0,
+      "ID": "9807"
+    },
+    {
+      "Name": "Johannes  Stark",
+      "Prize Category": "Physics",
+      "Year Won": 1919,
+      "Nominations Before Win": 11,
+      "Total Nominations": 11,
+      "First Nominated": 1914,
+      "Years Nominated": 5,
+      "ID": "8735"
+    },
+    {
+      "Name": "William Lawrence   Bragg",
+      "Prize Category": "Physics",
+      "Year Won": 1915,
+      "Nominations Before Win": 2,
+      "Total Nominations": 2,
+      "First Nominated": 1915,
+      "Years Nominated": 0,
+      "ID": "11051"
+    },
+    {
+      "Name": "Charles T Wilson",
+      "Prize Category": "Physics",
+      "Year Won": 1927,
+      "Nominations Before Win": 10,
+      "Total Nominations": 10,
+      "First Nominated": 1915,
+      "Years Nominated": 12,
+      "ID": "10215"
+    },
+    {
+      "Name": "Niels  Bohr",
+      "Prize Category": "Physics",
+      "Year Won": 1922,
+      "Nominations Before Win": 21,
+      "Total Nominations": 22,
+      "First Nominated": 1917,
+      "Years Nominated": 5,
+      "ID": "1118"
+    },
+    {
+      "Name": "Charles G Barkla",
+      "Prize Category": "Physics",
+      "Year Won": 1917,
+      "Nominations Before Win": 0,
+      "Total Nominations": 1,
+      "First Nominated": 1918,
+      "Years Nominated": -1,
+      "ID": "711"
+    },
+    {
+      "Name": "Percy W Bridgman",
+      "Prize Category": "Physics",
+      "Year Won": 1946,
+      "Nominations Before Win": 42,
+      "Total Nominations": 42,
+      "First Nominated": 1919,
+      "Years Nominated": 27,
+      "ID": "1336"
+    },
+    {
+      "Name": "Max  Born",
+      "Prize Category": "Physics",
+      "Year Won": 1954,
+      "Nominations Before Win": 34,
+      "Total Nominations": 34,
+      "First Nominated": 1930,
+      "Years Nominated": 24,
+      "ID": "1186"
+    },
+    {
+      "Name": "James  Franck",
+      "Prize Category": "Physics",
+      "Year Won": 1925,
+      "Nominations Before Win": 7,
+      "Total Nominations": 13,
+      "First Nominated": 1923,
+      "Years Nominated": 2,
+      "ID": "3167"
+    },
+    {
+      "Name": "Gustav  Hertz",
+      "Prize Category": "Physics",
+      "Year Won": 1925,
+      "Nominations Before Win": 1,
+      "Total Nominations": 2,
+      "First Nominated": 1924,
+      "Years Nominated": 1,
+      "ID": "4110"
+    },
+    {
+      "Name": "Erwin  Schr\u00f6dinger",
+      "Prize Category": "Physics",
+      "Year Won": 1933,
+      "Nominations Before Win": 41,
+      "Total Nominations": 41,
+      "First Nominated": 1928,
+      "Years Nominated": 5,
+      "ID": "8240"
+    },
+    {
+      "Name": "Owen W Richardson",
+      "Prize Category": "Physics",
+      "Year Won": 1928,
+      "Nominations Before Win": 8,
+      "Total Nominations": 13,
+      "First Nominated": 1924,
+      "Years Nominated": 4,
+      "ID": "7710"
+    },
+    {
+      "Name": "Prince Louis-Victor  de Broglie",
+      "Prize Category": "Physics",
+      "Year Won": 1929,
+      "Nominations Before Win": 15,
+      "Total Nominations": 16,
+      "First Nominated": 1925,
+      "Years Nominated": 4,
+      "ID": "2200"
+    },
+    {
+      "Name": "Arthur H Compton",
+      "Prize Category": "Physics",
+      "Year Won": 1927,
+      "Nominations Before Win": 15,
+      "Total Nominations": 15,
+      "First Nominated": 1925,
+      "Years Nominated": 2,
+      "ID": "1918"
+    },
+    {
+      "Name": "Otto  Stern",
+      "Prize Category": "Physics",
+      "Year Won": 1943,
+      "Nominations Before Win": 79,
+      "Total Nominations": 82,
+      "First Nominated": 1925,
+      "Years Nominated": 18,
+      "ID": "8779"
+    },
+    {
+      "Name": "Frits  Zernike",
+      "Prize Category": "Physics",
+      "Year Won": 1953,
+      "Nominations Before Win": 13,
+      "Total Nominations": 13,
+      "First Nominated": 1944,
+      "Years Nominated": 9,
+      "ID": "10397"
+    },
+    {
+      "Name": "Manne Karl  Siegbahn",
+      "Prize Category": "Physics",
+      "Year Won": 1924,
+      "Nominations Before Win": 0,
+      "Total Nominations": 3,
+      "First Nominated": 1925,
+      "Years Nominated": -1,
+      "ID": "8515"
+    },
+    {
+      "Name": "Werner Karl  Heisenberg",
+      "Prize Category": "Physics",
+      "Year Won": 1932,
+      "Nominations Before Win": 19,
+      "Total Nominations": 30,
+      "First Nominated": 1928,
+      "Years Nominated": 4,
+      "ID": "4018"
+    },
+    {
+      "Name": "Clinton J Davisson",
+      "Prize Category": "Physics",
+      "Year Won": 1937,
+      "Nominations Before Win": 44,
+      "Total Nominations": 44,
+      "First Nominated": 1929,
+      "Years Nominated": 8,
+      "ID": "2170"
+    },
+    {
+      "Name": "Paul Adrien Maurice  Dirac",
+      "Prize Category": "Physics",
+      "Year Won": 1933,
+      "Nominations Before Win": 3,
+      "Total Nominations": 3,
+      "First Nominated": 1929,
+      "Years Nominated": 4,
+      "ID": "2447"
+    },
+    {
+      "Name": "Chandrasekhara V Raman",
+      "Prize Category": "Physics",
+      "Year Won": 1930,
+      "Nominations Before Win": 12,
+      "Total Nominations": 12,
+      "First Nominated": 1929,
+      "Years Nominated": 1,
+      "ID": "7540"
+    },
+    {
+      "Name": "Enrico  Fermi",
+      "Prize Category": "Physics",
+      "Year Won": 1938,
+      "Nominations Before Win": 34,
+      "Total Nominations": 38,
+      "First Nominated": 1935,
+      "Years Nominated": 3,
+      "ID": "2955"
+    },
+    {
+      "Name": "George Paget  Thomson",
+      "Prize Category": "Physics",
+      "Year Won": 1937,
+      "Nominations Before Win": 8,
+      "Total Nominations": 8,
+      "First Nominated": 1931,
+      "Years Nominated": 6,
+      "ID": "9242"
+    },
+    {
+      "Name": "Victor F Hess",
+      "Prize Category": "Physics",
+      "Year Won": 1936,
+      "Nominations Before Win": 4,
+      "Total Nominations": 4,
+      "First Nominated": 1931,
+      "Years Nominated": 5,
+      "ID": "4127"
+    },
+    {
+      "Name": "Wolfgang  Pauli",
+      "Prize Category": "Physics",
+      "Year Won": 1945,
+      "Nominations Before Win": 23,
+      "Total Nominations": 29,
+      "First Nominated": 1933,
+      "Years Nominated": 12,
+      "ID": "7042"
+    },
+    {
+      "Name": "Carl D Anderson",
+      "Prize Category": "Physics",
+      "Year Won": 1936,
+      "Nominations Before Win": 19,
+      "Total Nominations": 37,
+      "First Nominated": 1934,
+      "Years Nominated": 2,
+      "ID": "427"
+    },
+    {
+      "Name": "James  Chadwick",
+      "Prize Category": "Physics",
+      "Year Won": 1935,
+      "Nominations Before Win": 20,
+      "Total Nominations": 21,
+      "First Nominated": 1934,
+      "Years Nominated": 1,
+      "ID": "1697"
+    },
+    {
+      "Name": "Walther  Bothe",
+      "Prize Category": "Physics",
+      "Year Won": 1954,
+      "Nominations Before Win": 15,
+      "Total Nominations": 15,
+      "First Nominated": 1934,
+      "Years Nominated": 20,
+      "ID": "1209"
+    },
+    {
+      "Name": "Edward V Appleton",
+      "Prize Category": "Physics",
+      "Year Won": 1947,
+      "Nominations Before Win": 15,
+      "Total Nominations": 15,
+      "First Nominated": 1935,
+      "Years Nominated": 12,
+      "ID": "469"
+    },
+    {
+      "Name": "Patrick Maynard Stuart   Blackett (Baron Blackett)",
+      "Prize Category": "Physics",
+      "Year Won": 1948,
+      "Nominations Before Win": 18,
+      "Total Nominations": 19,
+      "First Nominated": 1936,
+      "Years Nominated": 12,
+      "ID": "1057"
+    },
+    {
+      "Name": "John Douglas  Cockcroft",
+      "Prize Category": "Physics",
+      "Year Won": 1951,
+      "Nominations Before Win": 15,
+      "Total Nominations": 16,
+      "First Nominated": 1937,
+      "Years Nominated": 14,
+      "ID": "1855"
+    },
+    {
+      "Name": "Ernest Thomas Sinton  Walton",
+      "Prize Category": "Physics",
+      "Year Won": 1951,
+      "Nominations Before Win": 8,
+      "Total Nominations": 8,
+      "First Nominated": 1937,
+      "Years Nominated": 14,
+      "ID": "9967"
+    },
+    {
+      "Name": "Ernest O Lawrence",
+      "Prize Category": "Physics",
+      "Year Won": 1939,
+      "Nominations Before Win": 15,
+      "Total Nominations": 17,
+      "First Nominated": 1938,
+      "Years Nominated": 1,
+      "ID": "5290"
+    },
+    {
+      "Name": "Isidor I Rabi",
+      "Prize Category": "Physics",
+      "Year Won": 1944,
+      "Nominations Before Win": 20,
+      "Total Nominations": 21,
+      "First Nominated": 1939,
+      "Years Nominated": 5,
+      "ID": "7513"
+    },
+    {
+      "Name": "Hideki  Yukawa",
+      "Prize Category": "Physics",
+      "Year Won": 1949,
+      "Nominations Before Win": 20,
+      "Total Nominations": 24,
+      "First Nominated": 1940,
+      "Years Nominated": 9,
+      "ID": "10359"
+    },
+    {
+      "Name": "Eugene P Wigner",
+      "Prize Category": "Physics",
+      "Year Won": 1963,
+      "Nominations Before Win": 24,
+      "Total Nominations": 25,
+      "First Nominated": 1953,
+      "Years Nominated": 10,
+      "ID": "10181"
+    },
+    {
+      "Name": "Hans Albrecht  Bethe",
+      "Prize Category": "Physics",
+      "Year Won": 1967,
+      "Nominations Before Win": 56,
+      "Total Nominations": 56,
+      "First Nominated": 1943,
+      "Years Nominated": 24,
+      "ID": "971"
+    },
+    {
+      "Name": "Hannes  Alfv\u00e9n",
+      "Prize Category": "Physics",
+      "Year Won": 1970,
+      "Nominations Before Win": 52,
+      "Total Nominations": 52,
+      "First Nominated": 1953,
+      "Years Nominated": 17,
+      "ID": "368"
+    },
+    {
+      "Name": "Felix  Bloch",
+      "Prize Category": "Physics",
+      "Year Won": 1952,
+      "Nominations Before Win": 17,
+      "Total Nominations": 19,
+      "First Nominated": 1948,
+      "Years Nominated": 4,
+      "ID": "1081"
+    },
+    {
+      "Name": "Alfred  Kastler",
+      "Prize Category": "Physics",
+      "Year Won": 1966,
+      "Nominations Before Win": 50,
+      "Total Nominations": 50,
+      "First Nominated": 1956,
+      "Years Nominated": 10,
+      "ID": "4727"
+    },
+    {
+      "Name": "Cecil Frank  Powell",
+      "Prize Category": "Physics",
+      "Year Won": 1950,
+      "Nominations Before Win": 22,
+      "Total Nominations": 23,
+      "First Nominated": 1949,
+      "Years Nominated": 1,
+      "ID": "7379"
+    },
+    {
+      "Name": "Edward M Purcell",
+      "Prize Category": "Physics",
+      "Year Won": 1952,
+      "Nominations Before Win": 10,
+      "Total Nominations": 10,
+      "First Nominated": 1949,
+      "Years Nominated": 3,
+      "ID": "7484"
+    },
+    {
+      "Name": "Willis Eugene   Lamb, Jr",
+      "Prize Category": "Physics",
+      "Year Won": 1955,
+      "Nominations Before Win": 22,
+      "Total Nominations": 22,
+      "First Nominated": 1951,
+      "Years Nominated": 4,
+      "ID": "5176"
+    },
+    {
+      "Name": "Luis Walter  Alvarez",
+      "Prize Category": "Physics",
+      "Year Won": 1968,
+      "Nominations Before Win": 26,
+      "Total Nominations": 26,
+      "First Nominated": 1951,
+      "Years Nominated": 17,
+      "ID": "395"
+    },
+    {
+      "Name": "Julian  Schwinger",
+      "Prize Category": "Physics",
+      "Year Won": 1965,
+      "Nominations Before Win": 29,
+      "Total Nominations": 30,
+      "First Nominated": 1951,
+      "Years Nominated": 14,
+      "ID": "8294"
+    },
+    {
+      "Name": "Sin-Itiro  Tomonaga",
+      "Prize Category": "Physics",
+      "Year Won": 1965,
+      "Nominations Before Win": 15,
+      "Total Nominations": 15,
+      "First Nominated": 1951,
+      "Years Nominated": 14,
+      "ID": "9311"
+    },
+    {
+      "Name": "Pavel Alekseyevich  Cherenkov [\u010cerenkov]",
+      "Prize Category": "Physics",
+      "Year Won": 1958,
+      "Nominations Before Win": 12,
+      "Total Nominations": 12,
+      "First Nominated": 1952,
+      "Years Nominated": 6,
+      "ID": "10467"
+    },
+    {
+      "Name": "Louis  N\u00e9el",
+      "Prize Category": "Physics",
+      "Year Won": 1970,
+      "Nominations Before Win": 98,
+      "Total Nominations": 98,
+      "First Nominated": 1952,
+      "Years Nominated": 18,
+      "ID": "10474"
+    },
+    {
+      "Name": "Polykarp  Kusch",
+      "Prize Category": "Physics",
+      "Year Won": 1955,
+      "Nominations Before Win": 3,
+      "Total Nominations": 3,
+      "First Nominated": 1952,
+      "Years Nominated": 3,
+      "ID": "10481"
+    },
+    {
+      "Name": "Emilio Gino  Segr\u00e8",
+      "Prize Category": "Physics",
+      "Year Won": 1959,
+      "Nominations Before Win": 32,
+      "Total Nominations": 32,
+      "First Nominated": 1953,
+      "Years Nominated": 6,
+      "ID": "10538"
+    },
+    {
+      "Name": "Johannes Hans Daniel  Jensen",
+      "Prize Category": "Physics",
+      "Year Won": 1963,
+      "Nominations Before Win": 29,
+      "Total Nominations": 29,
+      "First Nominated": 1955,
+      "Years Nominated": 8,
+      "ID": "10539"
+    },
+    {
+      "Name": "Walter Houser  Brattain",
+      "Prize Category": "Physics",
+      "Year Won": 1956,
+      "Nominations Before Win": 7,
+      "Total Nominations": 8,
+      "First Nominated": 1953,
+      "Years Nominated": 3,
+      "ID": "10542"
+    },
+    {
+      "Name": "Lev Davidovich  Landau",
+      "Prize Category": "Physics",
+      "Year Won": 1962,
+      "Nominations Before Win": 16,
+      "Total Nominations": 21,
+      "First Nominated": 1954,
+      "Years Nominated": 8,
+      "ID": "10785"
+    },
+    {
+      "Name": "William  Shockley",
+      "Prize Category": "Physics",
+      "Year Won": 1956,
+      "Nominations Before Win": 6,
+      "Total Nominations": 6,
+      "First Nominated": 1954,
+      "Years Nominated": 2,
+      "ID": "10704"
+    },
+    {
+      "Name": "Maria  Goeppert-Mayer",
+      "Prize Category": "Physics",
+      "Year Won": 1963,
+      "Nominations Before Win": 27,
+      "Total Nominations": 27,
+      "First Nominated": 1955,
+      "Years Nominated": 8,
+      "ID": "10622"
+    },
+    {
+      "Name": "Richard Phillips  Feynman",
+      "Prize Category": "Physics",
+      "Year Won": 1965,
+      "Nominations Before Win": 48,
+      "Total Nominations": 49,
+      "First Nominated": 1956,
+      "Years Nominated": 9,
+      "ID": "10683"
+    },
+    {
+      "Name": "Charles Hard  Townes",
+      "Prize Category": "Physics",
+      "Year Won": 1964,
+      "Nominations Before Win": 72,
+      "Total Nominations": 74,
+      "First Nominated": 1958,
+      "Years Nominated": 6,
+      "ID": "10706"
+    },
+    {
+      "Name": "Owen  Chamberlain",
+      "Prize Category": "Physics",
+      "Year Won": 1959,
+      "Nominations Before Win": 7,
+      "Total Nominations": 7,
+      "First Nominated": 1957,
+      "Years Nominated": 2,
+      "ID": "10870"
+    },
+    {
+      "Name": "Chen Ning   Yang",
+      "Prize Category": "Physics",
+      "Year Won": 1957,
+      "Nominations Before Win": 1,
+      "Total Nominations": 5,
+      "First Nominated": 1957,
+      "Years Nominated": 0,
+      "ID": "13847"
+    },
+    {
+      "Name": "Tsung-Dao  Lee",
+      "Prize Category": "Physics",
+      "Year Won": 1957,
+      "Nominations Before Win": 1,
+      "Total Nominations": 6,
+      "First Nominated": 1957,
+      "Years Nominated": 0,
+      "ID": "10775"
+    },
+    {
+      "Name": "Igor Yevgenyevich   Tamm",
+      "Prize Category": "Physics",
+      "Year Won": 1958,
+      "Nominations Before Win": 3,
+      "Total Nominations": 3,
+      "First Nominated": 1957,
+      "Years Nominated": 1,
+      "ID": "10781"
+    },
+    {
+      "Name": "Ilya M Frank",
+      "Prize Category": "Physics",
+      "Year Won": 1958,
+      "Nominations Before Win": 2,
+      "Total Nominations": 2,
+      "First Nominated": 1957,
+      "Years Nominated": 1,
+      "ID": "10956"
+    },
+    {
+      "Name": "Robert  Hofstadter",
+      "Prize Category": "Physics",
+      "Year Won": 1961,
+      "Nominations Before Win": 13,
+      "Total Nominations": 13,
+      "First Nominated": 1958,
+      "Years Nominated": 3,
+      "ID": "10875"
+    },
+    {
+      "Name": "Donald A Glaser",
+      "Prize Category": "Physics",
+      "Year Won": 1960,
+      "Nominations Before Win": 13,
+      "Total Nominations": 13,
+      "First Nominated": 1959,
+      "Years Nominated": 1,
+      "ID": "10925"
+    },
+    {
+      "Name": "Murray  Gell-Mann",
+      "Prize Category": "Physics",
+      "Year Won": 1969,
+      "Nominations Before Win": 129,
+      "Total Nominations": 129,
+      "First Nominated": 1960,
+      "Years Nominated": 9,
+      "ID": "11043"
+    },
+    {
+      "Name": "Nicolay Gennadijevitj  Basov",
+      "Prize Category": "Physics",
+      "Year Won": 1964,
+      "Nominations Before Win": 8,
+      "Total Nominations": 8,
+      "First Nominated": 1960,
+      "Years Nominated": 4,
+      "ID": "11052"
+    },
+    {
+      "Name": "Aleksandr Mikhailovich  Prokhorov [Prockorov]",
+      "Prize Category": "Physics",
+      "Year Won": 1964,
+      "Nominations Before Win": 13,
+      "Total Nominations": 13,
+      "First Nominated": 1960,
+      "Years Nominated": 4,
+      "ID": "11053"
+    },
+    {
+      "Name": "Rudolf Ludwig   M\u00f6ssbauer",
+      "Prize Category": "Physics",
+      "Year Won": 1961,
+      "Nominations Before Win": 13,
+      "Total Nominations": 13,
+      "First Nominated": 1961,
+      "Years Nominated": 0,
+      "ID": "11391"
+    },
+    {
+      "Name": "Leon Neil  Cooper",
+      "Prize Category": "Physics",
+      "Year Won": 1972,
+      "Nominations Before Win": 43,
+      "Total Nominations": 43,
+      "First Nominated": 1961,
+      "Years Nominated": 11,
+      "ID": "11409"
+    },
+    {
+      "Name": "John Robert  Schrieffer",
+      "Prize Category": "Physics",
+      "Year Won": 1972,
+      "Nominations Before Win": 42,
+      "Total Nominations": 42,
+      "First Nominated": 1961,
+      "Years Nominated": 11,
+      "ID": "11410"
+    },
+    {
+      "Name": "Dennis  Gabor",
+      "Prize Category": "Physics",
+      "Year Won": 1971,
+      "Nominations Before Win": 35,
+      "Total Nominations": 36,
+      "First Nominated": 1929,
+      "Years Nominated": 42,
+      "ID": "3289"
+    },
+    {
+      "Name": "Martin  Ryle",
+      "Prize Category": "Physics",
+      "Year Won": 1974,
+      "Nominations Before Win": 49,
+      "Total Nominations": 49,
+      "First Nominated": 1963,
+      "Years Nominated": 11,
+      "ID": "13171"
+    },
+    {
+      "Name": "Antony   Hewish",
+      "Prize Category": "Physics",
+      "Year Won": 1974,
+      "Nominations Before Win": 11,
+      "Total Nominations": 11,
+      "First Nominated": 1970,
+      "Years Nominated": 4,
+      "ID": "15490"
+    }
+  ],
+  "chemistry": [
+    {
+      "Name": "Svante A Arrhenius",
+      "Prize Category": "Chemistry",
+      "Year Won": 1903,
+      "Nominations Before Win": 32,
+      "Total Nominations": 34,
+      "First Nominated": 1901,
+      "Years Nominated": 2,
+      "ID": "511"
+    },
+    {
+      "Name": "Jacobus Henricus  Van\u00b4t Hoff",
+      "Prize Category": "Chemistry",
+      "Year Won": 1901,
+      "Nominations Before Win": 11,
+      "Total Nominations": 11,
+      "First Nominated": 1901,
+      "Years Nominated": 0,
+      "ID": "9563"
+    },
+    {
+      "Name": "Emil H Fischer",
+      "Prize Category": "Chemistry",
+      "Year Won": 1902,
+      "Nominations Before Win": 9,
+      "Total Nominations": 16,
+      "First Nominated": 1901,
+      "Years Nominated": 1,
+      "ID": "3022"
+    },
+    {
+      "Name": "Adolf J von Baeyer",
+      "Prize Category": "Chemistry",
+      "Year Won": 1905,
+      "Nominations Before Win": 15,
+      "Total Nominations": 15,
+      "First Nominated": 1902,
+      "Years Nominated": 3,
+      "ID": "9713"
+    },
+    {
+      "Name": "Henri  Moissan",
+      "Prize Category": "Chemistry",
+      "Year Won": 1906,
+      "Nominations Before Win": 41,
+      "Total Nominations": 41,
+      "First Nominated": 1901,
+      "Years Nominated": 5,
+      "ID": "6352"
+    },
+    {
+      "Name": "William  Ramsay",
+      "Prize Category": "Chemistry",
+      "Year Won": 1904,
+      "Nominations Before Win": 31,
+      "Total Nominations": 31,
+      "First Nominated": 1902,
+      "Years Nominated": 2,
+      "ID": "7552"
+    },
+    {
+      "Name": "Theodore W Richards",
+      "Prize Category": "Chemistry",
+      "Year Won": 1914,
+      "Nominations Before Win": 26,
+      "Total Nominations": 33,
+      "First Nominated": 1902,
+      "Years Nominated": 12,
+      "ID": "7707"
+    },
+    {
+      "Name": "Wilhelm  Ostwald",
+      "Prize Category": "Chemistry",
+      "Year Won": 1909,
+      "Nominations Before Win": 20,
+      "Total Nominations": 20,
+      "First Nominated": 1904,
+      "Years Nominated": 5,
+      "ID": "6913"
+    },
+    {
+      "Name": "Eduard  Buchner",
+      "Prize Category": "Chemistry",
+      "Year Won": 1907,
+      "Nominations Before Win": 6,
+      "Total Nominations": 6,
+      "First Nominated": 1902,
+      "Years Nominated": 5,
+      "ID": "1428"
+    },
+    {
+      "Name": "Victor  Grignard",
+      "Prize Category": "Chemistry",
+      "Year Won": 1912,
+      "Nominations Before Win": 6,
+      "Total Nominations": 7,
+      "First Nominated": 1906,
+      "Years Nominated": 6,
+      "ID": "3649"
+    },
+    {
+      "Name": "Walther H Nernst",
+      "Prize Category": "Chemistry",
+      "Year Won": 1920,
+      "Nominations Before Win": 63,
+      "Total Nominations": 86,
+      "First Nominated": 1906,
+      "Years Nominated": 14,
+      "ID": "6650"
+    },
+    {
+      "Name": "Hans K von Euler-Chelpin",
+      "Prize Category": "Chemistry",
+      "Year Won": 1929,
+      "Nominations Before Win": 16,
+      "Total Nominations": 16,
+      "First Nominated": 1924,
+      "Years Nominated": 5,
+      "ID": "9751"
+    },
+    {
+      "Name": "Paul  Sabatier",
+      "Prize Category": "Chemistry",
+      "Year Won": 1912,
+      "Nominations Before Win": 7,
+      "Total Nominations": 9,
+      "First Nominated": 1907,
+      "Years Nominated": 5,
+      "ID": "8017"
+    },
+    {
+      "Name": "Ernest  Lord Rutherford",
+      "Prize Category": "Chemistry",
+      "Year Won": 1908,
+      "Nominations Before Win": 16,
+      "Total Nominations": 24,
+      "First Nominated": 1907,
+      "Years Nominated": 1,
+      "ID": "5627"
+    },
+    {
+      "Name": "Otto  Wallach",
+      "Prize Category": "Chemistry",
+      "Year Won": 1910,
+      "Nominations Before Win": 5,
+      "Total Nominations": 5,
+      "First Nominated": 1907,
+      "Years Nominated": 3,
+      "ID": "9953"
+    },
+    {
+      "Name": "Alfred  Werner",
+      "Prize Category": "Chemistry",
+      "Year Won": 1913,
+      "Nominations Before Win": 17,
+      "Total Nominations": 17,
+      "First Nominated": 1907,
+      "Years Nominated": 6,
+      "ID": "10087"
+    },
+    {
+      "Name": "Richard M Willst\u00e4tter",
+      "Prize Category": "Chemistry",
+      "Year Won": 1915,
+      "Nominations Before Win": 28,
+      "Total Nominations": 28,
+      "First Nominated": 1908,
+      "Years Nominated": 7,
+      "ID": "10210"
+    },
+    {
+      "Name": "Frederick  Soddy",
+      "Prize Category": "Chemistry",
+      "Year Won": 1921,
+      "Nominations Before Win": 4,
+      "Total Nominations": 6,
+      "First Nominated": 1908,
+      "Years Nominated": 13,
+      "ID": "8646"
+    },
+    {
+      "Name": "Richard A Zsigmondy",
+      "Prize Category": "Chemistry",
+      "Year Won": 1925,
+      "Nominations Before Win": 8,
+      "Total Nominations": 11,
+      "First Nominated": 1913,
+      "Years Nominated": 12,
+      "ID": "10428"
+    },
+    {
+      "Name": "Fritz  Haber",
+      "Prize Category": "Chemistry",
+      "Year Won": 1918,
+      "Nominations Before Win": 7,
+      "Total Nominations": 10,
+      "First Nominated": 1912,
+      "Years Nominated": 6,
+      "ID": "3758"
+    },
+    {
+      "Name": "Otto  Hahn",
+      "Prize Category": "Chemistry",
+      "Year Won": 1944,
+      "Nominations Before Win": 31,
+      "Total Nominations": 39,
+      "First Nominated": 1914,
+      "Years Nominated": 30,
+      "ID": "3787"
+    },
+    {
+      "Name": "Hermann  Staudinger",
+      "Prize Category": "Chemistry",
+      "Year Won": 1953,
+      "Nominations Before Win": 74,
+      "Total Nominations": 74,
+      "First Nominated": 1931,
+      "Years Nominated": 22,
+      "ID": "8746"
+    },
+    {
+      "Name": "Carl  Bosch",
+      "Prize Category": "Chemistry",
+      "Year Won": 1931,
+      "Nominations Before Win": 19,
+      "Total Nominations": 19,
+      "First Nominated": 1916,
+      "Years Nominated": 15,
+      "ID": "1198"
+    },
+    {
+      "Name": "Theodor  Svedberg",
+      "Prize Category": "Chemistry",
+      "Year Won": 1926,
+      "Nominations Before Win": 13,
+      "Total Nominations": 13,
+      "First Nominated": 1913,
+      "Years Nominated": 13,
+      "ID": "8915"
+    },
+    {
+      "Name": "Fritz  Pregl",
+      "Prize Category": "Chemistry",
+      "Year Won": 1923,
+      "Nominations Before Win": 10,
+      "Total Nominations": 10,
+      "First Nominated": 1917,
+      "Years Nominated": 6,
+      "ID": "7399"
+    },
+    {
+      "Name": "Adolf O Windaus",
+      "Prize Category": "Chemistry",
+      "Year Won": 1928,
+      "Nominations Before Win": 8,
+      "Total Nominations": 8,
+      "First Nominated": 1926,
+      "Years Nominated": 2,
+      "ID": "10241"
+    },
+    {
+      "Name": "Francis W Aston",
+      "Prize Category": "Chemistry",
+      "Year Won": 1922,
+      "Nominations Before Win": 4,
+      "Total Nominations": 4,
+      "First Nominated": 1922,
+      "Years Nominated": 0,
+      "ID": "546"
+    },
+    {
+      "Name": "George  de Hevesy",
+      "Prize Category": "Chemistry",
+      "Year Won": 1943,
+      "Nominations Before Win": 30,
+      "Total Nominations": 32,
+      "First Nominated": 1924,
+      "Years Nominated": 19,
+      "ID": "2235"
+    },
+    {
+      "Name": "Heinrich Otto  Wieland",
+      "Prize Category": "Chemistry",
+      "Year Won": 1927,
+      "Nominations Before Win": 9,
+      "Total Nominations": 13,
+      "First Nominated": 1924,
+      "Years Nominated": 3,
+      "ID": "10166"
+    },
+    {
+      "Name": "Jaroslav  Heyrovsk\u00fd",
+      "Prize Category": "Chemistry",
+      "Year Won": 1959,
+      "Nominations Before Win": 67,
+      "Total Nominations": 67,
+      "First Nominated": 1934,
+      "Years Nominated": 25,
+      "ID": "4154"
+    },
+    {
+      "Name": "Petrus J Debye",
+      "Prize Category": "Chemistry",
+      "Year Won": 1936,
+      "Nominations Before Win": 46,
+      "Total Nominations": 47,
+      "First Nominated": 1916,
+      "Years Nominated": 20,
+      "ID": "2325"
+    },
+    {
+      "Name": "Irving  Langmuir",
+      "Prize Category": "Chemistry",
+      "Year Won": 1932,
+      "Nominations Before Win": 13,
+      "Total Nominations": 15,
+      "First Nominated": 1916,
+      "Years Nominated": 16,
+      "ID": "5229"
+    },
+    {
+      "Name": "Hans  Fischer",
+      "Prize Category": "Chemistry",
+      "Year Won": 1930,
+      "Nominations Before Win": 16,
+      "Total Nominations": 16,
+      "First Nominated": 1928,
+      "Years Nominated": 2,
+      "ID": "3026"
+    },
+    {
+      "Name": "Robert  Robinson",
+      "Prize Category": "Chemistry",
+      "Year Won": 1947,
+      "Nominations Before Win": 51,
+      "Total Nominations": 51,
+      "First Nominated": 1928,
+      "Years Nominated": 19,
+      "ID": "7783"
+    },
+    {
+      "Name": "Friedrich  Bergius",
+      "Prize Category": "Chemistry",
+      "Year Won": 1931,
+      "Nominations Before Win": 2,
+      "Total Nominations": 2,
+      "First Nominated": 1929,
+      "Years Nominated": 2,
+      "ID": "900"
+    },
+    {
+      "Name": "Arthur  Harden",
+      "Prize Category": "Chemistry",
+      "Year Won": 1929,
+      "Nominations Before Win": 1,
+      "Total Nominations": 1,
+      "First Nominated": 1929,
+      "Years Nominated": 0,
+      "ID": "3887"
+    },
+    {
+      "Name": "Walter Norman  Haworth",
+      "Prize Category": "Chemistry",
+      "Year Won": 1937,
+      "Nominations Before Win": 16,
+      "Total Nominations": 16,
+      "First Nominated": 1929,
+      "Years Nominated": 8,
+      "ID": "3957"
+    },
+    {
+      "Name": "Leopold  Ruzicka",
+      "Prize Category": "Chemistry",
+      "Year Won": 1939,
+      "Nominations Before Win": 22,
+      "Total Nominations": 22,
+      "First Nominated": 1931,
+      "Years Nominated": 8,
+      "ID": "7994"
+    },
+    {
+      "Name": "Otto P Diels",
+      "Prize Category": "Chemistry",
+      "Year Won": 1950,
+      "Nominations Before Win": 32,
+      "Total Nominations": 32,
+      "First Nominated": 1932,
+      "Years Nominated": 18,
+      "ID": "2432"
+    },
+    {
+      "Name": "Paul  Karrer",
+      "Prize Category": "Chemistry",
+      "Year Won": 1937,
+      "Nominations Before Win": 28,
+      "Total Nominations": 28,
+      "First Nominated": 1932,
+      "Years Nominated": 5,
+      "ID": "4719"
+    },
+    {
+      "Name": "Richard  Kuhn",
+      "Prize Category": "Chemistry",
+      "Year Won": 1938,
+      "Nominations Before Win": 7,
+      "Total Nominations": 8,
+      "First Nominated": 1932,
+      "Years Nominated": 6,
+      "ID": "5084"
+    },
+    {
+      "Name": "Artturi I Virtanen",
+      "Prize Category": "Chemistry",
+      "Year Won": 1945,
+      "Nominations Before Win": 23,
+      "Total Nominations": 23,
+      "First Nominated": 1933,
+      "Years Nominated": 12,
+      "ID": "9668"
+    },
+    {
+      "Name": "Adolf F Butenandt",
+      "Prize Category": "Chemistry",
+      "Year Won": 1939,
+      "Nominations Before Win": 17,
+      "Total Nominations": 18,
+      "First Nominated": 1934,
+      "Years Nominated": 5,
+      "ID": "1487"
+    },
+    {
+      "Name": "Harold Clayton  Urey",
+      "Prize Category": "Chemistry",
+      "Year Won": 1934,
+      "Nominations Before Win": 2,
+      "Total Nominations": 2,
+      "First Nominated": 1934,
+      "Years Nominated": 0,
+      "ID": "9461"
+    },
+    {
+      "Name": "Fr\u00e9d\u00e9ric  Joliot",
+      "Prize Category": "Chemistry",
+      "Year Won": 1935,
+      "Nominations Before Win": 15,
+      "Total Nominations": 15,
+      "First Nominated": 1934,
+      "Years Nominated": 1,
+      "ID": "4613"
+    },
+    {
+      "Name": "Ir\u00e8ne  Joliot-Curie",
+      "Prize Category": "Chemistry",
+      "Year Won": 1935,
+      "Nominations Before Win": 18,
+      "Total Nominations": 18,
+      "First Nominated": 1934,
+      "Years Nominated": 1,
+      "ID": "4615"
+    },
+    {
+      "Name": "Kurt  Alder",
+      "Prize Category": "Chemistry",
+      "Year Won": 1950,
+      "Nominations Before Win": 7,
+      "Total Nominations": 7,
+      "First Nominated": 1936,
+      "Years Nominated": 14,
+      "ID": "359"
+    },
+    {
+      "Name": "William F Giauque",
+      "Prize Category": "Chemistry",
+      "Year Won": 1949,
+      "Nominations Before Win": 15,
+      "Total Nominations": 15,
+      "First Nominated": 1936,
+      "Years Nominated": 13,
+      "ID": "3418"
+    },
+    {
+      "Name": "Wendell M Stanley",
+      "Prize Category": "Chemistry",
+      "Year Won": 1946,
+      "Nominations Before Win": 44,
+      "Total Nominations": 45,
+      "First Nominated": 1937,
+      "Years Nominated": 9,
+      "ID": "8731"
+    },
+    {
+      "Name": "Odd  Hassel",
+      "Prize Category": "Chemistry",
+      "Year Won": 1969,
+      "Nominations Before Win": 18,
+      "Total Nominations": 18,
+      "First Nominated": 1960,
+      "Years Nominated": 9,
+      "ID": "3933"
+    },
+    {
+      "Name": "John H Northrop",
+      "Prize Category": "Chemistry",
+      "Year Won": 1946,
+      "Nominations Before Win": 45,
+      "Total Nominations": 45,
+      "First Nominated": 1932,
+      "Years Nominated": 14,
+      "ID": "6764"
+    },
+    {
+      "Name": "James B Sumner",
+      "Prize Category": "Chemistry",
+      "Year Won": 1946,
+      "Nominations Before Win": 18,
+      "Total Nominations": 18,
+      "First Nominated": 1932,
+      "Years Nominated": 14,
+      "ID": "8895"
+    },
+    {
+      "Name": "Vincent  du Vigneaud",
+      "Prize Category": "Chemistry",
+      "Year Won": 1955,
+      "Nominations Before Win": 37,
+      "Total Nominations": 39,
+      "First Nominated": 1943,
+      "Years Nominated": 12,
+      "ID": "2555"
+    },
+    {
+      "Name": "Nikolay Nikolayevich   Semyonov",
+      "Prize Category": "Chemistry",
+      "Year Won": 1956,
+      "Nominations Before Win": 6,
+      "Total Nominations": 7,
+      "First Nominated": 1946,
+      "Years Nominated": 10,
+      "ID": "8398"
+    },
+    {
+      "Name": "Cyril Norman  Hinshelwood",
+      "Prize Category": "Chemistry",
+      "Year Won": 1956,
+      "Nominations Before Win": 12,
+      "Total Nominations": 12,
+      "First Nominated": 1947,
+      "Years Nominated": 9,
+      "ID": "4194"
+    },
+    {
+      "Name": "Glenn Theodore  Seaborg",
+      "Prize Category": "Chemistry",
+      "Year Won": 1951,
+      "Nominations Before Win": 23,
+      "Total Nominations": 24,
+      "First Nominated": 1946,
+      "Years Nominated": 5,
+      "ID": "8323"
+    },
+    {
+      "Name": "Robert Burns B Woodward",
+      "Prize Category": "Chemistry",
+      "Year Won": 1965,
+      "Nominations Before Win": 111,
+      "Total Nominations": 111,
+      "First Nominated": 1946,
+      "Years Nominated": 19,
+      "ID": "10302"
+    },
+    {
+      "Name": "Arne W Tiselius",
+      "Prize Category": "Chemistry",
+      "Year Won": 1948,
+      "Nominations Before Win": 11,
+      "Total Nominations": 12,
+      "First Nominated": 1940,
+      "Years Nominated": 8,
+      "ID": "9282"
+    },
+    {
+      "Name": "Willard Frank  Libby",
+      "Prize Category": "Chemistry",
+      "Year Won": 1960,
+      "Nominations Before Win": 34,
+      "Total Nominations": 34,
+      "First Nominated": 1951,
+      "Years Nominated": 9,
+      "ID": "5458"
+    },
+    {
+      "Name": "Edwin Mattison  McMillan",
+      "Prize Category": "Chemistry",
+      "Year Won": 1951,
+      "Nominations Before Win": 9,
+      "Total Nominations": 11,
+      "First Nominated": 1947,
+      "Years Nominated": 4,
+      "ID": "6062"
+    },
+    {
+      "Name": "Alexander Robertus  Todd",
+      "Prize Category": "Chemistry",
+      "Year Won": 1957,
+      "Nominations Before Win": 21,
+      "Total Nominations": 21,
+      "First Nominated": 1949,
+      "Years Nominated": 8,
+      "ID": "9289"
+    },
+    {
+      "Name": "Melvin  Calvin",
+      "Prize Category": "Chemistry",
+      "Year Won": 1961,
+      "Nominations Before Win": 25,
+      "Total Nominations": 25,
+      "First Nominated": 1950,
+      "Years Nominated": 11,
+      "ID": "1550"
+    },
+    {
+      "Name": "Dorothy  Crowfoot Hodgkin",
+      "Prize Category": "Chemistry",
+      "Year Won": 1964,
+      "Nominations Before Win": 31,
+      "Total Nominations": 31,
+      "First Nominated": 1950,
+      "Years Nominated": 14,
+      "ID": "10685"
+    },
+    {
+      "Name": "Paul John  Flory",
+      "Prize Category": "Chemistry",
+      "Year Won": 1974,
+      "Nominations Before Win": 39,
+      "Total Nominations": 39,
+      "First Nominated": 1950,
+      "Years Nominated": 24,
+      "ID": "3072"
+    },
+    {
+      "Name": "Robert Sanderson   Mulliken",
+      "Prize Category": "Chemistry",
+      "Year Won": 1966,
+      "Nominations Before Win": 23,
+      "Total Nominations": 23,
+      "First Nominated": 1950,
+      "Years Nominated": 16,
+      "ID": "6504"
+    },
+    {
+      "Name": "Archer John Porter  Martin",
+      "Prize Category": "Chemistry",
+      "Year Won": 1952,
+      "Nominations Before Win": 8,
+      "Total Nominations": 9,
+      "First Nominated": 1950,
+      "Years Nominated": 2,
+      "ID": "5945"
+    },
+    {
+      "Name": "Richard L M Synge",
+      "Prize Category": "Chemistry",
+      "Year Won": 1952,
+      "Nominations Before Win": 4,
+      "Total Nominations": 4,
+      "First Nominated": 1950,
+      "Years Nominated": 2,
+      "ID": "8946"
+    },
+    {
+      "Name": "Max Ferdinand  Perutz",
+      "Prize Category": "Chemistry",
+      "Year Won": 1962,
+      "Nominations Before Win": 17,
+      "Total Nominations": 18,
+      "First Nominated": 1951,
+      "Years Nominated": 11,
+      "ID": "7146"
+    },
+    {
+      "Name": "Karl W Ziegler",
+      "Prize Category": "Chemistry",
+      "Year Won": 1963,
+      "Nominations Before Win": 32,
+      "Total Nominations": 32,
+      "First Nominated": 1954,
+      "Years Nominated": 9,
+      "ID": "10610"
+    },
+    {
+      "Name": "Giulio  Natta",
+      "Prize Category": "Chemistry",
+      "Year Won": 1963,
+      "Nominations Before Win": 44,
+      "Total Nominations": 44,
+      "First Nominated": 1955,
+      "Years Nominated": 8,
+      "ID": "10651"
+    },
+    {
+      "Name": "Lars  Onsager",
+      "Prize Category": "Chemistry",
+      "Year Won": 1968,
+      "Nominations Before Win": 93,
+      "Total Nominations": 93,
+      "First Nominated": 1952,
+      "Years Nominated": 16,
+      "ID": "10476"
+    },
+    {
+      "Name": "George  Porter",
+      "Prize Category": "Chemistry",
+      "Year Won": 1967,
+      "Nominations Before Win": 7,
+      "Total Nominations": 7,
+      "First Nominated": 1955,
+      "Years Nominated": 12,
+      "ID": "10654"
+    },
+    {
+      "Name": "Derek Harold Richard   Barton",
+      "Prize Category": "Chemistry",
+      "Year Won": 1969,
+      "Nominations Before Win": 54,
+      "Total Nominations": 54,
+      "First Nominated": 1960,
+      "Years Nominated": 9,
+      "ID": "10669"
+    },
+    {
+      "Name": "Gerhard  Herzberg",
+      "Prize Category": "Chemistry",
+      "Year Won": 1971,
+      "Nominations Before Win": 21,
+      "Total Nominations": 21,
+      "First Nominated": 1958,
+      "Years Nominated": 13,
+      "ID": "11155"
+    },
+    {
+      "Name": "Luis Federico   Leloir",
+      "Prize Category": "Chemistry",
+      "Year Won": 1970,
+      "Nominations Before Win": 36,
+      "Total Nominations": 36,
+      "First Nominated": 1958,
+      "Years Nominated": 12,
+      "ID": "10889"
+    },
+    {
+      "Name": "John Cowdery  Kendrew",
+      "Prize Category": "Chemistry",
+      "Year Won": 1962,
+      "Nominations Before Win": 13,
+      "Total Nominations": 14,
+      "First Nominated": 1959,
+      "Years Nominated": 3,
+      "ID": "10997"
+    },
+    {
+      "Name": "Manfred  Eigen",
+      "Prize Category": "Chemistry",
+      "Year Won": 1967,
+      "Nominations Before Win": 31,
+      "Total Nominations": 31,
+      "First Nominated": 1960,
+      "Years Nominated": 7,
+      "ID": "13019"
+    },
+    {
+      "Name": "Ronald George Wreyford   Norrish",
+      "Prize Category": "Chemistry",
+      "Year Won": 1967,
+      "Nominations Before Win": 8,
+      "Total Nominations": 8,
+      "First Nominated": 1961,
+      "Years Nominated": 6,
+      "ID": "11157"
+    },
+    {
+      "Name": "Ernst Otto  Fischer",
+      "Prize Category": "Chemistry",
+      "Year Won": 1973,
+      "Nominations Before Win": 12,
+      "Total Nominations": 12,
+      "First Nominated": 1962,
+      "Years Nominated": 11,
+      "ID": "13074"
+    },
+    {
+      "Name": "William Howard  Stein",
+      "Prize Category": "Chemistry",
+      "Year Won": 1972,
+      "Nominations Before Win": 7,
+      "Total Nominations": 7,
+      "First Nominated": 1951,
+      "Years Nominated": 21,
+      "ID": "8764"
+    },
+    {
+      "Name": "Stanford  Moore",
+      "Prize Category": "Chemistry",
+      "Year Won": 1972,
+      "Nominations Before Win": 8,
+      "Total Nominations": 8,
+      "First Nominated": 1951,
+      "Years Nominated": 21,
+      "ID": "6393"
+    },
+    {
+      "Name": "Geoffrey   Wilkinson",
+      "Prize Category": "Chemistry",
+      "Year Won": 1973,
+      "Nominations Before Win": 10,
+      "Total Nominations": 10,
+      "First Nominated": 1967,
+      "Years Nominated": 6,
+      "ID": "14663"
+    },
+    {
+      "Name": "Christian Boehmer   Anfinsen",
+      "Prize Category": "Chemistry",
+      "Year Won": 1972,
+      "Nominations Before Win": 3,
+      "Total Nominations": 3,
+      "First Nominated": 1971,
+      "Years Nominated": 1,
+      "ID": "16045"
+    }
+  ],
+  "medicine": [
+    {
+      "Name": "Alphonse C Laveran",
+      "Prize Category": "Physiology or Medicine",
+      "Year Won": 1907,
+      "Nominations Before Win": 13,
+      "Total Nominations": 14,
+      "First Nominated": 1901,
+      "Years Nominated": 6,
+      "ID": "5279"
+    },
+    {
+      "Name": "Ronald  Ross",
+      "Prize Category": "Physiology or Medicine",
+      "Year Won": 1902,
+      "Nominations Before Win": 14,
+      "Total Nominations": 15,
+      "First Nominated": 1901,
+      "Years Nominated": 1,
+      "ID": "7892"
+    },
+    {
+      "Name": "Niels R Finsen",
+      "Prize Category": "Physiology or Medicine",
+      "Year Won": 1903,
+      "Nominations Before Win": 15,
+      "Total Nominations": 17,
+      "First Nominated": 1901,
+      "Years Nominated": 2,
+      "ID": "3015"
+    },
+    {
+      "Name": "\u00c9lie  Metchnikoff",
+      "Prize Category": "Physiology or Medicine",
+      "Year Won": 1908,
+      "Nominations Before Win": 66,
+      "Total Nominations": 70,
+      "First Nominated": 1901,
+      "Years Nominated": 7,
+      "ID": "6214"
+    },
+    {
+      "Name": "Robert  Koch",
+      "Prize Category": "Physiology or Medicine",
+      "Year Won": 1905,
+      "Nominations Before Win": 55,
+      "Total Nominations": 60,
+      "First Nominated": 1901,
+      "Years Nominated": 4,
+      "ID": "4941"
+    },
+    {
+      "Name": "Ivan P Pavlov",
+      "Prize Category": "Physiology or Medicine",
+      "Year Won": 1904,
+      "Nominations Before Win": 50,
+      "Total Nominations": 64,
+      "First Nominated": 1901,
+      "Years Nominated": 3,
+      "ID": "7055"
+    },
+    {
+      "Name": "Santiago  Ramon y Caj\u00e0l",
+      "Prize Category": "Physiology or Medicine",
+      "Year Won": 1906,
+      "Nominations Before Win": 63,
+      "Total Nominations": 65,
+      "First Nominated": 1901,
+      "Years Nominated": 5,
+      "ID": "7547"
+    },
+    {
+      "Name": "Camillo  Golgi",
+      "Prize Category": "Physiology or Medicine",
+      "Year Won": 1906,
+      "Nominations Before Win": 31,
+      "Total Nominations": 31,
+      "First Nominated": 1901,
+      "Years Nominated": 5,
+      "ID": "3527"
+    },
+    {
+      "Name": "Emil A von Behring",
+      "Prize Category": "Physiology or Medicine",
+      "Year Won": 1901,
+      "Nominations Before Win": 13,
+      "Total Nominations": 13,
+      "First Nominated": 1901,
+      "Years Nominated": 0,
+      "ID": "9720"
+    },
+    {
+      "Name": "Paul  Ehrlich",
+      "Prize Category": "Physiology or Medicine",
+      "Year Won": 1908,
+      "Nominations Before Win": 60,
+      "Total Nominations": 76,
+      "First Nominated": 1901,
+      "Years Nominated": 7,
+      "ID": "2713"
+    },
+    {
+      "Name": "Willem  Einthoven",
+      "Prize Category": "Physiology or Medicine",
+      "Year Won": 1924,
+      "Nominations Before Win": 31,
+      "Total Nominations": 31,
+      "First Nominated": 1911,
+      "Years Nominated": 13,
+      "ID": "2730"
+    },
+    {
+      "Name": "Charles S Sherrington",
+      "Prize Category": "Physiology or Medicine",
+      "Year Won": 1932,
+      "Nominations Before Win": 131,
+      "Total Nominations": 131,
+      "First Nominated": 1902,
+      "Years Nominated": 30,
+      "ID": "8493"
+    },
+    {
+      "Name": "Jules  Bordet",
+      "Prize Category": "Physiology or Medicine",
+      "Year Won": 1919,
+      "Nominations Before Win": 102,
+      "Total Nominations": 115,
+      "First Nominated": 1902,
+      "Years Nominated": 17,
+      "ID": "1172"
+    },
+    {
+      "Name": "Albrecht  Kossel",
+      "Prize Category": "Physiology or Medicine",
+      "Year Won": 1910,
+      "Nominations Before Win": 8,
+      "Total Nominations": 8,
+      "First Nominated": 1902,
+      "Years Nominated": 8,
+      "ID": "4995"
+    },
+    {
+      "Name": "Charles Robert  Richet",
+      "Prize Category": "Physiology or Medicine",
+      "Year Won": 1913,
+      "Nominations Before Win": 28,
+      "Total Nominations": 46,
+      "First Nominated": 1904,
+      "Years Nominated": 9,
+      "ID": "7718"
+    },
+    {
+      "Name": "Emil T Kocher",
+      "Prize Category": "Physiology or Medicine",
+      "Year Won": 1909,
+      "Nominations Before Win": 5,
+      "Total Nominations": 6,
+      "First Nominated": 1907,
+      "Years Nominated": 2,
+      "ID": "4944"
+    },
+    {
+      "Name": "Allvar  Gullstrand",
+      "Prize Category": "Physiology or Medicine",
+      "Year Won": 1911,
+      "Nominations Before Win": 6,
+      "Total Nominations": 7,
+      "First Nominated": 1909,
+      "Years Nominated": 2,
+      "ID": "3717"
+    },
+    {
+      "Name": "Robert  B\u00e1r\u00e1ny",
+      "Prize Category": "Physiology or Medicine",
+      "Year Won": 1914,
+      "Nominations Before Win": 7,
+      "Total Nominations": 7,
+      "First Nominated": 1910,
+      "Years Nominated": 4,
+      "ID": "686"
+    },
+    {
+      "Name": "John James  Macleod",
+      "Prize Category": "Physiology or Medicine",
+      "Year Won": 1923,
+      "Nominations Before Win": 2,
+      "Total Nominations": 2,
+      "First Nominated": 1923,
+      "Years Nominated": 0,
+      "ID": "5782"
+    },
+    {
+      "Name": "Charles J Nicolle",
+      "Prize Category": "Physiology or Medicine",
+      "Year Won": 1928,
+      "Nominations Before Win": 13,
+      "Total Nominations": 13,
+      "First Nominated": 1919,
+      "Years Nominated": 9,
+      "ID": "6686"
+    },
+    {
+      "Name": "Alexis  Carrel",
+      "Prize Category": "Physiology or Medicine",
+      "Year Won": 1912,
+      "Nominations Before Win": 1,
+      "Total Nominations": 3,
+      "First Nominated": 1912,
+      "Years Nominated": 0,
+      "ID": "1621"
+    },
+    {
+      "Name": "Otto  Loewi",
+      "Prize Category": "Physiology or Medicine",
+      "Year Won": 1936,
+      "Nominations Before Win": 27,
+      "Total Nominations": 27,
+      "First Nominated": 1927,
+      "Years Nominated": 9,
+      "ID": "5583"
+    },
+    {
+      "Name": "Christiaan E Eijkman",
+      "Prize Category": "Physiology or Medicine",
+      "Year Won": 1929,
+      "Nominations Before Win": 28,
+      "Total Nominations": 28,
+      "First Nominated": 1914,
+      "Years Nominated": 15,
+      "ID": "2723"
+    },
+    {
+      "Name": "Julius  Wagner-Jauregg",
+      "Prize Category": "Physiology or Medicine",
+      "Year Won": 1927,
+      "Nominations Before Win": 16,
+      "Total Nominations": 17,
+      "First Nominated": 1925,
+      "Years Nominated": 2,
+      "ID": "9927"
+    },
+    {
+      "Name": "August S Krogh",
+      "Prize Category": "Physiology or Medicine",
+      "Year Won": 1920,
+      "Nominations Before Win": 3,
+      "Total Nominations": 3,
+      "First Nominated": 1919,
+      "Years Nominated": 1,
+      "ID": "5058"
+    },
+    {
+      "Name": "Thomas H Morgan",
+      "Prize Category": "Physiology or Medicine",
+      "Year Won": 1933,
+      "Nominations Before Win": 33,
+      "Total Nominations": 33,
+      "First Nominated": 1920,
+      "Years Nominated": 13,
+      "ID": "6428"
+    },
+    {
+      "Name": "Johannes A Fibiger",
+      "Prize Category": "Physiology or Medicine",
+      "Year Won": 1926,
+      "Nominations Before Win": 10,
+      "Total Nominations": 18,
+      "First Nominated": 1920,
+      "Years Nominated": 6,
+      "ID": "2978"
+    },
+    {
+      "Name": "Karl  Landsteiner",
+      "Prize Category": "Physiology or Medicine",
+      "Year Won": 1930,
+      "Nominations Before Win": 16,
+      "Total Nominations": 17,
+      "First Nominated": 1921,
+      "Years Nominated": 9,
+      "ID": "5205"
+    },
+    {
+      "Name": "Edward C Kendall",
+      "Prize Category": "Physiology or Medicine",
+      "Year Won": 1950,
+      "Nominations Before Win": 27,
+      "Total Nominations": 28,
+      "First Nominated": 1922,
+      "Years Nominated": 28,
+      "ID": "4789"
+    },
+    {
+      "Name": "Frederick G Banting",
+      "Prize Category": "Physiology or Medicine",
+      "Year Won": 1923,
+      "Nominations Before Win": 3,
+      "Total Nominations": 6,
+      "First Nominated": 1923,
+      "Years Nominated": 0,
+      "ID": "681"
+    },
+    {
+      "Name": "Frederick G Hopkins",
+      "Prize Category": "Physiology or Medicine",
+      "Year Won": 1929,
+      "Nominations Before Win": 13,
+      "Total Nominations": 13,
+      "First Nominated": 1923,
+      "Years Nominated": 6,
+      "ID": "4303"
+    },
+    {
+      "Name": "Otto F Meyerhof",
+      "Prize Category": "Physiology or Medicine",
+      "Year Won": 1922,
+      "Nominations Before Win": 0,
+      "Total Nominations": 2,
+      "First Nominated": 1923,
+      "Years Nominated": -1,
+      "ID": "6247"
+    },
+    {
+      "Name": "Otto H Warburg",
+      "Prize Category": "Physiology or Medicine",
+      "Year Won": 1931,
+      "Nominations Before Win": 49,
+      "Total Nominations": 51,
+      "First Nominated": 1923,
+      "Years Nominated": 8,
+      "ID": "9984"
+    },
+    {
+      "Name": "Archibald V Hill",
+      "Prize Category": "Physiology or Medicine",
+      "Year Won": 1922,
+      "Nominations Before Win": 0,
+      "Total Nominations": 1,
+      "First Nominated": 1923,
+      "Years Nominated": -1,
+      "ID": "4180"
+    },
+    {
+      "Name": "Hans  Spemann",
+      "Prize Category": "Physiology or Medicine",
+      "Year Won": 1935,
+      "Nominations Before Win": 20,
+      "Total Nominations": 21,
+      "First Nominated": 1924,
+      "Years Nominated": 11,
+      "ID": "8689"
+    },
+    {
+      "Name": "Peyton  Rous",
+      "Prize Category": "Physiology or Medicine",
+      "Year Won": 1966,
+      "Nominations Before Win": 17,
+      "Total Nominations": 17,
+      "First Nominated": 1926,
+      "Years Nominated": 40,
+      "ID": "7919"
+    },
+    {
+      "Name": "Henry Hallett  Dale",
+      "Prize Category": "Physiology or Medicine",
+      "Year Won": 1936,
+      "Nominations Before Win": 21,
+      "Total Nominations": 21,
+      "First Nominated": 1926,
+      "Years Nominated": 10,
+      "ID": "2111"
+    },
+    {
+      "Name": "Bernardo Alberto  Houssay",
+      "Prize Category": "Physiology or Medicine",
+      "Year Won": 1947,
+      "Nominations Before Win": 45,
+      "Total Nominations": 46,
+      "First Nominated": 1931,
+      "Years Nominated": 16,
+      "ID": "4324"
+    },
+    {
+      "Name": "George R Minot",
+      "Prize Category": "Physiology or Medicine",
+      "Year Won": 1934,
+      "Nominations Before Win": 57,
+      "Total Nominations": 60,
+      "First Nominated": 1928,
+      "Years Nominated": 6,
+      "ID": "6307"
+    },
+    {
+      "Name": "Joseph  Erlanger",
+      "Prize Category": "Physiology or Medicine",
+      "Year Won": 1944,
+      "Nominations Before Win": 17,
+      "Total Nominations": 17,
+      "First Nominated": 1935,
+      "Years Nominated": 9,
+      "ID": "2823"
+    },
+    {
+      "Name": "Edward A Doisy",
+      "Prize Category": "Physiology or Medicine",
+      "Year Won": 1943,
+      "Nominations Before Win": 3,
+      "Total Nominations": 4,
+      "First Nominated": 1931,
+      "Years Nominated": 12,
+      "ID": "2485"
+    },
+    {
+      "Name": "Antonio C.de Abreu Freire Egas  Moniz",
+      "Prize Category": "Physiology or Medicine",
+      "Year Won": 1949,
+      "Nominations Before Win": 16,
+      "Total Nominations": 18,
+      "First Nominated": 1928,
+      "Years Nominated": 21,
+      "ID": "6371"
+    },
+    {
+      "Name": "William P Murphy",
+      "Prize Category": "Physiology or Medicine",
+      "Year Won": 1934,
+      "Nominations Before Win": 16,
+      "Total Nominations": 17,
+      "First Nominated": 1929,
+      "Years Nominated": 5,
+      "ID": "6529"
+    },
+    {
+      "Name": "George H Whipple",
+      "Prize Category": "Physiology or Medicine",
+      "Year Won": 1934,
+      "Nominations Before Win": 21,
+      "Total Nominations": 23,
+      "First Nominated": 1929,
+      "Years Nominated": 5,
+      "ID": "10134"
+    },
+    {
+      "Name": "Edgar D Adrian (Lord)",
+      "Prize Category": "Physiology or Medicine",
+      "Year Won": 1932,
+      "Nominations Before Win": 6,
+      "Total Nominations": 6,
+      "First Nominated": 1930,
+      "Years Nominated": 2,
+      "ID": "325"
+    },
+    {
+      "Name": "Hermann Joseph  Muller",
+      "Prize Category": "Physiology or Medicine",
+      "Year Won": 1946,
+      "Nominations Before Win": 11,
+      "Total Nominations": 12,
+      "First Nominated": 1932,
+      "Years Nominated": 14,
+      "ID": "6501"
+    },
+    {
+      "Name": "Walter R Hess",
+      "Prize Category": "Physiology or Medicine",
+      "Year Won": 1949,
+      "Nominations Before Win": 31,
+      "Total Nominations": 31,
+      "First Nominated": 1933,
+      "Years Nominated": 16,
+      "ID": "4129"
+    },
+    {
+      "Name": "Corneille J Heymans",
+      "Prize Category": "Physiology or Medicine",
+      "Year Won": 1938,
+      "Nominations Before Win": 4,
+      "Total Nominations": 8,
+      "First Nominated": 1934,
+      "Years Nominated": 4,
+      "ID": "4149"
+    },
+    {
+      "Name": "Albert Imre  Szent-Gy\u00f6rgyi",
+      "Prize Category": "Physiology or Medicine",
+      "Year Won": 1937,
+      "Nominations Before Win": 23,
+      "Total Nominations": 24,
+      "First Nominated": 1934,
+      "Years Nominated": 3,
+      "ID": "14649"
+    },
+    {
+      "Name": "Herbert S Gasser",
+      "Prize Category": "Physiology or Medicine",
+      "Year Won": 1944,
+      "Nominations Before Win": 18,
+      "Total Nominations": 18,
+      "First Nominated": 1935,
+      "Years Nominated": 9,
+      "ID": "3351"
+    },
+    {
+      "Name": "Hugo A Theorell",
+      "Prize Category": "Physiology or Medicine",
+      "Year Won": 1955,
+      "Nominations Before Win": 28,
+      "Total Nominations": 28,
+      "First Nominated": 1936,
+      "Years Nominated": 19,
+      "ID": "9207"
+    },
+    {
+      "Name": "Max  Theiler",
+      "Prize Category": "Physiology or Medicine",
+      "Year Won": 1951,
+      "Nominations Before Win": 4,
+      "Total Nominations": 4,
+      "First Nominated": 1937,
+      "Years Nominated": 14,
+      "ID": "9202"
+    },
+    {
+      "Name": "Gerhard  Domagk",
+      "Prize Category": "Physiology or Medicine",
+      "Year Won": 1939,
+      "Nominations Before Win": 3,
+      "Total Nominations": 9,
+      "First Nominated": 1938,
+      "Years Nominated": 1,
+      "ID": "2494"
+    },
+    {
+      "Name": "Andr\u00e9 Michel   Lwoff",
+      "Prize Category": "Physiology or Medicine",
+      "Year Won": 1965,
+      "Nominations Before Win": 0,
+      "Total Nominations": 0,
+      "First Nominated": null,
+      "Years Nominated": 0,
+      "ID": "5718"
+    },
+    {
+      "Name": "Carl F Cori",
+      "Prize Category": "Physiology or Medicine",
+      "Year Won": 1947,
+      "Nominations Before Win": 5,
+      "Total Nominations": 5,
+      "First Nominated": 1946,
+      "Years Nominated": 1,
+      "ID": "1953"
+    },
+    {
+      "Name": "Howard W Florey",
+      "Prize Category": "Physiology or Medicine",
+      "Year Won": 1945,
+      "Nominations Before Win": 14,
+      "Total Nominations": 17,
+      "First Nominated": 1943,
+      "Years Nominated": 2,
+      "ID": "3070"
+    },
+    {
+      "Name": "Hendrik C Dam",
+      "Prize Category": "Physiology or Medicine",
+      "Year Won": 1943,
+      "Nominations Before Win": 5,
+      "Total Nominations": 6,
+      "First Nominated": 1941,
+      "Years Nominated": 2,
+      "ID": "2119"
+    },
+    {
+      "Name": "Alexander  Fleming",
+      "Prize Category": "Physiology or Medicine",
+      "Year Won": 1945,
+      "Nominations Before Win": 21,
+      "Total Nominations": 32,
+      "First Nominated": 1943,
+      "Years Nominated": 2,
+      "ID": "3058"
+    },
+    {
+      "Name": "Ernst B Chain",
+      "Prize Category": "Physiology or Medicine",
+      "Year Won": 1945,
+      "Nominations Before Win": 2,
+      "Total Nominations": 2,
+      "First Nominated": 1944,
+      "Years Nominated": 1,
+      "ID": "1706"
+    },
+    {
+      "Name": "Ragnar  Granit",
+      "Prize Category": "Physiology or Medicine",
+      "Year Won": 1967,
+      "Nominations Before Win": 14,
+      "Total Nominations": 14,
+      "First Nominated": 1946,
+      "Years Nominated": 21,
+      "ID": "3606"
+    },
+    {
+      "Name": "Charles B Huggins",
+      "Prize Category": "Physiology or Medicine",
+      "Year Won": 1966,
+      "Nominations Before Win": 3,
+      "Total Nominations": 3,
+      "First Nominated": 1950,
+      "Years Nominated": 16,
+      "ID": "4357"
+    },
+    {
+      "Name": "Hans Adolf  Krebs",
+      "Prize Category": "Physiology or Medicine",
+      "Year Won": 1953,
+      "Nominations Before Win": 23,
+      "Total Nominations": 23,
+      "First Nominated": 1946,
+      "Years Nominated": 7,
+      "ID": "5042"
+    },
+    {
+      "Name": "Selman A Waksman",
+      "Prize Category": "Physiology or Medicine",
+      "Year Won": 1952,
+      "Nominations Before Win": 45,
+      "Total Nominations": 45,
+      "First Nominated": 1946,
+      "Years Nominated": 6,
+      "ID": "9933"
+    },
+    {
+      "Name": "Gerty T Cori",
+      "Prize Category": "Physiology or Medicine",
+      "Year Won": 1947,
+      "Nominations Before Win": 2,
+      "Total Nominations": 2,
+      "First Nominated": 1946,
+      "Years Nominated": 1,
+      "ID": "1955"
+    },
+    {
+      "Name": "Karl  von Frisch",
+      "Prize Category": "Physiology or Medicine",
+      "Year Won": 1973,
+      "Nominations Before Win": 4,
+      "Total Nominations": 4,
+      "First Nominated": 1948,
+      "Years Nominated": 25,
+      "ID": "9759"
+    },
+    {
+      "Name": "Frank M Burnet",
+      "Prize Category": "Physiology or Medicine",
+      "Year Won": 1960,
+      "Nominations Before Win": 6,
+      "Total Nominations": 6,
+      "First Nominated": 1948,
+      "Years Nominated": 12,
+      "ID": "1464"
+    },
+    {
+      "Name": "Paul Hermann  M\u00fcller",
+      "Prize Category": "Physiology or Medicine",
+      "Year Won": 1948,
+      "Nominations Before Win": 6,
+      "Total Nominations": 6,
+      "First Nominated": 1948,
+      "Years Nominated": 0,
+      "ID": "6558"
+    },
+    {
+      "Name": "Dickinson W Richards",
+      "Prize Category": "Physiology or Medicine",
+      "Year Won": 1956,
+      "Nominations Before Win": 0,
+      "Total Nominations": 0,
+      "First Nominated": null,
+      "Years Nominated": 0,
+      "ID": "7705"
+    },
+    {
+      "Name": "George Wells  Beadle",
+      "Prize Category": "Physiology or Medicine",
+      "Year Won": 1958,
+      "Nominations Before Win": 13,
+      "Total Nominations": 13,
+      "First Nominated": 1948,
+      "Years Nominated": 10,
+      "ID": "782"
+    },
+    {
+      "Name": "Edward Lawrie  Tatum",
+      "Prize Category": "Physiology or Medicine",
+      "Year Won": 1958,
+      "Nominations Before Win": 6,
+      "Total Nominations": 6,
+      "First Nominated": 1948,
+      "Years Nominated": 10,
+      "ID": "9015"
+    },
+    {
+      "Name": "Fritz Albert  Lipmann",
+      "Prize Category": "Physiology or Medicine",
+      "Year Won": 1953,
+      "Nominations Before Win": 10,
+      "Total Nominations": 10,
+      "First Nominated": 1948,
+      "Years Nominated": 5,
+      "ID": "5529"
+    },
+    {
+      "Name": "Haldan K Hartline",
+      "Prize Category": "Physiology or Medicine",
+      "Year Won": 1967,
+      "Nominations Before Win": 2,
+      "Total Nominations": 2,
+      "First Nominated": 1949,
+      "Years Nominated": 18,
+      "ID": "3916"
+    },
+    {
+      "Name": "Philip S Hench",
+      "Prize Category": "Physiology or Medicine",
+      "Year Won": 1950,
+      "Nominations Before Win": 11,
+      "Total Nominations": 13,
+      "First Nominated": 1950,
+      "Years Nominated": 0,
+      "ID": "4041"
+    },
+    {
+      "Name": "Georg  von B\u00e9k\u00e9sy",
+      "Prize Category": "Physiology or Medicine",
+      "Year Won": 1961,
+      "Nominations Before Win": 6,
+      "Total Nominations": 6,
+      "First Nominated": 1950,
+      "Years Nominated": 11,
+      "ID": "9721"
+    },
+    {
+      "Name": "Tadeus  Reichstein",
+      "Prize Category": "Physiology or Medicine",
+      "Year Won": 1950,
+      "Nominations Before Win": 17,
+      "Total Nominations": 17,
+      "First Nominated": 1943,
+      "Years Nominated": 7,
+      "ID": "7631"
+    },
+    {
+      "Name": "John C Eccles",
+      "Prize Category": "Physiology or Medicine",
+      "Year Won": 1963,
+      "Nominations Before Win": 1,
+      "Total Nominations": 1,
+      "First Nominated": 1953,
+      "Years Nominated": 10,
+      "ID": "2671"
+    },
+    {
+      "Name": "Daniel  Bovet",
+      "Prize Category": "Physiology or Medicine",
+      "Year Won": 1957,
+      "Nominations Before Win": 2,
+      "Total Nominations": 2,
+      "First Nominated": 1951,
+      "Years Nominated": 6,
+      "ID": "1251"
+    },
+    {
+      "Name": "Werner  Forssmann",
+      "Prize Category": "Physiology or Medicine",
+      "Year Won": 1956,
+      "Nominations Before Win": 3,
+      "Total Nominations": 3,
+      "First Nominated": 1952,
+      "Years Nominated": 4,
+      "ID": "3125"
+    },
+    {
+      "Name": "John F Enders",
+      "Prize Category": "Physiology or Medicine",
+      "Year Won": 1954,
+      "Nominations Before Win": 3,
+      "Total Nominations": 3,
+      "First Nominated": 1952,
+      "Years Nominated": 2,
+      "ID": "2791"
+    },
+    {
+      "Name": "Ulf S von Euler",
+      "Prize Category": "Physiology or Medicine",
+      "Year Won": 1970,
+      "Nominations Before Win": 1,
+      "Total Nominations": 1,
+      "First Nominated": 1952,
+      "Years Nominated": 18,
+      "ID": "9747"
+    },
+    {
+      "Name": "Konrad  Lorenz",
+      "Prize Category": "Physiology or Medicine",
+      "Year Won": 1973,
+      "Nominations Before Win": 1,
+      "Total Nominations": 1,
+      "First Nominated": 1953,
+      "Years Nominated": 20,
+      "ID": "5638"
+    },
+    {
+      "Name": "Feodor  Lynen",
+      "Prize Category": "Physiology or Medicine",
+      "Year Won": 1964,
+      "Nominations Before Win": 21,
+      "Total Nominations": 22,
+      "First Nominated": 1953,
+      "Years Nominated": 11,
+      "ID": "5722"
+    },
+    {
+      "Name": "Alan L Hodgkin",
+      "Prize Category": "Physiology or Medicine",
+      "Year Won": 1963,
+      "Nominations Before Win": 1,
+      "Total Nominations": 1,
+      "First Nominated": 1953,
+      "Years Nominated": 10,
+      "ID": "4233"
+    },
+    {
+      "Name": "Andr\u00e9 Fr\u00e9d\u00e9ric   Cournand",
+      "Prize Category": "Physiology or Medicine",
+      "Year Won": 1956,
+      "Nominations Before Win": 1,
+      "Total Nominations": 1,
+      "First Nominated": 1953,
+      "Years Nominated": 3,
+      "ID": "2002"
+    }
+  ],
+  "literature": [
+    {
+      "Name": "Sully (Ren\u00e9) F Prudhomme",
+      "Prize Category": "Literature",
+      "Year Won": 1901,
+      "Nominations Before Win": 4,
+      "Total Nominations": 4,
+      "First Nominated": 1901,
+      "Years Nominated": 0,
+      "ID": "7470"
+    },
+    {
+      "Name": "Frederi (Fr\u00e9d\u00e9ric)  Mistral",
+      "Prize Category": "Literature",
+      "Year Won": 1904,
+      "Nominations Before Win": 14,
+      "Total Nominations": 14,
+      "First Nominated": 1901,
+      "Years Nominated": 3,
+      "ID": "6320"
+    },
+    {
+      "Name": "Henryk  Sienkiewicz",
+      "Prize Category": "Literature",
+      "Year Won": 1905,
+      "Nominations Before Win": 7,
+      "Total Nominations": 7,
+      "First Nominated": 1901,
+      "Years Nominated": 4,
+      "ID": "8523"
+    },
+    {
+      "Name": "Gerhart  Hauptmann",
+      "Prize Category": "Literature",
+      "Year Won": 1912,
+      "Nominations Before Win": 5,
+      "Total Nominations": 5,
+      "First Nominated": 1902,
+      "Years Nominated": 10,
+      "ID": "3947"
+    },
+    {
+      "Name": "William B Yeats",
+      "Prize Category": "Literature",
+      "Year Won": 1923,
+      "Nominations Before Win": 7,
+      "Total Nominations": 7,
+      "First Nominated": 1902,
+      "Years Nominated": 21,
+      "ID": "10345"
+    },
+    {
+      "Name": "Giosu\u00e8  Carducci",
+      "Prize Category": "Literature",
+      "Year Won": 1906,
+      "Nominations Before Win": 9,
+      "Total Nominations": 9,
+      "First Nominated": 1902,
+      "Years Nominated": 4,
+      "ID": "1595"
+    },
+    {
+      "Name": "Theodor  Mommsen",
+      "Prize Category": "Literature",
+      "Year Won": 1902,
+      "Nominations Before Win": 1,
+      "Total Nominations": 1,
+      "First Nominated": 1902,
+      "Years Nominated": 0,
+      "ID": "6361"
+    },
+    {
+      "Name": "Bj\u00f8rnstjerne Martinius  Bj\u00f8rnson",
+      "Prize Category": "Literature",
+      "Year Won": 1903,
+      "Nominations Before Win": 4,
+      "Total Nominations": 4,
+      "First Nominated": 1902,
+      "Years Nominated": 1,
+      "ID": "1053"
+    },
+    {
+      "Name": "Jos\u00e9  Echegaray y Eizaguirre",
+      "Prize Category": "Literature",
+      "Year Won": 1904,
+      "Nominations Before Win": 3,
+      "Total Nominations": 3,
+      "First Nominated": 1902,
+      "Years Nominated": 2,
+      "ID": "2673"
+    },
+    {
+      "Name": "Anatole (Jacques)  France (Thibault)",
+      "Prize Category": "Literature",
+      "Year Won": 1921,
+      "Nominations Before Win": 13,
+      "Total Nominations": 13,
+      "First Nominated": 1904,
+      "Years Nominated": 17,
+      "ID": "3157"
+    },
+    {
+      "Name": "Maurice  Maeterlinck",
+      "Prize Category": "Literature",
+      "Year Won": 1911,
+      "Nominations Before Win": 8,
+      "Total Nominations": 8,
+      "First Nominated": 1903,
+      "Years Nominated": 8,
+      "ID": "5801"
+    },
+    {
+      "Name": "Rudyard  Kipling",
+      "Prize Category": "Literature",
+      "Year Won": 1907,
+      "Nominations Before Win": 4,
+      "Total Nominations": 4,
+      "First Nominated": 1903,
+      "Years Nominated": 4,
+      "ID": "4859"
+    },
+    {
+      "Name": "Selma  Lagerl\u00f6f",
+      "Prize Category": "Literature",
+      "Year Won": 1909,
+      "Nominations Before Win": 28,
+      "Total Nominations": 28,
+      "First Nominated": 1904,
+      "Years Nominated": 5,
+      "ID": "5152"
+    },
+    {
+      "Name": "Rudolf C Eucken",
+      "Prize Category": "Literature",
+      "Year Won": 1908,
+      "Nominations Before Win": 1,
+      "Total Nominations": 1,
+      "First Nominated": 1908,
+      "Years Nominated": 0,
+      "ID": "2851"
+    },
+    {
+      "Name": "Verner  von Heidenstam",
+      "Prize Category": "Literature",
+      "Year Won": 1916,
+      "Nominations Before Win": 11,
+      "Total Nominations": 11,
+      "First Nominated": 1909,
+      "Years Nominated": 7,
+      "ID": "4000"
+    },
+    {
+      "Name": "Paul  Heyse",
+      "Prize Category": "Literature",
+      "Year Won": 1910,
+      "Nominations Before Win": 1,
+      "Total Nominations": 1,
+      "First Nominated": 1910,
+      "Years Nominated": 0,
+      "ID": "4155"
+    },
+    {
+      "Name": "George Bernard  Shaw",
+      "Prize Category": "Literature",
+      "Year Won": 1925,
+      "Nominations Before Win": 5,
+      "Total Nominations": 7,
+      "First Nominated": 1911,
+      "Years Nominated": 14,
+      "ID": "8479"
+    },
+    {
+      "Name": "Karl  Gjellerup",
+      "Prize Category": "Literature",
+      "Year Won": 1917,
+      "Nominations Before Win": 12,
+      "Total Nominations": 12,
+      "First Nominated": 1911,
+      "Years Nominated": 6,
+      "ID": "3474"
+    },
+    {
+      "Name": "Henri  Bergson",
+      "Prize Category": "Literature",
+      "Year Won": 1927,
+      "Nominations Before Win": 7,
+      "Total Nominations": 10,
+      "First Nominated": 1912,
+      "Years Nominated": 15,
+      "ID": "917"
+    },
+    {
+      "Name": "Carl  Spitteler",
+      "Prize Category": "Literature",
+      "Year Won": 1919,
+      "Nominations Before Win": 16,
+      "Total Nominations": 18,
+      "First Nominated": 1912,
+      "Years Nominated": 7,
+      "ID": "8702"
+    },
+    {
+      "Name": "Grazia  Deledda (Madesani)",
+      "Prize Category": "Literature",
+      "Year Won": 1926,
+      "Nominations Before Win": 17,
+      "Total Nominations": 18,
+      "First Nominated": 1913,
+      "Years Nominated": 13,
+      "ID": "2348"
+    },
+    {
+      "Name": "Henrik  Pontoppidan",
+      "Prize Category": "Literature",
+      "Year Won": 1917,
+      "Nominations Before Win": 4,
+      "Total Nominations": 4,
+      "First Nominated": 1913,
+      "Years Nominated": 4,
+      "ID": "7341"
+    },
+    {
+      "Name": "Rabindranath  Tagore",
+      "Prize Category": "Literature",
+      "Year Won": 1913,
+      "Nominations Before Win": 1,
+      "Total Nominations": 1,
+      "First Nominated": 1913,
+      "Years Nominated": 0,
+      "ID": "8979"
+    },
+    {
+      "Name": "Erik Axel  Karlfeldt",
+      "Prize Category": "Literature",
+      "Year Won": 1931,
+      "Nominations Before Win": 10,
+      "Total Nominations": 10,
+      "First Nominated": 1916,
+      "Years Nominated": 15,
+      "ID": "4716"
+    },
+    {
+      "Name": "Romain  Rolland",
+      "Prize Category": "Literature",
+      "Year Won": 1915,
+      "Nominations Before Win": 1,
+      "Total Nominations": 4,
+      "First Nominated": 1915,
+      "Years Nominated": 0,
+      "ID": "7831"
+    },
+    {
+      "Name": "Knut P Hamsun",
+      "Prize Category": "Literature",
+      "Year Won": 1920,
+      "Nominations Before Win": 3,
+      "Total Nominations": 3,
+      "First Nominated": 1918,
+      "Years Nominated": 2,
+      "ID": "3853"
+    },
+    {
+      "Name": "Wladyslaw S Reymont (Reyment)",
+      "Prize Category": "Literature",
+      "Year Won": 1924,
+      "Nominations Before Win": 4,
+      "Total Nominations": 4,
+      "First Nominated": 1919,
+      "Years Nominated": 5,
+      "ID": "7684"
+    },
+    {
+      "Name": "John  Galsworthy",
+      "Prize Category": "Literature",
+      "Year Won": 1932,
+      "Nominations Before Win": 6,
+      "Total Nominations": 6,
+      "First Nominated": 1919,
+      "Years Nominated": 13,
+      "ID": "3315"
+    },
+    {
+      "Name": "Jacinto  Benavente",
+      "Prize Category": "Literature",
+      "Year Won": 1922,
+      "Nominations Before Win": 2,
+      "Total Nominations": 2,
+      "First Nominated": 1921,
+      "Years Nominated": 1,
+      "ID": "845"
+    },
+    {
+      "Name": "Sigrid  Undset",
+      "Prize Category": "Literature",
+      "Year Won": 1928,
+      "Nominations Before Win": 4,
+      "Total Nominations": 4,
+      "First Nominated": 1922,
+      "Years Nominated": 6,
+      "ID": "9445"
+    },
+    {
+      "Name": "Ivan Alexeievitch  Bounine",
+      "Prize Category": "Literature",
+      "Year Won": 1933,
+      "Nominations Before Win": 18,
+      "Total Nominations": 18,
+      "First Nominated": 1923,
+      "Years Nominated": 10,
+      "ID": "1449"
+    },
+    {
+      "Name": "Thomas  Mann",
+      "Prize Category": "Literature",
+      "Year Won": 1929,
+      "Nominations Before Win": 3,
+      "Total Nominations": 5,
+      "First Nominated": 1924,
+      "Years Nominated": 5,
+      "ID": "5871"
+    },
+    {
+      "Name": "Johannes V Jensen",
+      "Prize Category": "Literature",
+      "Year Won": 1944,
+      "Nominations Before Win": 53,
+      "Total Nominations": 53,
+      "First Nominated": 1925,
+      "Years Nominated": 19,
+      "ID": "4582"
+    },
+    {
+      "Name": "Frans E Sillanp\u00e4\u00e4",
+      "Prize Category": "Literature",
+      "Year Won": 1939,
+      "Nominations Before Win": 39,
+      "Total Nominations": 39,
+      "First Nominated": 1930,
+      "Years Nominated": 9,
+      "ID": "8537"
+    },
+    {
+      "Name": "Sinclair  Lewis",
+      "Prize Category": "Literature",
+      "Year Won": 1930,
+      "Nominations Before Win": 1,
+      "Total Nominations": 1,
+      "First Nominated": 1930,
+      "Years Nominated": 0,
+      "ID": "5444"
+    },
+    {
+      "Name": "Hermann  Hesse",
+      "Prize Category": "Literature",
+      "Year Won": 1946,
+      "Nominations Before Win": 8,
+      "Total Nominations": 8,
+      "First Nominated": 1931,
+      "Years Nominated": 15,
+      "ID": "4133"
+    },
+    {
+      "Name": "Eugene G O\u00b4Neill",
+      "Prize Category": "Literature",
+      "Year Won": 1936,
+      "Nominations Before Win": 3,
+      "Total Nominations": 3,
+      "First Nominated": 1934,
+      "Years Nominated": 2,
+      "ID": "6935"
+    },
+    {
+      "Name": "Roger  Martin du Gard",
+      "Prize Category": "Literature",
+      "Year Won": 1937,
+      "Nominations Before Win": 5,
+      "Total Nominations": 5,
+      "First Nominated": 1934,
+      "Years Nominated": 3,
+      "ID": "5951"
+    },
+    {
+      "Name": "Luigi  Pirandello",
+      "Prize Category": "Literature",
+      "Year Won": 1934,
+      "Nominations Before Win": 1,
+      "Total Nominations": 1,
+      "First Nominated": 1934,
+      "Years Nominated": 0,
+      "ID": "7269"
+    },
+    {
+      "Name": "Pearl S. Buck",
+      "Prize Category": "Literature",
+      "Year Won": 1938,
+      "Nominations Before Win": 4,
+      "Total Nominations": 9,
+      "First Nominated": 1938,
+      "Years Nominated": 0,
+      "ID": "1432"
+    },
+    {
+      "Name": "Gabriela (Lucile)  Mistral (Godoy y Alcayaga)",
+      "Prize Category": "Literature",
+      "Year Won": 1945,
+      "Nominations Before Win": 8,
+      "Total Nominations": 8,
+      "First Nominated": 1940,
+      "Years Nominated": 5,
+      "ID": "6323"
+    },
+    {
+      "Name": "P\u00e4r Fabian  Lagerkvist",
+      "Prize Category": "Literature",
+      "Year Won": 1951,
+      "Nominations Before Win": 18,
+      "Total Nominations": 18,
+      "First Nominated": 1947,
+      "Years Nominated": 4,
+      "ID": "5150"
+    },
+    {
+      "Name": "John  Steinbeck",
+      "Prize Category": "Literature",
+      "Year Won": 1962,
+      "Nominations Before Win": 11,
+      "Total Nominations": 11,
+      "First Nominated": 1943,
+      "Years Nominated": 19,
+      "ID": "8766"
+    },
+    {
+      "Name": "Thomas S Eliot",
+      "Prize Category": "Literature",
+      "Year Won": 1948,
+      "Nominations Before Win": 7,
+      "Total Nominations": 7,
+      "First Nominated": 1945,
+      "Years Nominated": 3,
+      "ID": "2757"
+    },
+    {
+      "Name": "Winston Leonard Spencer  Churchill",
+      "Prize Category": "Literature",
+      "Year Won": 1953,
+      "Nominations Before Win": 23,
+      "Total Nominations": 23,
+      "First Nominated": 1945,
+      "Years Nominated": 8,
+      "ID": "1797"
+    },
+    {
+      "Name": "Boris L Pasternak",
+      "Prize Category": "Literature",
+      "Year Won": 1958,
+      "Nominations Before Win": 9,
+      "Total Nominations": 9,
+      "First Nominated": 1946,
+      "Years Nominated": 12,
+      "ID": "7016"
+    },
+    {
+      "Name": "Andr\u00e9  Gide",
+      "Prize Category": "Literature",
+      "Year Won": 1947,
+      "Nominations Before Win": 2,
+      "Total Nominations": 2,
+      "First Nominated": 1946,
+      "Years Nominated": 1,
+      "ID": "3426"
+    },
+    {
+      "Name": "Fran\u00e7ois  Mauriac",
+      "Prize Category": "Literature",
+      "Year Won": 1952,
+      "Nominations Before Win": 8,
+      "Total Nominations": 8,
+      "First Nominated": 1946,
+      "Years Nominated": 6,
+      "ID": "6005"
+    },
+    {
+      "Name": "Samuel Joseph  Agnon",
+      "Prize Category": "Literature",
+      "Year Won": 1966,
+      "Nominations Before Win": 6,
+      "Total Nominations": 6,
+      "First Nominated": 1947,
+      "Years Nominated": 19,
+      "ID": "330"
+    },
+    {
+      "Name": "Mikhail  Sholokhov",
+      "Prize Category": "Literature",
+      "Year Won": 1965,
+      "Nominations Before Win": 4,
+      "Total Nominations": 4,
+      "First Nominated": 1947,
+      "Years Nominated": 18,
+      "ID": "8503"
+    },
+    {
+      "Name": "Ernest  Hemingway",
+      "Prize Category": "Literature",
+      "Year Won": 1954,
+      "Nominations Before Win": 4,
+      "Total Nominations": 4,
+      "First Nominated": 1947,
+      "Years Nominated": 7,
+      "ID": "4037"
+    },
+    {
+      "Name": "Halld\u00f3r Kiljan  Laxness",
+      "Prize Category": "Literature",
+      "Year Won": 1955,
+      "Nominations Before Win": 25,
+      "Total Nominations": 25,
+      "First Nominated": 1948,
+      "Years Nominated": 7,
+      "ID": "5292"
+    },
+    {
+      "Name": "Albert  Camus",
+      "Prize Category": "Literature",
+      "Year Won": 1957,
+      "Nominations Before Win": 11,
+      "Total Nominations": 11,
+      "First Nominated": 1949,
+      "Years Nominated": 8,
+      "ID": "1572"
+    },
+    {
+      "Name": "Harry  Martinson",
+      "Prize Category": "Literature",
+      "Year Won": 1974,
+      "Nominations Before Win": 14,
+      "Total Nominations": 14,
+      "First Nominated": 1964,
+      "Years Nominated": 10,
+      "ID": "5958"
+    },
+    {
+      "Name": "William  Faulkner",
+      "Prize Category": "Literature",
+      "Year Won": 1949,
+      "Nominations Before Win": 0,
+      "Total Nominations": 1,
+      "First Nominated": 1950,
+      "Years Nominated": -1,
+      "ID": "2923"
+    },
+    {
+      "Name": "Bertrand A Russell",
+      "Prize Category": "Literature",
+      "Year Won": 1950,
+      "Nominations Before Win": 1,
+      "Total Nominations": 47,
+      "First Nominated": 1950,
+      "Years Nominated": 0,
+      "ID": "7980"
+    },
+    {
+      "Name": "Juan Ram\u00f3n  Jim\u00e9nez",
+      "Prize Category": "Literature",
+      "Year Won": 1956,
+      "Nominations Before Win": 5,
+      "Total Nominations": 5,
+      "First Nominated": 1952,
+      "Years Nominated": 4,
+      "ID": "12036"
+    },
+    {
+      "Name": "Saint-John  Perse",
+      "Prize Category": "Literature",
+      "Year Won": 1960,
+      "Nominations Before Win": 15,
+      "Total Nominations": 15,
+      "First Nominated": 1955,
+      "Years Nominated": 5,
+      "ID": "12089"
+    },
+    {
+      "Name": "George  Seferis",
+      "Prize Category": "Literature",
+      "Year Won": 1963,
+      "Nominations Before Win": 5,
+      "Total Nominations": 5,
+      "First Nominated": 1955,
+      "Years Nominated": 8,
+      "ID": "12135"
+    },
+    {
+      "Name": "Pablo  Neruda",
+      "Prize Category": "Literature",
+      "Year Won": 1971,
+      "Nominations Before Win": 22,
+      "Total Nominations": 23,
+      "First Nominated": 1956,
+      "Years Nominated": 15,
+      "ID": "12260"
+    },
+    {
+      "Name": "Samuel  Beckett",
+      "Prize Category": "Literature",
+      "Year Won": 1969,
+      "Nominations Before Win": 26,
+      "Total Nominations": 26,
+      "First Nominated": 1957,
+      "Years Nominated": 12,
+      "ID": "12321"
+    },
+    {
+      "Name": "Jean-Paul  Sartre",
+      "Prize Category": "Literature",
+      "Year Won": 1964,
+      "Nominations Before Win": 16,
+      "Total Nominations": 16,
+      "First Nominated": 1957,
+      "Years Nominated": 7,
+      "ID": "12337"
+    },
+    {
+      "Name": "Salvatore  Quasimodo",
+      "Prize Category": "Literature",
+      "Year Won": 1959,
+      "Nominations Before Win": 4,
+      "Total Nominations": 4,
+      "First Nominated": 1958,
+      "Years Nominated": 1,
+      "ID": "12362"
+    },
+    {
+      "Name": "Ivo  Andric",
+      "Prize Category": "Literature",
+      "Year Won": 1961,
+      "Nominations Before Win": 10,
+      "Total Nominations": 10,
+      "First Nominated": 1958,
+      "Years Nominated": 3,
+      "ID": "12405"
+    },
+    {
+      "Name": "Eyvind  Johnson",
+      "Prize Category": "Literature",
+      "Year Won": 1974,
+      "Nominations Before Win": 17,
+      "Total Nominations": 17,
+      "First Nominated": 1962,
+      "Years Nominated": 12,
+      "ID": "12669"
+    },
+    {
+      "Name": "Heinrich  B\u00f6ll",
+      "Prize Category": "Literature",
+      "Year Won": 1972,
+      "Nominations Before Win": 29,
+      "Total Nominations": 29,
+      "First Nominated": 1960,
+      "Years Nominated": 12,
+      "ID": "12538"
+    },
+    {
+      "Name": "Yasunari  Kawabata",
+      "Prize Category": "Literature",
+      "Year Won": 1968,
+      "Nominations Before Win": 8,
+      "Total Nominations": 8,
+      "First Nominated": 1961,
+      "Years Nominated": 7,
+      "ID": "12589"
+    },
+    {
+      "Name": "Nelly  Sachs",
+      "Prize Category": "Literature",
+      "Year Won": 1966,
+      "Nominations Before Win": 8,
+      "Total Nominations": 8,
+      "First Nominated": 1963,
+      "Years Nominated": 3,
+      "ID": "12697"
+    },
+    {
+      "Name": "Miguel \u00c1ngel   Asturias",
+      "Prize Category": "Literature",
+      "Year Won": 1967,
+      "Nominations Before Win": 6,
+      "Total Nominations": 6,
+      "First Nominated": 1964,
+      "Years Nominated": 3,
+      "ID": "13187"
+    },
+    {
+      "Name": "Patrick   White",
+      "Prize Category": "Literature",
+      "Year Won": 1973,
+      "Nominations Before Win": 21,
+      "Total Nominations": 21,
+      "First Nominated": 1968,
+      "Years Nominated": 5,
+      "ID": "15048"
+    },
+    {
+      "Name": "Aleksandr   Solzjenitsyn",
+      "Prize Category": "Literature",
+      "Year Won": 1970,
+      "Nominations Before Win": 9,
+      "Total Nominations": 9,
+      "First Nominated": 1969,
+      "Years Nominated": 1,
+      "ID": "15194"
+    }
+  ],
+  "peace": [
+    {
+      "Name": "Fredrik  Bajer",
+      "Prize Category": "Peace",
+      "Year Won": 1908,
+      "Nominations Before Win": 51,
+      "Total Nominations": 51,
+      "First Nominated": 1901,
+      "Years Nominated": 7,
+      "ID": "639"
+    },
+    {
+      "Name": "Fr\u00e9d\u00e9ric  Passy",
+      "Prize Category": "Peace",
+      "Year Won": 1901,
+      "Nominations Before Win": 41,
+      "Total Nominations": 41,
+      "First Nominated": 1901,
+      "Years Nominated": 0,
+      "ID": "7015"
+    },
+    {
+      "Name": "William Randal  Cremer",
+      "Prize Category": "Peace",
+      "Year Won": 1903,
+      "Nominations Before Win": 26,
+      "Total Nominations": 26,
+      "First Nominated": 1901,
+      "Years Nominated": 2,
+      "ID": "2021"
+    },
+    {
+      "Name": "The Permanent International Peace Bureau",
+      "Prize Category": "Peace",
+      "Year Won": 1910,
+      "Nominations Before Win": 103,
+      "Total Nominations": 136,
+      "First Nominated": 1901,
+      "Years Nominated": 9,
+      "ID": "9173"
+    },
+    {
+      "Name": "Bertha Sophie F von Suttner (Baroness)",
+      "Prize Category": "Peace",
+      "Year Won": 1905,
+      "Nominations Before Win": 101,
+      "Total Nominations": 101,
+      "First Nominated": 1901,
+      "Years Nominated": 4,
+      "ID": "9866"
+    },
+    {
+      "Name": "The Institute of International Law (Institut de Droit International)",
+      "Prize Category": "Peace",
+      "Year Won": 1904,
+      "Nominations Before Win": 53,
+      "Total Nominations": 59,
+      "First Nominated": 1901,
+      "Years Nominated": 3,
+      "ID": "9137"
+    },
+    {
+      "Name": "\u00c9lie  Ducommun",
+      "Prize Category": "Peace",
+      "Year Won": 1902,
+      "Nominations Before Win": 17,
+      "Total Nominations": 17,
+      "First Nominated": 1901,
+      "Years Nominated": 1,
+      "ID": "2569"
+    },
+    {
+      "Name": "Jean Henry  Dunant",
+      "Prize Category": "Peace",
+      "Year Won": 1901,
+      "Nominations Before Win": 10,
+      "Total Nominations": 10,
+      "First Nominated": 1901,
+      "Years Nominated": 0,
+      "ID": "2594"
+    },
+    {
+      "Name": "Ernesto Teodoro  Moneta",
+      "Prize Category": "Peace",
+      "Year Won": 1907,
+      "Nominations Before Win": 70,
+      "Total Nominations": 70,
+      "First Nominated": 1902,
+      "Years Nominated": 5,
+      "ID": "6368"
+    },
+    {
+      "Name": "Charles Albert  Gobat",
+      "Prize Category": "Peace",
+      "Year Won": 1902,
+      "Nominations Before Win": 7,
+      "Total Nominations": 7,
+      "First Nominated": 1901,
+      "Years Nominated": 1,
+      "ID": "3493"
+    },
+    {
+      "Name": "Henri Marie  La Fontaine",
+      "Prize Category": "Peace",
+      "Year Won": 1913,
+      "Nominations Before Win": 23,
+      "Total Nominations": 23,
+      "First Nominated": 1910,
+      "Years Nominated": 3,
+      "ID": "5125"
+    },
+    {
+      "Name": "The International Committee of the Red Cross",
+      "Prize Category": "Peace",
+      "Year Won": 1917,
+      "Nominations Before Win": 3,
+      "Total Nominations": 20,
+      "First Nominated": 1901,
+      "Years Nominated": 16,
+      "ID": "9141"
+    },
+    {
+      "Name": "Klas Pontus  Arnoldson",
+      "Prize Category": "Peace",
+      "Year Won": 1908,
+      "Nominations Before Win": 25,
+      "Total Nominations": 25,
+      "First Nominated": 1902,
+      "Years Nominated": 6,
+      "ID": "500"
+    },
+    {
+      "Name": "Karl Hjalmar  Branting",
+      "Prize Category": "Peace",
+      "Year Won": 1921,
+      "Nominations Before Win": 7,
+      "Total Nominations": 7,
+      "First Nominated": 1906,
+      "Years Nominated": 15,
+      "ID": "1292"
+    },
+    {
+      "Name": "Auguste-Marie-Fran\u00e7ois  Beernaert",
+      "Prize Category": "Peace",
+      "Year Won": 1909,
+      "Nominations Before Win": 1,
+      "Total Nominations": 1,
+      "First Nominated": 1909,
+      "Years Nominated": 0,
+      "ID": "812"
+    },
+    {
+      "Name": "Paul Henri Benjamin Balluet  d`Estournelles de Constant (Baron de Constant de R\u00e9becque)",
+      "Prize Category": "Peace",
+      "Year Won": 1909,
+      "Nominations Before Win": 26,
+      "Total Nominations": 26,
+      "First Nominated": 1904,
+      "Years Nominated": 5,
+      "ID": "2086"
+    },
+    {
+      "Name": "L\u00e9on Victor Auguste  Bourgeois",
+      "Prize Category": "Peace",
+      "Year Won": 1920,
+      "Nominations Before Win": 26,
+      "Total Nominations": 26,
+      "First Nominated": 1908,
+      "Years Nominated": 12,
+      "ID": "1233"
+    },
+    {
+      "Name": "Louis  Renault",
+      "Prize Category": "Peace",
+      "Year Won": 1907,
+      "Nominations Before Win": 15,
+      "Total Nominations": 15,
+      "First Nominated": 1904,
+      "Years Nominated": 3,
+      "ID": "7653"
+    },
+    {
+      "Name": "Theodore  Roosevelt",
+      "Prize Category": "Peace",
+      "Year Won": 1906,
+      "Nominations Before Win": 7,
+      "Total Nominations": 7,
+      "First Nominated": 1906,
+      "Years Nominated": 0,
+      "ID": "7858"
+    },
+    {
+      "Name": "Tobias Michael Carel  Asser",
+      "Prize Category": "Peace",
+      "Year Won": 1911,
+      "Nominations Before Win": 2,
+      "Total Nominations": 2,
+      "First Nominated": 1911,
+      "Years Nominated": 0,
+      "ID": "539"
+    },
+    {
+      "Name": "Alfred Hermann  Fried",
+      "Prize Category": "Peace",
+      "Year Won": 1911,
+      "Nominations Before Win": 30,
+      "Total Nominations": 30,
+      "First Nominated": 1909,
+      "Years Nominated": 2,
+      "ID": "3227"
+    },
+    {
+      "Name": "Ludwig  Quidde",
+      "Prize Category": "Peace",
+      "Year Won": 1927,
+      "Nominations Before Win": 37,
+      "Total Nominations": 37,
+      "First Nominated": 1924,
+      "Years Nominated": 3,
+      "ID": "7501"
+    },
+    {
+      "Name": "Elihu  Root",
+      "Prize Category": "Peace",
+      "Year Won": 1912,
+      "Nominations Before Win": 1,
+      "Total Nominations": 2,
+      "First Nominated": 1909,
+      "Years Nominated": 3,
+      "ID": "7860"
+    },
+    {
+      "Name": "John Raleigh  Mott",
+      "Prize Category": "Peace",
+      "Year Won": 1946,
+      "Nominations Before Win": 14,
+      "Total Nominations": 14,
+      "First Nominated": 1911,
+      "Years Nominated": 35,
+      "ID": "6466"
+    },
+    {
+      "Name": "Ralph Norman  Angell Lane",
+      "Prize Category": "Peace",
+      "Year Won": 1933,
+      "Nominations Before Win": 18,
+      "Total Nominations": 20,
+      "First Nominated": 1912,
+      "Years Nominated": 21,
+      "ID": "449"
+    },
+    {
+      "Name": "Christian Lous  Lange",
+      "Prize Category": "Peace",
+      "Year Won": 1921,
+      "Nominations Before Win": 7,
+      "Total Nominations": 7,
+      "First Nominated": 1914,
+      "Years Nominated": 7,
+      "ID": "5214"
+    },
+    {
+      "Name": "Jane  Addams",
+      "Prize Category": "Peace",
+      "Year Won": 1931,
+      "Nominations Before Win": 91,
+      "Total Nominations": 91,
+      "First Nominated": 1916,
+      "Years Nominated": 15,
+      "ID": "311"
+    },
+    {
+      "Name": "Thomas Woodrow  Wilson",
+      "Prize Category": "Peace",
+      "Year Won": 1919,
+      "Nominations Before Win": 12,
+      "Total Nominations": 22,
+      "First Nominated": 1918,
+      "Years Nominated": 1,
+      "ID": "10230"
+    },
+    {
+      "Name": "Fridtjof  Nansen",
+      "Prize Category": "Peace",
+      "Year Won": 1922,
+      "Nominations Before Win": 2,
+      "Total Nominations": 3,
+      "First Nominated": 1922,
+      "Years Nominated": 0,
+      "ID": "6599"
+    },
+    {
+      "Name": "Edgar Algernon Robert Gascoyne  Viscount Cecil of Chelwood",
+      "Prize Category": "Peace",
+      "Year Won": 1937,
+      "Nominations Before Win": 17,
+      "Total Nominations": 17,
+      "First Nominated": 1923,
+      "Years Nominated": 14,
+      "ID": "9672"
+    },
+    {
+      "Name": "Society of Friends (Quakers)",
+      "Prize Category": "Peace",
+      "Year Won": 1947,
+      "Nominations Before Win": 7,
+      "Total Nominations": 7,
+      "First Nominated": 1923,
+      "Years Nominated": 24,
+      "ID": "8644"
+    },
+    {
+      "Name": "Arthur  Henderson",
+      "Prize Category": "Peace",
+      "Year Won": 1934,
+      "Nominations Before Win": 4,
+      "Total Nominations": 4,
+      "First Nominated": 1931,
+      "Years Nominated": 3,
+      "ID": "4043"
+    },
+    {
+      "Name": "Ferdinand Edouard  Buisson",
+      "Prize Category": "Peace",
+      "Year Won": 1927,
+      "Nominations Before Win": 9,
+      "Total Nominations": 9,
+      "First Nominated": 1925,
+      "Years Nominated": 2,
+      "ID": "1437"
+    },
+    {
+      "Name": "Aristide Pierre Henri  Briand",
+      "Prize Category": "Peace",
+      "Year Won": 1926,
+      "Nominations Before Win": 12,
+      "Total Nominations": 14,
+      "First Nominated": 1926,
+      "Years Nominated": 0,
+      "ID": "1330"
+    },
+    {
+      "Name": "Joseph Austen  Chamberlain",
+      "Prize Category": "Peace",
+      "Year Won": 1925,
+      "Nominations Before Win": 0,
+      "Total Nominations": 10,
+      "First Nominated": 1926,
+      "Years Nominated": -1,
+      "ID": "1716"
+    },
+    {
+      "Name": "Gustav  Stresemann",
+      "Prize Category": "Peace",
+      "Year Won": 1926,
+      "Nominations Before Win": 10,
+      "Total Nominations": 10,
+      "First Nominated": 1926,
+      "Years Nominated": 0,
+      "ID": "8841"
+    },
+    {
+      "Name": "Charles Gates  Dawes",
+      "Prize Category": "Peace",
+      "Year Won": 1925,
+      "Nominations Before Win": 0,
+      "Total Nominations": 2,
+      "First Nominated": 1926,
+      "Years Nominated": -1,
+      "ID": "2172"
+    },
+    {
+      "Name": "Lars Olof Jonathan (Nathan)  S\u00f6derblom",
+      "Prize Category": "Peace",
+      "Year Won": 1930,
+      "Nominations Before Win": 19,
+      "Total Nominations": 19,
+      "First Nominated": 1926,
+      "Years Nominated": 4,
+      "ID": "8967"
+    },
+    {
+      "Name": "Frank Billings  Kellogg",
+      "Prize Category": "Peace",
+      "Year Won": 1929,
+      "Nominations Before Win": 3,
+      "Total Nominations": 13,
+      "First Nominated": 1929,
+      "Years Nominated": 0,
+      "ID": "4776"
+    },
+    {
+      "Name": "Nicholas Murray  Butler",
+      "Prize Category": "Peace",
+      "Year Won": 1931,
+      "Nominations Before Win": 11,
+      "Total Nominations": 11,
+      "First Nominated": 1930,
+      "Years Nominated": 1,
+      "ID": "1493"
+    },
+    {
+      "Name": "Albert  Schweitzer",
+      "Prize Category": "Peace",
+      "Year Won": 1952,
+      "Nominations Before Win": 30,
+      "Total Nominations": 31,
+      "First Nominated": 1930,
+      "Years Nominated": 22,
+      "ID": "8288"
+    },
+    {
+      "Name": "Philip  Noel-Baker",
+      "Prize Category": "Peace",
+      "Year Won": 1959,
+      "Nominations Before Win": 8,
+      "Total Nominations": 8,
+      "First Nominated": 1952,
+      "Years Nominated": 7,
+      "ID": "6735"
+    },
+    {
+      "Name": "Carl  von Ossietzky",
+      "Prize Category": "Peace",
+      "Year Won": 1935,
+      "Nominations Before Win": 7,
+      "Total Nominations": 93,
+      "First Nominated": 1935,
+      "Years Nominated": 0,
+      "ID": "9836"
+    },
+    {
+      "Name": "Carlos Saavedra  Lamas",
+      "Prize Category": "Peace",
+      "Year Won": 1936,
+      "Nominations Before Win": 11,
+      "Total Nominations": 11,
+      "First Nominated": 1935,
+      "Years Nominated": 1,
+      "ID": "5174"
+    },
+    {
+      "Name": "Cordell  Hull",
+      "Prize Category": "Peace",
+      "Year Won": 1945,
+      "Nominations Before Win": 31,
+      "Total Nominations": 31,
+      "First Nominated": 1936,
+      "Years Nominated": 9,
+      "ID": "4368"
+    },
+    {
+      "Name": "The Nansen International Office for Refugees",
+      "Prize Category": "Peace",
+      "Year Won": 1938,
+      "Nominations Before Win": 11,
+      "Total Nominations": 11,
+      "First Nominated": 1936,
+      "Years Nominated": 2,
+      "ID": "9159"
+    },
+    {
+      "Name": "American Friends Service Committee",
+      "Prize Category": "Peace",
+      "Year Won": 1947,
+      "Nominations Before Win": 6,
+      "Total Nominations": 6,
+      "First Nominated": 1937,
+      "Years Nominated": 10,
+      "ID": "407"
+    },
+    {
+      "Name": "Friends' Service Council",
+      "Prize Category": "Peace",
+      "Year Won": 1947,
+      "Nominations Before Win": 6,
+      "Total Nominations": 6,
+      "First Nominated": 1937,
+      "Years Nominated": 10,
+      "ID": "3230"
+    },
+    {
+      "Name": "L\u00e9on  Jouhaux",
+      "Prize Category": "Peace",
+      "Year Won": 1951,
+      "Nominations Before Win": 9,
+      "Total Nominations": 9,
+      "First Nominated": 1938,
+      "Years Nominated": 13,
+      "ID": "4648"
+    },
+    {
+      "Name": "Dag Hjalmar Agne Carl  Hammarskj\u00f6ld",
+      "Prize Category": "Peace",
+      "Year Won": 1961,
+      "Nominations Before Win": 11,
+      "Total Nominations": 11,
+      "First Nominated": 1957,
+      "Years Nominated": 4,
+      "ID": "3843"
+    },
+    {
+      "Name": "Emily Greene  Balch",
+      "Prize Category": "Peace",
+      "Year Won": 1946,
+      "Nominations Before Win": 13,
+      "Total Nominations": 13,
+      "First Nominated": 1946,
+      "Years Nominated": 0,
+      "ID": "651"
+    },
+    {
+      "Name": "John  Boyd Orr of Brechin",
+      "Prize Category": "Peace",
+      "Year Won": 1949,
+      "Nominations Before Win": 4,
+      "Total Nominations": 4,
+      "First Nominated": 1947,
+      "Years Nominated": 2,
+      "ID": "1260"
+    },
+    {
+      "Name": "Ren\u00e9  Cassin",
+      "Prize Category": "Peace",
+      "Year Won": 1968,
+      "Nominations Before Win": 3,
+      "Total Nominations": 3,
+      "First Nominated": 1949,
+      "Years Nominated": 19,
+      "ID": "1649"
+    },
+    {
+      "Name": "International Labour Organisation (ILO)",
+      "Prize Category": "Peace",
+      "Year Won": 1969,
+      "Nominations Before Win": 1,
+      "Total Nominations": 1,
+      "First Nominated": 1949,
+      "Years Nominated": 20,
+      "ID": "4472"
+    },
+    {
+      "Name": "Ralph Johnson  Bunche",
+      "Prize Category": "Peace",
+      "Year Won": 1950,
+      "Nominations Before Win": 1,
+      "Total Nominations": 1,
+      "First Nominated": 1950,
+      "Years Nominated": 0,
+      "ID": "1446"
+    },
+    {
+      "Name": "George Catlett  Marshall",
+      "Prize Category": "Peace",
+      "Year Won": 1953,
+      "Nominations Before Win": 2,
+      "Total Nominations": 2,
+      "First Nominated": 1950,
+      "Years Nominated": 3,
+      "ID": "5937"
+    },
+    {
+      "Name": "United Nations International Children's Emergency Fund (UNICEF)",
+      "Prize Category": "Peace",
+      "Year Won": 1965,
+      "Nominations Before Win": 1,
+      "Total Nominations": 1,
+      "First Nominated": 1950,
+      "Years Nominated": 15,
+      "ID": "9453"
+    },
+    {
+      "Name": "Lester B Pearson",
+      "Prize Category": "Peace",
+      "Year Won": 1957,
+      "Nominations Before Win": 2,
+      "Total Nominations": 2,
+      "First Nominated": 1952,
+      "Years Nominated": 5,
+      "ID": "7071"
+    },
+    {
+      "Name": "Office of the United Nations High Commissioner for Refugees",
+      "Prize Category": "Peace",
+      "Year Won": 1954,
+      "Nominations Before Win": 0,
+      "Total Nominations": 2,
+      "First Nominated": 1955,
+      "Years Nominated": -1,
+      "ID": "6829"
+    },
+    {
+      "Name": "Albert J Luthuli",
+      "Prize Category": "Peace",
+      "Year Won": 1960,
+      "Nominations Before Win": 0,
+      "Total Nominations": 17,
+      "First Nominated": 1961,
+      "Years Nominated": -1,
+      "ID": "11649"
+    },
+    {
+      "Name": "The Red Cross Association",
+      "Prize Category": "Peace",
+      "Year Won": 1963,
+      "Nominations Before Win": 6,
+      "Total Nominations": 6,
+      "First Nominated": 1963,
+      "Years Nominated": 0,
+      "ID": "13001"
+    },
+    {
+      "Name": "Martin Luther  King",
+      "Prize Category": "Peace",
+      "Year Won": 1964,
+      "Nominations Before Win": 2,
+      "Total Nominations": 2,
+      "First Nominated": 1964,
+      "Years Nominated": 0,
+      "ID": "13430"
+    },
+    {
+      "Name": "Eisako  Sato",
+      "Prize Category": "Peace",
+      "Year Won": 1974,
+      "Nominations Before Win": 1,
+      "Total Nominations": 1,
+      "First Nominated": 1974,
+      "Years Nominated": 0,
+      "ID": "14030"
+    },
+    {
+      "Name": "Norman Ernest  Borlaug",
+      "Prize Category": "Peace",
+      "Year Won": 1970,
+      "Nominations Before Win": 5,
+      "Total Nominations": 5,
+      "First Nominated": 1968,
+      "Years Nominated": 2,
+      "ID": "14818"
+    },
+    {
+      "Name": "Willy  Brandt",
+      "Prize Category": "Peace",
+      "Year Won": 1971,
+      "Nominations Before Win": 3,
+      "Total Nominations": 3,
+      "First Nominated": 1971,
+      "Years Nominated": 0,
+      "ID": "15956"
+    },
+    {
+      "Name": "Se\u00e1n  MacBride",
+      "Prize Category": "Peace",
+      "Year Won": 1974,
+      "Nominations Before Win": 11,
+      "Total Nominations": 11,
+      "First Nominated": 1972,
+      "Years Nominated": 2,
+      "ID": "16943"
+    },
+    {
+      "Name": "Henry Alfred  Kissinger",
+      "Prize Category": "Peace",
+      "Year Won": 1973,
+      "Nominations Before Win": 2,
+      "Total Nominations": 2,
+      "First Nominated": 1973,
+      "Years Nominated": 0,
+      "ID": "17072"
+    },
+    {
+      "Name": "Le Duc  Tho",
+      "Prize Category": "Peace",
+      "Year Won": 1973,
+      "Nominations Before Win": 1,
+      "Total Nominations": 1,
+      "First Nominated": 1973,
+      "Years Nominated": 0,
+      "ID": "17136"
+    }
+  ],
+  "non_winners_physics": [
+    {
+      "ID": "sommerfeld",
+      "Name": "Arnold Sommerfeld",
+      "Total Nominations": 84,
+      "Nominations by Category": {
+        "Physics": 84
+      }
+    },
+    {
+      "ID": "poincare",
+      "Name": "Henri Poincar\u00e9",
+      "Total Nominations": 51,
+      "Nominations by Category": {
+        "Physics": 51
+      }
+    },
+    {
+      "ID": "rossi",
+      "Name": "Bruno Rossi",
+      "Total Nominations": 47,
+      "Nominations by Category": {
+        "Physics": 47
+      }
+    },
+    {
+      "ID": "zavoisky",
+      "Name": "Yevgeny Zavoisky",
+      "Total Nominations": 41,
+      "Nominations by Category": {
+        "Physics": 41
+      }
+    },
+    {
+      "ID": "wood",
+      "Name": "Robert W. Wood",
+      "Total Nominations": 39,
+      "Nominations by Category": {
+        "Physics": 39
+      }
+    },
+    {
+      "ID": "gorter",
+      "Name": "Cornelis Gorter",
+      "Total Nominations": 36,
+      "Nominations by Category": {
+        "Physics": 36
+      }
+    },
+    {
+      "ID": "meitner",
+      "Name": "Lise Meitner",
+      "Total Nominations": 49,
+      "Nominations by Category": {
+        "Physics": 30,
+        "Chemistry": 19
+      }
+    },
+    {
+      "ID": "gerlach",
+      "Name": "Walter Gerlach",
+      "Total Nominations": 30,
+      "Nominations by Category": {
+        "Physics": 30
+      }
+    }
+  ],
+  "non_winners_chemistry": [
+    {
+      "ID": "4461",
+      "Name": "Christopher Kelk  Ingold",
+      "Total Nominations": 117,
+      "Nominations by Category": {
+        "Chemistry": 117
+      }
+    },
+    {
+      "ID": "13013",
+      "Name": "Neil  Bartlett",
+      "Total Nominations": 71,
+      "Nominations by Category": {
+        "Chemistry": 71
+      }
+    },
+    {
+      "ID": "7663",
+      "Name": "Walter  Reppe",
+      "Total Nominations": 64,
+      "Nominations by Category": {
+        "Chemistry": 64
+      }
+    },
+    {
+      "ID": "9458",
+      "Name": "Georges  Urbain",
+      "Total Nominations": 56,
+      "Nominations by Category": {
+        "Chemistry": 56
+      }
+    },
+    {
+      "ID": "2875",
+      "Name": "Henry  Eyring",
+      "Total Nominations": 53,
+      "Nominations by Category": {
+        "Chemistry": 53
+      }
+    },
+    {
+      "ID": "1853",
+      "Name": "Klaus  Clusius",
+      "Total Nominations": 52,
+      "Nominations by Category": {
+        "Physics": 13,
+        "Chemistry": 39
+      }
+    },
+    {
+      "ID": "282",
+      "Name": "Emil  Abderhalden",
+      "Total Nominations": 51,
+      "Nominations by Category": {
+        "Chemistry": 2,
+        "Physiology or Medicine": 49
+      }
+    },
+    {
+      "ID": "5441",
+      "Name": "Gilbert N Lewis",
+      "Total Nominations": 41,
+      "Nominations by Category": {
+        "Chemistry": 41
+      }
+    }
+  ],
+  "non_winners_medicine": [
+    {
+      "ID": "7545",
+      "Name": "Gaston  Ramon",
+      "Total Nominations": 155,
+      "Nominations by Category": {
+        "Physiology or Medicine": 155
+      }
+    },
+    {
+      "ID": "7930",
+      "Name": "Emile P Roux",
+      "Total Nominations": 115,
+      "Nominations by Category": {
+        "Physiology or Medicine": 115
+      }
+    },
+    {
+      "ID": "5400",
+      "Name": "Ren\u00e9  Leriche",
+      "Total Nominations": 79,
+      "Nominations by Category": {
+        "Physiology or Medicine": 79
+      }
+    },
+    {
+      "ID": "5571",
+      "Name": "Jacques  Loeb",
+      "Total Nominations": 78,
+      "Nominations by Category": {
+        "Physiology or Medicine": 78
+      }
+    },
+    {
+      "ID": "1548",
+      "Name": "Albert  Calmette",
+      "Total Nominations": 77,
+      "Nominations by Category": {
+        "Physiology or Medicine": 77
+      }
+    },
+    {
+      "ID": "10051",
+      "Name": "Rudolf  Weigl",
+      "Total Nominations": 75,
+      "Nominations by Category": {
+        "Physiology or Medicine": 74
+      }
+    },
+    {
+      "ID": "1653",
+      "Name": "Aldo  Castellani",
+      "Total Nominations": 61,
+      "Nominations by Category": {
+        "Physiology or Medicine": 61
+      }
+    },
+    {
+      "ID": "1217",
+      "Name": "Charles J Bouchard",
+      "Total Nominations": 57,
+      "Nominations by Category": {
+        "Physiology or Medicine": 57
+      }
+    }
+  ],
+  "non_winners_literature": [
+    {
+      "ID": "6178",
+      "Name": "Ram\u00f3n  Men\u00e9ndez Pidal",
+      "Total Nominations": 154,
+      "Nominations by Category": {
+        "Literature": 153
+      }
+    },
+    {
+      "ID": "5850",
+      "Name": "Georges Andr\u00e9  Malraux",
+      "Total Nominations": 94,
+      "Nominations by Category": {
+        "Literature": 93
+      }
+    },
+    {
+      "ID": "9629",
+      "Name": "Tarjei  Vesaas",
+      "Total Nominations": 57,
+      "Nominations by Category": {
+        "Literature": 57
+      }
+    },
+    {
+      "ID": "12580",
+      "Name": "Wystan Hugh   Auden",
+      "Total Nominations": 41,
+      "Nominations by Category": {
+        "Literature": 40
+      }
+    },
+    {
+      "ID": "12287",
+      "Name": "Jorge Luis  Borges",
+      "Total Nominations": 38,
+      "Nominations by Category": {
+        "Literature": 38
+      }
+    },
+    {
+      "ID": "2906",
+      "Name": "Johan  Falkberget",
+      "Total Nominations": 36,
+      "Nominations by Category": {
+        "Literature": 36
+      }
+    },
+    {
+      "ID": "3628",
+      "Name": "Graham  Greene",
+      "Total Nominations": 36,
+      "Nominations by Category": {
+        "Literature": 36
+      }
+    },
+    {
+      "ID": "9633",
+      "Name": "Simon  Vestdijk",
+      "Total Nominations": 31,
+      "Nominations by Category": {
+        "Literature": 31
+      }
+    }
+  ],
+  "non_winners_peace": [
+    {
+      "ID": "14778",
+      "Name": "World Esperanto Association (Universala Esperanto Asocio)",
+      "Total Nominations": 179,
+      "Nominations by Category": {
+        "Peace": 179
+      }
+    },
+    {
+      "ID": "1425",
+      "Name": "Frank  Buchman",
+      "Total Nominations": 107,
+      "Nominations by Category": {
+        "Peace": 107
+      }
+    },
+    {
+      "ID": "11560",
+      "Name": "Hermann  Gmeiner",
+      "Total Nominations": 103,
+      "Nominations by Category": {
+        "Peace": 103
+      }
+    },
+    {
+      "ID": "9138",
+      "Name": "The Inter-Parliamentary Union",
+      "Total Nominations": 85,
+      "Nominations by Category": {
+        "Peace": 85
+      }
+    },
+    {
+      "ID": "9058",
+      "Name": "The Academy of International Law (Acad\u00e9mie de Droit international de la Haye)",
+      "Total Nominations": 75,
+      "Nominations by Category": {
+        "Peace": 75
+      }
+    },
+    {
+      "ID": "15822",
+      "Name": "H\u00e9lder  C\u00e2mara",
+      "Total Nominations": 71,
+      "Nominations by Category": {
+        "Peace": 71
+      }
+    },
+    {
+      "ID": "1991",
+      "Name": "Count Richard Nicolas  Coudenhove-Kalergi",
+      "Total Nominations": 60,
+      "Nominations by Category": {
+        "Peace": 60
+      }
+    },
+    {
+      "ID": "7720",
+      "Name": "Adolf  Richter",
+      "Total Nominations": 49,
+      "Nominations by Category": {
+        "Peace": 49
+      }
+    }
+  ]
+}
