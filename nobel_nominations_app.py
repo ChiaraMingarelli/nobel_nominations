@@ -836,6 +836,79 @@ def create_non_winners_plot(non_winners: list, category_name: str):
     return fig
 
 
+def create_multi_non_winners_plot(category_data: dict, top_n: int = 3):
+    """
+    Create a comparison bar chart of top non-winners across multiple categories.
+
+    Args:
+        category_data: Dict mapping category name to list of non-winner dicts
+        top_n: Number of top non-winners to show per category
+
+    Returns:
+        matplotlib Figure object
+    """
+    if not category_data:
+        return None
+
+    # Define colors for categories
+    cat_colors = {
+        'Physics': '#5B76B5',
+        'Chemistry': '#E6A04B',
+        'Medicine': '#6BAF6B',
+        'Literature': '#9B6B9B',
+        'Peace': '#B56B6B',
+    }
+
+    # Prepare data - get top N from each category
+    all_entries = []
+    for cat_name, non_winners in category_data.items():
+        for i, nw in enumerate(non_winners[:top_n]):
+            display_name = shorten_name_for_display(nw['Name'])
+            # Add rank number if showing multiple per category
+            if top_n > 1:
+                label = f"{display_name}\n({cat_name})"
+            else:
+                label = f"{display_name}\n({cat_name})"
+            all_entries.append({
+                'name': label,
+                'full_name': nw['Name'],
+                'total': nw['Total Nominations'],
+                'category': cat_name,
+                'rank': i + 1
+            })
+
+    # Sort by total nominations descending
+    all_entries.sort(key=lambda x: x['total'], reverse=True)
+
+    names = [e['name'] for e in all_entries]
+    totals = [e['total'] for e in all_entries]
+    colors = [cat_colors.get(e['category'], '#888888') for e in all_entries]
+
+    fig, ax = plt.subplots(figsize=(14, 8))
+
+    bars = ax.bar(range(len(names)), totals, color=colors, edgecolor='black', width=0.7)
+
+    # Add total labels on top
+    for i, (bar, total) in enumerate(zip(bars, totals)):
+        ax.text(bar.get_x() + bar.get_width()/2, total + 1, str(total),
+                ha='center', va='bottom', fontsize=10, fontweight='bold')
+
+    ax.set_xticks(range(len(names)))
+    ax.set_xticklabels(names, rotation=45, ha='right', fontsize=9)
+    ax.set_ylabel("Total Nominations", fontsize=12)
+    ax.set_title("Top Non-Winners Across Categories", fontsize=14)
+    ax.set_ylim(0, max(totals) * 1.12)
+
+    # Create legend
+    from matplotlib.patches import Patch
+    legend_elements = [Patch(facecolor=cat_colors.get(cat, '#888888'), edgecolor='black', label=cat)
+                       for cat in category_data.keys()]
+    ax.legend(handles=legend_elements, loc='upper right', fontsize=10, frameon=True)
+
+    plt.tight_layout()
+    return fig
+
+
 def add_download_buttons(fig, filename_base: str, key_suffix: str = ""):
     """
     Add download buttons for a matplotlib figure (PNG and PDF).
@@ -1008,7 +1081,7 @@ def main():
         st.sidebar.subheader("Statistics Type")
         stats_type = st.sidebar.radio(
             "Select analysis",
-            ["Nominations to Win", "Compare Categories", "Top Non-Winners"],
+            ["Nominations to Win", "Compare Categories", "Top Non-Winners", "Compare Non-Winners"],
             label_visibility="collapsed"
         )
     
@@ -1575,7 +1648,7 @@ def main():
                         else:
                             st.error("No valid data found for selected categories.")
 
-        else:  # Top Non-Winners
+        elif stats_type == "Top Non-Winners":
             st.subheader("Top Nominated Non-Winners")
             st.markdown("Find the most nominated people who never won the Nobel Prize.")
 
@@ -1693,6 +1766,84 @@ def main():
                     st.dataframe(nw_df, hide_index=True, width='stretch')
                 else:
                     st.warning("No non-winners found")
+
+        else:  # Compare Non-Winners
+            st.subheader("Compare Non-Winners Across Categories")
+            st.markdown("Compare the most nominated non-winners across different Nobel Prize categories.")
+
+            # Category selection with multiselect
+            available_nw_categories = []
+            for cat in ['physics', 'chemistry', 'medicine', 'literature', 'peace']:
+                nw_key = f"non_winners_{cat}"
+                if nw_key in precomputed and precomputed[nw_key]:
+                    available_nw_categories.append(cat)
+
+            if not available_nw_categories:
+                st.warning("No precomputed non-winners data available. Please compute non-winners for individual categories first.")
+            else:
+                selected_nw_cats = st.multiselect(
+                    "Select categories to compare",
+                    options=available_nw_categories,
+                    default=available_nw_categories,
+                    format_func=lambda x: x.title(),
+                    key="compare_nw_categories"
+                )
+
+                top_n_per_cat = st.slider(
+                    "Number of non-winners per category",
+                    min_value=1,
+                    max_value=5,
+                    value=3,
+                    key="nw_compare_top_n"
+                )
+
+                if st.button("Compare Non-Winners", type="primary", key="compare_nw_btn"):
+                    if len(selected_nw_cats) < 2:
+                        st.warning("Please select at least 2 categories to compare.")
+                    else:
+                        # Gather data from precomputed
+                        category_data = {}
+                        cat_name_map = {
+                            'physics': 'Physics',
+                            'chemistry': 'Chemistry',
+                            'medicine': 'Medicine',
+                            'literature': 'Literature',
+                            'peace': 'Peace'
+                        }
+
+                        for cat in selected_nw_cats:
+                            nw_key = f"non_winners_{cat}"
+                            if nw_key in precomputed:
+                                category_data[cat_name_map.get(cat, cat.title())] = precomputed[nw_key]
+
+                        if category_data:
+                            fig = create_multi_non_winners_plot(category_data, top_n=top_n_per_cat)
+                            if fig:
+                                st.pyplot(fig)
+                                add_download_buttons(fig, "non_winners_comparison", "compare")
+                                plt.close(fig)
+
+                                # Show combined table
+                                st.subheader("Non-Winners Data")
+                                all_nw_data = []
+                                for cat_name, non_winners in category_data.items():
+                                    for i, nw in enumerate(non_winners[:top_n_per_cat]):
+                                        all_nw_data.append({
+                                            'Rank': i + 1,
+                                            'Category': cat_name,
+                                            'Name': nw['Name'],
+                                            'Total Nominations': nw['Total Nominations'],
+                                            'Breakdown': ', '.join([f"{k}: {v}" for k, v in nw.get('Nominations by Category', {}).items()])
+                                        })
+
+                                # Sort by total nominations
+                                all_nw_data.sort(key=lambda x: x['Total Nominations'], reverse=True)
+                                nw_comp_df = pd.DataFrame(all_nw_data)
+                                st.dataframe(nw_comp_df, hide_index=True, width='stretch')
+                            else:
+                                st.error("Could not generate comparison plot.")
+                        else:
+                            st.error("No data available for selected categories.")
 
     # Footer
     st.markdown("---")
