@@ -949,6 +949,201 @@ def add_download_buttons(fig, filename_base: str, key_suffix: str = ""):
         )
 
 
+def get_nn_nominations(category: str, year_from: int, year_to: int, progress_callback=None) -> dict:
+    """
+    Search for nominations made by anonymous nominators (N.N.).
+
+    Args:
+        category: Category code (phy, che, med, lit, pea) or empty for all
+        year_from: Start year
+        year_to: End year
+        progress_callback: Optional callback function for progress updates
+
+    Returns:
+        dict with 'by_year', 'by_category', 'top_nominees', 'total_count'
+    """
+    nn_data = {
+        'by_year': {},
+        'by_category': {},
+        'nominees': {},  # nominee_id -> {name, count, categories}
+        'total_count': 0
+    }
+
+    # Search for N.N. as nominator
+    search_url = f"{BASE_URL}list.php"
+
+    years = list(range(year_from, year_to + 1))
+    total_years = len(years)
+
+    for i, year in enumerate(years):
+        if progress_callback:
+            progress_callback(int((i / total_years) * 100))
+
+        params = {
+            'name': 'N.N.',
+            'year': str(year),
+            'prize': CATEGORIES.get(category, '') if category else '',
+        }
+
+        try:
+            response = requests.get(search_url, params=params, headers=HEADERS, timeout=30)
+            if response.status_code == 200:
+                soup = BeautifulSoup(response.text, 'html.parser')
+
+                # Find nomination entries
+                results_table = soup.find('table', class_='table-nobel-results')
+                if results_table:
+                    rows = results_table.find_all('tr')[1:]  # Skip header
+
+                    for row in rows:
+                        cols = row.find_all('td')
+                        if len(cols) >= 4:
+                            # Check if this is N.N. as nominator (not nominee)
+                            nominator_col = cols[2]  # Nominator column
+                            nominator_text = nominator_col.get_text(strip=True)
+
+                            if 'N.N.' in nominator_text or nominator_text == 'N.N.':
+                                # Get nominee info
+                                nominee_col = cols[1]
+                                nominee_link = nominee_col.find('a')
+                                if nominee_link:
+                                    nominee_name = nominee_link.get_text(strip=True)
+                                    nominee_href = nominee_link.get('href', '')
+                                    nominee_id = nominee_href.split('id=')[-1] if 'id=' in nominee_href else nominee_name
+
+                                    # Get category
+                                    cat_col = cols[0]
+                                    cat_text = cat_col.get_text(strip=True)
+
+                                    # Update stats
+                                    nn_data['total_count'] += 1
+
+                                    # By year
+                                    if year not in nn_data['by_year']:
+                                        nn_data['by_year'][year] = 0
+                                    nn_data['by_year'][year] += 1
+
+                                    # By category
+                                    if cat_text not in nn_data['by_category']:
+                                        nn_data['by_category'][cat_text] = 0
+                                    nn_data['by_category'][cat_text] += 1
+
+                                    # By nominee
+                                    if nominee_id not in nn_data['nominees']:
+                                        nn_data['nominees'][nominee_id] = {
+                                            'name': nominee_name,
+                                            'count': 0,
+                                            'categories': {}
+                                        }
+                                    nn_data['nominees'][nominee_id]['count'] += 1
+                                    if cat_text not in nn_data['nominees'][nominee_id]['categories']:
+                                        nn_data['nominees'][nominee_id]['categories'][cat_text] = 0
+                                    nn_data['nominees'][nominee_id]['categories'][cat_text] += 1
+
+            time.sleep(0.3)  # Rate limiting
+        except Exception as e:
+            continue
+
+    if progress_callback:
+        progress_callback(100)
+
+    # Sort top nominees
+    top_nominees = sorted(
+        nn_data['nominees'].values(),
+        key=lambda x: x['count'],
+        reverse=True
+    )
+    nn_data['top_nominees'] = top_nominees[:20]
+
+    return nn_data
+
+
+def create_nn_year_plot(nn_data: dict):
+    """Create a plot of N.N. nominations by year."""
+    if not nn_data['by_year']:
+        return None
+
+    years = sorted(nn_data['by_year'].keys())
+    counts = [nn_data['by_year'][y] for y in years]
+
+    fig, ax = plt.subplots(figsize=(12, 5))
+    ax.bar(years, counts, color='#666666', edgecolor='black', alpha=0.7)
+    ax.set_xlabel("Year", fontsize=12)
+    ax.set_ylabel("Number of N.N. Nominations", fontsize=12)
+    ax.set_title("Anonymous (N.N.) Nominations by Year", fontsize=14)
+
+    # Add trend line
+    if len(years) > 2:
+        z = np.polyfit(years, counts, 1)
+        p = np.poly1d(z)
+        ax.plot(years, p(years), "r--", alpha=0.8, label=f"Trend", linewidth=2)
+        ax.legend()
+
+    plt.tight_layout()
+    return fig
+
+
+def create_nn_category_plot(nn_data: dict):
+    """Create a plot of N.N. nominations by category."""
+    if not nn_data['by_category']:
+        return None
+
+    categories = list(nn_data['by_category'].keys())
+    counts = [nn_data['by_category'][c] for c in categories]
+
+    # Define colors
+    cat_colors = {
+        'Physics': '#5B76B5',
+        'Chemistry': '#E6A04B',
+        'Physiology or Medicine': '#6BAF6B',
+        'Literature': '#9B6B9B',
+        'Peace': '#B56B6B',
+    }
+    colors = [cat_colors.get(c, '#888888') for c in categories]
+
+    fig, ax = plt.subplots(figsize=(10, 6))
+    bars = ax.bar(categories, counts, color=colors, edgecolor='black')
+
+    # Add count labels
+    for bar, count in zip(bars, counts):
+        ax.text(bar.get_x() + bar.get_width()/2, bar.get_height() + 0.5,
+                str(count), ha='center', va='bottom', fontsize=11, fontweight='bold')
+
+    ax.set_ylabel("Number of N.N. Nominations", fontsize=12)
+    ax.set_title("Anonymous (N.N.) Nominations by Category", fontsize=14)
+    plt.setp(ax.get_xticklabels(), rotation=30, ha='right', fontsize=10)
+
+    plt.tight_layout()
+    return fig
+
+
+def create_nn_top_nominees_plot(nn_data: dict, top_n: int = 10):
+    """Create a plot of top nominees who received N.N. nominations."""
+    if not nn_data['top_nominees']:
+        return None
+
+    nominees = nn_data['top_nominees'][:top_n]
+    names = [shorten_name_for_display(n['name']) for n in nominees]
+    counts = [n['count'] for n in nominees]
+
+    fig, ax = plt.subplots(figsize=(12, 7))
+    bars = ax.barh(range(len(names)), counts, color='#5B76B5', edgecolor='black')
+
+    ax.set_yticks(range(len(names)))
+    ax.set_yticklabels(names, fontsize=11)
+    ax.invert_yaxis()
+    ax.set_xlabel("Number of Anonymous Nominations", fontsize=12)
+    ax.set_title("Most Nominated by Anonymous Nominators (N.N.)", fontsize=14)
+
+    # Add count labels
+    for bar, count in zip(bars, counts):
+        ax.text(bar.get_width() + 0.3, bar.get_y() + bar.get_height()/2,
+                str(count), ha='left', va='center', fontsize=10, fontweight='bold')
+
+    plt.tight_layout()
+    return fig
+
+
 def get_nominations_to_win_stats(category: str, year_from: int, year_to: int, progress_callback=None) -> list:
     """
     Get statistics on how many nominations laureates received before winning.
@@ -1081,7 +1276,7 @@ def main():
         st.sidebar.subheader("Statistics Type")
         stats_type = st.sidebar.radio(
             "Select analysis",
-            ["Nominations to Win", "Compare Categories", "Top Non-Winners", "Compare Non-Winners"],
+            ["Nominations to Win", "Compare Categories", "Top Non-Winners", "Compare Non-Winners", "Anonymous Nominators (N.N.)"],
             label_visibility="collapsed"
         )
     
@@ -1767,7 +1962,7 @@ def main():
                 else:
                     st.warning("No non-winners found")
 
-        else:  # Compare Non-Winners
+        elif stats_type == "Compare Non-Winners":
             st.subheader("Compare Non-Winners Across Categories")
             st.markdown("Compare the most nominated non-winners across different Nobel Prize categories.")
 
@@ -1844,6 +2039,149 @@ def main():
                                 st.error("Could not generate comparison plot.")
                         else:
                             st.error("No data available for selected categories.")
+
+        else:  # Anonymous Nominators (N.N.)
+            st.subheader("Anonymous Nominators (N.N.)")
+            st.markdown("""
+            Explore nominations made by anonymous nominators, marked as **N.N.** (*Nomen Nescio* - "name unknown")
+            in the Nobel Prize archive. These represent nominations where the nominator's identity was not disclosed.
+            """)
+
+            col_nn1, col_nn2 = st.columns(2)
+            with col_nn1:
+                nn_category = st.selectbox(
+                    "Category",
+                    options=['all'] + [k for k in CATEGORIES.keys() if k != 'all'],
+                    format_func=lambda x: 'All Categories' if x == 'all' else x.title(),
+                    key="nn_category"
+                )
+            with col_nn2:
+                nn_top_n = st.number_input(
+                    "Top N nominees to show",
+                    min_value=5,
+                    max_value=20,
+                    value=10,
+                    key="nn_top_n"
+                )
+
+            col_nn_year1, col_nn_year2 = st.columns(2)
+            with col_nn_year1:
+                nn_year_from = st.number_input("From Year", min_value=1901, max_value=1974, value=1901, key="nn_year_from")
+            with col_nn_year2:
+                nn_year_to = st.number_input("To Year", min_value=1901, max_value=1974, value=1974, key="nn_year_to")
+
+            # Check for precomputed N.N. data
+            nn_key = f"nn_data_{nn_category}"
+            if nn_key in precomputed:
+                st.success("Precomputed N.N. data available")
+                use_precomputed_nn = st.checkbox("Use precomputed N.N. data", value=True, key="use_precomputed_nn")
+            else:
+                use_precomputed_nn = False
+
+            col_nn_btn1, col_nn_btn2 = st.columns(2)
+            with col_nn_btn1:
+                get_nn_btn = st.button("Analyze N.N. Nominations", type="primary", key="get_nn_btn")
+            with col_nn_btn2:
+                save_nn_btn = st.button("Compute & Save N.N. Data", key="save_nn_btn")
+
+            if get_nn_btn or save_nn_btn:
+                if nn_year_from > nn_year_to:
+                    st.error("'From Year' must be less than or equal to 'To Year'")
+                else:
+                    if use_precomputed_nn and nn_key in precomputed and get_nn_btn:
+                        st.info("Using precomputed data...")
+                        nn_data = precomputed[nn_key]
+                    else:
+                        progress_bar = st.progress(0)
+                        status_text = st.empty()
+                        status_text.text("Searching for anonymous (N.N.) nominations... This may take a while.")
+
+                        def update_nn_progress(pct):
+                            progress_bar.progress(pct)
+
+                        nn_data = get_nn_nominations(
+                            nn_category if nn_category != 'all' else '',
+                            nn_year_from,
+                            nn_year_to,
+                            progress_callback=update_nn_progress
+                        )
+
+                        progress_bar.empty()
+                        status_text.empty()
+
+                        if save_nn_btn and nn_data['total_count'] > 0:
+                            precomputed[nn_key] = nn_data
+                            save_precomputed_stats(precomputed)
+                            st.success(f"Saved N.N. data for {nn_category.title() if nn_category != 'all' else 'All Categories'}")
+
+                    if nn_data and nn_data['total_count'] > 0:
+                        st.success(f"Found {nn_data['total_count']} anonymous nominations")
+
+                        # Summary metrics
+                        col1, col2, col3 = st.columns(3)
+                        with col1:
+                            st.metric("Total N.N. Nominations", nn_data['total_count'])
+                        with col2:
+                            st.metric("Categories", len(nn_data['by_category']))
+                        with col3:
+                            st.metric("Unique Nominees", len(nn_data['nominees']))
+
+                        # Tabs for different visualizations
+                        tab1, tab2, tab3 = st.tabs(["By Year", "By Category", "Top Nominees"])
+
+                        with tab1:
+                            st.subheader("N.N. Nominations Over Time")
+                            fig_year = create_nn_year_plot(nn_data)
+                            if fig_year:
+                                st.pyplot(fig_year)
+                                add_download_buttons(fig_year, "nn_by_year", "year")
+                                plt.close(fig_year)
+
+                            # Year data table
+                            if nn_data['by_year']:
+                                year_df = pd.DataFrame([
+                                    {'Year': y, 'N.N. Nominations': c}
+                                    for y, c in sorted(nn_data['by_year'].items())
+                                ])
+                                st.dataframe(year_df, hide_index=True)
+
+                        with tab2:
+                            st.subheader("N.N. Nominations by Category")
+                            fig_cat = create_nn_category_plot(nn_data)
+                            if fig_cat:
+                                st.pyplot(fig_cat)
+                                add_download_buttons(fig_cat, "nn_by_category", "cat")
+                                plt.close(fig_cat)
+
+                            # Category data table
+                            if nn_data['by_category']:
+                                cat_df = pd.DataFrame([
+                                    {'Category': c, 'N.N. Nominations': n}
+                                    for c, n in sorted(nn_data['by_category'].items(), key=lambda x: x[1], reverse=True)
+                                ])
+                                st.dataframe(cat_df, hide_index=True)
+
+                        with tab3:
+                            st.subheader(f"Top {nn_top_n} Nominees from Anonymous Nominators")
+                            fig_nominees = create_nn_top_nominees_plot(nn_data, top_n=nn_top_n)
+                            if fig_nominees:
+                                st.pyplot(fig_nominees)
+                                add_download_buttons(fig_nominees, "nn_top_nominees", "nominees")
+                                plt.close(fig_nominees)
+
+                            # Nominees table
+                            if nn_data['top_nominees']:
+                                nominees_df = pd.DataFrame([
+                                    {
+                                        'Name': n['name'],
+                                        'N.N. Nominations': n['count'],
+                                        'Categories': ', '.join([f"{k}: {v}" for k, v in n['categories'].items()])
+                                    }
+                                    for n in nn_data['top_nominees'][:nn_top_n]
+                                ])
+                                st.dataframe(nominees_df, hide_index=True, width='stretch')
+                    else:
+                        st.warning("No anonymous (N.N.) nominations found in the specified range.")
 
     # Footer
     st.markdown("---")
