@@ -1332,7 +1332,41 @@ def main():
                     )
 
                 if not results:
-                    st.warning(f"No people named '{name}' found in the archive")
+                    # Fallback: check precomputed laureates for names not in archive
+                    fallback_results = []
+                    search_name_lower = name.lower()
+                    for cat_key in ['physics', 'chemistry', 'medicine', 'literature', 'peace']:
+                        if cat_key in precomputed:
+                            for laureate in precomputed[cat_key]:
+                                if search_name_lower in laureate.get('Name', '').lower():
+                                    # Check category filter
+                                    if category == 'all' or cat_key == category:
+                                        fallback_results.append(laureate)
+
+                    if fallback_results:
+                        st.warning(f"No nomination records found in the archive for '{name}', but found in laureate data:")
+                        for laureate in fallback_results:
+                            with st.expander(f"**{laureate['Name']}** — {laureate['Prize Category']} ({laureate['Year Won']})"):
+                                col1, col2 = st.columns(2)
+                                with col1:
+                                    st.metric("Prize Category", laureate['Prize Category'])
+                                    st.metric("Year Won", laureate['Year Won'])
+                                with col2:
+                                    noms = laureate.get('Nominations Before Win')
+                                    if noms is not None:
+                                        st.metric("Nominations Before Win", noms)
+                                    else:
+                                        st.metric("Nominations Before Win", "N/A")
+                                    first_nom = laureate.get('First Nominated')
+                                    if first_nom is not None:
+                                        st.metric("First Nominated", first_nom)
+                                    else:
+                                        st.metric("First Nominated", "N/A")
+
+                                if laureate.get('Note'):
+                                    st.info(f"Note: {laureate['Note']}")
+                    else:
+                        st.warning(f"No people named '{name}' found in the archive")
                 else:
                     st.success(f"Found {len(results)} person(s) named '{name}'")
                     
