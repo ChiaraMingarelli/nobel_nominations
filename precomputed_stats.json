@@ -4037,6 +4037,15 @@
       }
     },
     {
+      "ID": "meitner",
+      "Name": "Lise Meitner",
+      "Total Nominations": 49,
+      "Nominations by Category": {
+        "Physics": 30,
+        "Chemistry": 19
+      }
+    },
+    {
       "ID": "rossi",
       "Name": "Bruno Rossi",
       "Total Nominations": 47,
@@ -4066,15 +4075,6 @@
       "Total Nominations": 36,
       "Nominations by Category": {
         "Physics": 36
-      }
-    },
-    {
-      "ID": "meitner",
-      "Name": "Lise Meitner",
-      "Total Nominations": 49,
-      "Nominations by Category": {
-        "Physics": 30,
-        "Chemistry": 19
       }
     },
     {
