@@ -1262,12 +1262,15 @@ def main():
     st.title("🏆 Nobel Prize Nomination Archive Explorer")
     
     st.markdown("""
-    Query the [Nobel Prize Nomination Archive](https://www.nobelprize.org/nomination/archive/) 
+    Query the [Nobel Prize Nomination Archive](https://www.nobelprize.org/nomination/archive/)
     to find nomination counts for any nominee or nominator.
-    
+
     **Note:** Due to the 50-year secrecy rule, the archive only contains data through **1974**.
     """)
-    
+
+    # Load precomputed stats (used for fallback search and statistics)
+    precomputed = load_precomputed_stats()
+
     # Sidebar for search options
     st.sidebar.header("Search Options")
 
@@ -1548,9 +1551,6 @@ def main():
 
     else:  # Statistics
         st.header("Statistics")
-
-        # Load precomputed stats
-        precomputed = load_precomputed_stats()
 
         if stats_type == "Nominations to Win":
             st.subheader("Nominations to Win Statistics")
