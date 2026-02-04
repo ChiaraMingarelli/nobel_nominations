@@ -1,26 +1,6 @@
 {
   "physics": [
     {
-      "Name": "Henri A Becquerel",
-      "Prize Category": "Physics",
-      "Year Won": 1903,
-      "Nominations Before Win": 10,
-      "Total Nominations": 10,
-      "First Nominated": 1901,
-      "Years Nominated": 2,
-      "ID": "802"
-    },
-    {
-      "Name": "Philipp E.A. v.  Lenard",
-      "Prize Category": "Physics",
-      "Year Won": 1905,
-      "Nominations Before Win": 13,
-      "Total Nominations": 15,
-      "First Nominated": 1901,
-      "Years Nominated": 4,
-      "ID": "5373"
-    },
-    {
       "Name": "Wilhelm C R\u00f6ntgen",
       "Prize Category": "Physics",
       "Year Won": 1901,
@@ -29,56 +9,6 @@
       "First Nominated": 1901,
       "Years Nominated": 0,
       "ID": "8006"
-    },
-    {
-      "Name": "Gabriel  Lippmann",
-      "Prize Category": "Physics",
-      "Year Won": 1908,
-      "Nominations Before Win": 23,
-      "Total Nominations": 23,
-      "First Nominated": 1901,
-      "Years Nominated": 7,
-      "ID": "5533"
-    },
-    {
-      "Name": "Guglielmo  Marconi",
-      "Prize Category": "Physics",
-      "Year Won": 1909,
-      "Nominations Before Win": 13,
-      "Total Nominations": 15,
-      "First Nominated": 1901,
-      "Years Nominated": 8,
-      "ID": "5901"
-    },
-    {
-      "Name": "Max K Planck",
-      "Prize Category": "Physics",
-      "Year Won": 1918,
-      "Nominations Before Win": 68,
-      "Total Nominations": 74,
-      "First Nominated": 1907,
-      "Years Nominated": 11,
-      "ID": "7283"
-    },
-    {
-      "Name": "Johannes D van der Waals",
-      "Prize Category": "Physics",
-      "Year Won": 1910,
-      "Nominations Before Win": 9,
-      "Total Nominations": 9,
-      "First Nominated": 1901,
-      "Years Nominated": 9,
-      "ID": "9528"
-    },
-    {
-      "Name": "Heike  Kamerlingh Onnes",
-      "Prize Category": "Physics",
-      "Year Won": 1913,
-      "Nominations Before Win": 23,
-      "Total Nominations": 23,
-      "First Nominated": 1909,
-      "Years Nominated": 4,
-      "ID": "4701"
     },
     {
       "Name": "Pieter  Zeeman",
@@ -91,14 +21,24 @@
       "ID": "10386"
     },
     {
-      "Name": "Albert A Michelson",
+      "Name": "Hendrik A Lorentz",
       "Prize Category": "Physics",
-      "Year Won": 1907,
-      "Nominations Before Win": 4,
-      "Total Nominations": 4,
-      "First Nominated": 1904,
-      "Years Nominated": 3,
-      "ID": "6266"
+      "Year Won": 1902,
+      "Nominations Before Win": 10,
+      "Total Nominations": 16,
+      "First Nominated": 1902,
+      "Years Nominated": 0,
+      "ID": "5636"
+    },
+    {
+      "Name": "Henri A Becquerel",
+      "Prize Category": "Physics",
+      "Year Won": 1903,
+      "Nominations Before Win": 10,
+      "Total Nominations": 10,
+      "First Nominated": 1901,
+      "Years Nominated": 2,
+      "ID": "802"
     },
     {
       "Name": "Pierre  Curie",
@@ -121,24 +61,14 @@
       "ID": "8852"
     },
     {
-      "Name": "Charles E Guillaume",
+      "Name": "Philipp E.A. v.  Lenard",
       "Prize Category": "Physics",
-      "Year Won": 1920,
-      "Nominations Before Win": 11,
-      "Total Nominations": 11,
-      "First Nominated": 1902,
-      "Years Nominated": 18,
-      "ID": "3710"
-    },
-    {
-      "Name": "Hendrik A Lorentz",
-      "Prize Category": "Physics",
-      "Year Won": 1902,
-      "Nominations Before Win": 10,
-      "Total Nominations": 16,
-      "First Nominated": 1902,
-      "Years Nominated": 0,
-      "ID": "5636"
+      "Year Won": 1905,
+      "Nominations Before Win": 13,
+      "Total Nominations": 15,
+      "First Nominated": 1901,
+      "Years Nominated": 4,
+      "ID": "5373"
     },
     {
       "Name": "Joseph J Thomson",
@@ -151,6 +81,36 @@
       "ID": "9247"
     },
     {
+      "Name": "Albert A Michelson",
+      "Prize Category": "Physics",
+      "Year Won": 1907,
+      "Nominations Before Win": 4,
+      "Total Nominations": 4,
+      "First Nominated": 1904,
+      "Years Nominated": 3,
+      "ID": "6266"
+    },
+    {
+      "Name": "Gabriel  Lippmann",
+      "Prize Category": "Physics",
+      "Year Won": 1908,
+      "Nominations Before Win": 23,
+      "Total Nominations": 23,
+      "First Nominated": 1901,
+      "Years Nominated": 7,
+      "ID": "5533"
+    },
+    {
+      "Name": "Guglielmo  Marconi",
+      "Prize Category": "Physics",
+      "Year Won": 1909,
+      "Nominations Before Win": 13,
+      "Total Nominations": 15,
+      "First Nominated": 1901,
+      "Years Nominated": 8,
+      "ID": "5901"
+    },
+    {
       "Name": "Ferdinand C Braun",
       "Prize Category": "Physics",
       "Year Won": 1909,
@@ -159,6 +119,16 @@
       "First Nominated": 1905,
       "Years Nominated": 4,
       "ID": "1298"
+    },
+    {
+      "Name": "Johannes D van der Waals",
+      "Prize Category": "Physics",
+      "Year Won": 1910,
+      "Nominations Before Win": 9,
+      "Total Nominations": 9,
+      "First Nominated": 1901,
+      "Years Nominated": 9,
+      "ID": "9528"
     },
     {
       "Name": "Wilhelm  Wien",
@@ -171,16 +141,6 @@
       "ID": "10170"
     },
     {
-      "Name": "Albert  Einstein",
-      "Prize Category": "Physics",
-      "Year Won": 1921,
-      "Nominations Before Win": 47,
-      "Total Nominations": 66,
-      "First Nominated": 1910,
-      "Years Nominated": 11,
-      "ID": "2728"
-    },
-    {
       "Name": "Nils G Dal\u00e9n",
       "Prize Category": "Physics",
       "Year Won": 1912,
@@ -191,34 +151,14 @@
       "ID": "2114"
     },
     {
-      "Name": "Jean B Perrin",
+      "Name": "Heike  Kamerlingh Onnes",
       "Prize Category": "Physics",
-      "Year Won": 1926,
-      "Nominations Before Win": 47,
-      "Total Nominations": 47,
-      "First Nominated": 1913,
-      "Years Nominated": 13,
-      "ID": "7136"
-    },
-    {
-      "Name": "Robert A Millikan",
-      "Prize Category": "Physics",
-      "Year Won": 1923,
-      "Nominations Before Win": 17,
-      "Total Nominations": 19,
-      "First Nominated": 1916,
-      "Years Nominated": 7,
-      "ID": "6292"
-    },
-    {
-      "Name": "William Henry  Bragg",
-      "Prize Category": "Physics",
-      "Year Won": 1915,
-      "Nominations Before Win": 6,
-      "Total Nominations": 6,
-      "First Nominated": 1914,
-      "Years Nominated": 1,
-      "ID": "1276"
+      "Year Won": 1913,
+      "Nominations Before Win": 23,
+      "Total Nominations": 23,
+      "First Nominated": 1909,
+      "Years Nominated": 4,
+      "ID": "4701"
     },
     {
       "Name": "Max  von Laue",
@@ -231,14 +171,14 @@
       "ID": "9807"
     },
     {
-      "Name": "Johannes  Stark",
+      "Name": "William Henry  Bragg",
       "Prize Category": "Physics",
-      "Year Won": 1919,
-      "Nominations Before Win": 11,
-      "Total Nominations": 11,
+      "Year Won": 1915,
+      "Nominations Before Win": 6,
+      "Total Nominations": 6,
       "First Nominated": 1914,
-      "Years Nominated": 5,
-      "ID": "8735"
+      "Years Nominated": 1,
+      "ID": "1276"
     },
     {
       "Name": "William Lawrence   Bragg",
@@ -251,14 +191,54 @@
       "ID": "11051"
     },
     {
-      "Name": "Charles T Wilson",
+      "Name": "Charles G Barkla",
       "Prize Category": "Physics",
-      "Year Won": 1927,
-      "Nominations Before Win": 10,
-      "Total Nominations": 10,
-      "First Nominated": 1915,
-      "Years Nominated": 12,
-      "ID": "10215"
+      "Year Won": 1917,
+      "Nominations Before Win": 0,
+      "Total Nominations": 1,
+      "First Nominated": 1918,
+      "Years Nominated": -1,
+      "ID": "711"
+    },
+    {
+      "Name": "Max K Planck",
+      "Prize Category": "Physics",
+      "Year Won": 1918,
+      "Nominations Before Win": 68,
+      "Total Nominations": 74,
+      "First Nominated": 1907,
+      "Years Nominated": 11,
+      "ID": "7283"
+    },
+    {
+      "Name": "Johannes  Stark",
+      "Prize Category": "Physics",
+      "Year Won": 1919,
+      "Nominations Before Win": 11,
+      "Total Nominations": 11,
+      "First Nominated": 1914,
+      "Years Nominated": 5,
+      "ID": "8735"
+    },
+    {
+      "Name": "Charles E Guillaume",
+      "Prize Category": "Physics",
+      "Year Won": 1920,
+      "Nominations Before Win": 11,
+      "Total Nominations": 11,
+      "First Nominated": 1902,
+      "Years Nominated": 18,
+      "ID": "3710"
+    },
+    {
+      "Name": "Albert  Einstein",
+      "Prize Category": "Physics",
+      "Year Won": 1921,
+      "Nominations Before Win": 47,
+      "Total Nominations": 66,
+      "First Nominated": 1910,
+      "Years Nominated": 11,
+      "ID": "2728"
     },
     {
       "Name": "Niels  Bohr",
@@ -271,34 +251,24 @@
       "ID": "1118"
     },
     {
-      "Name": "Charles G Barkla",
+      "Name": "Robert A Millikan",
       "Prize Category": "Physics",
-      "Year Won": 1917,
+      "Year Won": 1923,
+      "Nominations Before Win": 17,
+      "Total Nominations": 19,
+      "First Nominated": 1916,
+      "Years Nominated": 7,
+      "ID": "6292"
+    },
+    {
+      "Name": "Manne Karl  Siegbahn",
+      "Prize Category": "Physics",
+      "Year Won": 1924,
       "Nominations Before Win": 0,
-      "Total Nominations": 1,
-      "First Nominated": 1918,
+      "Total Nominations": 3,
+      "First Nominated": 1925,
       "Years Nominated": -1,
-      "ID": "711"
-    },
-    {
-      "Name": "Percy W Bridgman",
-      "Prize Category": "Physics",
-      "Year Won": 1946,
-      "Nominations Before Win": 42,
-      "Total Nominations": 42,
-      "First Nominated": 1919,
-      "Years Nominated": 27,
-      "ID": "1336"
-    },
-    {
-      "Name": "Max  Born",
-      "Prize Category": "Physics",
-      "Year Won": 1954,
-      "Nominations Before Win": 34,
-      "Total Nominations": 34,
-      "First Nominated": 1930,
-      "Years Nominated": 24,
-      "ID": "1186"
+      "ID": "8515"
     },
     {
       "Name": "James  Franck",
@@ -321,14 +291,34 @@
       "ID": "4110"
     },
     {
-      "Name": "Erwin  Schr\u00f6dinger",
+      "Name": "Jean B Perrin",
       "Prize Category": "Physics",
-      "Year Won": 1933,
-      "Nominations Before Win": 41,
-      "Total Nominations": 41,
-      "First Nominated": 1928,
-      "Years Nominated": 5,
-      "ID": "8240"
+      "Year Won": 1926,
+      "Nominations Before Win": 47,
+      "Total Nominations": 47,
+      "First Nominated": 1913,
+      "Years Nominated": 13,
+      "ID": "7136"
+    },
+    {
+      "Name": "Charles T Wilson",
+      "Prize Category": "Physics",
+      "Year Won": 1927,
+      "Nominations Before Win": 10,
+      "Total Nominations": 10,
+      "First Nominated": 1915,
+      "Years Nominated": 12,
+      "ID": "10215"
+    },
+    {
+      "Name": "Arthur H Compton",
+      "Prize Category": "Physics",
+      "Year Won": 1927,
+      "Nominations Before Win": 15,
+      "Total Nominations": 15,
+      "First Nominated": 1925,
+      "Years Nominated": 2,
+      "ID": "1918"
     },
     {
       "Name": "Owen W Richardson",
@@ -351,44 +341,14 @@
       "ID": "2200"
     },
     {
-      "Name": "Arthur H Compton",
+      "Name": "Chandrasekhara V Raman",
       "Prize Category": "Physics",
-      "Year Won": 1927,
-      "Nominations Before Win": 15,
-      "Total Nominations": 15,
-      "First Nominated": 1925,
-      "Years Nominated": 2,
-      "ID": "1918"
-    },
-    {
-      "Name": "Otto  Stern",
-      "Prize Category": "Physics",
-      "Year Won": 1943,
-      "Nominations Before Win": 79,
-      "Total Nominations": 82,
-      "First Nominated": 1925,
-      "Years Nominated": 18,
-      "ID": "8779"
-    },
-    {
-      "Name": "Frits  Zernike",
-      "Prize Category": "Physics",
-      "Year Won": 1953,
-      "Nominations Before Win": 13,
-      "Total Nominations": 13,
-      "First Nominated": 1944,
-      "Years Nominated": 9,
-      "ID": "10397"
-    },
-    {
-      "Name": "Manne Karl  Siegbahn",
-      "Prize Category": "Physics",
-      "Year Won": 1924,
-      "Nominations Before Win": 0,
-      "Total Nominations": 3,
-      "First Nominated": 1925,
-      "Years Nominated": -1,
-      "ID": "8515"
+      "Year Won": 1930,
+      "Nominations Before Win": 12,
+      "Total Nominations": 12,
+      "First Nominated": 1929,
+      "Years Nominated": 1,
+      "ID": "7540"
     },
     {
       "Name": "Werner Karl  Heisenberg",
@@ -401,14 +361,14 @@
       "ID": "4018"
     },
     {
-      "Name": "Clinton J Davisson",
+      "Name": "Erwin  Schr\u00f6dinger",
       "Prize Category": "Physics",
-      "Year Won": 1937,
-      "Nominations Before Win": 44,
-      "Total Nominations": 44,
-      "First Nominated": 1929,
-      "Years Nominated": 8,
-      "ID": "2170"
+      "Year Won": 1933,
+      "Nominations Before Win": 41,
+      "Total Nominations": 41,
+      "First Nominated": 1928,
+      "Years Nominated": 5,
+      "ID": "8240"
     },
     {
       "Name": "Paul Adrien Maurice  Dirac",
@@ -421,34 +381,14 @@
       "ID": "2447"
     },
     {
-      "Name": "Chandrasekhara V Raman",
+      "Name": "James  Chadwick",
       "Prize Category": "Physics",
-      "Year Won": 1930,
-      "Nominations Before Win": 12,
-      "Total Nominations": 12,
-      "First Nominated": 1929,
+      "Year Won": 1935,
+      "Nominations Before Win": 20,
+      "Total Nominations": 21,
+      "First Nominated": 1934,
       "Years Nominated": 1,
-      "ID": "7540"
-    },
-    {
-      "Name": "Enrico  Fermi",
-      "Prize Category": "Physics",
-      "Year Won": 1938,
-      "Nominations Before Win": 34,
-      "Total Nominations": 38,
-      "First Nominated": 1935,
-      "Years Nominated": 3,
-      "ID": "2955"
-    },
-    {
-      "Name": "George Paget  Thomson",
-      "Prize Category": "Physics",
-      "Year Won": 1937,
-      "Nominations Before Win": 8,
-      "Total Nominations": 8,
-      "First Nominated": 1931,
-      "Years Nominated": 6,
-      "ID": "9242"
+      "ID": "1697"
     },
     {
       "Name": "Victor F Hess",
@@ -461,16 +401,6 @@
       "ID": "4127"
     },
     {
-      "Name": "Wolfgang  Pauli",
-      "Prize Category": "Physics",
-      "Year Won": 1945,
-      "Nominations Before Win": 23,
-      "Total Nominations": 29,
-      "First Nominated": 1933,
-      "Years Nominated": 12,
-      "ID": "7042"
-    },
-    {
       "Name": "Carl D Anderson",
       "Prize Category": "Physics",
       "Year Won": 1936,
@@ -481,24 +411,84 @@
       "ID": "427"
     },
     {
-      "Name": "James  Chadwick",
+      "Name": "Clinton J Davisson",
       "Prize Category": "Physics",
-      "Year Won": 1935,
-      "Nominations Before Win": 20,
-      "Total Nominations": 21,
-      "First Nominated": 1934,
-      "Years Nominated": 1,
-      "ID": "1697"
+      "Year Won": 1937,
+      "Nominations Before Win": 44,
+      "Total Nominations": 44,
+      "First Nominated": 1929,
+      "Years Nominated": 8,
+      "ID": "2170"
     },
     {
-      "Name": "Walther  Bothe",
+      "Name": "George Paget  Thomson",
       "Prize Category": "Physics",
-      "Year Won": 1954,
+      "Year Won": 1937,
+      "Nominations Before Win": 8,
+      "Total Nominations": 8,
+      "First Nominated": 1931,
+      "Years Nominated": 6,
+      "ID": "9242"
+    },
+    {
+      "Name": "Enrico  Fermi",
+      "Prize Category": "Physics",
+      "Year Won": 1938,
+      "Nominations Before Win": 34,
+      "Total Nominations": 38,
+      "First Nominated": 1935,
+      "Years Nominated": 3,
+      "ID": "2955"
+    },
+    {
+      "Name": "Ernest O Lawrence",
+      "Prize Category": "Physics",
+      "Year Won": 1939,
       "Nominations Before Win": 15,
-      "Total Nominations": 15,
-      "First Nominated": 1934,
-      "Years Nominated": 20,
-      "ID": "1209"
+      "Total Nominations": 17,
+      "First Nominated": 1938,
+      "Years Nominated": 1,
+      "ID": "5290"
+    },
+    {
+      "Name": "Otto  Stern",
+      "Prize Category": "Physics",
+      "Year Won": 1943,
+      "Nominations Before Win": 79,
+      "Total Nominations": 82,
+      "First Nominated": 1925,
+      "Years Nominated": 18,
+      "ID": "8779"
+    },
+    {
+      "Name": "Isidor I Rabi",
+      "Prize Category": "Physics",
+      "Year Won": 1944,
+      "Nominations Before Win": 20,
+      "Total Nominations": 21,
+      "First Nominated": 1939,
+      "Years Nominated": 5,
+      "ID": "7513"
+    },
+    {
+      "Name": "Wolfgang  Pauli",
+      "Prize Category": "Physics",
+      "Year Won": 1945,
+      "Nominations Before Win": 23,
+      "Total Nominations": 29,
+      "First Nominated": 1933,
+      "Years Nominated": 12,
+      "ID": "7042"
+    },
+    {
+      "Name": "Percy W Bridgman",
+      "Prize Category": "Physics",
+      "Year Won": 1946,
+      "Nominations Before Win": 42,
+      "Total Nominations": 42,
+      "First Nominated": 1919,
+      "Years Nominated": 27,
+      "ID": "1336"
     },
     {
       "Name": "Edward V Appleton",
@@ -521,6 +511,26 @@
       "ID": "1057"
     },
     {
+      "Name": "Hideki  Yukawa",
+      "Prize Category": "Physics",
+      "Year Won": 1949,
+      "Nominations Before Win": 20,
+      "Total Nominations": 24,
+      "First Nominated": 1940,
+      "Years Nominated": 9,
+      "ID": "10359"
+    },
+    {
+      "Name": "Cecil Frank  Powell",
+      "Prize Category": "Physics",
+      "Year Won": 1950,
+      "Nominations Before Win": 22,
+      "Total Nominations": 23,
+      "First Nominated": 1949,
+      "Years Nominated": 1,
+      "ID": "7379"
+    },
+    {
       "Name": "John Douglas  Cockcroft",
       "Prize Category": "Physics",
       "Year Won": 1951,
@@ -541,66 +551,6 @@
       "ID": "9967"
     },
     {
-      "Name": "Ernest O Lawrence",
-      "Prize Category": "Physics",
-      "Year Won": 1939,
-      "Nominations Before Win": 15,
-      "Total Nominations": 17,
-      "First Nominated": 1938,
-      "Years Nominated": 1,
-      "ID": "5290"
-    },
-    {
-      "Name": "Isidor I Rabi",
-      "Prize Category": "Physics",
-      "Year Won": 1944,
-      "Nominations Before Win": 20,
-      "Total Nominations": 21,
-      "First Nominated": 1939,
-      "Years Nominated": 5,
-      "ID": "7513"
-    },
-    {
-      "Name": "Hideki  Yukawa",
-      "Prize Category": "Physics",
-      "Year Won": 1949,
-      "Nominations Before Win": 20,
-      "Total Nominations": 24,
-      "First Nominated": 1940,
-      "Years Nominated": 9,
-      "ID": "10359"
-    },
-    {
-      "Name": "Eugene P Wigner",
-      "Prize Category": "Physics",
-      "Year Won": 1963,
-      "Nominations Before Win": 24,
-      "Total Nominations": 25,
-      "First Nominated": 1953,
-      "Years Nominated": 10,
-      "ID": "10181"
-    },
-    {
-      "Name": "Hans Albrecht  Bethe",
-      "Prize Category": "Physics",
-      "Year Won": 1967,
-      "Nominations Before Win": 56,
-      "Total Nominations": 56,
-      "First Nominated": 1943,
-      "Years Nominated": 24,
-      "ID": "971"
-    },
-    {
-      "Name": "Hannes  Alfv\u00e9n",
-      "Prize Category": "Physics",
-      "Year Won": 1970,
-      "Nominations Before Win": 52,
-      "Total Nominations": 52,
-      "First Nominated": 1953,
-      "Years Nominated": 17,
-      "ID": "368"
-    },
-    {
       "Name": "Felix  Bloch",
       "Prize Category": "Physics",
       "Year Won": 1952,
@@ -609,26 +559,6 @@
       "First Nominated": 1948,
       "Years Nominated": 4,
       "ID": "1081"
-    },
-    {
-      "Name": "Alfred  Kastler",
-      "Prize Category": "Physics",
-      "Year Won": 1966,
-      "Nominations Before Win": 50,
-      "Total Nominations": 50,
-      "First Nominated": 1956,
-      "Years Nominated": 10,
-      "ID": "4727"
-    },
-    {
-      "Name": "Cecil Frank  Powell",
-      "Prize Category": "Physics",
-      "Year Won": 1950,
-      "Nominations Before Win": 22,
-      "Total Nominations": 23,
-      "First Nominated": 1949,
-      "Years Nominated": 1,
-      "ID": "7379"
     },
     {
       "Name": "Edward M Purcell",
@@ -641,6 +571,36 @@
       "ID": "7484"
     },
     {
+      "Name": "Frits  Zernike",
+      "Prize Category": "Physics",
+      "Year Won": 1953,
+      "Nominations Before Win": 13,
+      "Total Nominations": 13,
+      "First Nominated": 1944,
+      "Years Nominated": 9,
+      "ID": "10397"
+    },
+    {
+      "Name": "Max  Born",
+      "Prize Category": "Physics",
+      "Year Won": 1954,
+      "Nominations Before Win": 34,
+      "Total Nominations": 34,
+      "First Nominated": 1930,
+      "Years Nominated": 24,
+      "ID": "1186"
+    },
+    {
+      "Name": "Walther  Bothe",
+      "Prize Category": "Physics",
+      "Year Won": 1954,
+      "Nominations Before Win": 15,
+      "Total Nominations": 15,
+      "First Nominated": 1934,
+      "Years Nominated": 20,
+      "ID": "1209"
+    },
+    {
       "Name": "Willis Eugene   Lamb, Jr",
       "Prize Category": "Physics",
       "Year Won": 1955,
@@ -649,56 +609,6 @@
       "First Nominated": 1951,
       "Years Nominated": 4,
       "ID": "5176"
-    },
-    {
-      "Name": "Luis Walter  Alvarez",
-      "Prize Category": "Physics",
-      "Year Won": 1968,
-      "Nominations Before Win": 26,
-      "Total Nominations": 26,
-      "First Nominated": 1951,
-      "Years Nominated": 17,
-      "ID": "395"
-    },
-    {
-      "Name": "Julian  Schwinger",
-      "Prize Category": "Physics",
-      "Year Won": 1965,
-      "Nominations Before Win": 29,
-      "Total Nominations": 30,
-      "First Nominated": 1951,
-      "Years Nominated": 14,
-      "ID": "8294"
-    },
-    {
-      "Name": "Sin-Itiro  Tomonaga",
-      "Prize Category": "Physics",
-      "Year Won": 1965,
-      "Nominations Before Win": 15,
-      "Total Nominations": 15,
-      "First Nominated": 1951,
-      "Years Nominated": 14,
-      "ID": "9311"
-    },
-    {
-      "Name": "Pavel Alekseyevich  Cherenkov [\u010cerenkov]",
-      "Prize Category": "Physics",
-      "Year Won": 1958,
-      "Nominations Before Win": 12,
-      "Total Nominations": 12,
-      "First Nominated": 1952,
-      "Years Nominated": 6,
-      "ID": "10467"
-    },
-    {
-      "Name": "Louis  N\u00e9el",
-      "Prize Category": "Physics",
-      "Year Won": 1970,
-      "Nominations Before Win": 98,
-      "Total Nominations": 98,
-      "First Nominated": 1952,
-      "Years Nominated": 18,
-      "ID": "10474"
     },
     {
       "Name": "Polykarp  Kusch",
@@ -711,26 +621,6 @@
       "ID": "10481"
     },
     {
-      "Name": "Emilio Gino  Segr\u00e8",
-      "Prize Category": "Physics",
-      "Year Won": 1959,
-      "Nominations Before Win": 32,
-      "Total Nominations": 32,
-      "First Nominated": 1953,
-      "Years Nominated": 6,
-      "ID": "10538"
-    },
-    {
-      "Name": "Johannes Hans Daniel  Jensen",
-      "Prize Category": "Physics",
-      "Year Won": 1963,
-      "Nominations Before Win": 29,
-      "Total Nominations": 29,
-      "First Nominated": 1955,
-      "Years Nominated": 8,
-      "ID": "10539"
-    },
-    {
       "Name": "Walter Houser  Brattain",
       "Prize Category": "Physics",
       "Year Won": 1956,
@@ -741,16 +631,6 @@
       "ID": "10542"
     },
     {
-      "Name": "Lev Davidovich  Landau",
-      "Prize Category": "Physics",
-      "Year Won": 1962,
-      "Nominations Before Win": 16,
-      "Total Nominations": 21,
-      "First Nominated": 1954,
-      "Years Nominated": 8,
-      "ID": "10785"
-    },
-    {
       "Name": "William  Shockley",
       "Prize Category": "Physics",
       "Year Won": 1956,
@@ -759,46 +639,6 @@
       "First Nominated": 1954,
       "Years Nominated": 2,
       "ID": "10704"
-    },
-    {
-      "Name": "Maria  Goeppert-Mayer",
-      "Prize Category": "Physics",
-      "Year Won": 1963,
-      "Nominations Before Win": 27,
-      "Total Nominations": 27,
-      "First Nominated": 1955,
-      "Years Nominated": 8,
-      "ID": "10622"
-    },
-    {
-      "Name": "Richard Phillips  Feynman",
-      "Prize Category": "Physics",
-      "Year Won": 1965,
-      "Nominations Before Win": 48,
-      "Total Nominations": 49,
-      "First Nominated": 1956,
-      "Years Nominated": 9,
-      "ID": "10683"
-    },
-    {
-      "Name": "Charles Hard  Townes",
-      "Prize Category": "Physics",
-      "Year Won": 1964,
-      "Nominations Before Win": 72,
-      "Total Nominations": 74,
-      "First Nominated": 1958,
-      "Years Nominated": 6,
-      "ID": "10706"
-    },
-    {
-      "Name": "Owen  Chamberlain",
-      "Prize Category": "Physics",
-      "Year Won": 1959,
-      "Nominations Before Win": 7,
-      "Total Nominations": 7,
-      "First Nominated": 1957,
-      "Years Nominated": 2,
-      "ID": "10870"
     },
     {
       "Name": "Chen Ning   Yang",
@@ -821,6 +661,16 @@
       "ID": "10775"
     },
     {
+      "Name": "Pavel Alekseyevich  Cherenkov [\u010cerenkov]",
+      "Prize Category": "Physics",
+      "Year Won": 1958,
+      "Nominations Before Win": 12,
+      "Total Nominations": 12,
+      "First Nominated": 1952,
+      "Years Nominated": 6,
+      "ID": "10467"
+    },
+    {
       "Name": "Igor Yevgenyevich   Tamm",
       "Prize Category": "Physics",
       "Year Won": 1958,
@@ -841,14 +691,24 @@
       "ID": "10956"
     },
     {
-      "Name": "Robert  Hofstadter",
+      "Name": "Emilio Gino  Segr\u00e8",
       "Prize Category": "Physics",
-      "Year Won": 1961,
-      "Nominations Before Win": 13,
-      "Total Nominations": 13,
-      "First Nominated": 1958,
-      "Years Nominated": 3,
-      "ID": "10875"
+      "Year Won": 1959,
+      "Nominations Before Win": 32,
+      "Total Nominations": 32,
+      "First Nominated": 1953,
+      "Years Nominated": 6,
+      "ID": "10538"
+    },
+    {
+      "Name": "Owen  Chamberlain",
+      "Prize Category": "Physics",
+      "Year Won": 1959,
+      "Nominations Before Win": 7,
+      "Total Nominations": 7,
+      "First Nominated": 1957,
+      "Years Nominated": 2,
+      "ID": "10870"
     },
     {
       "Name": "Donald A Glaser",
@@ -861,14 +721,74 @@
       "ID": "10925"
     },
     {
-      "Name": "Murray  Gell-Mann",
+      "Name": "Robert  Hofstadter",
       "Prize Category": "Physics",
-      "Year Won": 1969,
-      "Nominations Before Win": 129,
-      "Total Nominations": 129,
-      "First Nominated": 1960,
-      "Years Nominated": 9,
-      "ID": "11043"
+      "Year Won": 1961,
+      "Nominations Before Win": 13,
+      "Total Nominations": 13,
+      "First Nominated": 1958,
+      "Years Nominated": 3,
+      "ID": "10875"
+    },
+    {
+      "Name": "Rudolf Ludwig   M\u00f6ssbauer",
+      "Prize Category": "Physics",
+      "Year Won": 1961,
+      "Nominations Before Win": 13,
+      "Total Nominations": 13,
+      "First Nominated": 1961,
+      "Years Nominated": 0,
+      "ID": "11391"
+    },
+    {
+      "Name": "Lev Davidovich  Landau",
+      "Prize Category": "Physics",
+      "Year Won": 1962,
+      "Nominations Before Win": 16,
+      "Total Nominations": 21,
+      "First Nominated": 1954,
+      "Years Nominated": 8,
+      "ID": "10785"
+    },
+    {
+      "Name": "Eugene P Wigner",
+      "Prize Category": "Physics",
+      "Year Won": 1963,
+      "Nominations Before Win": 24,
+      "Total Nominations": 25,
+      "First Nominated": 1953,
+      "Years Nominated": 10,
+      "ID": "10181"
+    },
+    {
+      "Name": "Johannes Hans Daniel  Jensen",
+      "Prize Category": "Physics",
+      "Year Won": 1963,
+      "Nominations Before Win": 29,
+      "Total Nominations": 29,
+      "First Nominated": 1955,
+      "Years Nominated": 8,
+      "ID": "10539"
+    },
+    {
+      "Name": "Maria  Goeppert-Mayer",
+      "Prize Category": "Physics",
+      "Year Won": 1963,
+      "Nominations Before Win": 27,
+      "Total Nominations": 27,
+      "First Nominated": 1955,
+      "Years Nominated": 8,
+      "ID": "10622"
+    },
+    {
+      "Name": "Charles Hard  Townes",
+      "Prize Category": "Physics",
+      "Year Won": 1964,
+      "Nominations Before Win": 72,
+      "Total Nominations": 74,
+      "First Nominated": 1958,
+      "Years Nominated": 6,
+      "ID": "10706"
     },
     {
       "Name": "Nicolay Gennadijevitj  Basov",
@@ -891,14 +811,104 @@
       "ID": "11053"
     },
     {
-      "Name": "Rudolf Ludwig   M\u00f6ssbauer",
+      "Name": "Julian  Schwinger",
       "Prize Category": "Physics",
-      "Year Won": 1961,
-      "Nominations Before Win": 13,
-      "Total Nominations": 13,
-      "First Nominated": 1961,
-      "Years Nominated": 0,
-      "ID": "11391"
+      "Year Won": 1965,
+      "Nominations Before Win": 29,
+      "Total Nominations": 30,
+      "First Nominated": 1951,
+      "Years Nominated": 14,
+      "ID": "8294"
+    },
+    {
+      "Name": "Sin-Itiro  Tomonaga",
+      "Prize Category": "Physics",
+      "Year Won": 1965,
+      "Nominations Before Win": 15,
+      "Total Nominations": 15,
+      "First Nominated": 1951,
+      "Years Nominated": 14,
+      "ID": "9311"
+    },
+    {
+      "Name": "Richard Phillips  Feynman",
+      "Prize Category": "Physics",
+      "Year Won": 1965,
+      "Nominations Before Win": 48,
+      "Total Nominations": 49,
+      "First Nominated": 1956,
+      "Years Nominated": 9,
+      "ID": "10683"
+    },
+    {
+      "Name": "Alfred  Kastler",
+      "Prize Category": "Physics",
+      "Year Won": 1966,
+      "Nominations Before Win": 50,
+      "Total Nominations": 50,
+      "First Nominated": 1956,
+      "Years Nominated": 10,
+      "ID": "4727"
+    },
+    {
+      "Name": "Hans Albrecht  Bethe",
+      "Prize Category": "Physics",
+      "Year Won": 1967,
+      "Nominations Before Win": 56,
+      "Total Nominations": 56,
+      "First Nominated": 1943,
+      "Years Nominated": 24,
+      "ID": "971"
+    },
+    {
+      "Name": "Luis Walter  Alvarez",
+      "Prize Category": "Physics",
+      "Year Won": 1968,
+      "Nominations Before Win": 26,
+      "Total Nominations": 26,
+      "First Nominated": 1951,
+      "Years Nominated": 17,
+      "ID": "395"
+    },
+    {
+      "Name": "Murray  Gell-Mann",
+      "Prize Category": "Physics",
+      "Year Won": 1969,
+      "Nominations Before Win": 129,
+      "Total Nominations": 129,
+      "First Nominated": 1960,
+      "Years Nominated": 9,
+      "ID": "11043"
+    },
+    {
+      "Name": "Hannes  Alfv\u00e9n",
+      "Prize Category": "Physics",
+      "Year Won": 1970,
+      "Nominations Before Win": 52,
+      "Total Nominations": 52,
+      "First Nominated": 1953,
+      "Years Nominated": 17,
+      "ID": "368"
+    },
+    {
+      "Name": "Louis  N\u00e9el",
+      "Prize Category": "Physics",
+      "Year Won": 1970,
+      "Nominations Before Win": 98,
+      "Total Nominations": 98,
+      "First Nominated": 1952,
+      "Years Nominated": 18,
+      "ID": "10474"
+    },
+    {
+      "Name": "Dennis  Gabor",
+      "Prize Category": "Physics",
+      "Year Won": 1971,
+      "Nominations Before Win": 35,
+      "Total Nominations": 36,
+      "First Nominated": 1929,
+      "Years Nominated": 42,
+      "ID": "3289"
     },
     {
       "Name": "Leon Neil  Cooper",
@@ -921,14 +931,37 @@
       "ID": "11410"
     },
     {
-      "Name": "Dennis  Gabor",
+      "Name": "Brian D. Josephson",
       "Prize Category": "Physics",
-      "Year Won": 1971,
-      "Nominations Before Win": 35,
-      "Total Nominations": 36,
-      "First Nominated": 1929,
-      "Years Nominated": 42,
-      "ID": "3289"
+      "Year Won": 1973,
+      "Nominations Before Win": null,
+      "Total Nominations": null,
+      "First Nominated": null,
+      "Years Nominated": null,
+      "ID": null,
+      "Note": "Nomination data not available in archive"
+    },
+    {
+      "Name": "Leo Esaki",
+      "Prize Category": "Physics",
+      "Year Won": 1973,
+      "Nominations Before Win": null,
+      "Total Nominations": null,
+      "First Nominated": null,
+      "Years Nominated": null,
+      "ID": null,
+      "Note": "Nomination data not available in archive"
+    },
+    {
+      "Name": "Ivar Giaever",
+      "Prize Category": "Physics",
+      "Year Won": 1973,
+      "Nominations Before Win": null,
+      "Total Nominations": null,
+      "First Nominated": null,
+      "Years Nominated": null,
+      "ID": null,
+      "Note": "Nomination data not available in archive"
     },
     {
       "Name": "Martin  Ryle",
