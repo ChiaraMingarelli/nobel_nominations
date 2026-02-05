@@ -1318,6 +1318,11 @@ def main():
             year_to = st.text_input("Year to (optional)", placeholder="e.g., 1974")
         
         if st.button("Search", type="primary"):
+            # Strip whitespace from inputs (phones often add trailing spaces)
+            name = name.strip() if name else ""
+            year_from = year_from.strip() if year_from else ""
+            year_to = year_to.strip() if year_to else ""
+
             if not name:
                 st.warning("Please enter a name to search")
             else:
