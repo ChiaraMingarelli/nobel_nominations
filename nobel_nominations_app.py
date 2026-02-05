@@ -1350,20 +1350,26 @@ def main():
                             with col2:
                                 st.metric("Year Won", laureate['Year Won'])
                             with col3:
-                                noms = laureate.get('Nominations Before Win')
-                                if noms is not None:
-                                    st.metric("Nominations Before Win", noms)
+                                total_noms = laureate.get('Total Nominations')
+                                if total_noms is not None:
+                                    st.metric("Total Nominations", total_noms)
                                 else:
-                                    st.metric("Nominations Before Win", "N/A")
+                                    st.metric("Total Nominations", "N/A")
 
-                            col4, col5 = st.columns(2)
+                            col4, col5, col6 = st.columns(3)
                             with col4:
+                                noms_before = laureate.get('Nominations Before Win')
+                                if noms_before is not None:
+                                    st.metric("Before Win", noms_before)
+                                else:
+                                    st.metric("Before Win", "N/A")
+                            with col5:
                                 first_nom = laureate.get('First Nominated')
                                 if first_nom is not None:
                                     st.metric("First Nominated", first_nom)
                                 else:
                                     st.metric("First Nominated", "N/A")
-                            with col5:
+                            with col6:
                                 years_nom = laureate.get('Years Nominated')
                                 if years_nom is not None:
                                     st.metric("Years Nominated", years_nom)
