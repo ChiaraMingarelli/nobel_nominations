@@ -1326,134 +1326,154 @@ def main():
             if not name:
                 st.warning("Please enter a name to search")
             else:
-                # Show search info
                 yr_from = year_from if year_from else "1901"
                 yr_to = year_to if year_to else "1974"
-                st.info(f"Searching for '{name}' from {yr_from} to {yr_to}... This may take a moment.")
 
-                with st.spinner(f"Searching archive for '{name}'..."):
-                    results = search_archive(
-                        name,
-                        CATEGORIES.get(category, ''),
-                        year_from,
-                        year_to
-                    )
+                # FAST PATH: Check precomputed laureate data first (instant)
+                cached_results = []
+                search_name_lower = name.lower()
+                for cat_key in ['physics', 'chemistry', 'medicine', 'literature', 'peace']:
+                    if cat_key in precomputed:
+                        for laureate in precomputed[cat_key]:
+                            if search_name_lower in laureate.get('Name', '').lower():
+                                # Check category filter
+                                if category == 'all' or cat_key == category:
+                                    cached_results.append(laureate)
 
-                if not results:
-                    # Fallback: check precomputed laureates for names not in archive
-                    fallback_results = []
-                    search_name_lower = name.lower()
-                    for cat_key in ['physics', 'chemistry', 'medicine', 'literature', 'peace']:
-                        if cat_key in precomputed:
-                            for laureate in precomputed[cat_key]:
-                                if search_name_lower in laureate.get('Name', '').lower():
-                                    # Check category filter
-                                    if category == 'all' or cat_key == category:
-                                        fallback_results.append(laureate)
-
-                    if fallback_results:
-                        st.warning(f"No nomination records found in the archive for '{name}', but found in laureate data:")
-                        for laureate in fallback_results:
-                            with st.expander(f"**{laureate['Name']}** — {laureate['Prize Category']} ({laureate['Year Won']})"):
-                                col1, col2 = st.columns(2)
-                                with col1:
-                                    st.metric("Prize Category", laureate['Prize Category'])
-                                    st.metric("Year Won", laureate['Year Won'])
-                                with col2:
-                                    noms = laureate.get('Nominations Before Win')
-                                    if noms is not None:
-                                        st.metric("Nominations Before Win", noms)
-                                    else:
-                                        st.metric("Nominations Before Win", "N/A")
-                                    first_nom = laureate.get('First Nominated')
-                                    if first_nom is not None:
-                                        st.metric("First Nominated", first_nom)
-                                    else:
-                                        st.metric("First Nominated", "N/A")
-
-                                if laureate.get('Note'):
-                                    st.info(f"Note: {laureate['Note']}")
-                    else:
-                        st.warning(f"No people named '{name}' found in the archive")
-                else:
-                    st.success(f"Found {len(results)} person(s) named '{name}'")
-                    
-                    # Get detailed info for each result
-                    detailed_results = []
-                    progress = st.progress(0)
-                    
-                    for i, result in enumerate(results):
-                        details = get_person_details(result['id'], year_from, year_to)
-                        if details:
-                            detailed_results.append(details)
-                        progress.progress((i + 1) / len(results))
-                        time.sleep(0.3)  # Rate limiting
-                    
-                    progress.empty()
-
-                    # Filter results based on search role
-                    if search_role == "Nominee":
-                        detailed_results = [r for r in detailed_results if len(r.nominations_as_nominee) > 0]
-                        sort_key = lambda x: len(x.nominations_as_nominee)
-                    elif search_role == "Nominator":
-                        detailed_results = [r for r in detailed_results if len(r.nominations_as_nominator) > 0]
-                        sort_key = lambda x: len(x.nominations_as_nominator)
-                    else:
-                        sort_key = lambda x: len(x.nominations_as_nominee) + len(x.nominations_as_nominator)
-
-                    if not detailed_results:
-                        st.warning(f"No people named '{name}' found as {search_role.lower()}")
-
-                    # Display results
-                    for result in sorted(detailed_results, key=sort_key, reverse=True):
-                        nominee_filtered = len(result.nominations_as_nominee)
-                        nominator_filtered = len(result.nominations_as_nominator)
-
-                        if search_role == "Nominator":
-                            label = f"**{result.name or 'Unknown'}** — {nominator_filtered} nomination(s) as nominator"
-                        elif search_role == "Nominee":
-                            label = f"**{result.name or 'Unknown'}** — {nominee_filtered} nomination(s) as nominee"
-                        else:
-                            label = f"**{result.name or 'Unknown'}** — {nominee_filtered} as nominee, {nominator_filtered} as nominator"
-
-                        with st.expander(
-                            label,
-                            expanded=(len(detailed_results) == 1)
-                        ):
-                            col1, col2 = st.columns(2)
-
+                if cached_results:
+                    st.success(f"Found {len(cached_results)} laureate(s) matching '{name}' (from cached data)")
+                    for laureate in cached_results:
+                        with st.expander(f"**{laureate['Name']}** — {laureate['Prize Category']} ({laureate['Year Won']})", expanded=True):
+                            col1, col2, col3 = st.columns(3)
                             with col1:
-                                st.metric("Total Nominations as Nominee", result.nominee_count)
-                                st.metric("Total Nominations as Nominator", result.nominator_count)
-
+                                st.metric("Prize Category", laureate['Prize Category'])
                             with col2:
-                                if result.won_prize and result.prize_info:
-                                    st.success(f"Won Nobel Prize in {result.prize_info['category']} ({result.prize_info['year']})")
-                                elif result.nominee_count > 0:
-                                    st.info("Did not win Nobel Prize")
+                                st.metric("Year Won", laureate['Year Won'])
+                            with col3:
+                                noms = laureate.get('Nominations Before Win')
+                                if noms is not None:
+                                    st.metric("Nominations Before Win", noms)
+                                else:
+                                    st.metric("Nominations Before Win", "N/A")
 
-                            # Show nominations based on search role
-                            if search_role in ["Nominee", "Both"] and result.nominations_as_nominee:
-                                st.subheader(f"Nominated by ({len(result.nominations_as_nominee)} nominations)")
-                                nominee_data = []
-                                for nom in sorted(result.nominations_as_nominee, key=lambda x: x.year):
-                                    nominee_data.append({
-                                        "Year": nom.year,
-                                        "Category": nom.category,
-                                        "Nominated by": nom.other_party
-                                    })
-                                st.dataframe(pd.DataFrame(nominee_data), hide_index=True, width='stretch')
+                            col4, col5 = st.columns(2)
+                            with col4:
+                                first_nom = laureate.get('First Nominated')
+                                if first_nom is not None:
+                                    st.metric("First Nominated", first_nom)
+                                else:
+                                    st.metric("First Nominated", "N/A")
+                            with col5:
+                                years_nom = laureate.get('Years Nominated')
+                                if years_nom is not None:
+                                    st.metric("Years Nominated", years_nom)
+                                else:
+                                    st.metric("Years Nominated", "N/A")
 
-                            if search_role in ["Nominator", "Both"] and result.nominations_as_nominator:
-                                st.subheader(f"Nominated others ({len(result.nominations_as_nominator)} nominations)")
-                                nominator_data = []
-                                for nom in sorted(result.nominations_as_nominator, key=lambda x: x.year):
-                                    nominator_data.append({
-                                        "Year": nom.year,
-                                        "Category": nom.category,
-                                        "Nominated": nom.other_party
-                                    })
-                                st.dataframe(pd.DataFrame(nominator_data), hide_index=True, width='stretch')
+                            if laureate.get('Note'):
+                                st.info(f"Note: {laureate['Note']}")
+
+                    st.markdown("---")
+                    st.caption("Want more details? Use the live archive search below for full nomination history.")
+
+                # SLOW PATH: Live archive search
+                do_live_search = st.checkbox("Search live archive for more details", value=not cached_results, key="live_search_checkbox")
+
+                if do_live_search:
+                    st.info(f"Searching live archive for '{name}' from {yr_from} to {yr_to}... This may take a moment.")
+
+                    with st.spinner(f"Searching archive for '{name}'..."):
+                        results = search_archive(
+                            name,
+                            CATEGORIES.get(category, ''),
+                            year_from,
+                            year_to
+                        )
+
+                    if not results:
+                        if not cached_results:
+                            st.warning(f"No people named '{name}' found in the archive")
+                        else:
+                            st.info("No additional records found in the live archive.")
+                    else:
+                        st.success(f"Found {len(results)} person(s) named '{name}'")
+
+                        # Get detailed info for each result
+                        detailed_results = []
+                        progress = st.progress(0)
+
+                        for i, result in enumerate(results):
+                            details = get_person_details(result['id'], year_from, year_to)
+                            if details:
+                                detailed_results.append(details)
+                            progress.progress((i + 1) / len(results))
+                            time.sleep(0.3)  # Rate limiting
+
+                        progress.empty()
+
+                        # Filter results based on search role
+                        if search_role == "Nominee":
+                            detailed_results = [r for r in detailed_results if len(r.nominations_as_nominee) > 0]
+                            sort_key = lambda x: len(x.nominations_as_nominee)
+                        elif search_role == "Nominator":
+                            detailed_results = [r for r in detailed_results if len(r.nominations_as_nominator) > 0]
+                            sort_key = lambda x: len(x.nominations_as_nominator)
+                        else:
+                            sort_key = lambda x: len(x.nominations_as_nominee) + len(x.nominations_as_nominator)
+
+                        if not detailed_results:
+                            st.warning(f"No people named '{name}' found as {search_role.lower()}")
+
+                        # Display results
+                        for result in sorted(detailed_results, key=sort_key, reverse=True):
+                            nominee_filtered = len(result.nominations_as_nominee)
+                            nominator_filtered = len(result.nominations_as_nominator)
+
+                            if search_role == "Nominator":
+                                label = f"**{result.name or 'Unknown'}** — {nominator_filtered} nomination(s) as nominator"
+                            elif search_role == "Nominee":
+                                label = f"**{result.name or 'Unknown'}** — {nominee_filtered} nomination(s) as nominee"
+                            else:
+                                label = f"**{result.name or 'Unknown'}** — {nominee_filtered} as nominee, {nominator_filtered} as nominator"
+
+                            with st.expander(
+                                label,
+                                expanded=(len(detailed_results) == 1)
+                            ):
+                                col1, col2 = st.columns(2)
+
+                                with col1:
+                                    st.metric("Total Nominations as Nominee", result.nominee_count)
+                                    st.metric("Total Nominations as Nominator", result.nominator_count)
+
+                                with col2:
+                                    if result.won_prize and result.prize_info:
+                                        st.success(f"Won Nobel Prize in {result.prize_info['category']} ({result.prize_info['year']})")
+                                    elif result.nominee_count > 0:
+                                        st.info("Did not win Nobel Prize")
+
+                                # Show nominations based on search role
+                                if search_role in ["Nominee", "Both"] and result.nominations_as_nominee:
+                                    st.subheader(f"Nominated by ({len(result.nominations_as_nominee)} nominations)")
+                                    nominee_data = []
+                                    for nom in sorted(result.nominations_as_nominee, key=lambda x: x.year):
+                                        nominee_data.append({
+                                            "Year": nom.year,
+                                            "Category": nom.category,
+                                            "Nominated by": nom.other_party
+                                        })
+                                    st.dataframe(pd.DataFrame(nominee_data), hide_index=True, width='stretch')
+
+                                if search_role in ["Nominator", "Both"] and result.nominations_as_nominator:
+                                    st.subheader(f"Nominated others ({len(result.nominations_as_nominator)} nominations)")
+                                    nominator_data = []
+                                    for nom in sorted(result.nominations_as_nominator, key=lambda x: x.year):
+                                        nominator_data.append({
+                                            "Year": nom.year,
+                                            "Category": nom.category,
+                                            "Nominated": nom.other_party
+                                        })
+                                    st.dataframe(pd.DataFrame(nominator_data), hide_index=True, width='stretch')
 
                             st.markdown(f"[View in Archive]({result.url})")
                     
