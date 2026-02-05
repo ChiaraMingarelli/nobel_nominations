@@ -4387,18 +4387,23 @@
   ],
   "nn_data": {
     "by_year": {
-      "1968": 4,
-      "1969": 2,
-      "1971": 8,
-      "1972": 16,
-      "1973": 21,
-      "1974": 11
+      "1962": 1,
+      "1964": 3,
+      "1966": 3,
+      "1967": 3,
+      "1968": 7,
+      "1969": 3,
+      "1970": 1,
+      "1971": 12,
+      "1972": 33,
+      "1973": 40,
+      "1974": 28
     },
     "by_category": {
-      "Physics": 53,
-      "Chemistry": 9
+      "Physics": 112,
+      "Chemistry": 22
     },
-    "total": 62,
-    "note": "Data from partial scan (IDs 20000-30000). More N.N. nominations may exist."
+    "total": 134,
+    "note": "Complete scan of IDs 1-35000. N.N. marks nominators still living at time of archive release."
   }
 }
