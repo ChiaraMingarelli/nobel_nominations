@@ -1590,7 +1590,7 @@ def main():
             """)
 
             # Check if precomputed data is available
-            precomputed_categories = [k for k in precomputed.keys() if not k.startswith('non_winners')]
+            precomputed_categories = [k for k in precomputed.keys() if k in CATEGORIES and k != 'all']
 
             if precomputed_categories:
                 st.success(f"Precomputed data available for: {', '.join([c.title() for c in precomputed_categories])}")
@@ -1760,7 +1760,7 @@ def main():
                     if use_precomputed:
                         if category_key == 'all':
                             # For "All Categories", combine all individual category data
-                            individual_cats = [k for k in precomputed.keys() if not k.startswith('non_winners')]
+                            individual_cats = [k for k in precomputed.keys() if k in CATEGORIES and k != 'all']
                             if individual_cats:
                                 can_use_precomputed = True
                                 st.info("Using precomputed data (combining all categories)...")
