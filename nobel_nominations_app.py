@@ -1837,7 +1837,7 @@ def main():
             st.markdown("Overlay nomination distributions from multiple categories to compare them.")
 
             # Check which categories have precomputed data
-            individual_cats = [k for k in precomputed.keys() if not k.startswith('non_winners')]
+            individual_cats = [k for k in precomputed.keys() if k in CATEGORIES and k != 'all']
 
             if not individual_cats:
                 st.warning("No precomputed data available. Please compute statistics for individual categories first.")
