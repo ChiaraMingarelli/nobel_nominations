@@ -1388,6 +1388,8 @@ def main():
                 if do_live_search:
                     st.info(f"Searching live archive for '{name}' from {yr_from} to {yr_to}... This may take a moment.")
 
+                    detailed_results = []
+
                     with st.spinner(f"Searching archive for '{name}'..."):
                         results = search_archive(
                             name,
