@@ -1864,20 +1864,18 @@ def main():
                             individual_cats = [k for k in precomputed.keys() if k in CATEGORIES and k != 'all']
                             if individual_cats:
                                 can_use_precomputed = True
-                                st.info("Using precomputed data (combining all categories)...")
                                 all_stats = []
                                 for cat in individual_cats:
                                     all_stats.extend(precomputed[cat])
-                                # Filter by year range
                                 stats = [s for s in all_stats if stats_year_from <= s['Year Won'] <= stats_year_to]
-                                display_stats(stats, stats_category)
+                                st.session_state['ntw_stats'] = stats
+                                st.session_state['ntw_category'] = stats_category
                         elif category_key in precomputed:
                             can_use_precomputed = True
-                            st.info("Using precomputed data...")
                             all_stats = precomputed[category_key]
-                            # Filter by year range
                             stats = [s for s in all_stats if stats_year_from <= s['Year Won'] <= stats_year_to]
-                            display_stats(stats, stats_category)
+                            st.session_state['ntw_stats'] = stats
+                            st.session_state['ntw_category'] = stats_category
 
                     if not can_use_precomputed:
                         # Compute fresh
@@ -1898,7 +1896,12 @@ def main():
                         progress_bar.empty()
                         status_text.empty()
 
-                        display_stats(stats, stats_category)
+                        st.session_state['ntw_stats'] = stats
+                        st.session_state['ntw_category'] = stats_category
+
+            # Display persisted stats (survives selectbox reruns)
+            if 'ntw_stats' in st.session_state:
+                display_stats(st.session_state['ntw_stats'], st.session_state['ntw_category'])
 
             if compute_save_btn:
                 if stats_year_from > stats_year_to:
@@ -1929,7 +1932,8 @@ def main():
                         save_precomputed_stats(precomputed)
                         st.success(f"Saved {len(stats)} laureate records for {stats_category.title() if stats_category != 'all' else 'All Categories'}. Future queries will be instant!")
 
-                        display_stats(stats, stats_category)
+                        st.session_state['ntw_stats'] = stats
+                        st.session_state['ntw_category'] = stats_category
                     else:
                         st.warning("No laureates found to save")
 
