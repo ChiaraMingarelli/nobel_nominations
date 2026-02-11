@@ -99,6 +99,61 @@ PRIZE_CODES = {
 }
 
 
+def _token_matches_word(token: str, word: str) -> bool:
+    """Check if a query token matches a candidate word (case-insensitive).
+
+    A token matches if it equals the word or the word starts with the token
+    (handles initials like "J" matching "John").
+    """
+    token_l = token.lower()
+    word_l = word.lower()
+    return word_l == token_l or word_l.startswith(token_l)
+
+
+def name_matches(query: str, candidate: str) -> bool:
+    """Flexible name matching: substring, 'Last, First' format, or all-tokens match.
+
+    Examples:
+        name_matches("Wheeler", "John Archibald Wheeler")           -> True
+        name_matches("Wheeler, J A", "John Archibald Wheeler")      -> True
+        name_matches("J Wheeler", "John Archibald Wheeler")         -> True
+        name_matches("Curie, M", "Marie Curie")                     -> True
+    """
+    query = query.strip()
+    candidate = candidate.strip()
+    if not query or not candidate:
+        return False
+
+    # 1. Direct substring (preserves original behavior)
+    if query.lower() in candidate.lower():
+        return True
+
+    candidate_words = candidate.split()
+
+    # 2. "Last, First" format
+    if ',' in query:
+        parts = query.split(',', 1)
+        last = parts[0].strip()
+        first_tokens = parts[1].split()
+
+        # Last name must appear as substring in candidate
+        if last.lower() not in candidate.lower():
+            return False
+
+        # Each first-name token must match some candidate word
+        for ft in first_tokens:
+            if not any(_token_matches_word(ft, cw) for cw in candidate_words):
+                return False
+        return True
+
+    # 3. All-tokens match
+    query_tokens = query.split()
+    for qt in query_tokens:
+        if not any(_token_matches_word(qt, cw) for cw in candidate_words):
+            return False
+    return True
+
+
 def search_archive(name: str, category: str = '', year_from: str = '', year_to: str = '') -> list:
     """
     Search the Nobel Prize nomination archive using a smart sampling approach:
@@ -122,7 +177,6 @@ def search_archive(name: str, category: str = '', year_from: str = '', year_to: 
     # Get prize codes to search
     prize_codes = PRIZE_CODES.get(category, [1, 2, 3, 4, 5])
 
-    name_lower = name.lower()
     results = {}  # Use dict to deduplicate by ID
 
     def search_year(year: int) -> bool:
@@ -145,7 +199,7 @@ def search_archive(name: str, category: str = '', year_from: str = '', year_to: 
                         person_id = re.search(r'id=(\d+)', href)
                         if person_id:
                             name_text = link.get_text(strip=True)
-                            if name_text and name_lower in name_text.lower():
+                            if name_text and name_matches(name, name_text):
                                 pid = person_id.group(1)
                                 if pid not in results:
                                     results[pid] = {
