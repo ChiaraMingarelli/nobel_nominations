@@ -4087,11 +4087,12 @@
       }
     },
     {
-      "ID": "zavoisky",
+      "ID": "10860",
       "Name": "Yevgeny Zavoisky",
-      "Total Nominations": 41,
+      "Total Nominations": 46,
       "Nominations by Category": {
-        "Physics": 41
+        "Physics": 41,
+        "Chemistry": 5
       }
     },
     {
