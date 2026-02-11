@@ -1931,7 +1931,7 @@ def main():
                     "Top N",
                     min_value=5,
                     max_value=20,
-                    value=10,
+                    value=8,
                     key="nw_top_n"
                 )
 
