@@ -456,73 +456,113 @@ def save_precomputed_stats(stats: dict):
         st.error(f"Error saving stats: {e}")
 
 
+DISTRIBUTION_NAMES = [
+    "Log-Normal", "Gamma", "Exponential", "Weibull", "Log-Logistic (Fisk)", "Burr XII"
+]
+
+
 def fit_distributions(data: list) -> dict:
     """
-    Fit various statistical distributions to the nomination data.
-    Returns dict with fit results for each distribution.
+    Fit statistical distributions to the nomination data.
+    Returns dict keyed by distribution name, each containing:
+      - params: dict of human-readable parameter names/values
+      - log_likelihood, aic, k
+      - scipy_dist: frozen scipy distribution object
     """
     if not data or len(data) < 3:
         return {}
 
-    data = np.array(data)
+    x = np.array(data, dtype=float)
+    x = x[np.isfinite(x) & (x > 0)]
+    if len(x) < 3:
+        return {}
+
     results = {}
 
-    # Distributions to try
-    distributions = [
-        ('Normal', scipy_stats.norm),
-        ('Poisson', scipy_stats.poisson),
-        ('Exponential', scipy_stats.expon),
-        ('Geometric', scipy_stats.geom),
-        ('Log-Normal', scipy_stats.lognorm),
-    ]
+    # Log-Normal
+    try:
+        shape, loc, scale = scipy_stats.lognorm.fit(x, floc=0)
+        frozen = scipy_stats.lognorm(shape, loc=loc, scale=scale)
+        ll = np.sum(frozen.logpdf(x))
+        k = 2
+        results['Log-Normal'] = {
+            'params': {'\u03bc (log-mean)': round(np.log(scale), 3),
+                       '\u03c3 (log-std)': round(shape, 3)},
+            'log_likelihood': round(ll, 2), 'aic': round(2 * k - 2 * ll, 2),
+            'k': k, 'scipy_dist': frozen,
+        }
+    except Exception:
+        pass
 
-    for name, dist in distributions:
-        try:
-            if name == 'Poisson':
-                # Poisson uses mean as parameter
-                mu = np.mean(data)
-                # Calculate log-likelihood
-                ll = np.sum(scipy_stats.poisson.logpmf(data.astype(int), mu))
-                results[name] = {
-                    'params': {'mu (mean)': round(mu, 2)},
-                    'log_likelihood': round(ll, 2),
-                    'aic': round(2 * 1 - 2 * ll, 2)  # AIC = 2k - 2ln(L)
-                }
-            elif name == 'Geometric':
-                # Geometric: p = 1/mean
-                p = 1.0 / max(np.mean(data), 1)
-                ll = np.sum(scipy_stats.geom.logpmf(data.astype(int), p))
-                results[name] = {
-                    'params': {'p': round(p, 4)},
-                    'log_likelihood': round(ll, 2),
-                    'aic': round(2 * 1 - 2 * ll, 2)
-                }
-            elif name == 'Normal':
-                mu, std = scipy_stats.norm.fit(data)
-                ll = np.sum(scipy_stats.norm.logpdf(data, mu, std))
-                results[name] = {
-                    'params': {'mean': round(mu, 2), 'std': round(std, 2)},
-                    'log_likelihood': round(ll, 2),
-                    'aic': round(2 * 2 - 2 * ll, 2)
-                }
-            elif name == 'Exponential':
-                loc, scale = scipy_stats.expon.fit(data)
-                ll = np.sum(scipy_stats.expon.logpdf(data, loc, scale))
-                results[name] = {
-                    'params': {'loc': round(loc, 2), 'scale (mean)': round(scale, 2)},
-                    'log_likelihood': round(ll, 2),
-                    'aic': round(2 * 2 - 2 * ll, 2)
-                }
-            elif name == 'Log-Normal':
-                shape, loc, scale = scipy_stats.lognorm.fit(data, floc=0)
-                ll = np.sum(scipy_stats.lognorm.logpdf(data, shape, loc, scale))
-                results[name] = {
-                    'params': {'sigma': round(shape, 2), 'scale': round(scale, 2)},
-                    'log_likelihood': round(ll, 2),
-                    'aic': round(2 * 2 - 2 * ll, 2)
-                }
-        except Exception:
-            continue
+    # Gamma
+    try:
+        a, loc, scale = scipy_stats.gamma.fit(x, floc=0)
+        frozen = scipy_stats.gamma(a, loc=loc, scale=scale)
+        ll = np.sum(frozen.logpdf(x))
+        k = 2
+        results['Gamma'] = {
+            'params': {'shape (k)': round(a, 3), 'scale (\u03b8)': round(scale, 3)},
+            'log_likelihood': round(ll, 2), 'aic': round(2 * k - 2 * ll, 2),
+            'k': k, 'scipy_dist': frozen,
+        }
+    except Exception:
+        pass
+
+    # Exponential
+    try:
+        loc, scale = scipy_stats.expon.fit(x, floc=0)
+        frozen = scipy_stats.expon(loc=loc, scale=scale)
+        ll = np.sum(frozen.logpdf(x))
+        k = 1
+        results['Exponential'] = {
+            'params': {'scale (mean)': round(scale, 3)},
+            'log_likelihood': round(ll, 2), 'aic': round(2 * k - 2 * ll, 2),
+            'k': k, 'scipy_dist': frozen,
+        }
+    except Exception:
+        pass
+
+    # Weibull (min)
+    try:
+        c, loc, scale = scipy_stats.weibull_min.fit(x, floc=0)
+        frozen = scipy_stats.weibull_min(c, loc=loc, scale=scale)
+        ll = np.sum(frozen.logpdf(x))
+        k = 2
+        results['Weibull'] = {
+            'params': {'shape (k)': round(c, 3), 'scale (\u03bb)': round(scale, 3)},
+            'log_likelihood': round(ll, 2), 'aic': round(2 * k - 2 * ll, 2),
+            'k': k, 'scipy_dist': frozen,
+        }
+    except Exception:
+        pass
+
+    # Log-Logistic (Fisk)
+    try:
+        c, loc, scale = scipy_stats.fisk.fit(x, floc=0)
+        frozen = scipy_stats.fisk(c, loc=loc, scale=scale)
+        ll = np.sum(frozen.logpdf(x))
+        k = 2
+        results['Log-Logistic (Fisk)'] = {
+            'params': {'shape (c)': round(c, 3), 'scale': round(scale, 3)},
+            'log_likelihood': round(ll, 2), 'aic': round(2 * k - 2 * ll, 2),
+            'k': k, 'scipy_dist': frozen,
+        }
+    except Exception:
+        pass
+
+    # Burr XII (Type XII)
+    try:
+        c, d, loc, scale = scipy_stats.burr12.fit(x, floc=0)
+        frozen = scipy_stats.burr12(c, d, loc=loc, scale=scale)
+        ll = np.sum(frozen.logpdf(x))
+        k = 3
+        results['Burr XII'] = {
+            'params': {'c': round(c, 3), 'd': round(d, 3), 'scale': round(scale, 3)},
+            'log_likelihood': round(ll, 2), 'aic': round(2 * k - 2 * ll, 2),
+            'k': k, 'scipy_dist': frozen,
+        }
+    except Exception:
+        pass
 
     return results
 
@@ -540,69 +580,55 @@ CATEGORY_NAME_TO_CODE = {
 }
 
 
-def create_distribution_plot(data: list, category_name: str):
+def create_distribution_plot(data: list, category_name: str, dist_name: str = "Log-Normal"):
     """
-    Create a publication-quality histogram with log-normal fit overlay.
-    Matches the style from the user's Jupyter notebook.
+    Create a publication-quality histogram with a fitted distribution overlay.
 
     Args:
         data: List of nomination counts
         category_name: Name of the category for the title
+        dist_name: Which distribution to plot (must be one of DISTRIBUTION_NAMES)
 
     Returns:
-        tuple: (matplotlib Figure object, dict of fit parameters)
+        tuple: (matplotlib Figure object, dict with fit info including params,
+                median, lo68, hi68, ks_stat, ks_pval, and all_fits dict)
     """
     x = np.array(data, dtype=float)
-
-    # Filter out zeros, negatives, NaN, and infinite values
     x = x[np.isfinite(x) & (x > 0)]
 
     if len(x) < 3:
         return None, None
 
-    # Fit log-normal (scipy returns shape, loc, scale)
-    try:
-        shape, loc, scale = scipy_stats.lognorm.fit(x, floc=0)
-    except Exception:
+    all_fits = fit_distributions(data)
+    if dist_name not in all_fits:
         return None, None
-    dist = scipy_stats.lognorm(shape, loc=loc, scale=scale)
 
-    # Convert scipy's parameters to μ, σ
-    sigma = shape
-    mu = np.log(scale)
+    fit = all_fits[dist_name]
+    dist = fit['scipy_dist']
 
-    # Sample median
     median_sample = np.median(x)
-
-    # Equal-tailed 68% interval (better than exp(mu±sigma) for skewed data)
     lo68, hi68 = dist.ppf([0.16, 0.84])
-
-    # KS test
-    ks_stat, ks_pval = scipy_stats.kstest(x, 'lognorm', args=(shape, loc, scale))
+    ks_stat, ks_pval = scipy_stats.kstest(x, dist.cdf)
 
     # Create figure
     fig, ax = plt.subplots(figsize=(8, 5))
 
-    # Histogram: light gray (bin_width=5 to match notebook)
     bin_width = 5
     bins = np.arange(0, x.max() + bin_width, bin_width)
     ax.hist(x, bins=bins, density=True, alpha=0.4, color="gray",
             edgecolor="black", label="Data")
 
-    # Smooth curve for log-normal fit
-    xmin = np.linspace(1, x.max(), 500)
-    ax.plot(xmin, dist.pdf(xmin), color="tab:blue", lw=2.5, label="Log-normal fit")
+    xrange = np.linspace(max(0.5, x.min() * 0.5), x.max() * 1.1, 500)
+    ax.plot(xrange, dist.pdf(xrange), color="tab:blue", lw=2.5,
+            label=f"{dist_name} fit")
 
-    # Median: dashed black line
     ax.axvline(median_sample, color="black", linestyle="--", lw=2,
                label=f"Median = {median_sample:.1f}")
 
-    # Shaded 68% interval
-    mask = (xmin >= lo68) & (xmin <= hi68)
-    ax.fill_between(xmin[mask], 0, dist.pdf(xmin)[mask], alpha=0.25,
+    mask = (xrange >= lo68) & (xrange <= hi68)
+    ax.fill_between(xrange[mask], 0, dist.pdf(xrange)[mask], alpha=0.25,
                     color="tab:orange", label=f"68% = [{lo68:.1f}, {hi68:.1f}]")
 
-    # Labels and legend
     ax.set_xlabel("Number of nominations", fontsize=11)
     ax.set_ylabel("Probability density", fontsize=11)
     ax.set_title(f"Distribution of Total Nominations - {category_name}", fontsize=12)
@@ -610,16 +636,23 @@ def create_distribution_plot(data: list, category_name: str):
 
     plt.tight_layout()
 
-    return fig, {'mu': mu, 'sigma': sigma, 'median': median_sample,
-                 'lo68': lo68, 'hi68': hi68, 'ks_stat': ks_stat, 'ks_pval': ks_pval}
+    return fig, {
+        'params': fit['params'],
+        'median': median_sample,
+        'lo68': lo68, 'hi68': hi68,
+        'ks_stat': ks_stat, 'ks_pval': ks_pval,
+        'aic': fit['aic'],
+        'all_fits': all_fits,
+    }
 
 
-def create_multi_distribution_plot(category_data: dict):
+def create_multi_distribution_plot(category_data: dict, dist_name: str = "Log-Normal"):
     """
     Create a plot with multiple category distributions overlaid.
 
     Args:
         category_data: Dict mapping category name to list of nomination counts
+        dist_name: Which distribution to fit (must be one of DISTRIBUTION_NAMES)
 
     Returns:
         tuple: (matplotlib Figure object, dict of fit parameters by category)
@@ -627,9 +660,8 @@ def create_multi_distribution_plot(category_data: dict):
     if not category_data:
         return None, None
 
-    # Define colors for each category
     cat_colors = {
-        'All Categories': '#333333',  # Dark gray/black for overall
+        'All Categories': '#333333',
         'Physics': '#5B76B5',
         'Chemistry': '#E6A04B',
         'Physiology or Medicine': '#6BAF6B',
@@ -643,7 +675,6 @@ def create_multi_distribution_plot(category_data: dict):
     all_fit_params = {}
     max_x = 0
 
-    # First pass: find max x value and fit distributions
     for cat_name, data in category_data.items():
         x = np.array(data, dtype=float)
         x = x[x > 0]
@@ -653,7 +684,6 @@ def create_multi_distribution_plot(category_data: dict):
     if max_x == 0:
         return None, None
 
-    # Plot each category
     for cat_name, data in category_data.items():
         x = np.array(data, dtype=float)
         x = x[x > 0]
@@ -661,36 +691,38 @@ def create_multi_distribution_plot(category_data: dict):
         if len(x) < 3:
             continue
 
-        # Fit log-normal
-        shape, loc, scale = scipy_stats.lognorm.fit(x, floc=0)
-        dist = scipy_stats.lognorm(shape, loc=loc, scale=scale)
+        fits = fit_distributions(data)
+        if dist_name not in fits:
+            continue
 
-        sigma = shape
-        mu = np.log(scale)
+        fit = fits[dist_name]
+        dist = fit['scipy_dist']
+
         median_sample = np.median(x)
         lo68, hi68 = dist.ppf([0.16, 0.84])
-        ks_stat, ks_pval = scipy_stats.kstest(x, 'lognorm', args=(shape, loc, scale))
+        ks_stat, ks_pval = scipy_stats.kstest(x, dist.cdf)
 
         all_fit_params[cat_name] = {
-            'mu': mu, 'sigma': sigma, 'median': median_sample,
-            'lo68': lo68, 'hi68': hi68, 'ks_stat': ks_stat, 'ks_pval': ks_pval,
-            'n': len(x)
+            'params': fit['params'],
+            'median': median_sample,
+            'lo68': lo68, 'hi68': hi68,
+            'ks_stat': ks_stat, 'ks_pval': ks_pval,
+            'n': len(x),
         }
 
         color = cat_colors.get(cat_name, '#888888')
 
-        # Plot histogram with transparency
         bin_width = 5
         bins = np.arange(0, max_x + bin_width, bin_width)
         ax.hist(x, bins=bins, density=True, alpha=0.3, color=color, edgecolor=color, linewidth=1)
 
-        # Plot smooth fit curve
-        xrange = np.linspace(1, max_x, 500)
-        ax.plot(xrange, dist.pdf(xrange), color=color, lw=2.5, label=f"{cat_name} (n={len(x)}, median={median_sample:.0f})")
+        xrange = np.linspace(max(0.5, 1), max_x, 500)
+        ax.plot(xrange, dist.pdf(xrange), color=color, lw=2.5,
+                label=f"{cat_name} (n={len(x)}, median={median_sample:.0f})")
 
     ax.set_xlabel("Number of nominations", fontsize=11)
     ax.set_ylabel("Probability density", fontsize=11)
-    ax.set_title("Distribution Comparison Across Categories", fontsize=12)
+    ax.set_title(f"Distribution Comparison Across Categories ({dist_name})", fontsize=12)
     ax.legend(loc='upper right', fontsize=9)
 
     plt.tight_layout()
@@ -1733,35 +1765,45 @@ def main():
                     q25 = df['Total Nominations'].quantile(0.25)
                     st.metric("25th Percentile", f"{q25:.1f}")
 
-                # Log-Normal Distribution Visualization
+                # Distribution Fit Visualization
                 if len(nom_data) >= 3:
-                    st.subheader("Log-Normal Distribution Fit")
+                    selected_dist = st.selectbox(
+                        "Distribution to fit",
+                        options=DISTRIBUTION_NAMES,
+                        index=0,
+                        key=f"dist_select_{category_name}"
+                    )
 
-                    # Create the publication-quality figure
-                    fig, fit_params = create_distribution_plot(nom_data, category_name.title())
+                    st.subheader(f"{selected_dist} Distribution Fit")
+
+                    fig, fit_params = create_distribution_plot(
+                        nom_data, category_name.title(), dist_name=selected_dist
+                    )
 
                     if fig is not None and fit_params is not None:
                         st.pyplot(fig)
                         add_download_buttons(fig, f"distribution_{stats_category}", "single")
                         plt.close(fig)
 
-                        # Display fit parameters in a nice format
-                        col1, col2, col3 = st.columns(3)
-                        with col1:
-                            st.metric("μ (log-mean)", f"{fit_params['mu']:.3f}")
-                        with col2:
-                            st.metric("σ (log-std)", f"{fit_params['sigma']:.3f}")
-                        with col3:
+                        # Display fit parameters dynamically
+                        param_items = list(fit_params['params'].items())
+                        n_params = len(param_items)
+                        # Always show params + KS p-value
+                        cols = st.columns(n_params + 1)
+                        for i, (pname, pval) in enumerate(param_items):
+                            with cols[i]:
+                                st.metric(pname, f"{pval:.3f}")
+                        with cols[n_params]:
                             ks_result = "Good fit" if fit_params['ks_pval'] > 0.05 else "Poor fit"
                             st.metric("KS p-value", f"{fit_params['ks_pval']:.3f}", delta=ks_result)
 
                         st.caption(f"68% of laureates received between {fit_params['lo68']:.1f} and {fit_params['hi68']:.1f} total nominations.")
 
-                        # Check for overdispersion
-                        mean_val = np.mean(nom_data)
-                        var_val = np.var(nom_data)
-                        if var_val > mean_val:
-                            st.info(f"Data is overdispersed (variance {var_val:.1f} > mean {mean_val:.1f}), confirming log-normal is a better fit than Poisson.")
+                        # Note best-fitting distribution
+                        all_fits = fit_params['all_fits']
+                        best_name = min(all_fits, key=lambda n: all_fits[n]['aic'])
+                        if best_name != selected_dist:
+                            st.info(f"**Tip:** {best_name} has the lowest AIC ({all_fits[best_name]['aic']}) for this data. Try selecting it above.")
                     else:
                         st.warning("Insufficient data for distribution fitting (need at least 3 positive values).")
 
@@ -1770,19 +1812,22 @@ def main():
                 fit_results = fit_distributions(nom_data)
 
                 if fit_results:
-                    # Find best fit (lowest AIC)
                     best_fit = min(fit_results.items(), key=lambda x: x[1]['aic'])
                     st.info(f"**Best fit:** {best_fit[0]} (lowest AIC = {best_fit[1]['aic']})")
 
-                    # Show all fits in a table
                     fit_data = []
                     for name, result in sorted(fit_results.items(), key=lambda x: x[1]['aic']):
                         params_str = ", ".join([f"{k}={v}" for k, v in result['params'].items()])
+                        ks_stat, ks_pval = scipy_stats.kstest(
+                            np.array(nom_data, dtype=float),
+                            result['scipy_dist'].cdf
+                        )
                         fit_data.append({
                             'Distribution': name,
                             'Parameters': params_str,
                             'Log-Likelihood': result['log_likelihood'],
-                            'AIC': result['aic']
+                            'AIC': result['aic'],
+                            'KS p-value': round(ks_pval, 4),
                         })
 
                     fit_df = pd.DataFrame(fit_data)
@@ -1918,15 +1963,20 @@ def main():
                     format_func=lambda x: cat_display_names.get(x, x.title())
                 )
 
+                compare_dist = st.selectbox(
+                    "Distribution to fit",
+                    options=DISTRIBUTION_NAMES,
+                    index=0,
+                    key="compare_dist_select"
+                )
+
                 if st.button("Compare Distributions", type="primary"):
                     if len(selected_cats) < 2:
                         st.warning("Please select at least 2 categories to compare.")
                     else:
-                        # Gather data for each selected category
                         category_data = {}
                         for cat_key in selected_cats:
                             if cat_key == 'all':
-                                # Combine all individual categories for "All"
                                 all_nom_data = []
                                 for ind_cat in individual_cats:
                                     cat_stats = precomputed.get(ind_cat, [])
@@ -1941,27 +1991,28 @@ def main():
                                     category_data[display_name] = nom_data
 
                         if category_data:
-                            # Create the comparison plot
-                            fig, fit_params = create_multi_distribution_plot(category_data)
+                            fig, fit_params = create_multi_distribution_plot(
+                                category_data, dist_name=compare_dist
+                            )
 
                             if fig is not None:
                                 st.pyplot(fig)
                                 add_download_buttons(fig, "distribution_comparison", "multi")
                                 plt.close(fig)
 
-                                # Show comparison table
-                                st.subheader("Fit Parameters Comparison")
+                                st.subheader(f"Fit Parameters Comparison ({compare_dist})")
                                 comparison_data = []
                                 for cat_name, params in fit_params.items():
-                                    comparison_data.append({
+                                    row = {
                                         'Category': cat_name,
                                         'N': params['n'],
                                         'Median': f"{params['median']:.1f}",
-                                        'μ (log-mean)': f"{params['mu']:.3f}",
-                                        'σ (log-std)': f"{params['sigma']:.3f}",
-                                        '68% Interval': f"[{params['lo68']:.1f}, {params['hi68']:.1f}]",
-                                        'KS p-value': f"{params['ks_pval']:.3f}"
-                                    })
+                                    }
+                                    for pname, pval in params['params'].items():
+                                        row[pname] = f"{pval:.3f}"
+                                    row['68% Interval'] = f"[{params['lo68']:.1f}, {params['hi68']:.1f}]"
+                                    row['KS p-value'] = f"{params['ks_pval']:.3f}"
+                                    comparison_data.append(row)
 
                                 comp_df = pd.DataFrame(comparison_data)
                                 st.dataframe(comp_df, hide_index=True, width='stretch')
