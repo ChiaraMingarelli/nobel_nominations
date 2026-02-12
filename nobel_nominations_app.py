@@ -34,6 +34,7 @@ from pathlib import Path
 from io import BytesIO
 import numpy as np
 from scipy import stats as scipy_stats
+import unicodedata
 import matplotlib.pyplot as plt
 
 # Constants
@@ -465,52 +466,175 @@ def save_precomputed_stats(stats: dict):
         st.error(f"Error saving stats: {e}")
 
 
+def _clean_name(name: str) -> str:
+    """Strip parentheticals, brackets, titles, suffixes, and normalize punctuation."""
+    cleaned = re.sub(r'\([^)]*\)', '', name)
+    cleaned = re.sub(r'\[[^\]]*\]', '', cleaned)
+    for title in [', Lord ', ' Lord ', ', Jr', ' Jr.', ' Jr', ', Baron', ' Baron',
+                  ' Baroness', ', Baroness']:
+        cleaned = cleaned.replace(title, ' ')
+    cleaned = cleaned.replace('\u00b4', "'").replace('`', "'")
+    cleaned = re.sub(r'\.(?=\s|$)', '', cleaned)
+    cleaned = cleaned.replace(' v. ', ' von ')
+    cleaned = re.sub(r'\s+', ' ', cleaned).strip()
+    return cleaned
+
+
+def _normalize_unicode(s: str) -> str:
+    """Normalize accented characters to ASCII for comparison."""
+    return unicodedata.normalize('NFD', s).encode('ascii', 'ignore').decode('ascii').lower()
+
+
+def _flexible_name_match(archive_name: str, api_full: str, api_known: str) -> bool:
+    """Try multiple matching strategies for archive name vs API names."""
+    if name_matches(archive_name, api_full) or name_matches(archive_name, api_known):
+        return True
+    cleaned = _clean_name(archive_name)
+    if name_matches(cleaned, api_full) or name_matches(cleaned, api_known):
+        return True
+    norm_archive = _normalize_unicode(cleaned)
+    norm_full = _normalize_unicode(api_full)
+    norm_known = _normalize_unicode(api_known)
+    if norm_archive and (norm_archive in norm_full or norm_full in norm_archive):
+        return True
+    if norm_archive and (norm_archive in norm_known or norm_known in norm_archive):
+        return True
+    archive_tokens = set(_normalize_unicode(t) for t in cleaned.split() if len(t) > 1)
+    api_tokens = set(_normalize_unicode(t) for t in api_full.split() if len(t) > 1)
+    if archive_tokens and api_tokens and archive_tokens.issubset(api_tokens):
+        return True
+    return False
+
+
+# Manual mapping for names where archive spelling differs drastically from API.
+# Key: normalized archive name -> value: (API search term, API knownName).
+_LAUREATE_NAME_OVERRIDES = {
+    "Ilya M Frank": ("Frank", "Il\u00b4ja M. Frank"),
+    "Nikolay Nikolayevich Semyonov": ("Semenov", "Nikolay Semenov"),
+    "Elie Metchnikoff": ("Mechnikov", "Ilya Mechnikov"),
+    "Aleksandr Solzjenitsyn": ("Solzhenitsyn", "Aleksandr Solzhenitsyn"),
+    "Eugene G O'Neill": ("Neill", "Eugene O'Neill"),
+    "Ivan Alexeievitch Bounine": ("Bunin", "Ivan Bunin"),
+    "Albert J Luthuli": ("Lutuli", "Albert Lutuli"),
+}
+
+
+def _search_nobel_api(query: str) -> list:
+    """Search the Nobel API and return laureate results."""
+    url = f"https://api.nobelprize.org/2.1/laureates?name={query}"
+    try:
+        resp = requests.get(url, headers=WIKIDATA_HEADERS, timeout=15)
+        if resp.status_code == 200:
+            return resp.json().get('laureates', [])
+    except Exception:
+        pass
+    return []
+
+
+def _extract_laureate_info(laureate: dict) -> dict:
+    """Extract country, institution, and wiki URL from a Nobel API laureate object."""
+    birth = laureate.get('birth', {})
+    place = birth.get('place', {})
+    country = place.get('countryNow', {}).get('en', '')
+    wiki_url = laureate.get('wikipedia', {}).get('english', '')
+    institution = ''
+    for prize in laureate.get('nobelPrizes', []):
+        affiliations = prize.get('affiliations', [])
+        if affiliations:
+            institution = affiliations[0].get('name', {}).get('en', '')
+            break
+    return {'country': country, 'institution': institution, 'wiki_url': wiki_url}
+
+
 def get_country_from_nobel_api(name: str) -> Optional[dict]:
     """Look up birth country and institution from the official Nobel Prize API.
 
+    Uses flexible name matching with unicode normalization and multiple search
+    strategies to handle special characters, titles, and transliteration differences.
+
     Args:
-        name: Full name of the laureate.
+        name: Full name of the laureate (as stored in the archive).
 
     Returns:
         dict with 'country', 'institution', 'source', 'source_url' or None.
     """
-    # Use last word of name as surname for the API search
-    parts = name.strip().split()
+    cleaned = _clean_name(name)
+    norm_name = re.sub(r'\s+', ' ', cleaned).strip()
+
+    # Check manual override for names with very different transliterations
+    if norm_name in _LAUREATE_NAME_OVERRIDES:
+        search_term, known_target = _LAUREATE_NAME_OVERRIDES[norm_name]
+        results = _search_nobel_api(search_term)
+        for laureate in results:
+            known = laureate.get('knownName', {}).get('en', '')
+            if known == known_target:
+                info = _extract_laureate_info(laureate)
+                if info['country']:
+                    return {
+                        'country': info['country'],
+                        'institution': info['institution'],
+                        'source': 'Nobel Prize',
+                        'source_url': info['wiki_url'],
+                    }
+
+    parts = cleaned.split()
     if not parts:
         return None
-    last_name = parts[-1]
 
-    try:
-        url = f"https://api.nobelprize.org/2.1/laureates?name={last_name}"
-        resp = requests.get(url, headers=WIKIDATA_HEADERS, timeout=15)
-        if resp.status_code != 200:
-            return None
-
-        data = resp.json()
-        for laureate in data.get('laureates', []):
+    def _try_match(results):
+        for laureate in results:
             full = laureate.get('fullName', {}).get('en', '')
             known = laureate.get('knownName', {}).get('en', '')
-            if name_matches(name, full) or name_matches(name, known):
-                birth = laureate.get('birth', {})
-                place = birth.get('place', {})
-                country = place.get('countryNow', {}).get('en', '')
-                wiki_url = laureate.get('wikipedia', {}).get('english', '')
-
-                # Extract institution from first Nobel Prize affiliation
-                institution = ''
-                for prize in laureate.get('nobelPrizes', []):
-                    affiliations = prize.get('affiliations', [])
-                    if affiliations:
-                        institution = affiliations[0].get('name', {}).get('en', '')
-                        break
-
-                if country:
+            if _flexible_name_match(name, full, known):
+                info = _extract_laureate_info(laureate)
+                if info['country']:
                     return {
-                        'country': country,
-                        'institution': institution,
+                        'country': info['country'],
+                        'institution': info['institution'],
                         'source': 'Nobel Prize',
-                        'source_url': wiki_url or '',
+                        'source_url': info['wiki_url'],
                     }
+        return None
+
+    try:
+        # Strategy 1: Search by last name
+        last_name = parts[-1]
+        result = _try_match(_search_nobel_api(last_name))
+        if result:
+            return result
+
+        # Strategy 2: For "Last, First" format, try first part as surname
+        if ',' in name:
+            first_part = name.split(',')[0].strip().split()[-1]
+            result = _try_match(_search_nobel_api(first_part))
+            if result:
+                return result
+
+        # Strategy 3: For hyphenated names, try each part
+        if '-' in last_name:
+            for part in last_name.split('-'):
+                if len(part) > 2:
+                    result = _try_match(_search_nobel_api(part))
+                    if result:
+                        return result
+
+        # Strategy 4: Search by first + last name
+        if len(parts) >= 2:
+            result = _try_match(_search_nobel_api(f"{parts[0]} {parts[-1]}"))
+            if result:
+                return result
+
+        # Strategy 5: Single result for surname -> take it
+        results = _search_nobel_api(last_name)
+        if len(results) == 1:
+            info = _extract_laureate_info(results[0])
+            if info['country']:
+                return {
+                    'country': info['country'],
+                    'institution': info['institution'],
+                    'source': 'Nobel Prize',
+                    'source_url': info['wiki_url'],
+                }
     except Exception:
         pass
     return None
