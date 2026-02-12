@@ -8,7 +8,9 @@
       "Total Nominations": 21,
       "First Nominated": 1901,
       "Years Nominated": 0,
-      "ID": "8006"
+      "ID": "8006",
+      "Country": "Germany",
+      "Institution": "Munich University"
     },
     {
       "Name": "Pieter  Zeeman",
@@ -18,7 +20,9 @@
       "Total Nominations": 3,
       "First Nominated": 1901,
       "Years Nominated": 1,
-      "ID": "10386"
+      "ID": "10386",
+      "Country": "the Netherlands",
+      "Institution": "Amsterdam University"
     },
     {
       "Name": "Hendrik A Lorentz",
@@ -28,7 +32,9 @@
       "Total Nominations": 16,
       "First Nominated": 1902,
       "Years Nominated": 0,
-      "ID": "5636"
+      "ID": "5636",
+      "Country": "the Netherlands",
+      "Institution": "Leiden University"
     },
     {
       "Name": "Henri A Becquerel",
@@ -38,7 +44,9 @@
       "Total Nominations": 10,
       "First Nominated": 1901,
       "Years Nominated": 2,
-      "ID": "802"
+      "ID": "802",
+      "Country": "France",
+      "Institution": "\u00c9cole Polytechnique"
     },
     {
       "Name": "Pierre  Curie",
@@ -48,7 +56,9 @@
       "Total Nominations": 8,
       "First Nominated": 1902,
       "Years Nominated": 1,
-      "ID": "2053"
+      "ID": "2053",
+      "Country": "France",
+      "Institution": "\u00c9cole municipale de physique et de chimie industrielles (Municipal School of Industrial Physics and Chemistry)"
     },
     {
       "Name": "John W Strutt, Lord Rayleigh",
@@ -58,7 +68,9 @@
       "Total Nominations": 20,
       "First Nominated": 1902,
       "Years Nominated": 2,
-      "ID": "8852"
+      "ID": "8852",
+      "Country": "",
+      "Institution": ""
     },
     {
       "Name": "Philipp E.A. v.  Lenard",
@@ -68,7 +80,9 @@
       "Total Nominations": 15,
       "First Nominated": 1901,
       "Years Nominated": 4,
-      "ID": "5373"
+      "ID": "5373",
+      "Country": "",
+      "Institution": ""
     },
     {
       "Name": "Joseph J Thomson",
@@ -78,7 +92,9 @@
       "Total Nominations": 24,
       "First Nominated": 1902,
       "Years Nominated": 4,
-      "ID": "9247"
+      "ID": "9247",
+      "Country": "United Kingdom",
+      "Institution": "University of Cambridge"
     },
     {
       "Name": "Albert A Michelson",
@@ -88,7 +104,9 @@
       "Total Nominations": 4,
       "First Nominated": 1904,
       "Years Nominated": 3,
-      "ID": "6266"
+      "ID": "6266",
+      "Country": "Poland",
+      "Institution": "University of Chicago"
     },
     {
       "Name": "Gabriel  Lippmann",
@@ -98,7 +116,9 @@
       "Total Nominations": 23,
       "First Nominated": 1901,
       "Years Nominated": 7,
-      "ID": "5533"
+      "ID": "5533",
+      "Country": "Luxembourg",
+      "Institution": "Sorbonne University"
     },
     {
       "Name": "Guglielmo  Marconi",
@@ -108,7 +128,9 @@
       "Total Nominations": 15,
       "First Nominated": 1901,
       "Years Nominated": 8,
-      "ID": "5901"
+      "ID": "5901",
+      "Country": "Italy",
+      "Institution": "Marconi Wireless Telegraph Co. Ltd."
     },
     {
       "Name": "Ferdinand C Braun",
@@ -118,7 +140,9 @@
       "Total Nominations": 5,
       "First Nominated": 1905,
       "Years Nominated": 4,
-      "ID": "1298"
+      "ID": "1298",
+      "Country": "",
+      "Institution": ""
     },
     {
       "Name": "Johannes D van der Waals",
@@ -128,7 +152,9 @@
       "Total Nominations": 9,
       "First Nominated": 1901,
       "Years Nominated": 9,
-      "ID": "9528"
+      "ID": "9528",
+      "Country": "the Netherlands",
+      "Institution": "Amsterdam University"
     },
     {
       "Name": "Wilhelm  Wien",
@@ -138,7 +164,9 @@
       "Total Nominations": 9,
       "First Nominated": 1907,
       "Years Nominated": 4,
-      "ID": "10170"
+      "ID": "10170",
+      "Country": "Russia",
+      "Institution": "W\u00fcrzburg University"
     },
     {
       "Name": "Nils G Dal\u00e9n",
@@ -148,7 +176,9 @@
       "Total Nominations": 1,
       "First Nominated": 1912,
       "Years Nominated": 0,
-      "ID": "2114"
+      "ID": "2114",
+      "Country": "Sweden",
+      "Institution": "Swedish Gas-Accumulator Co."
     },
     {
       "Name": "Heike  Kamerlingh Onnes",
@@ -158,7 +188,9 @@
       "Total Nominations": 23,
       "First Nominated": 1909,
       "Years Nominated": 4,
-      "ID": "4701"
+      "ID": "4701",
+      "Country": "the Netherlands",
+      "Institution": "Leiden University"
     },
     {
       "Name": "Max  von Laue",
@@ -168,7 +200,9 @@
       "Total Nominations": 5,
       "First Nominated": 1914,
       "Years Nominated": 0,
-      "ID": "9807"
+      "ID": "9807",
+      "Country": "Germany",
+      "Institution": "Frankfurt-on-the-Main University"
     },
     {
       "Name": "William Henry  Bragg",
@@ -178,7 +212,9 @@
       "Total Nominations": 6,
       "First Nominated": 1914,
       "Years Nominated": 1,
-      "ID": "1276"
+      "ID": "1276",
+      "Country": "United Kingdom",
+      "Institution": "University College"
     },
     {
       "Name": "William Lawrence   Bragg",
@@ -188,7 +224,9 @@
       "Total Nominations": 2,
       "First Nominated": 1915,
       "Years Nominated": 0,
-      "ID": "11051"
+      "ID": "11051",
+      "Country": "Australia",
+      "Institution": "Victoria University"
     },
     {
       "Name": "Charles G Barkla",
@@ -198,7 +236,9 @@
       "Total Nominations": 1,
       "First Nominated": 1918,
       "Years Nominated": -1,
-      "ID": "711"
+      "ID": "711",
+      "Country": "United Kingdom",
+      "Institution": "Edinburgh University"
     },
     {
       "Name": "Max K Planck",
@@ -208,7 +248,9 @@
       "Total Nominations": 74,
       "First Nominated": 1907,
       "Years Nominated": 11,
-      "ID": "7283"
+      "ID": "7283",
+      "Country": "Germany",
+      "Institution": "Berlin University"
     },
     {
       "Name": "Johannes  Stark",
@@ -218,7 +260,9 @@
       "Total Nominations": 11,
       "First Nominated": 1914,
       "Years Nominated": 5,
-      "ID": "8735"
+      "ID": "8735",
+      "Country": "Germany",
+      "Institution": "Greifswald University"
     },
     {
       "Name": "Charles E Guillaume",
@@ -228,7 +272,9 @@
       "Total Nominations": 11,
       "First Nominated": 1902,
       "Years Nominated": 18,
-      "ID": "3710"
+      "ID": "3710",
+      "Country": "Switzerland",
+      "Institution": "Bureau International des Poids et Mesures (International Bureau of Weights and Measures)"
     },
     {
       "Name": "Albert  Einstein",
@@ -238,7 +284,9 @@
       "Total Nominations": 66,
       "First Nominated": 1910,
       "Years Nominated": 11,
-      "ID": "2728"
+      "ID": "2728",
+      "Country": "Germany",
+      "Institution": "Kaiser-Wilhelm-Institut (now Max-Planck-Institut) f\u00fcr Physik"
     },
     {
       "Name": "Niels  Bohr",
@@ -248,7 +296,9 @@
       "Total Nominations": 22,
       "First Nominated": 1917,
       "Years Nominated": 5,
-      "ID": "1118"
+      "ID": "1118",
+      "Country": "Denmark",
+      "Institution": "Niels Bohr Institute"
     },
     {
       "Name": "Robert A Millikan",
@@ -258,7 +308,9 @@
       "Total Nominations": 19,
       "First Nominated": 1916,
       "Years Nominated": 7,
-      "ID": "6292"
+      "ID": "6292",
+      "Country": "USA",
+      "Institution": "California Institute of Technology (Caltech)"
     },
     {
       "Name": "Manne Karl  Siegbahn",
@@ -268,7 +320,9 @@
       "Total Nominations": 3,
       "First Nominated": 1925,
       "Years Nominated": -1,
-      "ID": "8515"
+      "ID": "8515",
+      "Country": "Sweden",
+      "Institution": "Uppsala University"
     },
     {
       "Name": "James  Franck",
@@ -278,7 +332,9 @@
       "Total Nominations": 13,
       "First Nominated": 1923,
       "Years Nominated": 2,
-      "ID": "3167"
+      "ID": "3167",
+      "Country": "Germany",
+      "Institution": "Goettingen University"
     },
     {
       "Name": "Gustav  Hertz",
@@ -288,7 +344,9 @@
       "Total Nominations": 2,
       "First Nominated": 1924,
       "Years Nominated": 1,
-      "ID": "4110"
+      "ID": "4110",
+      "Country": "Germany",
+      "Institution": "Halle University"
     },
     {
       "Name": "Jean B Perrin",
@@ -298,7 +356,9 @@
       "Total Nominations": 47,
       "First Nominated": 1913,
       "Years Nominated": 13,
-      "ID": "7136"
+      "ID": "7136",
+      "Country": "France",
+      "Institution": "Sorbonne University"
     },
     {
       "Name": "Charles T Wilson",
@@ -308,7 +368,9 @@
       "Total Nominations": 10,
       "First Nominated": 1915,
       "Years Nominated": 12,
-      "ID": "10215"
+      "ID": "10215",
+      "Country": "Scotland",
+      "Institution": "University of Cambridge"
     },
     {
       "Name": "Arthur H Compton",
@@ -318,7 +380,9 @@
       "Total Nominations": 15,
       "First Nominated": 1925,
       "Years Nominated": 2,
-      "ID": "1918"
+      "ID": "1918",
+      "Country": "USA",
+      "Institution": "University of Chicago"
     },
     {
       "Name": "Owen W Richardson",
@@ -328,7 +392,9 @@
       "Total Nominations": 13,
       "First Nominated": 1924,
       "Years Nominated": 4,
-      "ID": "7710"
+      "ID": "7710",
+      "Country": "United Kingdom",
+      "Institution": "London University"
     },
     {
       "Name": "Prince Louis-Victor  de Broglie",
@@ -338,7 +404,9 @@
       "Total Nominations": 16,
       "First Nominated": 1925,
       "Years Nominated": 4,
-      "ID": "2200"
+      "ID": "2200",
+      "Country": "France",
+      "Institution": "Sorbonne University, Institut Henri Poincar\u00e9"
     },
     {
       "Name": "Chandrasekhara V Raman",
@@ -348,7 +416,9 @@
       "Total Nominations": 12,
       "First Nominated": 1929,
       "Years Nominated": 1,
-      "ID": "7540"
+      "ID": "7540",
+      "Country": "India",
+      "Institution": "Calcutta University"
     },
     {
       "Name": "Werner Karl  Heisenberg",
@@ -358,7 +428,9 @@
       "Total Nominations": 30,
       "First Nominated": 1928,
       "Years Nominated": 4,
-      "ID": "4018"
+      "ID": "4018",
+      "Country": "Germany",
+      "Institution": "Leipzig University"
     },
     {
       "Name": "Erwin  Schr\u00f6dinger",
@@ -368,7 +440,9 @@
       "Total Nominations": 41,
       "First Nominated": 1928,
       "Years Nominated": 5,
-      "ID": "8240"
+      "ID": "8240",
+      "Country": "Austria",
+      "Institution": "Berlin University"
     },
     {
       "Name": "Paul Adrien Maurice  Dirac",
@@ -378,7 +452,9 @@
       "Total Nominations": 3,
       "First Nominated": 1929,
       "Years Nominated": 4,
-      "ID": "2447"
+      "ID": "2447",
+      "Country": "United Kingdom",
+      "Institution": "University of Cambridge"
     },
     {
       "Name": "James  Chadwick",
@@ -388,7 +464,9 @@
       "Total Nominations": 21,
       "First Nominated": 1934,
       "Years Nominated": 1,
-      "ID": "1697"
+      "ID": "1697",
+      "Country": "United Kingdom",
+      "Institution": "Liverpool University"
     },
     {
       "Name": "Victor F Hess",
@@ -398,7 +476,9 @@
       "Total Nominations": 4,
       "First Nominated": 1931,
       "Years Nominated": 5,
-      "ID": "4127"
+      "ID": "4127",
+      "Country": "Austria",
+      "Institution": "Innsbruck University"
     },
     {
       "Name": "Carl D Anderson",
@@ -408,7 +488,9 @@
       "Total Nominations": 37,
       "First Nominated": 1934,
       "Years Nominated": 2,
-      "ID": "427"
+      "ID": "427",
+      "Country": "USA",
+      "Institution": "California Institute of Technology (Caltech)"
     },
     {
       "Name": "Clinton J Davisson",
@@ -418,7 +500,9 @@
       "Total Nominations": 44,
       "First Nominated": 1929,
       "Years Nominated": 8,
-      "ID": "2170"
+      "ID": "2170",
+      "Country": "USA",
+      "Institution": "Bell Telephone Laboratories"
     },
     {
       "Name": "George Paget  Thomson",
@@ -428,7 +512,9 @@
       "Total Nominations": 8,
       "First Nominated": 1931,
       "Years Nominated": 6,
-      "ID": "9242"
+      "ID": "9242",
+      "Country": "United Kingdom",
+      "Institution": "London University"
     },
     {
       "Name": "Enrico  Fermi",
@@ -438,7 +524,9 @@
       "Total Nominations": 38,
       "First Nominated": 1935,
       "Years Nominated": 3,
-      "ID": "2955"
+      "ID": "2955",
+      "Country": "Italy",
+      "Institution": "Rome University"
     },
     {
       "Name": "Ernest O Lawrence",
@@ -448,7 +536,9 @@
       "Total Nominations": 17,
       "First Nominated": 1938,
       "Years Nominated": 1,
-      "ID": "5290"
+      "ID": "5290",
+      "Country": "USA",
+      "Institution": "University of California"
     },
     {
       "Name": "Otto  Stern",
@@ -458,7 +548,9 @@
       "Total Nominations": 82,
       "First Nominated": 1925,
       "Years Nominated": 18,
-      "ID": "8779"
+      "ID": "8779",
+      "Country": "Poland",
+      "Institution": "Carnegie Institute of Technology"
     },
     {
       "Name": "Isidor I Rabi",
@@ -468,7 +560,9 @@
       "Total Nominations": 21,
       "First Nominated": 1939,
       "Years Nominated": 5,
-      "ID": "7513"
+      "ID": "7513",
+      "Country": "Poland",
+      "Institution": "Columbia University"
     },
     {
       "Name": "Wolfgang  Pauli",
@@ -478,7 +572,9 @@
       "Total Nominations": 29,
       "First Nominated": 1933,
       "Years Nominated": 12,
-      "ID": "7042"
+      "ID": "7042",
+      "Country": "Austria",
+      "Institution": "Princeton University"
     },
     {
       "Name": "Percy W Bridgman",
@@ -488,7 +584,9 @@
       "Total Nominations": 42,
       "First Nominated": 1919,
       "Years Nominated": 27,
-      "ID": "1336"
+      "ID": "1336",
+      "Country": "USA",
+      "Institution": "Harvard University"
     },
     {
       "Name": "Edward V Appleton",
@@ -498,7 +596,9 @@
       "Total Nominations": 15,
       "First Nominated": 1935,
       "Years Nominated": 12,
-      "ID": "469"
+      "ID": "469",
+      "Country": "United Kingdom",
+      "Institution": "Department of Scientific and Industrial Research"
     },
     {
       "Name": "Patrick Maynard Stuart   Blackett (Baron Blackett)",
@@ -508,7 +608,9 @@
       "Total Nominations": 19,
       "First Nominated": 1936,
       "Years Nominated": 12,
-      "ID": "1057"
+      "ID": "1057",
+      "Country": "",
+      "Institution": ""
     },
     {
       "Name": "Hideki  Yukawa",
@@ -518,7 +620,9 @@
       "Total Nominations": 24,
       "First Nominated": 1940,
       "Years Nominated": 9,
-      "ID": "10359"
+      "ID": "10359",
+      "Country": "Japan",
+      "Institution": "Columbia University"
     },
     {
       "Name": "Cecil Frank  Powell",
@@ -528,7 +632,9 @@
       "Total Nominations": 23,
       "First Nominated": 1949,
       "Years Nominated": 1,
-      "ID": "7379"
+      "ID": "7379",
+      "Country": "United Kingdom",
+      "Institution": "Bristol University"
     },
     {
       "Name": "John Douglas  Cockcroft",
@@ -538,7 +644,9 @@
       "Total Nominations": 16,
       "First Nominated": 1937,
       "Years Nominated": 14,
-      "ID": "1855"
+      "ID": "1855",
+      "Country": "United Kingdom",
+      "Institution": "Atomic Energy Research Establishment"
     },
     {
       "Name": "Ernest Thomas Sinton  Walton",
@@ -548,7 +656,9 @@
       "Total Nominations": 8,
       "First Nominated": 1937,
       "Years Nominated": 14,
-      "ID": "9967"
+      "ID": "9967",
+      "Country": "Ireland",
+      "Institution": "Trinity College"
     },
     {
       "Name": "Felix  Bloch",
@@ -558,7 +668,9 @@
       "Total Nominations": 19,
       "First Nominated": 1948,
       "Years Nominated": 4,
-      "ID": "1081"
+      "ID": "1081",
+      "Country": "Switzerland",
+      "Institution": "Stanford University"
     },
     {
       "Name": "Edward M Purcell",
@@ -568,7 +680,9 @@
       "Total Nominations": 10,
       "First Nominated": 1949,
       "Years Nominated": 3,
-      "ID": "7484"
+      "ID": "7484",
+      "Country": "USA",
+      "Institution": "Harvard University"
     },
     {
       "Name": "Frits  Zernike",
@@ -578,7 +692,9 @@
       "Total Nominations": 13,
       "First Nominated": 1944,
       "Years Nominated": 9,
-      "ID": "10397"
+      "ID": "10397",
+      "Country": "the Netherlands",
+      "Institution": "Groningen University"
     },
     {
       "Name": "Max  Born",
@@ -588,7 +704,9 @@
       "Total Nominations": 34,
       "First Nominated": 1930,
       "Years Nominated": 24,
-      "ID": "1186"
+      "ID": "1186",
+      "Country": "Poland",
+      "Institution": "Edinburgh University"
     },
     {
       "Name": "Walther  Bothe",
@@ -598,7 +716,9 @@
       "Total Nominations": 15,
       "First Nominated": 1934,
       "Years Nominated": 20,
-      "ID": "1209"
+      "ID": "1209",
+      "Country": "Germany",
+      "Institution": "University of Heidelberg"
     },
     {
       "Name": "Willis Eugene   Lamb, Jr",
@@ -608,7 +728,9 @@
       "Total Nominations": 22,
       "First Nominated": 1951,
       "Years Nominated": 4,
-      "ID": "5176"
+      "ID": "5176",
+      "Country": "",
+      "Institution": ""
     },
     {
       "Name": "Polykarp  Kusch",
@@ -618,7 +740,9 @@
       "Total Nominations": 3,
       "First Nominated": 1952,
       "Years Nominated": 3,
-      "ID": "10481"
+      "ID": "10481",
+      "Country": "Germany",
+      "Institution": "Columbia University"
     },
     {
       "Name": "Walter Houser  Brattain",
@@ -628,7 +752,9 @@
       "Total Nominations": 8,
       "First Nominated": 1953,
       "Years Nominated": 3,
-      "ID": "10542"
+      "ID": "10542",
+      "Country": "China",
+      "Institution": "Bell Telephone Laboratories"
     },
     {
       "Name": "William  Shockley",
@@ -638,7 +764,9 @@
       "Total Nominations": 6,
       "First Nominated": 1954,
       "Years Nominated": 2,
-      "ID": "10704"
+      "ID": "10704",
+      "Country": "United Kingdom",
+      "Institution": "Semiconductor Laboratory of Beckman Instruments, Inc."
     },
     {
       "Name": "Chen Ning   Yang",
@@ -648,7 +776,9 @@
       "Total Nominations": 5,
       "First Nominated": 1957,
       "Years Nominated": 0,
-      "ID": "13847"
+      "ID": "13847",
+      "Country": "China",
+      "Institution": "Institute for Advanced Study"
     },
     {
       "Name": "Tsung-Dao  Lee",
@@ -658,7 +788,9 @@
       "Total Nominations": 6,
       "First Nominated": 1957,
       "Years Nominated": 0,
-      "ID": "10775"
+      "ID": "10775",
+      "Country": "China",
+      "Institution": "Columbia University"
     },
     {
       "Name": "Pavel Alekseyevich  Cherenkov [\u010cerenkov]",
@@ -668,7 +800,9 @@
       "Total Nominations": 12,
       "First Nominated": 1952,
       "Years Nominated": 6,
-      "ID": "10467"
+      "ID": "10467",
+      "Country": "",
+      "Institution": ""
     },
     {
       "Name": "Igor Yevgenyevich   Tamm",
@@ -678,7 +812,9 @@
       "Total Nominations": 3,
       "First Nominated": 1957,
       "Years Nominated": 1,
-      "ID": "10781"
+      "ID": "10781",
+      "Country": "Russia",
+      "Institution": "Lomonosov Moscow State University"
     },
     {
       "Name": "Ilya M Frank",
@@ -688,7 +824,9 @@
       "Total Nominations": 2,
       "First Nominated": 1957,
       "Years Nominated": 1,
-      "ID": "10956"
+      "ID": "10956",
+      "Country": "",
+      "Institution": ""
     },
     {
       "Name": "Emilio Gino  Segr\u00e8",
@@ -698,7 +836,9 @@
       "Total Nominations": 32,
       "First Nominated": 1953,
       "Years Nominated": 6,
-      "ID": "10538"
+      "ID": "10538",
+      "Country": "Italy",
+      "Institution": "University of California"
     },
     {
       "Name": "Owen  Chamberlain",
@@ -708,7 +848,9 @@
       "Total Nominations": 7,
       "First Nominated": 1957,
       "Years Nominated": 2,
-      "ID": "10870"
+      "ID": "10870",
+      "Country": "USA",
+      "Institution": "University of California"
     },
     {
       "Name": "Donald A Glaser",
@@ -718,7 +860,9 @@
       "Total Nominations": 13,
       "First Nominated": 1959,
       "Years Nominated": 1,
-      "ID": "10925"
+      "ID": "10925",
+      "Country": "USA",
+      "Institution": "University of California"
     },
     {
       "Name": "Robert  Hofstadter",
@@ -728,7 +872,9 @@
       "Total Nominations": 13,
       "First Nominated": 1958,
       "Years Nominated": 3,
-      "ID": "10875"
+      "ID": "10875",
+      "Country": "USA",
+      "Institution": "Stanford University"
     },
     {
       "Name": "Rudolf Ludwig   M\u00f6ssbauer",
@@ -738,7 +884,9 @@
       "Total Nominations": 13,
       "First Nominated": 1961,
       "Years Nominated": 0,
-      "ID": "11391"
+      "ID": "11391",
+      "Country": "Germany",
+      "Institution": "Technical University"
     },
     {
       "Name": "Lev Davidovich  Landau",
@@ -748,7 +896,9 @@
       "Total Nominations": 21,
       "First Nominated": 1954,
       "Years Nominated": 8,
-      "ID": "10785"
+      "ID": "10785",
+      "Country": "Azerbaijan",
+      "Institution": "Academy of Sciences"
     },
     {
       "Name": "Eugene P Wigner",
@@ -758,7 +908,9 @@
       "Total Nominations": 25,
       "First Nominated": 1953,
       "Years Nominated": 10,
-      "ID": "10181"
+      "ID": "10181",
+      "Country": "Hungary",
+      "Institution": "Princeton University"
     },
     {
       "Name": "Johannes Hans Daniel  Jensen",
@@ -768,7 +920,9 @@
       "Total Nominations": 29,
       "First Nominated": 1955,
       "Years Nominated": 8,
-      "ID": "10539"
+      "ID": "10539",
+      "Country": "",
+      "Institution": ""
     },
     {
       "Name": "Maria  Goeppert-Mayer",
@@ -778,7 +932,9 @@
       "Total Nominations": 27,
       "First Nominated": 1955,
       "Years Nominated": 8,
-      "ID": "10622"
+      "ID": "10622",
+      "Country": "",
+      "Institution": ""
     },
     {
       "Name": "Charles Hard  Townes",
@@ -788,7 +944,9 @@
       "Total Nominations": 74,
       "First Nominated": 1958,
       "Years Nominated": 6,
-      "ID": "10706"
+      "ID": "10706",
+      "Country": "USA",
+      "Institution": "Massachusetts Institute of Technology (MIT)"
     },
     {
       "Name": "Nicolay Gennadijevitj  Basov",
@@ -798,7 +956,9 @@
       "Total Nominations": 8,
       "First Nominated": 1960,
       "Years Nominated": 4,
-      "ID": "11052"
+      "ID": "11052",
+      "Country": "",
+      "Institution": ""
     },
     {
       "Name": "Aleksandr Mikhailovich  Prokhorov [Prockorov]",
@@ -808,7 +968,9 @@
       "Total Nominations": 13,
       "First Nominated": 1960,
       "Years Nominated": 4,
-      "ID": "11053"
+      "ID": "11053",
+      "Country": "",
+      "Institution": ""
     },
     {
       "Name": "Julian  Schwinger",
@@ -818,7 +980,9 @@
       "Total Nominations": 30,
       "First Nominated": 1951,
       "Years Nominated": 14,
-      "ID": "8294"
+      "ID": "8294",
+      "Country": "USA",
+      "Institution": "Harvard University"
     },
     {
       "Name": "Sin-Itiro  Tomonaga",
@@ -828,7 +992,9 @@
       "Total Nominations": 15,
       "First Nominated": 1951,
       "Years Nominated": 14,
-      "ID": "9311"
+      "ID": "9311",
+      "Country": "Japan",
+      "Institution": "Tokyo University of Education"
     },
     {
       "Name": "Richard Phillips  Feynman",
@@ -838,7 +1004,9 @@
       "Total Nominations": 49,
       "First Nominated": 1956,
       "Years Nominated": 9,
-      "ID": "10683"
+      "ID": "10683",
+      "Country": "",
+      "Institution": ""
     },
     {
       "Name": "Alfred  Kastler",
@@ -848,7 +1016,9 @@
       "Total Nominations": 50,
       "First Nominated": 1956,
       "Years Nominated": 10,
-      "ID": "4727"
+      "ID": "4727",
+      "Country": "France",
+      "Institution": "\u00c9cole Normale Sup\u00e9rieure"
     },
     {
       "Name": "Hans Albrecht  Bethe",
@@ -858,7 +1028,9 @@
       "Total Nominations": 56,
       "First Nominated": 1943,
       "Years Nominated": 24,
-      "ID": "971"
+      "ID": "971",
+      "Country": "France",
+      "Institution": "Cornell University"
     },
     {
       "Name": "Luis Walter  Alvarez",
@@ -868,7 +1040,9 @@
       "Total Nominations": 26,
       "First Nominated": 1951,
       "Years Nominated": 17,
-      "ID": "395"
+      "ID": "395",
+      "Country": "USA",
+      "Institution": "University of California"
     },
     {
       "Name": "Murray  Gell-Mann",
@@ -878,7 +1052,9 @@
       "Total Nominations": 129,
       "First Nominated": 1960,
       "Years Nominated": 9,
-      "ID": "11043"
+      "ID": "11043",
+      "Country": "USA",
+      "Institution": "California Institute of Technology (Caltech)"
     },
     {
       "Name": "Hannes  Alfv\u00e9n",
@@ -888,7 +1064,9 @@
       "Total Nominations": 52,
       "First Nominated": 1953,
       "Years Nominated": 17,
-      "ID": "368"
+      "ID": "368",
+      "Country": "Sweden",
+      "Institution": "Royal Institute of Technology"
     },
     {
       "Name": "Louis  N\u00e9el",
@@ -898,7 +1076,9 @@
       "Total Nominations": 98,
       "First Nominated": 1952,
       "Years Nominated": 18,
-      "ID": "10474"
+      "ID": "10474",
+      "Country": "France",
+      "Institution": "University of Grenoble"
     },
     {
       "Name": "Dennis  Gabor",
@@ -908,7 +1088,9 @@
       "Total Nominations": 36,
       "First Nominated": 1929,
       "Years Nominated": 42,
-      "ID": "3289"
+      "ID": "3289",
+      "Country": "Hungary",
+      "Institution": "Imperial College"
     },
     {
       "Name": "Leon Neil  Cooper",
@@ -918,7 +1100,9 @@
       "Total Nominations": 43,
       "First Nominated": 1961,
       "Years Nominated": 11,
-      "ID": "11409"
+      "ID": "11409",
+      "Country": "USA",
+      "Institution": "Brown University"
     },
     {
       "Name": "John Robert  Schrieffer",
@@ -928,7 +1112,9 @@
       "Total Nominations": 42,
       "First Nominated": 1961,
       "Years Nominated": 11,
-      "ID": "11410"
+      "ID": "11410",
+      "Country": "USA",
+      "Institution": "University of Pennsylvania"
     },
     {
       "Name": "Brian D. Josephson",
@@ -939,7 +1125,9 @@
       "First Nominated": null,
       "Years Nominated": null,
       "ID": null,
-      "Note": "Nomination data not available in archive"
+      "Note": "Nomination data not available in archive",
+      "Country": "United Kingdom",
+      "Institution": "University of Cambridge"
     },
     {
       "Name": "Leo Esaki",
@@ -950,7 +1138,9 @@
       "First Nominated": null,
       "Years Nominated": null,
       "ID": null,
-      "Note": "Nomination data not available in archive"
+      "Note": "Nomination data not available in archive",
+      "Country": "Japan",
+      "Institution": "IBM Thomas J. Watson Research Center"
     },
     {
       "Name": "Ivar Giaever",
@@ -961,7 +1151,9 @@
       "First Nominated": null,
       "Years Nominated": null,
       "ID": null,
-      "Note": "Nomination data not available in archive"
+      "Note": "Nomination data not available in archive",
+      "Country": "Norway",
+      "Institution": "General Electric Company"
     },
     {
       "Name": "Martin  Ryle",
@@ -971,7 +1163,9 @@
       "Total Nominations": 49,
       "First Nominated": 1963,
       "Years Nominated": 11,
-      "ID": "13171"
+      "ID": "13171",
+      "Country": "United Kingdom",
+      "Institution": "University of Cambridge"
     },
     {
       "Name": "Antony   Hewish",
@@ -981,7 +1175,9 @@
       "Total Nominations": 11,
       "First Nominated": 1970,
       "Years Nominated": 4,
-      "ID": "15490"
+      "ID": "15490",
+      "Country": "United Kingdom",
+      "Institution": "University of Cambridge"
     }
   ],
   "chemistry": [
@@ -993,7 +1189,9 @@
       "Total Nominations": 34,
       "First Nominated": 1901,
       "Years Nominated": 2,
-      "ID": "511"
+      "ID": "511",
+      "Country": "Sweden",
+      "Institution": "Stockholm University"
     },
     {
       "Name": "Jacobus Henricus  Van\u00b4t Hoff",
@@ -1003,7 +1201,9 @@
       "Total Nominations": 11,
       "First Nominated": 1901,
       "Years Nominated": 0,
-      "ID": "9563"
+      "ID": "9563",
+      "Country": "",
+      "Institution": ""
     },
     {
       "Name": "Emil H Fischer",
@@ -1013,7 +1213,9 @@
       "Total Nominations": 16,
       "First Nominated": 1901,
       "Years Nominated": 1,
-      "ID": "3022"
+      "ID": "3022",
+      "Country": "Germany",
+      "Institution": "Berlin University"
     },
     {
       "Name": "Adolf J von Baeyer",
@@ -1023,7 +1225,9 @@
       "Total Nominations": 15,
       "First Nominated": 1902,
       "Years Nominated": 3,
-      "ID": "9713"
+      "ID": "9713",
+      "Country": "Germany",
+      "Institution": "Munich University"
     },
     {
       "Name": "Henri  Moissan",
@@ -1033,7 +1237,9 @@
       "Total Nominations": 41,
       "First Nominated": 1901,
       "Years Nominated": 5,
-      "ID": "6352"
+      "ID": "6352",
+      "Country": "France",
+      "Institution": "Sorbonne University"
     },
     {
       "Name": "William  Ramsay",
@@ -1043,7 +1249,9 @@
       "Total Nominations": 31,
       "First Nominated": 1902,
       "Years Nominated": 2,
-      "ID": "7552"
+      "ID": "7552",
+      "Country": "Scotland",
+      "Institution": "University College"
     },
     {
       "Name": "Theodore W Richards",
@@ -1053,7 +1261,9 @@
       "Total Nominations": 33,
       "First Nominated": 1902,
       "Years Nominated": 12,
-      "ID": "7707"
+      "ID": "7707",
+      "Country": "USA",
+      "Institution": "Harvard University"
     },
     {
       "Name": "Wilhelm  Ostwald",
@@ -1063,7 +1273,9 @@
       "Total Nominations": 20,
       "First Nominated": 1904,
       "Years Nominated": 5,
-      "ID": "6913"
+      "ID": "6913",
+      "Country": "Latvia",
+      "Institution": "Leipzig University"
     },
     {
       "Name": "Eduard  Buchner",
@@ -1073,7 +1285,9 @@
       "Total Nominations": 6,
       "First Nominated": 1902,
       "Years Nominated": 5,
-      "ID": "1428"
+      "ID": "1428",
+      "Country": "Germany",
+      "Institution": "Landwirtschaftliche Hochschule (Agricultural College)"
     },
     {
       "Name": "Victor  Grignard",
@@ -1083,7 +1297,9 @@
       "Total Nominations": 7,
       "First Nominated": 1906,
       "Years Nominated": 6,
-      "ID": "3649"
+      "ID": "3649",
+      "Country": "France",
+      "Institution": "Nancy University"
     },
     {
       "Name": "Walther H Nernst",
@@ -1093,7 +1309,9 @@
       "Total Nominations": 86,
       "First Nominated": 1906,
       "Years Nominated": 14,
-      "ID": "6650"
+      "ID": "6650",
+      "Country": "Poland",
+      "Institution": "Berlin University"
     },
     {
       "Name": "Hans K von Euler-Chelpin",
@@ -1103,7 +1321,9 @@
       "Total Nominations": 16,
       "First Nominated": 1924,
       "Years Nominated": 5,
-      "ID": "9751"
+      "ID": "9751",
+      "Country": "Germany",
+      "Institution": "Stockholm University"
     },
     {
       "Name": "Paul  Sabatier",
@@ -1113,7 +1333,9 @@
       "Total Nominations": 9,
       "First Nominated": 1907,
       "Years Nominated": 5,
-      "ID": "8017"
+      "ID": "8017",
+      "Country": "France",
+      "Institution": "Toulouse University"
     },
     {
       "Name": "Ernest  Lord Rutherford",
@@ -1123,7 +1345,9 @@
       "Total Nominations": 24,
       "First Nominated": 1907,
       "Years Nominated": 1,
-      "ID": "5627"
+      "ID": "5627",
+      "Country": "",
+      "Institution": ""
     },
     {
       "Name": "Otto  Wallach",
@@ -1133,7 +1357,9 @@
       "Total Nominations": 5,
       "First Nominated": 1907,
       "Years Nominated": 3,
-      "ID": "9953"
+      "ID": "9953",
+      "Country": "Russia",
+      "Institution": "Goettingen University"
     },
     {
       "Name": "Alfred  Werner",
@@ -1143,7 +1369,9 @@
       "Total Nominations": 17,
       "First Nominated": 1907,
       "Years Nominated": 6,
-      "ID": "10087"
+      "ID": "10087",
+      "Country": "France",
+      "Institution": "University of Zurich"
     },
     {
       "Name": "Richard M Willst\u00e4tter",
@@ -1153,7 +1381,9 @@
       "Total Nominations": 28,
       "First Nominated": 1908,
       "Years Nominated": 7,
-      "ID": "10210"
+      "ID": "10210",
+      "Country": "Germany",
+      "Institution": "Kaiser-Wilhelm-Institut (now Max-Planck Institut) f\u00fcr Chemie"
     },
     {
       "Name": "Frederick  Soddy",
@@ -1163,7 +1393,9 @@
       "Total Nominations": 6,
       "First Nominated": 1908,
       "Years Nominated": 13,
-      "ID": "8646"
+      "ID": "8646",
+      "Country": "United Kingdom",
+      "Institution": "University of Oxford"
     },
     {
       "Name": "Richard A Zsigmondy",
@@ -1173,7 +1405,9 @@
       "Total Nominations": 11,
       "First Nominated": 1913,
       "Years Nominated": 12,
-      "ID": "10428"
+      "ID": "10428",
+      "Country": "Austria",
+      "Institution": "Goettingen University"
     },
     {
       "Name": "Fritz  Haber",
@@ -1183,7 +1417,9 @@
       "Total Nominations": 10,
       "First Nominated": 1912,
       "Years Nominated": 6,
-      "ID": "3758"
+      "ID": "3758",
+      "Country": "Poland",
+      "Institution": "Kaiser-Wilhelm-Institut (now Fritz-Haber-Institut) f\u00fcr physikalische Chemie und Electrochemie"
     },
     {
       "Name": "Otto  Hahn",
@@ -1193,7 +1429,9 @@
       "Total Nominations": 39,
       "First Nominated": 1914,
       "Years Nominated": 30,
-      "ID": "3787"
+      "ID": "3787",
+      "Country": "Germany",
+      "Institution": "Kaiser-Wilhelm-Institut (now Max-Planck Institut) f\u00fcr Chemie"
     },
     {
       "Name": "Hermann  Staudinger",
@@ -1203,7 +1441,9 @@
       "Total Nominations": 74,
       "First Nominated": 1931,
       "Years Nominated": 22,
-      "ID": "8746"
+      "ID": "8746",
+      "Country": "Germany",
+      "Institution": "University of Freiburg"
     },
     {
       "Name": "Carl  Bosch",
@@ -1213,7 +1453,9 @@
       "Total Nominations": 19,
       "First Nominated": 1916,
       "Years Nominated": 15,
-      "ID": "1198"
+      "ID": "1198",
+      "Country": "Germany",
+      "Institution": "University of Heidelberg"
     },
     {
       "Name": "Theodor  Svedberg",
@@ -1223,7 +1465,9 @@
       "Total Nominations": 13,
       "First Nominated": 1913,
       "Years Nominated": 13,
-      "ID": "8915"
+      "ID": "8915",
+      "Country": "",
+      "Institution": ""
     },
     {
       "Name": "Fritz  Pregl",
@@ -1233,7 +1477,9 @@
       "Total Nominations": 10,
       "First Nominated": 1917,
       "Years Nominated": 6,
-      "ID": "7399"
+      "ID": "7399",
+      "Country": "Slovenia",
+      "Institution": "Graz University"
     },
     {
       "Name": "Adolf O Windaus",
@@ -1243,7 +1489,9 @@
       "Total Nominations": 8,
       "First Nominated": 1926,
       "Years Nominated": 2,
-      "ID": "10241"
+      "ID": "10241",
+      "Country": "Germany",
+      "Institution": "Goettingen University"
     },
     {
       "Name": "Francis W Aston",
@@ -1253,7 +1501,9 @@
       "Total Nominations": 4,
       "First Nominated": 1922,
       "Years Nominated": 0,
-      "ID": "546"
+      "ID": "546",
+      "Country": "United Kingdom",
+      "Institution": "University of Cambridge"
     },
     {
       "Name": "George  de Hevesy",
@@ -1263,7 +1513,9 @@
       "Total Nominations": 32,
       "First Nominated": 1924,
       "Years Nominated": 19,
-      "ID": "2235"
+      "ID": "2235",
+      "Country": "Hungary",
+      "Institution": "Stockholm University"
     },
     {
       "Name": "Heinrich Otto  Wieland",
@@ -1273,7 +1525,9 @@
       "Total Nominations": 13,
       "First Nominated": 1924,
       "Years Nominated": 3,
-      "ID": "10166"
+      "ID": "10166",
+      "Country": "Germany",
+      "Institution": "Munich University"
     },
     {
       "Name": "Jaroslav  Heyrovsk\u00fd",
@@ -1283,7 +1537,9 @@
       "Total Nominations": 67,
       "First Nominated": 1934,
       "Years Nominated": 25,
-      "ID": "4154"
+      "ID": "4154",
+      "Country": "",
+      "Institution": ""
     },
     {
       "Name": "Petrus J Debye",
@@ -1293,7 +1549,9 @@
       "Total Nominations": 47,
       "First Nominated": 1916,
       "Years Nominated": 20,
-      "ID": "2325"
+      "ID": "2325",
+      "Country": "the Netherlands",
+      "Institution": "Berlin University"
     },
     {
       "Name": "Irving  Langmuir",
@@ -1303,7 +1561,9 @@
       "Total Nominations": 15,
       "First Nominated": 1916,
       "Years Nominated": 16,
-      "ID": "5229"
+      "ID": "5229",
+      "Country": "USA",
+      "Institution": "General Electric Company"
     },
     {
       "Name": "Hans  Fischer",
@@ -1313,7 +1573,9 @@
       "Total Nominations": 16,
       "First Nominated": 1928,
       "Years Nominated": 2,
-      "ID": "3026"
+      "ID": "3026",
+      "Country": "Germany",
+      "Institution": "Technische Hochschule (Institute of Technology)"
     },
     {
       "Name": "Robert  Robinson",
@@ -1323,7 +1585,9 @@
       "Total Nominations": 51,
       "First Nominated": 1928,
       "Years Nominated": 19,
-      "ID": "7783"
+      "ID": "7783",
+      "Country": "United Kingdom",
+      "Institution": "University of Oxford"
     },
     {
       "Name": "Friedrich  Bergius",
@@ -1333,7 +1597,9 @@
       "Total Nominations": 2,
       "First Nominated": 1929,
       "Years Nominated": 2,
-      "ID": "900"
+      "ID": "900",
+      "Country": "Poland",
+      "Institution": "University of Heidelberg"
     },
     {
       "Name": "Arthur  Harden",
@@ -1343,7 +1609,9 @@
       "Total Nominations": 1,
       "First Nominated": 1929,
       "Years Nominated": 0,
-      "ID": "3887"
+      "ID": "3887",
+      "Country": "United Kingdom",
+      "Institution": "London University"
     },
     {
       "Name": "Walter Norman  Haworth",
@@ -1353,7 +1621,9 @@
       "Total Nominations": 16,
       "First Nominated": 1929,
       "Years Nominated": 8,
-      "ID": "3957"
+      "ID": "3957",
+      "Country": "United Kingdom",
+      "Institution": "Birmingham University"
     },
     {
       "Name": "Leopold  Ruzicka",
@@ -1363,7 +1633,9 @@
       "Total Nominations": 22,
       "First Nominated": 1931,
       "Years Nominated": 8,
-      "ID": "7994"
+      "ID": "7994",
+      "Country": "Croatia",
+      "Institution": "Eidgen\u00f6ssische Technische Hochschule (Swiss Federal Institute of Technology)"
     },
     {
       "Name": "Otto P Diels",
@@ -1373,7 +1645,9 @@
       "Total Nominations": 32,
       "First Nominated": 1932,
       "Years Nominated": 18,
-      "ID": "2432"
+      "ID": "2432",
+      "Country": "Germany",
+      "Institution": "Kiel University"
     },
     {
       "Name": "Paul  Karrer",
@@ -1383,7 +1657,9 @@
       "Total Nominations": 28,
       "First Nominated": 1932,
       "Years Nominated": 5,
-      "ID": "4719"
+      "ID": "4719",
+      "Country": "Russia",
+      "Institution": "University of Zurich"
     },
     {
       "Name": "Richard  Kuhn",
@@ -1393,7 +1669,9 @@
       "Total Nominations": 8,
       "First Nominated": 1932,
       "Years Nominated": 6,
-      "ID": "5084"
+      "ID": "5084",
+      "Country": "Austria",
+      "Institution": "Kaiser-Wilhelm-Institut (now Max-Planck Institut) f\u00fcr Medizinische Forschung"
     },
     {
       "Name": "Artturi I Virtanen",
@@ -1403,7 +1681,9 @@
       "Total Nominations": 23,
       "First Nominated": 1933,
       "Years Nominated": 12,
-      "ID": "9668"
+      "ID": "9668",
+      "Country": "Finland",
+      "Institution": "University of Helsinki"
     },
     {
       "Name": "Adolf F Butenandt",
@@ -1413,7 +1693,9 @@
       "Total Nominations": 18,
       "First Nominated": 1934,
       "Years Nominated": 5,
-      "ID": "1487"
+      "ID": "1487",
+      "Country": "Germany",
+      "Institution": "Kaiser-Wilhelm-Institut (now Max-Planck-Institut) f\u00fcr Biochemie"
     },
     {
       "Name": "Harold Clayton  Urey",
@@ -1423,7 +1705,9 @@
       "Total Nominations": 2,
       "First Nominated": 1934,
       "Years Nominated": 0,
-      "ID": "9461"
+      "ID": "9461",
+      "Country": "USA",
+      "Institution": "Columbia University"
     },
     {
       "Name": "Fr\u00e9d\u00e9ric  Joliot",
@@ -1433,7 +1717,9 @@
       "Total Nominations": 15,
       "First Nominated": 1934,
       "Years Nominated": 1,
-      "ID": "4613"
+      "ID": "4613",
+      "Country": "France",
+      "Institution": "Institut du Radium"
     },
     {
       "Name": "Ir\u00e8ne  Joliot-Curie",
@@ -1443,7 +1729,9 @@
       "Total Nominations": 18,
       "First Nominated": 1934,
       "Years Nominated": 1,
-      "ID": "4615"
+      "ID": "4615",
+      "Country": "France",
+      "Institution": "Institut du Radium"
     },
     {
       "Name": "Kurt  Alder",
@@ -1453,7 +1741,9 @@
       "Total Nominations": 7,
       "First Nominated": 1936,
       "Years Nominated": 14,
-      "ID": "359"
+      "ID": "359",
+      "Country": "Poland",
+      "Institution": "Cologne University"
     },
     {
       "Name": "William F Giauque",
@@ -1463,7 +1753,9 @@
       "Total Nominations": 15,
       "First Nominated": 1936,
       "Years Nominated": 13,
-      "ID": "3418"
+      "ID": "3418",
+      "Country": "Canada",
+      "Institution": "University of California"
     },
     {
       "Name": "Wendell M Stanley",
@@ -1473,7 +1765,9 @@
       "Total Nominations": 45,
       "First Nominated": 1937,
       "Years Nominated": 9,
-      "ID": "8731"
+      "ID": "8731",
+      "Country": "USA",
+      "Institution": "Rockefeller Institute for Medical Research"
     },
     {
       "Name": "Odd  Hassel",
@@ -1483,7 +1777,9 @@
       "Total Nominations": 18,
       "First Nominated": 1960,
       "Years Nominated": 9,
-      "ID": "3933"
+      "ID": "3933",
+      "Country": "Norway",
+      "Institution": "University of Oslo"
     },
     {
       "Name": "John H Northrop",
@@ -1493,7 +1789,9 @@
       "Total Nominations": 45,
       "First Nominated": 1932,
       "Years Nominated": 14,
-      "ID": "6764"
+      "ID": "6764",
+      "Country": "USA",
+      "Institution": "Rockefeller Institute for Medical Research"
     },
     {
       "Name": "James B Sumner",
@@ -1503,7 +1801,9 @@
       "Total Nominations": 18,
       "First Nominated": 1932,
       "Years Nominated": 14,
-      "ID": "8895"
+      "ID": "8895",
+      "Country": "USA",
+      "Institution": "Cornell University"
     },
     {
       "Name": "Vincent  du Vigneaud",
@@ -1513,7 +1813,9 @@
       "Total Nominations": 39,
       "First Nominated": 1943,
       "Years Nominated": 12,
-      "ID": "2555"
+      "ID": "2555",
+      "Country": "USA",
+      "Institution": "Cornell University"
     },
     {
       "Name": "Nikolay Nikolayevich   Semyonov",
@@ -1523,7 +1825,9 @@
       "Total Nominations": 7,
       "First Nominated": 1946,
       "Years Nominated": 10,
-      "ID": "8398"
+      "ID": "8398",
+      "Country": "",
+      "Institution": ""
     },
     {
       "Name": "Cyril Norman  Hinshelwood",
@@ -1533,7 +1837,9 @@
       "Total Nominations": 12,
       "First Nominated": 1947,
       "Years Nominated": 9,
-      "ID": "4194"
+      "ID": "4194",
+      "Country": "United Kingdom",
+      "Institution": "University of Oxford"
     },
     {
       "Name": "Glenn Theodore  Seaborg",
@@ -1543,7 +1849,9 @@
       "Total Nominations": 24,
       "First Nominated": 1946,
       "Years Nominated": 5,
-      "ID": "8323"
+      "ID": "8323",
+      "Country": "USA",
+      "Institution": "University of California"
     },
     {
       "Name": "Robert Burns B Woodward",
@@ -1553,7 +1861,9 @@
       "Total Nominations": 111,
       "First Nominated": 1946,
       "Years Nominated": 19,
-      "ID": "10302"
+      "ID": "10302",
+      "Country": "USA",
+      "Institution": "Harvard University"
     },
     {
       "Name": "Arne W Tiselius",
@@ -1563,7 +1873,9 @@
       "Total Nominations": 12,
       "First Nominated": 1940,
       "Years Nominated": 8,
-      "ID": "9282"
+      "ID": "9282",
+      "Country": "Sweden",
+      "Institution": "Uppsala University"
     },
     {
       "Name": "Willard Frank  Libby",
@@ -1573,7 +1885,9 @@
       "Total Nominations": 34,
       "First Nominated": 1951,
       "Years Nominated": 9,
-      "ID": "5458"
+      "ID": "5458",
+      "Country": "USA",
+      "Institution": "University of California"
     },
     {
       "Name": "Edwin Mattison  McMillan",
@@ -1583,7 +1897,9 @@
       "Total Nominations": 11,
       "First Nominated": 1947,
       "Years Nominated": 4,
-      "ID": "6062"
+      "ID": "6062",
+      "Country": "USA",
+      "Institution": "University of California"
     },
     {
       "Name": "Alexander Robertus  Todd",
@@ -1593,7 +1909,9 @@
       "Total Nominations": 21,
       "First Nominated": 1949,
       "Years Nominated": 8,
-      "ID": "9289"
+      "ID": "9289",
+      "Country": "",
+      "Institution": ""
     },
     {
       "Name": "Melvin  Calvin",
@@ -1603,7 +1921,9 @@
       "Total Nominations": 25,
       "First Nominated": 1950,
       "Years Nominated": 11,
-      "ID": "1550"
+      "ID": "1550",
+      "Country": "USA",
+      "Institution": "University of California"
     },
     {
       "Name": "Dorothy  Crowfoot Hodgkin",
@@ -1613,7 +1933,9 @@
       "Total Nominations": 31,
       "First Nominated": 1950,
       "Years Nominated": 14,
-      "ID": "10685"
+      "ID": "10685",
+      "Country": "Egypt",
+      "Institution": "University of Oxford, Royal Society"
     },
     {
       "Name": "Paul John  Flory",
@@ -1623,7 +1945,9 @@
       "Total Nominations": 39,
       "First Nominated": 1950,
       "Years Nominated": 24,
-      "ID": "3072"
+      "ID": "3072",
+      "Country": "",
+      "Institution": ""
     },
     {
       "Name": "Robert Sanderson   Mulliken",
@@ -1633,7 +1957,9 @@
       "Total Nominations": 23,
       "First Nominated": 1950,
       "Years Nominated": 16,
-      "ID": "6504"
+      "ID": "6504",
+      "Country": "",
+      "Institution": ""
     },
     {
       "Name": "Archer John Porter  Martin",
@@ -1643,7 +1969,9 @@
       "Total Nominations": 9,
       "First Nominated": 1950,
       "Years Nominated": 2,
-      "ID": "5945"
+      "ID": "5945",
+      "Country": "United Kingdom",
+      "Institution": "National Institute for Medical Research"
     },
     {
       "Name": "Richard L M Synge",
@@ -1653,7 +1981,9 @@
       "Total Nominations": 4,
       "First Nominated": 1950,
       "Years Nominated": 2,
-      "ID": "8946"
+      "ID": "8946",
+      "Country": "United Kingdom",
+      "Institution": "Rowett Research Institute"
     },
     {
       "Name": "Max Ferdinand  Perutz",
@@ -1663,7 +1993,9 @@
       "Total Nominations": 18,
       "First Nominated": 1951,
       "Years Nominated": 11,
-      "ID": "7146"
+      "ID": "7146",
+      "Country": "Austria",
+      "Institution": "MRC Laboratory of Molecular Biology"
     },
     {
       "Name": "Karl W Ziegler",
@@ -1673,7 +2005,9 @@
       "Total Nominations": 32,
       "First Nominated": 1954,
       "Years Nominated": 9,
-      "ID": "10610"
+      "ID": "10610",
+      "Country": "",
+      "Institution": ""
     },
     {
       "Name": "Giulio  Natta",
@@ -1683,7 +2017,9 @@
       "Total Nominations": 44,
       "First Nominated": 1955,
       "Years Nominated": 8,
-      "ID": "10651"
+      "ID": "10651",
+      "Country": "Italy",
+      "Institution": "Institute of Technology"
     },
     {
       "Name": "Lars  Onsager",
@@ -1693,7 +2029,9 @@
       "Total Nominations": 93,
       "First Nominated": 1952,
       "Years Nominated": 16,
-      "ID": "10476"
+      "ID": "10476",
+      "Country": "Norway",
+      "Institution": "Yale University"
     },
     {
       "Name": "George  Porter",
@@ -1703,7 +2041,9 @@
       "Total Nominations": 7,
       "First Nominated": 1955,
       "Years Nominated": 12,
-      "ID": "10654"
+      "ID": "10654",
+      "Country": "United Kingdom",
+      "Institution": "Royal Institution of Great Britain"
     },
     {
       "Name": "Derek Harold Richard   Barton",
@@ -1713,7 +2053,9 @@
       "Total Nominations": 54,
       "First Nominated": 1960,
       "Years Nominated": 9,
-      "ID": "10669"
+      "ID": "10669",
+      "Country": "",
+      "Institution": ""
     },
     {
       "Name": "Gerhard  Herzberg",
@@ -1723,7 +2065,9 @@
       "Total Nominations": 21,
       "First Nominated": 1958,
       "Years Nominated": 13,
-      "ID": "11155"
+      "ID": "11155",
+      "Country": "Germany",
+      "Institution": "National Research Council of Canada"
     },
     {
       "Name": "Luis Federico   Leloir",
@@ -1733,7 +2077,9 @@
       "Total Nominations": 36,
       "First Nominated": 1958,
       "Years Nominated": 12,
-      "ID": "10889"
+      "ID": "10889",
+      "Country": "",
+      "Institution": ""
     },
     {
       "Name": "John Cowdery  Kendrew",
@@ -1743,7 +2089,9 @@
       "Total Nominations": 14,
       "First Nominated": 1959,
       "Years Nominated": 3,
-      "ID": "10997"
+      "ID": "10997",
+      "Country": "United Kingdom",
+      "Institution": "MRC Laboratory of Molecular Biology"
     },
     {
       "Name": "Manfred  Eigen",
@@ -1753,7 +2101,9 @@
       "Total Nominations": 31,
       "First Nominated": 1960,
       "Years Nominated": 7,
-      "ID": "13019"
+      "ID": "13019",
+      "Country": "Germany",
+      "Institution": "Max-Planck-Institut f\u00fcr Physikalische Chemie"
     },
     {
       "Name": "Ronald George Wreyford   Norrish",
@@ -1763,7 +2113,9 @@
       "Total Nominations": 8,
       "First Nominated": 1961,
       "Years Nominated": 6,
-      "ID": "11157"
+      "ID": "11157",
+      "Country": "United Kingdom",
+      "Institution": "Institute of Physical Chemistry"
     },
     {
       "Name": "Ernst Otto  Fischer",
@@ -1773,7 +2125,9 @@
       "Total Nominations": 12,
       "First Nominated": 1962,
       "Years Nominated": 11,
-      "ID": "13074"
+      "ID": "13074",
+      "Country": "Germany",
+      "Institution": "Technical University"
     },
     {
       "Name": "William Howard  Stein",
@@ -1783,7 +2137,9 @@
       "Total Nominations": 7,
       "First Nominated": 1951,
       "Years Nominated": 21,
-      "ID": "8764"
+      "ID": "8764",
+      "Country": "",
+      "Institution": ""
     },
     {
       "Name": "Stanford  Moore",
@@ -1793,7 +2149,9 @@
       "Total Nominations": 8,
       "First Nominated": 1951,
       "Years Nominated": 21,
-      "ID": "6393"
+      "ID": "6393",
+      "Country": "USA",
+      "Institution": "Rockefeller University"
     },
     {
       "Name": "Geoffrey   Wilkinson",
@@ -1803,7 +2161,9 @@
       "Total Nominations": 10,
       "First Nominated": 1967,
       "Years Nominated": 6,
-      "ID": "14663"
+      "ID": "14663",
+      "Country": "United Kingdom",
+      "Institution": "Imperial College"
     },
     {
       "Name": "Christian Boehmer   Anfinsen",
@@ -1813,7 +2173,9 @@
       "Total Nominations": 3,
       "First Nominated": 1971,
       "Years Nominated": 1,
-      "ID": "16045"
+      "ID": "16045",
+      "Country": "",
+      "Institution": ""
     }
   ],
   "medicine": [
@@ -1825,7 +2187,9 @@
       "Total Nominations": 14,
       "First Nominated": 1901,
       "Years Nominated": 6,
-      "ID": "5279"
+      "ID": "5279",
+      "Country": "France",
+      "Institution": "Institut Pasteur"
     },
     {
       "Name": "Ronald  Ross",
@@ -1835,7 +2199,9 @@
       "Total Nominations": 15,
       "First Nominated": 1901,
       "Years Nominated": 1,
-      "ID": "7892"
+      "ID": "7892",
+      "Country": "India",
+      "Institution": "University College"
     },
     {
       "Name": "Niels R Finsen",
@@ -1845,7 +2211,9 @@
       "Total Nominations": 17,
       "First Nominated": 1901,
       "Years Nominated": 2,
-      "ID": "3015"
+      "ID": "3015",
+      "Country": "Faroe Islands (Denmark)",
+      "Institution": "Finsen Medical Light Institute"
     },
     {
       "Name": "\u00c9lie  Metchnikoff",
@@ -1855,7 +2223,9 @@
       "Total Nominations": 70,
       "First Nominated": 1901,
       "Years Nominated": 7,
-      "ID": "6214"
+      "ID": "6214",
+      "Country": "",
+      "Institution": ""
     },
     {
       "Name": "Robert  Koch",
@@ -1865,7 +2235,9 @@
       "Total Nominations": 60,
       "First Nominated": 1901,
       "Years Nominated": 4,
-      "ID": "4941"
+      "ID": "4941",
+      "Country": "Germany",
+      "Institution": "Institute for Infectious Diseases"
     },
     {
       "Name": "Ivan P Pavlov",
@@ -1875,7 +2247,9 @@
       "Total Nominations": 64,
       "First Nominated": 1901,
       "Years Nominated": 3,
-      "ID": "7055"
+      "ID": "7055",
+      "Country": "Russia",
+      "Institution": "Military Medical Academy"
     },
     {
       "Name": "Santiago  Ramon y Caj\u00e0l",
@@ -1885,7 +2259,9 @@
       "Total Nominations": 65,
       "First Nominated": 1901,
       "Years Nominated": 5,
-      "ID": "7547"
+      "ID": "7547",
+      "Country": "",
+      "Institution": ""
     },
     {
       "Name": "Camillo  Golgi",
@@ -1895,7 +2271,9 @@
       "Total Nominations": 31,
       "First Nominated": 1901,
       "Years Nominated": 5,
-      "ID": "3527"
+      "ID": "3527",
+      "Country": "Italy",
+      "Institution": "Pavia University"
     },
     {
       "Name": "Emil A von Behring",
@@ -1905,7 +2283,9 @@
       "Total Nominations": 13,
       "First Nominated": 1901,
       "Years Nominated": 0,
-      "ID": "9720"
+      "ID": "9720",
+      "Country": "Poland",
+      "Institution": "Marburg University"
     },
     {
       "Name": "Paul  Ehrlich",
@@ -1915,7 +2295,9 @@
       "Total Nominations": 76,
       "First Nominated": 1901,
       "Years Nominated": 7,
-      "ID": "2713"
+      "ID": "2713",
+      "Country": "Poland",
+      "Institution": "Goettingen University"
     },
     {
       "Name": "Willem  Einthoven",
@@ -1925,7 +2307,9 @@
       "Total Nominations": 31,
       "First Nominated": 1911,
       "Years Nominated": 13,
-      "ID": "2730"
+      "ID": "2730",
+      "Country": "Indonesia",
+      "Institution": "Leiden University"
     },
     {
       "Name": "Charles S Sherrington",
@@ -1935,7 +2319,9 @@
       "Total Nominations": 131,
       "First Nominated": 1902,
       "Years Nominated": 30,
-      "ID": "8493"
+      "ID": "8493",
+      "Country": "United Kingdom",
+      "Institution": "University of Oxford"
     },
     {
       "Name": "Jules  Bordet",
@@ -1945,7 +2331,9 @@
       "Total Nominations": 115,
       "First Nominated": 1902,
       "Years Nominated": 17,
-      "ID": "1172"
+      "ID": "1172",
+      "Country": "Belgium",
+      "Institution": "Brussels University"
     },
     {
       "Name": "Albrecht  Kossel",
@@ -1955,7 +2343,9 @@
       "Total Nominations": 8,
       "First Nominated": 1902,
       "Years Nominated": 8,
-      "ID": "4995"
+      "ID": "4995",
+      "Country": "Germany",
+      "Institution": "University of Heidelberg"
     },
     {
       "Name": "Charles Robert  Richet",
@@ -1965,7 +2355,9 @@
       "Total Nominations": 46,
       "First Nominated": 1904,
       "Years Nominated": 9,
-      "ID": "7718"
+      "ID": "7718",
+      "Country": "France",
+      "Institution": "Sorbonne University"
     },
     {
       "Name": "Emil T Kocher",
@@ -1975,7 +2367,9 @@
       "Total Nominations": 6,
       "First Nominated": 1907,
       "Years Nominated": 2,
-      "ID": "4944"
+      "ID": "4944",
+      "Country": "Switzerland",
+      "Institution": "Berne University"
     },
     {
       "Name": "Allvar  Gullstrand",
@@ -1985,7 +2379,9 @@
       "Total Nominations": 7,
       "First Nominated": 1909,
       "Years Nominated": 2,
-      "ID": "3717"
+      "ID": "3717",
+      "Country": "Sweden",
+      "Institution": "Uppsala University"
     },
     {
       "Name": "Robert  B\u00e1r\u00e1ny",
@@ -1995,7 +2391,9 @@
       "Total Nominations": 7,
       "First Nominated": 1910,
       "Years Nominated": 4,
-      "ID": "686"
+      "ID": "686",
+      "Country": "Austria",
+      "Institution": "Vienna University"
     },
     {
       "Name": "John James  Macleod",
@@ -2005,7 +2403,9 @@
       "Total Nominations": 2,
       "First Nominated": 1923,
       "Years Nominated": 0,
-      "ID": "5782"
+      "ID": "5782",
+      "Country": "Scotland",
+      "Institution": "University of Toronto"
     },
     {
       "Name": "Charles J Nicolle",
@@ -2015,7 +2415,9 @@
       "Total Nominations": 13,
       "First Nominated": 1919,
       "Years Nominated": 9,
-      "ID": "6686"
+      "ID": "6686",
+      "Country": "France",
+      "Institution": "Institut Pasteur"
     },
     {
       "Name": "Alexis  Carrel",
@@ -2025,7 +2427,9 @@
       "Total Nominations": 3,
       "First Nominated": 1912,
       "Years Nominated": 0,
-      "ID": "1621"
+      "ID": "1621",
+      "Country": "France",
+      "Institution": "Rockefeller Institute for Medical Research"
     },
     {
       "Name": "Otto  Loewi",
@@ -2035,7 +2439,9 @@
       "Total Nominations": 27,
       "First Nominated": 1927,
       "Years Nominated": 9,
-      "ID": "5583"
+      "ID": "5583",
+      "Country": "Germany",
+      "Institution": "Graz University"
     },
     {
       "Name": "Christiaan E Eijkman",
@@ -2045,7 +2451,9 @@
       "Total Nominations": 28,
       "First Nominated": 1914,
       "Years Nominated": 15,
-      "ID": "2723"
+      "ID": "2723",
+      "Country": "the Netherlands",
+      "Institution": "Utrecht University"
     },
     {
       "Name": "Julius  Wagner-Jauregg",
@@ -2055,7 +2463,9 @@
       "Total Nominations": 17,
       "First Nominated": 1925,
       "Years Nominated": 2,
-      "ID": "9927"
+      "ID": "9927",
+      "Country": "Austria",
+      "Institution": "Vienna University"
     },
     {
       "Name": "August S Krogh",
@@ -2065,7 +2475,9 @@
       "Total Nominations": 3,
       "First Nominated": 1919,
       "Years Nominated": 1,
-      "ID": "5058"
+      "ID": "5058",
+      "Country": "Denmark",
+      "Institution": "Copenhagen University"
     },
     {
       "Name": "Thomas H Morgan",
@@ -2075,7 +2487,9 @@
       "Total Nominations": 33,
       "First Nominated": 1920,
       "Years Nominated": 13,
-      "ID": "6428"
+      "ID": "6428",
+      "Country": "USA",
+      "Institution": "California Institute of Technology (Caltech)"
     },
     {
       "Name": "Johannes A Fibiger",
@@ -2085,7 +2499,9 @@
       "Total Nominations": 18,
       "First Nominated": 1920,
       "Years Nominated": 6,
-      "ID": "2978"
+      "ID": "2978",
+      "Country": "Denmark",
+      "Institution": "Copenhagen University"
     },
     {
       "Name": "Karl  Landsteiner",
@@ -2095,7 +2511,9 @@
       "Total Nominations": 17,
       "First Nominated": 1921,
       "Years Nominated": 9,
-      "ID": "5205"
+      "ID": "5205",
+      "Country": "Austria",
+      "Institution": "Rockefeller Institute for Medical Research"
     },
     {
       "Name": "Edward C Kendall",
@@ -2105,7 +2523,9 @@
       "Total Nominations": 28,
       "First Nominated": 1922,
       "Years Nominated": 28,
-      "ID": "4789"
+      "ID": "4789",
+      "Country": "USA",
+      "Institution": "Mayo Clinic"
     },
     {
       "Name": "Frederick G Banting",
@@ -2115,7 +2535,9 @@
       "Total Nominations": 6,
       "First Nominated": 1923,
       "Years Nominated": 0,
-      "ID": "681"
+      "ID": "681",
+      "Country": "Canada",
+      "Institution": "University of Toronto"
     },
     {
       "Name": "Frederick G Hopkins",
@@ -2125,7 +2547,9 @@
       "Total Nominations": 13,
       "First Nominated": 1923,
       "Years Nominated": 6,
-      "ID": "4303"
+      "ID": "4303",
+      "Country": "United Kingdom",
+      "Institution": "University of Cambridge"
     },
     {
       "Name": "Otto F Meyerhof",
@@ -2135,7 +2559,9 @@
       "Total Nominations": 2,
       "First Nominated": 1923,
       "Years Nominated": -1,
-      "ID": "6247"
+      "ID": "6247",
+      "Country": "Germany",
+      "Institution": "Kiel University"
     },
     {
       "Name": "Otto H Warburg",
@@ -2145,7 +2571,9 @@
       "Total Nominations": 51,
       "First Nominated": 1923,
       "Years Nominated": 8,
-      "ID": "9984"
+      "ID": "9984",
+      "Country": "Germany",
+      "Institution": "Kaiser-Wilhelm-Institut (now Max-Planck-Institut) f\u00fcr Biologie"
     },
     {
       "Name": "Archibald V Hill",
@@ -2155,7 +2583,9 @@
       "Total Nominations": 1,
       "First Nominated": 1923,
       "Years Nominated": -1,
-      "ID": "4180"
+      "ID": "4180",
+      "Country": "United Kingdom",
+      "Institution": "London University"
     },
     {
       "Name": "Hans  Spemann",
@@ -2165,7 +2595,9 @@
       "Total Nominations": 21,
       "First Nominated": 1924,
       "Years Nominated": 11,
-      "ID": "8689"
+      "ID": "8689",
+      "Country": "Germany",
+      "Institution": "University of Freiburg im Breisgau"
     },
     {
       "Name": "Peyton  Rous",
@@ -2175,7 +2607,9 @@
       "Total Nominations": 17,
       "First Nominated": 1926,
       "Years Nominated": 40,
-      "ID": "7919"
+      "ID": "7919",
+      "Country": "USA",
+      "Institution": "Rockefeller University"
     },
     {
       "Name": "Henry Hallett  Dale",
@@ -2185,7 +2619,9 @@
       "Total Nominations": 21,
       "First Nominated": 1926,
       "Years Nominated": 10,
-      "ID": "2111"
+      "ID": "2111",
+      "Country": "United Kingdom",
+      "Institution": "National Institute for Medical Research"
     },
     {
       "Name": "Bernardo Alberto  Houssay",
@@ -2195,7 +2631,9 @@
       "Total Nominations": 46,
       "First Nominated": 1931,
       "Years Nominated": 16,
-      "ID": "4324"
+      "ID": "4324",
+      "Country": "Argentina",
+      "Institution": "Instituto de Biologia y Medicina Experimental (Institute for Biology and Experimental Medicine)"
     },
     {
       "Name": "George R Minot",
@@ -2205,7 +2643,9 @@
       "Total Nominations": 60,
       "First Nominated": 1928,
       "Years Nominated": 6,
-      "ID": "6307"
+      "ID": "6307",
+      "Country": "USA",
+      "Institution": "Harvard University"
     },
     {
       "Name": "Joseph  Erlanger",
@@ -2215,7 +2655,9 @@
       "Total Nominations": 17,
       "First Nominated": 1935,
       "Years Nominated": 9,
-      "ID": "2823"
+      "ID": "2823",
+      "Country": "USA",
+      "Institution": "Washington University"
     },
     {
       "Name": "Edward A Doisy",
@@ -2225,7 +2667,9 @@
       "Total Nominations": 4,
       "First Nominated": 1931,
       "Years Nominated": 12,
-      "ID": "2485"
+      "ID": "2485",
+      "Country": "USA",
+      "Institution": "Saint Louis University"
     },
     {
       "Name": "Antonio C.de Abreu Freire Egas  Moniz",
@@ -2235,7 +2679,9 @@
       "Total Nominations": 18,
       "First Nominated": 1928,
       "Years Nominated": 21,
-      "ID": "6371"
+      "ID": "6371",
+      "Country": "",
+      "Institution": ""
     },
     {
       "Name": "William P Murphy",
@@ -2245,7 +2691,9 @@
       "Total Nominations": 17,
       "First Nominated": 1929,
       "Years Nominated": 5,
-      "ID": "6529"
+      "ID": "6529",
+      "Country": "USA",
+      "Institution": "Harvard University"
     },
     {
       "Name": "George H Whipple",
@@ -2255,7 +2703,9 @@
       "Total Nominations": 23,
       "First Nominated": 1929,
       "Years Nominated": 5,
-      "ID": "10134"
+      "ID": "10134",
+      "Country": "USA",
+      "Institution": "University of Rochester"
     },
     {
       "Name": "Edgar D Adrian (Lord)",
@@ -2265,7 +2715,9 @@
       "Total Nominations": 6,
       "First Nominated": 1930,
       "Years Nominated": 2,
-      "ID": "325"
+      "ID": "325",
+      "Country": "",
+      "Institution": ""
     },
     {
       "Name": "Hermann Joseph  Muller",
@@ -2275,7 +2727,9 @@
       "Total Nominations": 12,
       "First Nominated": 1932,
       "Years Nominated": 14,
-      "ID": "6501"
+      "ID": "6501",
+      "Country": "USA",
+      "Institution": "Indiana University"
     },
     {
       "Name": "Walter R Hess",
@@ -2285,7 +2739,9 @@
       "Total Nominations": 31,
       "First Nominated": 1933,
       "Years Nominated": 16,
-      "ID": "4129"
+      "ID": "4129",
+      "Country": "Switzerland",
+      "Institution": "University of Zurich"
     },
     {
       "Name": "Corneille J Heymans",
@@ -2295,7 +2751,9 @@
       "Total Nominations": 8,
       "First Nominated": 1934,
       "Years Nominated": 4,
-      "ID": "4149"
+      "ID": "4149",
+      "Country": "Belgium",
+      "Institution": "Ghent University"
     },
     {
       "Name": "Albert Imre  Szent-Gy\u00f6rgyi",
@@ -2305,7 +2763,9 @@
       "Total Nominations": 24,
       "First Nominated": 1934,
       "Years Nominated": 3,
-      "ID": "14649"
+      "ID": "14649",
+      "Country": "",
+      "Institution": ""
     },
     {
       "Name": "Herbert S Gasser",
@@ -2315,7 +2775,9 @@
       "Total Nominations": 18,
       "First Nominated": 1935,
       "Years Nominated": 9,
-      "ID": "3351"
+      "ID": "3351",
+      "Country": "USA",
+      "Institution": "Rockefeller Institute for Medical Research"
     },
     {
       "Name": "Hugo A Theorell",
@@ -2325,7 +2787,9 @@
       "Total Nominations": 28,
       "First Nominated": 1936,
       "Years Nominated": 19,
-      "ID": "9207"
+      "ID": "9207",
+      "Country": "Sweden",
+      "Institution": "Karolinska Institutet, Nobel Medical Institute"
     },
     {
       "Name": "Max  Theiler",
@@ -2335,7 +2799,9 @@
       "Total Nominations": 4,
       "First Nominated": 1937,
       "Years Nominated": 14,
-      "ID": "9202"
+      "ID": "9202",
+      "Country": "South Africa",
+      "Institution": "Laboratories of the Division of Medicine and Public Health, Rockefeller Foundation"
     },
     {
       "Name": "Gerhard  Domagk",
@@ -2345,7 +2811,9 @@
       "Total Nominations": 9,
       "First Nominated": 1938,
       "Years Nominated": 1,
-      "ID": "2494"
+      "ID": "2494",
+      "Country": "Poland",
+      "Institution": "Munster University"
     },
     {
       "Name": "Andr\u00e9 Michel   Lwoff",
@@ -2355,7 +2823,9 @@
       "Total Nominations": 0,
       "First Nominated": null,
       "Years Nominated": 0,
-      "ID": "5718"
+      "ID": "5718",
+      "Country": "",
+      "Institution": ""
     },
     {
       "Name": "Carl F Cori",
@@ -2365,7 +2835,9 @@
       "Total Nominations": 5,
       "First Nominated": 1946,
       "Years Nominated": 1,
-      "ID": "1953"
+      "ID": "1953",
+      "Country": "Czech Republic",
+      "Institution": "Washington University"
     },
     {
       "Name": "Howard W Florey",
@@ -2375,7 +2847,9 @@
       "Total Nominations": 17,
       "First Nominated": 1943,
       "Years Nominated": 2,
-      "ID": "3070"
+      "ID": "3070",
+      "Country": "Australia",
+      "Institution": "University of Oxford"
     },
     {
       "Name": "Hendrik C Dam",
@@ -2385,7 +2859,9 @@
       "Total Nominations": 6,
       "First Nominated": 1941,
       "Years Nominated": 2,
-      "ID": "2119"
+      "ID": "2119",
+      "Country": "",
+      "Institution": ""
     },
     {
       "Name": "Alexander  Fleming",
@@ -2395,7 +2871,9 @@
       "Total Nominations": 32,
       "First Nominated": 1943,
       "Years Nominated": 2,
-      "ID": "3058"
+      "ID": "3058",
+      "Country": "Scotland",
+      "Institution": "London University"
     },
     {
       "Name": "Ernst B Chain",
@@ -2405,7 +2883,9 @@
       "Total Nominations": 2,
       "First Nominated": 1944,
       "Years Nominated": 1,
-      "ID": "1706"
+      "ID": "1706",
+      "Country": "Germany",
+      "Institution": "University of Oxford"
     },
     {
       "Name": "Ragnar  Granit",
@@ -2415,7 +2895,9 @@
       "Total Nominations": 14,
       "First Nominated": 1946,
       "Years Nominated": 21,
-      "ID": "3606"
+      "ID": "3606",
+      "Country": "Finland",
+      "Institution": "Karolinska Institutet"
     },
     {
       "Name": "Charles B Huggins",
@@ -2425,7 +2907,9 @@
       "Total Nominations": 3,
       "First Nominated": 1950,
       "Years Nominated": 16,
-      "ID": "4357"
+      "ID": "4357",
+      "Country": "Canada",
+      "Institution": "University of Chicago, Ben May Laboratory for Cancer Research"
     },
     {
       "Name": "Hans Adolf  Krebs",
@@ -2435,7 +2919,9 @@
       "Total Nominations": 23,
       "First Nominated": 1946,
       "Years Nominated": 7,
-      "ID": "5042"
+      "ID": "5042",
+      "Country": "Germany",
+      "Institution": "Sheffield University"
     },
     {
       "Name": "Selman A Waksman",
@@ -2445,7 +2931,9 @@
       "Total Nominations": 45,
       "First Nominated": 1946,
       "Years Nominated": 6,
-      "ID": "9933"
+      "ID": "9933",
+      "Country": "Ukraine",
+      "Institution": "Rutgers University"
     },
     {
       "Name": "Gerty T Cori",
@@ -2455,7 +2943,9 @@
       "Total Nominations": 2,
       "First Nominated": 1946,
       "Years Nominated": 1,
-      "ID": "1955"
+      "ID": "1955",
+      "Country": "Czech Republic",
+      "Institution": "Washington University"
     },
     {
       "Name": "Karl  von Frisch",
@@ -2465,7 +2955,9 @@
       "Total Nominations": 4,
       "First Nominated": 1948,
       "Years Nominated": 25,
-      "ID": "9759"
+      "ID": "9759",
+      "Country": "Austria",
+      "Institution": "Zoologisches Institut der Universit\u00e4t M\u00fcnchen"
     },
     {
       "Name": "Frank M Burnet",
@@ -2475,7 +2967,9 @@
       "Total Nominations": 6,
       "First Nominated": 1948,
       "Years Nominated": 12,
-      "ID": "1464"
+      "ID": "1464",
+      "Country": "Australia",
+      "Institution": "Walter and Eliza Hall Institute for Medical Research"
     },
     {
       "Name": "Paul Hermann  M\u00fcller",
@@ -2485,7 +2979,9 @@
       "Total Nominations": 6,
       "First Nominated": 1948,
       "Years Nominated": 0,
-      "ID": "6558"
+      "ID": "6558",
+      "Country": "Switzerland",
+      "Institution": "Laboratorium der Farben-Fabriken J.R. Geigy A.G. (Laboratory of the J.R. Geigy Dye-Factory Co.)"
     },
     {
       "Name": "Dickinson W Richards",
@@ -2495,7 +2991,9 @@
       "Total Nominations": 0,
       "First Nominated": null,
       "Years Nominated": 0,
-      "ID": "7705"
+      "ID": "7705",
+      "Country": "USA",
+      "Institution": "Columbia University"
     },
     {
       "Name": "George Wells  Beadle",
@@ -2505,7 +3003,9 @@
       "Total Nominations": 13,
       "First Nominated": 1948,
       "Years Nominated": 10,
-      "ID": "782"
+      "ID": "782",
+      "Country": "USA",
+      "Institution": "California Institute of Technology (Caltech)"
     },
     {
       "Name": "Edward Lawrie  Tatum",
@@ -2515,7 +3015,9 @@
       "Total Nominations": 6,
       "First Nominated": 1948,
       "Years Nominated": 10,
-      "ID": "9015"
+      "ID": "9015",
+      "Country": "USA",
+      "Institution": "Rockefeller Institute for Medical Research"
     },
     {
       "Name": "Fritz Albert  Lipmann",
@@ -2525,7 +3027,9 @@
       "Total Nominations": 10,
       "First Nominated": 1948,
       "Years Nominated": 5,
-      "ID": "5529"
+      "ID": "5529",
+      "Country": "Russia",
+      "Institution": "Harvard Medical School"
     },
     {
       "Name": "Haldan K Hartline",
@@ -2535,7 +3039,9 @@
       "Total Nominations": 2,
       "First Nominated": 1949,
       "Years Nominated": 18,
-      "ID": "3916"
+      "ID": "3916",
+      "Country": "USA",
+      "Institution": "Rockefeller University"
     },
     {
       "Name": "Philip S Hench",
@@ -2545,7 +3051,9 @@
       "Total Nominations": 13,
       "First Nominated": 1950,
       "Years Nominated": 0,
-      "ID": "4041"
+      "ID": "4041",
+      "Country": "USA",
+      "Institution": "Mayo Clinic"
     },
     {
       "Name": "Georg  von B\u00e9k\u00e9sy",
@@ -2555,7 +3063,9 @@
       "Total Nominations": 6,
       "First Nominated": 1950,
       "Years Nominated": 11,
-      "ID": "9721"
+      "ID": "9721",
+      "Country": "Hungary",
+      "Institution": "Harvard University"
     },
     {
       "Name": "Tadeus  Reichstein",
@@ -2565,7 +3075,9 @@
       "Total Nominations": 17,
       "First Nominated": 1943,
       "Years Nominated": 7,
-      "ID": "7631"
+      "ID": "7631",
+      "Country": "Poland",
+      "Institution": "Basel University"
     },
     {
       "Name": "John C Eccles",
@@ -2575,7 +3087,9 @@
       "Total Nominations": 1,
       "First Nominated": 1953,
       "Years Nominated": 10,
-      "ID": "2671"
+      "ID": "2671",
+      "Country": "Australia",
+      "Institution": "Australian National University"
     },
     {
       "Name": "Daniel  Bovet",
@@ -2585,7 +3099,9 @@
       "Total Nominations": 2,
       "First Nominated": 1951,
       "Years Nominated": 6,
-      "ID": "1251"
+      "ID": "1251",
+      "Country": "Switzerland",
+      "Institution": "Istituto Superiore di Sanit\u00e0 (Chief Institute of Public Health)"
     },
     {
       "Name": "Werner  Forssmann",
@@ -2595,7 +3111,9 @@
       "Total Nominations": 3,
       "First Nominated": 1952,
       "Years Nominated": 4,
-      "ID": "3125"
+      "ID": "3125",
+      "Country": "Germany",
+      "Institution": "Mainz University"
     },
     {
       "Name": "John F Enders",
@@ -2605,7 +3123,9 @@
       "Total Nominations": 3,
       "First Nominated": 1952,
       "Years Nominated": 2,
-      "ID": "2791"
+      "ID": "2791",
+      "Country": "USA",
+      "Institution": "Harvard Medical School"
     },
     {
       "Name": "Ulf S von Euler",
@@ -2615,7 +3135,9 @@
       "Total Nominations": 1,
       "First Nominated": 1952,
       "Years Nominated": 18,
-      "ID": "9747"
+      "ID": "9747",
+      "Country": "",
+      "Institution": ""
     },
     {
       "Name": "Konrad  Lorenz",
@@ -2625,7 +3147,9 @@
       "Total Nominations": 1,
       "First Nominated": 1953,
       "Years Nominated": 20,
-      "ID": "5638"
+      "ID": "5638",
+      "Country": "Austria",
+      "Institution": "Konrad-Lorenz-Institut der \u00d6sterreichischen Akademie der Wissen\u00adschaften, Forschungsstelle f\u00fcr Ethologie"
     },
     {
       "Name": "Feodor  Lynen",
@@ -2635,7 +3159,9 @@
       "Total Nominations": 22,
       "First Nominated": 1953,
       "Years Nominated": 11,
-      "ID": "5722"
+      "ID": "5722",
+      "Country": "Germany",
+      "Institution": "Max-Planck-Institut f\u00fcr Zellchemie"
     },
     {
       "Name": "Alan L Hodgkin",
@@ -2645,7 +3171,9 @@
       "Total Nominations": 1,
       "First Nominated": 1953,
       "Years Nominated": 10,
-      "ID": "4233"
+      "ID": "4233",
+      "Country": "United Kingdom",
+      "Institution": "University of Cambridge"
     },
     {
       "Name": "Andr\u00e9 Fr\u00e9d\u00e9ric   Cournand",
@@ -2655,7 +3183,9 @@
       "Total Nominations": 1,
       "First Nominated": 1953,
       "Years Nominated": 3,
-      "ID": "2002"
+      "ID": "2002",
+      "Country": "France",
+      "Institution": "Columbia University Division, Cardio-Pulmonary Laboratory, Bellevue Hospital"
     }
   ],
   "literature": [
@@ -2667,7 +3197,9 @@
       "Total Nominations": 4,
       "First Nominated": 1901,
       "Years Nominated": 0,
-      "ID": "7470"
+      "ID": "7470",
+      "Country": "",
+      "Institution": ""
     },
     {
       "Name": "Frederi (Fr\u00e9d\u00e9ric)  Mistral",
@@ -2677,7 +3209,9 @@
       "Total Nominations": 14,
       "First Nominated": 1901,
       "Years Nominated": 3,
-      "ID": "6320"
+      "ID": "6320",
+      "Country": "",
+      "Institution": ""
     },
     {
       "Name": "Henryk  Sienkiewicz",
@@ -2687,7 +3221,9 @@
       "Total Nominations": 7,
       "First Nominated": 1901,
       "Years Nominated": 4,
-      "ID": "8523"
+      "ID": "8523",
+      "Country": "Poland",
+      "Institution": ""
     },
     {
       "Name": "Gerhart  Hauptmann",
@@ -2697,7 +3233,9 @@
       "Total Nominations": 5,
       "First Nominated": 1902,
       "Years Nominated": 10,
-      "ID": "3947"
+      "ID": "3947",
+      "Country": "Poland",
+      "Institution": ""
     },
     {
       "Name": "William B Yeats",
@@ -2707,7 +3245,9 @@
       "Total Nominations": 7,
       "First Nominated": 1902,
       "Years Nominated": 21,
-      "ID": "10345"
+      "ID": "10345",
+      "Country": "Ireland",
+      "Institution": ""
     },
     {
       "Name": "Giosu\u00e8  Carducci",
@@ -2717,7 +3257,9 @@
       "Total Nominations": 9,
       "First Nominated": 1902,
       "Years Nominated": 4,
-      "ID": "1595"
+      "ID": "1595",
+      "Country": "Italy",
+      "Institution": ""
     },
     {
       "Name": "Theodor  Mommsen",
@@ -2727,7 +3269,9 @@
       "Total Nominations": 1,
       "First Nominated": 1902,
       "Years Nominated": 0,
-      "ID": "6361"
+      "ID": "6361",
+      "Country": "Germany",
+      "Institution": ""
     },
     {
       "Name": "Bj\u00f8rnstjerne Martinius  Bj\u00f8rnson",
@@ -2737,7 +3281,9 @@
       "Total Nominations": 4,
       "First Nominated": 1902,
       "Years Nominated": 1,
-      "ID": "1053"
+      "ID": "1053",
+      "Country": "",
+      "Institution": ""
     },
     {
       "Name": "Jos\u00e9  Echegaray y Eizaguirre",
@@ -2747,7 +3293,9 @@
       "Total Nominations": 3,
       "First Nominated": 1902,
       "Years Nominated": 2,
-      "ID": "2673"
+      "ID": "2673",
+      "Country": "Spain",
+      "Institution": ""
     },
     {
       "Name": "Anatole (Jacques)  France (Thibault)",
@@ -2757,7 +3305,9 @@
       "Total Nominations": 13,
       "First Nominated": 1904,
       "Years Nominated": 17,
-      "ID": "3157"
+      "ID": "3157",
+      "Country": "",
+      "Institution": ""
     },
     {
       "Name": "Maurice  Maeterlinck",
@@ -2767,7 +3317,9 @@
       "Total Nominations": 8,
       "First Nominated": 1903,
       "Years Nominated": 8,
-      "ID": "5801"
+      "ID": "5801",
+      "Country": "Belgium",
+      "Institution": ""
     },
     {
       "Name": "Rudyard  Kipling",
@@ -2777,7 +3329,9 @@
       "Total Nominations": 4,
       "First Nominated": 1903,
       "Years Nominated": 4,
-      "ID": "4859"
+      "ID": "4859",
+      "Country": "India",
+      "Institution": ""
     },
     {
       "Name": "Selma  Lagerl\u00f6f",
@@ -2787,7 +3341,9 @@
       "Total Nominations": 28,
       "First Nominated": 1904,
       "Years Nominated": 5,
-      "ID": "5152"
+      "ID": "5152",
+      "Country": "Sweden",
+      "Institution": ""
     },
     {
       "Name": "Rudolf C Eucken",
@@ -2797,7 +3353,9 @@
       "Total Nominations": 1,
       "First Nominated": 1908,
       "Years Nominated": 0,
-      "ID": "2851"
+      "ID": "2851",
+      "Country": "Germany",
+      "Institution": ""
     },
     {
       "Name": "Verner  von Heidenstam",
@@ -2807,7 +3365,9 @@
       "Total Nominations": 11,
       "First Nominated": 1909,
       "Years Nominated": 7,
-      "ID": "4000"
+      "ID": "4000",
+      "Country": "Sweden",
+      "Institution": ""
     },
     {
       "Name": "Paul  Heyse",
@@ -2817,7 +3377,9 @@
       "Total Nominations": 1,
       "First Nominated": 1910,
       "Years Nominated": 0,
-      "ID": "4155"
+      "ID": "4155",
+      "Country": "Germany",
+      "Institution": ""
     },
     {
       "Name": "George Bernard  Shaw",
@@ -2827,7 +3389,9 @@
       "Total Nominations": 7,
       "First Nominated": 1911,
       "Years Nominated": 14,
-      "ID": "8479"
+      "ID": "8479",
+      "Country": "Ireland",
+      "Institution": ""
     },
     {
       "Name": "Karl  Gjellerup",
@@ -2837,7 +3401,9 @@
       "Total Nominations": 12,
       "First Nominated": 1911,
       "Years Nominated": 6,
-      "ID": "3474"
+      "ID": "3474",
+      "Country": "Denmark",
+      "Institution": ""
     },
     {
       "Name": "Henri  Bergson",
@@ -2847,7 +3413,9 @@
       "Total Nominations": 10,
       "First Nominated": 1912,
       "Years Nominated": 15,
-      "ID": "917"
+      "ID": "917",
+      "Country": "France",
+      "Institution": ""
     },
     {
       "Name": "Carl  Spitteler",
@@ -2857,7 +3425,9 @@
       "Total Nominations": 18,
       "First Nominated": 1912,
       "Years Nominated": 7,
-      "ID": "8702"
+      "ID": "8702",
+      "Country": "Switzerland",
+      "Institution": ""
     },
     {
       "Name": "Grazia  Deledda (Madesani)",
@@ -2867,7 +3437,9 @@
       "Total Nominations": 18,
       "First Nominated": 1913,
       "Years Nominated": 13,
-      "ID": "2348"
+      "ID": "2348",
+      "Country": "",
+      "Institution": ""
     },
     {
       "Name": "Henrik  Pontoppidan",
@@ -2877,7 +3449,9 @@
       "Total Nominations": 4,
       "First Nominated": 1913,
       "Years Nominated": 4,
-      "ID": "7341"
+      "ID": "7341",
+      "Country": "Denmark",
+      "Institution": ""
     },
     {
       "Name": "Rabindranath  Tagore",
@@ -2887,7 +3461,9 @@
       "Total Nominations": 1,
       "First Nominated": 1913,
       "Years Nominated": 0,
-      "ID": "8979"
+      "ID": "8979",
+      "Country": "India",
+      "Institution": ""
     },
     {
       "Name": "Erik Axel  Karlfeldt",
@@ -2897,7 +3473,9 @@
       "Total Nominations": 10,
       "First Nominated": 1916,
       "Years Nominated": 15,
-      "ID": "4716"
+      "ID": "4716",
+      "Country": "Sweden",
+      "Institution": ""
     },
     {
       "Name": "Romain  Rolland",
@@ -2907,7 +3485,9 @@
       "Total Nominations": 4,
       "First Nominated": 1915,
       "Years Nominated": 0,
-      "ID": "7831"
+      "ID": "7831",
+      "Country": "France",
+      "Institution": ""
     },
     {
       "Name": "Knut P Hamsun",
@@ -2917,7 +3497,9 @@
       "Total Nominations": 3,
       "First Nominated": 1918,
       "Years Nominated": 2,
-      "ID": "3853"
+      "ID": "3853",
+      "Country": "Norway",
+      "Institution": ""
     },
     {
       "Name": "Wladyslaw S Reymont (Reyment)",
@@ -2927,7 +3509,9 @@
       "Total Nominations": 4,
       "First Nominated": 1919,
       "Years Nominated": 5,
-      "ID": "7684"
+      "ID": "7684",
+      "Country": "",
+      "Institution": ""
     },
     {
       "Name": "John  Galsworthy",
@@ -2937,7 +3521,9 @@
       "Total Nominations": 6,
       "First Nominated": 1919,
       "Years Nominated": 13,
-      "ID": "3315"
+      "ID": "3315",
+      "Country": "United Kingdom",
+      "Institution": ""
     },
     {
       "Name": "Jacinto  Benavente",
@@ -2947,7 +3533,9 @@
       "Total Nominations": 2,
       "First Nominated": 1921,
       "Years Nominated": 1,
-      "ID": "845"
+      "ID": "845",
+      "Country": "Spain",
+      "Institution": ""
     },
     {
       "Name": "Sigrid  Undset",
@@ -2957,7 +3545,9 @@
       "Total Nominations": 4,
       "First Nominated": 1922,
       "Years Nominated": 6,
-      "ID": "9445"
+      "ID": "9445",
+      "Country": "Denmark",
+      "Institution": ""
     },
     {
       "Name": "Ivan Alexeievitch  Bounine",
@@ -2967,7 +3557,9 @@
       "Total Nominations": 18,
       "First Nominated": 1923,
       "Years Nominated": 10,
-      "ID": "1449"
+      "ID": "1449",
+      "Country": "",
+      "Institution": ""
     },
     {
       "Name": "Thomas  Mann",
@@ -2977,7 +3569,9 @@
       "Total Nominations": 5,
       "First Nominated": 1924,
       "Years Nominated": 5,
-      "ID": "5871"
+      "ID": "5871",
+      "Country": "Germany",
+      "Institution": ""
     },
     {
       "Name": "Johannes V Jensen",
@@ -2987,7 +3581,9 @@
       "Total Nominations": 53,
       "First Nominated": 1925,
       "Years Nominated": 19,
-      "ID": "4582"
+      "ID": "4582",
+      "Country": "Denmark",
+      "Institution": ""
     },
     {
       "Name": "Frans E Sillanp\u00e4\u00e4",
@@ -2997,7 +3593,9 @@
       "Total Nominations": 39,
       "First Nominated": 1930,
       "Years Nominated": 9,
-      "ID": "8537"
+      "ID": "8537",
+      "Country": "Finland",
+      "Institution": ""
     },
     {
       "Name": "Sinclair  Lewis",
@@ -3007,7 +3605,9 @@
       "Total Nominations": 1,
       "First Nominated": 1930,
       "Years Nominated": 0,
-      "ID": "5444"
+      "ID": "5444",
+      "Country": "USA",
+      "Institution": ""
     },
     {
       "Name": "Hermann  Hesse",
@@ -3017,7 +3617,9 @@
       "Total Nominations": 8,
       "First Nominated": 1931,
       "Years Nominated": 15,
-      "ID": "4133"
+      "ID": "4133",
+      "Country": "Germany",
+      "Institution": ""
     },
     {
       "Name": "Eugene G O\u00b4Neill",
@@ -3027,7 +3629,9 @@
       "Total Nominations": 3,
       "First Nominated": 1934,
       "Years Nominated": 2,
-      "ID": "6935"
+      "ID": "6935",
+      "Country": "",
+      "Institution": ""
     },
     {
       "Name": "Roger  Martin du Gard",
@@ -3037,7 +3641,9 @@
       "Total Nominations": 5,
       "First Nominated": 1934,
       "Years Nominated": 3,
-      "ID": "5951"
+      "ID": "5951",
+      "Country": "France",
+      "Institution": ""
     },
     {
       "Name": "Luigi  Pirandello",
@@ -3047,7 +3653,9 @@
       "Total Nominations": 1,
       "First Nominated": 1934,
       "Years Nominated": 0,
-      "ID": "7269"
+      "ID": "7269",
+      "Country": "Italy",
+      "Institution": ""
     },
     {
       "Name": "Pearl S. Buck",
@@ -3057,7 +3665,9 @@
       "Total Nominations": 9,
       "First Nominated": 1938,
       "Years Nominated": 0,
-      "ID": "1432"
+      "ID": "1432",
+      "Country": "",
+      "Institution": ""
     },
     {
       "Name": "Gabriela (Lucile)  Mistral (Godoy y Alcayaga)",
@@ -3067,7 +3677,9 @@
       "Total Nominations": 8,
       "First Nominated": 1940,
       "Years Nominated": 5,
-      "ID": "6323"
+      "ID": "6323",
+      "Country": "",
+      "Institution": ""
     },
     {
       "Name": "P\u00e4r Fabian  Lagerkvist",
@@ -3077,7 +3689,9 @@
       "Total Nominations": 18,
       "First Nominated": 1947,
       "Years Nominated": 4,
-      "ID": "5150"
+      "ID": "5150",
+      "Country": "Sweden",
+      "Institution": ""
     },
     {
       "Name": "John  Steinbeck",
@@ -3087,7 +3701,9 @@
       "Total Nominations": 11,
       "First Nominated": 1943,
       "Years Nominated": 19,
-      "ID": "8766"
+      "ID": "8766",
+      "Country": "USA",
+      "Institution": ""
     },
     {
       "Name": "Thomas S Eliot",
@@ -3097,7 +3713,9 @@
       "Total Nominations": 7,
       "First Nominated": 1945,
       "Years Nominated": 3,
-      "ID": "2757"
+      "ID": "2757",
+      "Country": "USA",
+      "Institution": ""
     },
     {
       "Name": "Winston Leonard Spencer  Churchill",
@@ -3107,7 +3725,9 @@
       "Total Nominations": 23,
       "First Nominated": 1945,
       "Years Nominated": 8,
-      "ID": "1797"
+      "ID": "1797",
+      "Country": "United Kingdom",
+      "Institution": ""
     },
     {
       "Name": "Boris L Pasternak",
@@ -3117,7 +3737,9 @@
       "Total Nominations": 9,
       "First Nominated": 1946,
       "Years Nominated": 12,
-      "ID": "7016"
+      "ID": "7016",
+      "Country": "Russia",
+      "Institution": ""
     },
     {
       "Name": "Andr\u00e9  Gide",
@@ -3127,7 +3749,9 @@
       "Total Nominations": 2,
       "First Nominated": 1946,
       "Years Nominated": 1,
-      "ID": "3426"
+      "ID": "3426",
+      "Country": "France",
+      "Institution": ""
     },
     {
       "Name": "Fran\u00e7ois  Mauriac",
@@ -3137,7 +3761,9 @@
       "Total Nominations": 8,
       "First Nominated": 1946,
       "Years Nominated": 6,
-      "ID": "6005"
+      "ID": "6005",
+      "Country": "France",
+      "Institution": ""
     },
     {
       "Name": "Samuel Joseph  Agnon",
@@ -3147,7 +3773,9 @@
       "Total Nominations": 6,
       "First Nominated": 1947,
       "Years Nominated": 19,
-      "ID": "330"
+      "ID": "330",
+      "Country": "",
+      "Institution": ""
     },
     {
       "Name": "Mikhail  Sholokhov",
@@ -3157,7 +3785,9 @@
       "Total Nominations": 4,
       "First Nominated": 1947,
       "Years Nominated": 18,
-      "ID": "8503"
+      "ID": "8503",
+      "Country": "Russia",
+      "Institution": ""
     },
     {
       "Name": "Ernest  Hemingway",
@@ -3167,7 +3797,9 @@
       "Total Nominations": 4,
       "First Nominated": 1947,
       "Years Nominated": 7,
-      "ID": "4037"
+      "ID": "4037",
+      "Country": "USA",
+      "Institution": ""
     },
     {
       "Name": "Halld\u00f3r Kiljan  Laxness",
@@ -3177,7 +3809,9 @@
       "Total Nominations": 25,
       "First Nominated": 1948,
       "Years Nominated": 7,
-      "ID": "5292"
+      "ID": "5292",
+      "Country": "Iceland",
+      "Institution": ""
     },
     {
       "Name": "Albert  Camus",
@@ -3187,7 +3821,9 @@
       "Total Nominations": 11,
       "First Nominated": 1949,
       "Years Nominated": 8,
-      "ID": "1572"
+      "ID": "1572",
+      "Country": "Algeria",
+      "Institution": ""
     },
     {
       "Name": "Harry  Martinson",
@@ -3197,7 +3833,9 @@
       "Total Nominations": 14,
       "First Nominated": 1964,
       "Years Nominated": 10,
-      "ID": "5958"
+      "ID": "5958",
+      "Country": "Sweden",
+      "Institution": ""
     },
     {
       "Name": "William  Faulkner",
@@ -3207,7 +3845,9 @@
       "Total Nominations": 1,
       "First Nominated": 1950,
       "Years Nominated": -1,
-      "ID": "2923"
+      "ID": "2923",
+      "Country": "USA",
+      "Institution": ""
     },
     {
       "Name": "Bertrand A Russell",
@@ -3217,7 +3857,9 @@
       "Total Nominations": 47,
       "First Nominated": 1950,
       "Years Nominated": 0,
-      "ID": "7980"
+      "ID": "7980",
+      "Country": "",
+      "Institution": ""
     },
     {
       "Name": "Juan Ram\u00f3n  Jim\u00e9nez",
@@ -3227,7 +3869,9 @@
       "Total Nominations": 5,
       "First Nominated": 1952,
       "Years Nominated": 4,
-      "ID": "12036"
+      "ID": "12036",
+      "Country": "Spain",
+      "Institution": ""
     },
     {
       "Name": "Saint-John  Perse",
@@ -3237,7 +3881,9 @@
       "Total Nominations": 15,
       "First Nominated": 1955,
       "Years Nominated": 5,
-      "ID": "12089"
+      "ID": "12089",
+      "Country": "Guadeloupe, France",
+      "Institution": ""
     },
     {
       "Name": "George  Seferis",
@@ -3247,7 +3893,9 @@
       "Total Nominations": 5,
       "First Nominated": 1955,
       "Years Nominated": 8,
-      "ID": "12135"
+      "ID": "12135",
+      "Country": "",
+      "Institution": ""
     },
     {
       "Name": "Pablo  Neruda",
@@ -3257,7 +3905,9 @@
       "Total Nominations": 23,
       "First Nominated": 1956,
       "Years Nominated": 15,
-      "ID": "12260"
+      "ID": "12260",
+      "Country": "Chile",
+      "Institution": ""
     },
     {
       "Name": "Samuel  Beckett",
@@ -3267,7 +3917,9 @@
       "Total Nominations": 26,
       "First Nominated": 1957,
       "Years Nominated": 12,
-      "ID": "12321"
+      "ID": "12321",
+      "Country": "Ireland",
+      "Institution": ""
     },
     {
       "Name": "Jean-Paul  Sartre",
@@ -3277,7 +3929,9 @@
       "Total Nominations": 16,
       "First Nominated": 1957,
       "Years Nominated": 7,
-      "ID": "12337"
+      "ID": "12337",
+      "Country": "France",
+      "Institution": ""
     },
     {
       "Name": "Salvatore  Quasimodo",
@@ -3287,7 +3941,9 @@
       "Total Nominations": 4,
       "First Nominated": 1958,
       "Years Nominated": 1,
-      "ID": "12362"
+      "ID": "12362",
+      "Country": "Italy",
+      "Institution": ""
     },
     {
       "Name": "Ivo  Andric",
@@ -3297,7 +3953,9 @@
       "Total Nominations": 10,
       "First Nominated": 1958,
       "Years Nominated": 3,
-      "ID": "12405"
+      "ID": "12405",
+      "Country": "",
+      "Institution": ""
     },
     {
       "Name": "Eyvind  Johnson",
@@ -3307,7 +3965,9 @@
       "Total Nominations": 17,
       "First Nominated": 1962,
       "Years Nominated": 12,
-      "ID": "12669"
+      "ID": "12669",
+      "Country": "Sweden",
+      "Institution": ""
     },
     {
       "Name": "Heinrich  B\u00f6ll",
@@ -3317,7 +3977,9 @@
       "Total Nominations": 29,
       "First Nominated": 1960,
       "Years Nominated": 12,
-      "ID": "12538"
+      "ID": "12538",
+      "Country": "Germany",
+      "Institution": ""
     },
     {
       "Name": "Yasunari  Kawabata",
@@ -3327,7 +3989,9 @@
       "Total Nominations": 8,
       "First Nominated": 1961,
       "Years Nominated": 7,
-      "ID": "12589"
+      "ID": "12589",
+      "Country": "Japan",
+      "Institution": ""
     },
     {
       "Name": "Nelly  Sachs",
@@ -3337,7 +4001,9 @@
       "Total Nominations": 8,
       "First Nominated": 1963,
       "Years Nominated": 3,
-      "ID": "12697"
+      "ID": "12697",
+      "Country": "Germany",
+      "Institution": ""
     },
     {
       "Name": "Miguel \u00c1ngel   Asturias",
@@ -3347,7 +4013,9 @@
       "Total Nominations": 6,
       "First Nominated": 1964,
       "Years Nominated": 3,
-      "ID": "13187"
+      "ID": "13187",
+      "Country": "",
+      "Institution": ""
     },
     {
       "Name": "Patrick   White",
@@ -3357,7 +4025,9 @@
       "Total Nominations": 21,
       "First Nominated": 1968,
       "Years Nominated": 5,
-      "ID": "15048"
+      "ID": "15048",
+      "Country": "United Kingdom",
+      "Institution": ""
     },
     {
       "Name": "Aleksandr   Solzjenitsyn",
@@ -3367,7 +4037,9 @@
       "Total Nominations": 9,
       "First Nominated": 1969,
       "Years Nominated": 1,
-      "ID": "15194"
+      "ID": "15194",
+      "Country": "",
+      "Institution": ""
     }
   ],
   "peace": [
@@ -3379,7 +4051,9 @@
       "Total Nominations": 51,
       "First Nominated": 1901,
       "Years Nominated": 7,
-      "ID": "639"
+      "ID": "639",
+      "Country": "Denmark",
+      "Institution": ""
     },
     {
       "Name": "Fr\u00e9d\u00e9ric  Passy",
@@ -3389,7 +4063,9 @@
       "Total Nominations": 41,
       "First Nominated": 1901,
       "Years Nominated": 0,
-      "ID": "7015"
+      "ID": "7015",
+      "Country": "France",
+      "Institution": ""
     },
     {
       "Name": "William Randal  Cremer",
@@ -3399,7 +4075,9 @@
       "Total Nominations": 26,
       "First Nominated": 1901,
       "Years Nominated": 2,
-      "ID": "2021"
+      "ID": "2021",
+      "Country": "United Kingdom",
+      "Institution": ""
     },
     {
       "Name": "The Permanent International Peace Bureau",
@@ -3409,7 +4087,9 @@
       "Total Nominations": 136,
       "First Nominated": 1901,
       "Years Nominated": 9,
-      "ID": "9173"
+      "ID": "9173",
+      "Country": "",
+      "Institution": ""
     },
     {
       "Name": "Bertha Sophie F von Suttner (Baroness)",
@@ -3419,7 +4099,9 @@
       "Total Nominations": 101,
       "First Nominated": 1901,
       "Years Nominated": 4,
-      "ID": "9866"
+      "ID": "9866",
+      "Country": "",
+      "Institution": ""
     },
     {
       "Name": "The Institute of International Law (Institut de Droit International)",
@@ -3429,7 +4111,9 @@
       "Total Nominations": 59,
       "First Nominated": 1901,
       "Years Nominated": 3,
-      "ID": "9137"
+      "ID": "9137",
+      "Country": "",
+      "Institution": ""
     },
     {
       "Name": "\u00c9lie  Ducommun",
@@ -3439,7 +4123,9 @@
       "Total Nominations": 17,
       "First Nominated": 1901,
       "Years Nominated": 1,
-      "ID": "2569"
+      "ID": "2569",
+      "Country": "Switzerland",
+      "Institution": ""
     },
     {
       "Name": "Jean Henry  Dunant",
@@ -3449,7 +4135,9 @@
       "Total Nominations": 10,
       "First Nominated": 1901,
       "Years Nominated": 0,
-      "ID": "2594"
+      "ID": "2594",
+      "Country": "Switzerland",
+      "Institution": ""
     },
     {
       "Name": "Ernesto Teodoro  Moneta",
@@ -3459,7 +4147,9 @@
       "Total Nominations": 70,
       "First Nominated": 1902,
       "Years Nominated": 5,
-      "ID": "6368"
+      "ID": "6368",
+      "Country": "Italy",
+      "Institution": ""
     },
     {
       "Name": "Charles Albert  Gobat",
@@ -3469,7 +4159,9 @@
       "Total Nominations": 7,
       "First Nominated": 1901,
       "Years Nominated": 1,
-      "ID": "3493"
+      "ID": "3493",
+      "Country": "Switzerland",
+      "Institution": ""
     },
     {
       "Name": "Henri Marie  La Fontaine",
@@ -3479,7 +4171,9 @@
       "Total Nominations": 23,
       "First Nominated": 1910,
       "Years Nominated": 3,
-      "ID": "5125"
+      "ID": "5125",
+      "Country": "",
+      "Institution": ""
     },
     {
       "Name": "The International Committee of the Red Cross",
@@ -3489,7 +4183,9 @@
       "Total Nominations": 20,
       "First Nominated": 1901,
       "Years Nominated": 16,
-      "ID": "9141"
+      "ID": "9141",
+      "Country": "",
+      "Institution": ""
     },
     {
       "Name": "Klas Pontus  Arnoldson",
@@ -3499,7 +4195,9 @@
       "Total Nominations": 25,
       "First Nominated": 1902,
       "Years Nominated": 6,
-      "ID": "500"
+      "ID": "500",
+      "Country": "Sweden",
+      "Institution": ""
     },
     {
       "Name": "Karl Hjalmar  Branting",
@@ -3509,7 +4207,9 @@
       "Total Nominations": 7,
       "First Nominated": 1906,
       "Years Nominated": 15,
-      "ID": "1292"
+      "ID": "1292",
+      "Country": "Sweden",
+      "Institution": ""
     },
     {
       "Name": "Auguste-Marie-Fran\u00e7ois  Beernaert",
@@ -3519,7 +4219,9 @@
       "Total Nominations": 1,
       "First Nominated": 1909,
       "Years Nominated": 0,
-      "ID": "812"
+      "ID": "812",
+      "Country": "",
+      "Institution": ""
     },
     {
       "Name": "Paul Henri Benjamin Balluet  d`Estournelles de Constant (Baron de Constant de R\u00e9becque)",
@@ -3529,7 +4231,9 @@
       "Total Nominations": 26,
       "First Nominated": 1904,
       "Years Nominated": 5,
-      "ID": "2086"
+      "ID": "2086",
+      "Country": "",
+      "Institution": ""
     },
     {
       "Name": "L\u00e9on Victor Auguste  Bourgeois",
@@ -3539,7 +4243,9 @@
       "Total Nominations": 26,
       "First Nominated": 1908,
       "Years Nominated": 12,
-      "ID": "1233"
+      "ID": "1233",
+      "Country": "France",
+      "Institution": ""
     },
     {
       "Name": "Louis  Renault",
@@ -3549,7 +4255,9 @@
       "Total Nominations": 15,
       "First Nominated": 1904,
       "Years Nominated": 3,
-      "ID": "7653"
+      "ID": "7653",
+      "Country": "France",
+      "Institution": "Sorbonne University"
     },
     {
       "Name": "Theodore  Roosevelt",
@@ -3559,7 +4267,9 @@
       "Total Nominations": 7,
       "First Nominated": 1906,
       "Years Nominated": 0,
-      "ID": "7858"
+      "ID": "7858",
+      "Country": "USA",
+      "Institution": ""
     },
     {
       "Name": "Tobias Michael Carel  Asser",
@@ -3569,7 +4279,9 @@
       "Total Nominations": 2,
       "First Nominated": 1911,
       "Years Nominated": 0,
-      "ID": "539"
+      "ID": "539",
+      "Country": "the Netherlands",
+      "Institution": ""
     },
     {
       "Name": "Alfred Hermann  Fried",
@@ -3579,7 +4291,9 @@
       "Total Nominations": 30,
       "First Nominated": 1909,
       "Years Nominated": 2,
-      "ID": "3227"
+      "ID": "3227",
+      "Country": "Austria",
+      "Institution": ""
     },
     {
       "Name": "Ludwig  Quidde",
@@ -3589,7 +4303,9 @@
       "Total Nominations": 37,
       "First Nominated": 1924,
       "Years Nominated": 3,
-      "ID": "7501"
+      "ID": "7501",
+      "Country": "Germany",
+      "Institution": ""
     },
     {
       "Name": "Elihu  Root",
@@ -3599,7 +4315,9 @@
       "Total Nominations": 2,
       "First Nominated": 1909,
       "Years Nominated": 3,
-      "ID": "7860"
+      "ID": "7860",
+      "Country": "USA",
+      "Institution": ""
     },
     {
       "Name": "John Raleigh  Mott",
@@ -3609,7 +4327,9 @@
       "Total Nominations": 14,
       "First Nominated": 1911,
       "Years Nominated": 35,
-      "ID": "6466"
+      "ID": "6466",
+      "Country": "USA",
+      "Institution": ""
     },
     {
       "Name": "Ralph Norman  Angell Lane",
@@ -3619,7 +4339,9 @@
       "Total Nominations": 20,
       "First Nominated": 1912,
       "Years Nominated": 21,
-      "ID": "449"
+      "ID": "449",
+      "Country": "",
+      "Institution": ""
     },
     {
       "Name": "Christian Lous  Lange",
@@ -3629,7 +4351,9 @@
       "Total Nominations": 7,
       "First Nominated": 1914,
       "Years Nominated": 7,
-      "ID": "5214"
+      "ID": "5214",
+      "Country": "Norway",
+      "Institution": ""
     },
     {
       "Name": "Jane  Addams",
@@ -3639,7 +4363,9 @@
       "Total Nominations": 91,
       "First Nominated": 1916,
       "Years Nominated": 15,
-      "ID": "311"
+      "ID": "311",
+      "Country": "USA",
+      "Institution": ""
     },
     {
       "Name": "Thomas Woodrow  Wilson",
@@ -3649,7 +4375,9 @@
       "Total Nominations": 22,
       "First Nominated": 1918,
       "Years Nominated": 1,
-      "ID": "10230"
+      "ID": "10230",
+      "Country": "USA",
+      "Institution": ""
     },
     {
       "Name": "Fridtjof  Nansen",
@@ -3659,7 +4387,9 @@
       "Total Nominations": 3,
       "First Nominated": 1922,
       "Years Nominated": 0,
-      "ID": "6599"
+      "ID": "6599",
+      "Country": "Norway",
+      "Institution": ""
     },
     {
       "Name": "Edgar Algernon Robert Gascoyne  Viscount Cecil of Chelwood",
@@ -3669,7 +4399,9 @@
       "Total Nominations": 17,
       "First Nominated": 1923,
       "Years Nominated": 14,
-      "ID": "9672"
+      "ID": "9672",
+      "Country": "United Kingdom",
+      "Institution": ""
     },
     {
       "Name": "Society of Friends (Quakers)",
@@ -3679,7 +4411,9 @@
       "Total Nominations": 7,
       "First Nominated": 1923,
       "Years Nominated": 24,
-      "ID": "8644"
+      "ID": "8644",
+      "Country": "",
+      "Institution": ""
     },
     {
       "Name": "Arthur  Henderson",
@@ -3689,7 +4423,9 @@
       "Total Nominations": 4,
       "First Nominated": 1931,
       "Years Nominated": 3,
-      "ID": "4043"
+      "ID": "4043",
+      "Country": "Scotland",
+      "Institution": ""
     },
     {
       "Name": "Ferdinand Edouard  Buisson",
@@ -3699,7 +4435,9 @@
       "Total Nominations": 9,
       "First Nominated": 1925,
       "Years Nominated": 2,
-      "ID": "1437"
+      "ID": "1437",
+      "Country": "",
+      "Institution": ""
     },
     {
       "Name": "Aristide Pierre Henri  Briand",
@@ -3709,7 +4447,9 @@
       "Total Nominations": 14,
       "First Nominated": 1926,
       "Years Nominated": 0,
-      "ID": "1330"
+      "ID": "1330",
+      "Country": "",
+      "Institution": ""
     },
     {
       "Name": "Joseph Austen  Chamberlain",
@@ -3719,7 +4459,9 @@
       "Total Nominations": 10,
       "First Nominated": 1926,
       "Years Nominated": -1,
-      "ID": "1716"
+      "ID": "1716",
+      "Country": "",
+      "Institution": ""
     },
     {
       "Name": "Gustav  Stresemann",
@@ -3729,7 +4471,9 @@
       "Total Nominations": 10,
       "First Nominated": 1926,
       "Years Nominated": 0,
-      "ID": "8841"
+      "ID": "8841",
+      "Country": "Germany",
+      "Institution": ""
     },
     {
       "Name": "Charles Gates  Dawes",
@@ -3739,7 +4483,9 @@
       "Total Nominations": 2,
       "First Nominated": 1926,
       "Years Nominated": -1,
-      "ID": "2172"
+      "ID": "2172",
+      "Country": "USA",
+      "Institution": ""
     },
     {
       "Name": "Lars Olof Jonathan (Nathan)  S\u00f6derblom",
@@ -3749,7 +4495,9 @@
       "Total Nominations": 19,
       "First Nominated": 1926,
       "Years Nominated": 4,
-      "ID": "8967"
+      "ID": "8967",
+      "Country": "Sweden",
+      "Institution": ""
     },
     {
       "Name": "Frank Billings  Kellogg",
@@ -3759,7 +4507,9 @@
       "Total Nominations": 13,
       "First Nominated": 1929,
       "Years Nominated": 0,
-      "ID": "4776"
+      "ID": "4776",
+      "Country": "USA",
+      "Institution": ""
     },
     {
       "Name": "Nicholas Murray  Butler",
@@ -3769,7 +4519,9 @@
       "Total Nominations": 11,
       "First Nominated": 1930,
       "Years Nominated": 1,
-      "ID": "1493"
+      "ID": "1493",
+      "Country": "USA",
+      "Institution": "Columbia University"
     },
     {
       "Name": "Albert  Schweitzer",
@@ -3779,7 +4531,9 @@
       "Total Nominations": 31,
       "First Nominated": 1930,
       "Years Nominated": 22,
-      "ID": "8288"
+      "ID": "8288",
+      "Country": "France",
+      "Institution": ""
     },
     {
       "Name": "Philip  Noel-Baker",
@@ -3789,7 +4543,9 @@
       "Total Nominations": 8,
       "First Nominated": 1952,
       "Years Nominated": 7,
-      "ID": "6735"
+      "ID": "6735",
+      "Country": "United Kingdom",
+      "Institution": ""
     },
     {
       "Name": "Carl  von Ossietzky",
@@ -3799,7 +4555,9 @@
       "Total Nominations": 93,
       "First Nominated": 1935,
       "Years Nominated": 0,
-      "ID": "9836"
+      "ID": "9836",
+      "Country": "Germany",
+      "Institution": ""
     },
     {
       "Name": "Carlos Saavedra  Lamas",
@@ -3809,7 +4567,9 @@
       "Total Nominations": 11,
       "First Nominated": 1935,
       "Years Nominated": 1,
-      "ID": "5174"
+      "ID": "5174",
+      "Country": "Argentina",
+      "Institution": ""
     },
     {
       "Name": "Cordell  Hull",
@@ -3819,7 +4579,9 @@
       "Total Nominations": 31,
       "First Nominated": 1936,
       "Years Nominated": 9,
-      "ID": "4368"
+      "ID": "4368",
+      "Country": "USA",
+      "Institution": ""
     },
     {
       "Name": "The Nansen International Office for Refugees",
@@ -3829,7 +4591,9 @@
       "Total Nominations": 11,
       "First Nominated": 1936,
       "Years Nominated": 2,
-      "ID": "9159"
+      "ID": "9159",
+      "Country": "",
+      "Institution": ""
     },
     {
       "Name": "American Friends Service Committee",
@@ -3839,7 +4603,9 @@
       "Total Nominations": 6,
       "First Nominated": 1937,
       "Years Nominated": 10,
-      "ID": "407"
+      "ID": "407",
+      "Country": "",
+      "Institution": ""
     },
     {
       "Name": "Friends' Service Council",
@@ -3849,7 +4615,9 @@
       "Total Nominations": 6,
       "First Nominated": 1937,
       "Years Nominated": 10,
-      "ID": "3230"
+      "ID": "3230",
+      "Country": "",
+      "Institution": ""
     },
     {
       "Name": "L\u00e9on  Jouhaux",
@@ -3859,7 +4627,9 @@
       "Total Nominations": 9,
       "First Nominated": 1938,
       "Years Nominated": 13,
-      "ID": "4648"
+      "ID": "4648",
+      "Country": "France",
+      "Institution": ""
     },
     {
       "Name": "Dag Hjalmar Agne Carl  Hammarskj\u00f6ld",
@@ -3869,7 +4639,9 @@
       "Total Nominations": 11,
       "First Nominated": 1957,
       "Years Nominated": 4,
-      "ID": "3843"
+      "ID": "3843",
+      "Country": "Sweden",
+      "Institution": ""
     },
     {
       "Name": "Emily Greene  Balch",
@@ -3879,7 +4651,9 @@
       "Total Nominations": 13,
       "First Nominated": 1946,
       "Years Nominated": 0,
-      "ID": "651"
+      "ID": "651",
+      "Country": "USA",
+      "Institution": ""
     },
     {
       "Name": "John  Boyd Orr of Brechin",
@@ -3889,7 +4663,9 @@
       "Total Nominations": 4,
       "First Nominated": 1947,
       "Years Nominated": 2,
-      "ID": "1260"
+      "ID": "1260",
+      "Country": "Scotland",
+      "Institution": ""
     },
     {
       "Name": "Ren\u00e9  Cassin",
@@ -3899,7 +4675,9 @@
       "Total Nominations": 3,
       "First Nominated": 1949,
       "Years Nominated": 19,
-      "ID": "1649"
+      "ID": "1649",
+      "Country": "France",
+      "Institution": ""
     },
     {
       "Name": "International Labour Organisation (ILO)",
@@ -3909,7 +4687,9 @@
       "Total Nominations": 1,
       "First Nominated": 1949,
       "Years Nominated": 20,
-      "ID": "4472"
+      "ID": "4472",
+      "Country": "",
+      "Institution": ""
     },
     {
       "Name": "Ralph Johnson  Bunche",
@@ -3919,7 +4699,9 @@
       "Total Nominations": 1,
       "First Nominated": 1950,
       "Years Nominated": 0,
-      "ID": "1446"
+      "ID": "1446",
+      "Country": "",
+      "Institution": ""
     },
     {
       "Name": "George Catlett  Marshall",
@@ -3929,7 +4711,9 @@
       "Total Nominations": 2,
       "First Nominated": 1950,
       "Years Nominated": 3,
-      "ID": "5937"
+      "ID": "5937",
+      "Country": "USA",
+      "Institution": ""
     },
     {
       "Name": "United Nations International Children's Emergency Fund (UNICEF)",
@@ -3939,7 +4723,9 @@
       "Total Nominations": 1,
       "First Nominated": 1950,
       "Years Nominated": 15,
-      "ID": "9453"
+      "ID": "9453",
+      "Country": "",
+      "Institution": ""
     },
     {
       "Name": "Lester B Pearson",
@@ -3949,7 +4735,9 @@
       "Total Nominations": 2,
       "First Nominated": 1952,
       "Years Nominated": 5,
-      "ID": "7071"
+      "ID": "7071",
+      "Country": "Canada",
+      "Institution": ""
     },
     {
       "Name": "Office of the United Nations High Commissioner for Refugees",
@@ -3959,7 +4747,9 @@
       "Total Nominations": 2,
       "First Nominated": 1955,
       "Years Nominated": -1,
-      "ID": "6829"
+      "ID": "6829",
+      "Country": "",
+      "Institution": ""
     },
     {
       "Name": "Albert J Luthuli",
@@ -3969,7 +4759,9 @@
       "Total Nominations": 17,
       "First Nominated": 1961,
       "Years Nominated": -1,
-      "ID": "11649"
+      "ID": "11649",
+      "Country": "",
+      "Institution": ""
     },
     {
       "Name": "The Red Cross Association",
@@ -3979,7 +4771,9 @@
       "Total Nominations": 6,
       "First Nominated": 1963,
       "Years Nominated": 0,
-      "ID": "13001"
+      "ID": "13001",
+      "Country": "",
+      "Institution": ""
     },
     {
       "Name": "Martin Luther  King",
@@ -3989,7 +4783,9 @@
       "Total Nominations": 2,
       "First Nominated": 1964,
       "Years Nominated": 0,
-      "ID": "13430"
+      "ID": "13430",
+      "Country": "USA",
+      "Institution": ""
     },
     {
       "Name": "Eisako  Sato",
@@ -3999,7 +4795,9 @@
       "Total Nominations": 1,
       "First Nominated": 1974,
       "Years Nominated": 0,
-      "ID": "14030"
+      "ID": "14030",
+      "Country": "",
+      "Institution": ""
     },
     {
       "Name": "Norman Ernest  Borlaug",
@@ -4009,7 +4807,9 @@
       "Total Nominations": 5,
       "First Nominated": 1968,
       "Years Nominated": 2,
-      "ID": "14818"
+      "ID": "14818",
+      "Country": "USA",
+      "Institution": ""
     },
     {
       "Name": "Willy  Brandt",
@@ -4019,7 +4819,9 @@
       "Total Nominations": 3,
       "First Nominated": 1971,
       "Years Nominated": 0,
-      "ID": "15956"
+      "ID": "15956",
+      "Country": "Germany",
+      "Institution": ""
     },
     {
       "Name": "Se\u00e1n  MacBride",
@@ -4029,7 +4831,9 @@
       "Total Nominations": 11,
       "First Nominated": 1972,
       "Years Nominated": 2,
-      "ID": "16943"
+      "ID": "16943",
+      "Country": "France",
+      "Institution": ""
     },
     {
       "Name": "Henry Alfred  Kissinger",
@@ -4039,7 +4843,9 @@
       "Total Nominations": 2,
       "First Nominated": 1973,
       "Years Nominated": 0,
-      "ID": "17072"
+      "ID": "17072",
+      "Country": "Germany",
+      "Institution": ""
     },
     {
       "Name": "Le Duc  Tho",
@@ -4049,7 +4855,9 @@
       "Total Nominations": 1,
       "First Nominated": 1973,
       "Years Nominated": 0,
-      "ID": "17136"
+      "ID": "17136",
+      "Country": "Vietnam",
+      "Institution": ""
     }
   ],
   "non_winners_physics": [
