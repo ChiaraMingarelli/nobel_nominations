@@ -1019,9 +1019,15 @@ def get_top_non_winners(category: str, year_from: int, year_to: int, top_n: int 
                         cat = nom.category
                         cat_counts[cat] = cat_counts.get(cat, 0) + 1
 
+                    # Fetch country from Wikipedia
+                    person_name = details.name or non_winners[pid]['name']
+                    country_info = get_country_from_wikipedia(person_name)
+                    country = country_info['country'] if country_info else ''
+
                     confirmed_non_winners.append({
                         'ID': pid,
-                        'Name': details.name or non_winners[pid]['name'],
+                        'Name': person_name,
+                        'Country': country,
                         'Total Nominations': details.nominee_count,
                         'Nominations by Category': cat_counts
                     })
@@ -2362,26 +2368,13 @@ def main():
                             plt.close(fig)
 
                         # Show table
-                        country_cache = precomputed.get(COUNTRY_CACHE_KEY, {})
                         nw_df = pd.DataFrame([{
                             'Name': nw['Name'],
-                            'Country': country_cache.get(nw.get('ID', ''), {}).get('country', ''),
+                            'Country': nw.get('Country', ''),
                             'Total Nominations': nw['Total Nominations'],
                             'Categories': ', '.join([f"{k}: {v}" for k, v in nw.get('Nominations by Category', {}).items()])
                         } for nw in non_winners])
                         st.dataframe(nw_df, hide_index=True, width='stretch')
-
-                        # Enrich non-winners with country data
-                        nw_missing = [nw for nw in non_winners if nw.get('ID', '') and nw['ID'] not in country_cache]
-                        if nw_missing:
-                            if st.button(f"Fetch Country Data ({len(nw_missing)} missing)", key="enrich_nw_get"):
-                                prog = st.progress(0)
-                                for i, nw in enumerate(nw_missing):
-                                    get_country_for_person(nw['Name'], False, person_id=nw['ID'], precomputed=precomputed)
-                                    prog.progress((i + 1) / len(nw_missing))
-                                    time.sleep(0.15)
-                                prog.empty()
-                                st.rerun()
                     else:
                         st.warning("No non-winners found")
 
@@ -2417,26 +2410,13 @@ def main():
                             plt.close(fig)
 
                         # Show table
-                        country_cache = precomputed.get(COUNTRY_CACHE_KEY, {})
                         nw_df = pd.DataFrame([{
                             'Name': nw['Name'],
-                            'Country': country_cache.get(nw.get('ID', ''), {}).get('country', ''),
+                            'Country': nw.get('Country', ''),
                             'Total Nominations': nw['Total Nominations'],
                             'Categories': ', '.join([f"{k}: {v}" for k, v in nw.get('Nominations by Category', {}).items()])
                         } for nw in non_winners[:nw_top_n]])
                         st.dataframe(nw_df, hide_index=True, width='stretch')
-
-                        # Enrich non-winners with country data
-                        nw_missing = [nw for nw in non_winners[:nw_top_n] if nw.get('ID', '') and nw['ID'] not in country_cache]
-                        if nw_missing:
-                            if st.button(f"Fetch Country Data ({len(nw_missing)} missing)", key="enrich_nw_save"):
-                                prog = st.progress(0)
-                                for i, nw in enumerate(nw_missing):
-                                    get_country_for_person(nw['Name'], False, person_id=nw['ID'], precomputed=precomputed)
-                                    prog.progress((i + 1) / len(nw_missing))
-                                    time.sleep(0.15)
-                                prog.empty()
-                                st.rerun()
                     else:
                         st.warning("No non-winners found")
 
@@ -2497,7 +2477,6 @@ def main():
 
                                     # Show combined table
                                     st.subheader("Non-Winners Data")
-                                    country_cache = precomputed.get(COUNTRY_CACHE_KEY, {})
                                     all_nw_data = []
                                     for cat_name, non_winners in category_data.items():
                                         for i, nw in enumerate(non_winners[:top_n_per_cat]):
@@ -2505,7 +2484,7 @@ def main():
                                                 'Rank': i + 1,
                                                 'Category': cat_name,
                                                 'Name': nw['Name'],
-                                                'Country': country_cache.get(nw.get('ID', ''), {}).get('country', ''),
+                                                'Country': nw.get('Country', ''),
                                                 'Total Nominations': nw['Total Nominations'],
                                                 'Breakdown': ', '.join([f"{k}: {v}" for k, v in nw.get('Nominations by Category', {}).items()])
                                             })
@@ -2514,21 +2493,6 @@ def main():
                                     all_nw_data.sort(key=lambda x: x['Total Nominations'], reverse=True)
                                     nw_comp_df = pd.DataFrame(all_nw_data)
                                     st.dataframe(nw_comp_df, hide_index=True, width='stretch')
-
-                                    # Enrich compared non-winners with country data
-                                    all_compare_nw = []
-                                    for cat_name, nws in category_data.items():
-                                        all_compare_nw.extend(nws[:top_n_per_cat])
-                                    cmp_missing = [nw for nw in all_compare_nw if nw.get('ID', '') and nw['ID'] not in country_cache]
-                                    if cmp_missing:
-                                        if st.button(f"Fetch Country Data ({len(cmp_missing)} missing)", key="enrich_nw_compare"):
-                                            prog = st.progress(0)
-                                            for i, nw in enumerate(cmp_missing):
-                                                get_country_for_person(nw['Name'], False, person_id=nw['ID'], precomputed=precomputed)
-                                                prog.progress((i + 1) / len(cmp_missing))
-                                                time.sleep(0.15)
-                                            prog.empty()
-                                            st.rerun()
                                 else:
                                     st.error("Could not generate comparison plot.")
                             else:
