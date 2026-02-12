@@ -2165,11 +2165,10 @@ def main():
                                     prog = st.progress(0, text="Fetching country & institution data...")
                                     for i, s in enumerate(missing_data):
                                         info = get_country_from_nobel_api(s['Name'])
-                                        if info:
-                                            if not s.get('Country'):
-                                                s['Country'] = info['country']
-                                            if not s.get('Institution'):
-                                                s['Institution'] = info.get('institution', '')
+                                        if 'Country' not in s:
+                                            s['Country'] = info['country'] if info else ''
+                                        if 'Institution' not in s:
+                                            s['Institution'] = info.get('institution', '') if info else ''
                                         prog.progress((i + 1) / len(missing_data))
                                         time.sleep(0.15)
                                     prog.empty()
