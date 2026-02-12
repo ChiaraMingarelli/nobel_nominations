@@ -1596,51 +1596,6 @@ def main():
                 label_visibility="collapsed"
             )
 
-    # Enrich with Country Data button
-    st.sidebar.markdown("---")
-    st.sidebar.header("Country Data")
-    country_cache = precomputed.get(COUNTRY_CACHE_KEY, {})
-    st.sidebar.caption(f"{len(country_cache)} people cached")
-    if st.sidebar.button("Enrich with Country Data"):
-        # Collect all person IDs + names from precomputed data
-        persons_to_enrich = {}  # id -> (name, won_prize)
-
-        # Laureates from precomputed categories
-        for cat_key in ['physics', 'chemistry', 'medicine', 'literature', 'peace']:
-            if cat_key in precomputed:
-                for laureate in precomputed[cat_key]:
-                    pid = str(laureate.get('ID', ''))
-                    if pid and pid not in country_cache:
-                        persons_to_enrich[pid] = (laureate.get('Name', ''), True)
-
-        # Non-winners from precomputed data
-        for cat_key in ['physics', 'chemistry', 'medicine', 'literature', 'peace']:
-            nw_key = f"non_winners_{cat_key}"
-            if nw_key in precomputed:
-                for nw in precomputed[nw_key]:
-                    pid = str(nw.get('ID', ''))
-                    if pid and pid not in country_cache:
-                        persons_to_enrich[pid] = (nw.get('Name', ''), False)
-
-        if not persons_to_enrich:
-            st.sidebar.success("All cached people already have country data!")
-        else:
-            progress = st.sidebar.progress(0)
-            status = st.sidebar.empty()
-            total = len(persons_to_enrich)
-            enriched = 0
-
-            for i, (pid, (pname, won)) in enumerate(persons_to_enrich.items()):
-                status.text(f"Looking up {i+1}/{total}: {pname[:30]}...")
-                get_country_for_person(pname, won, person_id=pid, precomputed=precomputed)
-                enriched += 1
-                progress.progress((i + 1) / total)
-                time.sleep(0.15)  # Rate limit
-
-            progress.empty()
-            status.empty()
-            st.sidebar.success(f"Enriched {enriched} people with country data!")
-
     if search_type == "By Name":
         st.header("Search by Name")
         
@@ -2140,14 +2095,31 @@ def main():
                 display_df = display_df.sort_values('Year Won')
                 st.dataframe(display_df, hide_index=True, width='stretch')
 
-                # Download button
-                csv = display_df.to_csv(index=False)
-                st.download_button(
-                    "Download as CSV",
-                    csv,
-                    f"nominations_to_win_{category_name}_{stats_year_from}-{stats_year_to}.csv",
-                    "text/csv"
-                )
+                # Download and enrich buttons
+                dl_col, enrich_col = st.columns(2)
+                with dl_col:
+                    csv = display_df.to_csv(index=False)
+                    st.download_button(
+                        "Download as CSV",
+                        csv,
+                        f"nominations_to_win_{category_name}_{stats_year_from}-{stats_year_to}.csv",
+                        "text/csv"
+                    )
+                with enrich_col:
+                    if 'ID' in df.columns:
+                        missing = [str(pid) for pid in df['ID'] if str(pid) not in country_cache]
+                        if missing:
+                            if st.button(f"Fetch Country Data ({len(missing)} missing)", key="enrich_laureates"):
+                                prog = st.progress(0)
+                                for i, pid in enumerate(missing):
+                                    row = df[df['ID'].astype(str) == pid].iloc[0]
+                                    get_country_for_person(row['Name'], True, person_id=pid, precomputed=precomputed)
+                                    prog.progress((i + 1) / len(missing))
+                                    time.sleep(0.15)
+                                prog.empty()
+                                st.rerun()
+                        else:
+                            st.caption("All country data loaded")
 
             if get_stats_btn:
                 if stats_year_from > stats_year_to:
@@ -2411,6 +2383,18 @@ def main():
                             'Categories': ', '.join([f"{k}: {v}" for k, v in nw.get('Nominations by Category', {}).items()])
                         } for nw in non_winners])
                         st.dataframe(nw_df, hide_index=True, width='stretch')
+
+                        # Enrich non-winners with country data
+                        nw_missing = [nw for nw in non_winners if nw.get('ID', '') and nw['ID'] not in country_cache]
+                        if nw_missing:
+                            if st.button(f"Fetch Country Data ({len(nw_missing)} missing)", key="enrich_nw_get"):
+                                prog = st.progress(0)
+                                for i, nw in enumerate(nw_missing):
+                                    get_country_for_person(nw['Name'], False, person_id=nw['ID'], precomputed=precomputed)
+                                    prog.progress((i + 1) / len(nw_missing))
+                                    time.sleep(0.15)
+                                prog.empty()
+                                st.rerun()
                     else:
                         st.warning("No non-winners found")
 
@@ -2454,6 +2438,18 @@ def main():
                             'Categories': ', '.join([f"{k}: {v}" for k, v in nw.get('Nominations by Category', {}).items()])
                         } for nw in non_winners[:nw_top_n]])
                         st.dataframe(nw_df, hide_index=True, width='stretch')
+
+                        # Enrich non-winners with country data
+                        nw_missing = [nw for nw in non_winners[:nw_top_n] if nw.get('ID', '') and nw['ID'] not in country_cache]
+                        if nw_missing:
+                            if st.button(f"Fetch Country Data ({len(nw_missing)} missing)", key="enrich_nw_save"):
+                                prog = st.progress(0)
+                                for i, nw in enumerate(nw_missing):
+                                    get_country_for_person(nw['Name'], False, person_id=nw['ID'], precomputed=precomputed)
+                                    prog.progress((i + 1) / len(nw_missing))
+                                    time.sleep(0.15)
+                                prog.empty()
+                                st.rerun()
                     else:
                         st.warning("No non-winners found")
 
@@ -2531,6 +2527,21 @@ def main():
                                     all_nw_data.sort(key=lambda x: x['Total Nominations'], reverse=True)
                                     nw_comp_df = pd.DataFrame(all_nw_data)
                                     st.dataframe(nw_comp_df, hide_index=True, width='stretch')
+
+                                    # Enrich compared non-winners with country data
+                                    all_compare_nw = []
+                                    for cat_name, nws in category_data.items():
+                                        all_compare_nw.extend(nws[:top_n_per_cat])
+                                    cmp_missing = [nw for nw in all_compare_nw if nw.get('ID', '') and nw['ID'] not in country_cache]
+                                    if cmp_missing:
+                                        if st.button(f"Fetch Country Data ({len(cmp_missing)} missing)", key="enrich_nw_compare"):
+                                            prog = st.progress(0)
+                                            for i, nw in enumerate(cmp_missing):
+                                                get_country_for_person(nw['Name'], False, person_id=nw['ID'], precomputed=precomputed)
+                                                prog.progress((i + 1) / len(cmp_missing))
+                                                time.sleep(0.15)
+                                            prog.empty()
+                                            st.rerun()
                                 else:
                                     st.error("Could not generate comparison plot.")
                             else:
