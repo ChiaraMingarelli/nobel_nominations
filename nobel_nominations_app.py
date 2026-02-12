@@ -1777,12 +1777,9 @@ def main():
                     # Fit all distributions once, reuse everywhere
                     all_fits = fit_distributions(nom_data)
 
-                    selected_dist = st.selectbox(
-                        "Distribution to fit",
-                        options=DISTRIBUTION_NAMES,
-                        index=0,
-                        key=f"dist_select_{category_name}"
-                    )
+                    # Read selection from session_state (default Log-Normal)
+                    dist_key = f"dist_select_{category_name}"
+                    selected_dist = st.session_state.get(dist_key, "Log-Normal")
 
                     st.subheader(f"{selected_dist} Distribution Fit")
 
@@ -1795,6 +1792,14 @@ def main():
                         st.pyplot(fig)
                         add_download_buttons(fig, f"distribution_{stats_category}", "single")
                         plt.close(fig)
+
+                        # Selectbox below the figure
+                        st.selectbox(
+                            "Distribution to fit",
+                            options=DISTRIBUTION_NAMES,
+                            index=DISTRIBUTION_NAMES.index(selected_dist),
+                            key=dist_key
+                        )
 
                         # Display fit parameters dynamically
                         param_items = list(fit_params['params'].items())
@@ -1812,7 +1817,7 @@ def main():
                         # Note best-fitting distribution
                         best_name = min(all_fits, key=lambda n: all_fits[n]['aic'])
                         if best_name != selected_dist:
-                            st.info(f"**Tip:** {best_name} has the lowest AIC ({all_fits[best_name]['aic']}) for this data. Try selecting it above.")
+                            st.info(f"**Tip:** {best_name} has the lowest AIC ({all_fits[best_name]['aic']}) for this data.")
                     else:
                         st.warning("Insufficient data for distribution fitting (need at least 3 positive values).")
 
