@@ -1709,7 +1709,20 @@ def main():
                             if laureate.get('Note'):
                                 st.info(f"Note: {laureate['Note']}")
 
-                            # Country and institution from precomputed data
+                            # Country and institution — backfill if missing
+                            if 'Country' not in laureate or 'Institution' not in laureate:
+                                api_info = get_country_from_nobel_api(laureate['Name'])
+                                if api_info:
+                                    if 'Country' not in laureate:
+                                        laureate['Country'] = api_info.get('country', '')
+                                    if 'Institution' not in laureate:
+                                        laureate['Institution'] = api_info.get('institution', '')
+                                    save_precomputed_stats(precomputed)
+                                else:
+                                    laureate.setdefault('Country', '')
+                                    laureate.setdefault('Institution', '')
+                                    save_precomputed_stats(precomputed)
+
                             if laureate.get('Country') or laureate.get('Institution'):
                                 info_parts = []
                                 if laureate.get('Country'):
