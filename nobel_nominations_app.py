@@ -1377,9 +1377,14 @@ def main():
         ["By Name", "Browse by Category/Year", "Statistics"]
     )
 
-    # Show statistics sub-menu when Statistics is selected
+    # Show statistics sub-menu indented under Statistics
     stats_type = None
     if search_type == "Statistics":
+        st.sidebar.markdown(
+            "<style>[data-testid='stSidebar'] .stRadio:nth-of-type(2) "
+            "{margin-left: 1.2rem; font-size: 0.9rem;}</style>",
+            unsafe_allow_html=True
+        )
         stats_type = st.sidebar.radio(
             "Statistics",
             STATS_SUBTYPES,
