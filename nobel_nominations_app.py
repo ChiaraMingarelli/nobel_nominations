@@ -44,6 +44,12 @@ HEADERS = {
     'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
 }
 
+COUNTRY_CACHE_KEY = "country_data"
+WIKIDATA_HEADERS = {
+    'User-Agent': 'NobelNominationsApp/1.0 (chiara.mingarelli@yale.edu)',
+    'Accept': 'application/json',
+}
+
 CATEGORIES = {
     'all': '',
     'physics': 'phy',
@@ -86,6 +92,9 @@ class NominationResult:
     nominations_as_nominator: list  # List of NominationEntry
     won_prize: bool
     prize_info: Optional[dict] = None
+    country: Optional[str] = None
+    country_source: Optional[str] = None
+    country_source_url: Optional[str] = None
 
 
 PRIZE_CODES = {
@@ -454,6 +463,192 @@ def save_precomputed_stats(stats: dict):
             json.dump(stats, f, indent=2)
     except Exception as e:
         st.error(f"Error saving stats: {e}")
+
+
+def get_country_from_nobel_api(name: str) -> Optional[dict]:
+    """Look up birth country from the official Nobel Prize API.
+
+    Args:
+        name: Full name of the laureate.
+
+    Returns:
+        dict with 'country', 'source', 'source_url' or None.
+    """
+    # Use last word of name as surname for the API search
+    parts = name.strip().split()
+    if not parts:
+        return None
+    last_name = parts[-1]
+
+    try:
+        url = f"https://api.nobelprize.org/2.1/laureates?name={last_name}"
+        resp = requests.get(url, headers=WIKIDATA_HEADERS, timeout=15)
+        if resp.status_code != 200:
+            return None
+
+        data = resp.json()
+        for laureate in data.get('laureates', []):
+            full = laureate.get('fullName', {}).get('en', '')
+            known = laureate.get('knownName', {}).get('en', '')
+            if name_matches(name, full) or name_matches(name, known):
+                birth = laureate.get('birth', {})
+                place = birth.get('place', {})
+                country = place.get('countryNow', {}).get('en', '')
+                wiki_url = laureate.get('wikipedia', {}).get('english', '')
+                if country:
+                    return {
+                        'country': country,
+                        'source': 'Nobel Prize',
+                        'source_url': wiki_url or '',
+                    }
+    except Exception:
+        pass
+    return None
+
+
+def get_country_from_wikipedia(name: str) -> Optional[dict]:
+    """Look up country of citizenship via Wikipedia REST API + Wikidata.
+
+    Pipeline:
+      1. Wikipedia page summary → wikibase_item (Wikidata QID) + page URL
+      2. Wikidata claims → P27 (country of citizenship) entity ID
+      3. Wikidata labels → resolve country entity to English name
+
+    Args:
+        name: Full name of the person.
+
+    Returns:
+        dict with 'country', 'source', 'source_url' or None.
+    """
+    # Step 1: Get Wikidata ID from Wikipedia
+    wiki_title = name.replace(' ', '_')
+    wikidata_id = None
+    source_url = ''
+
+    try:
+        summary_url = f"https://en.wikipedia.org/api/rest_v1/page/summary/{wiki_title}"
+        resp = requests.get(summary_url, headers=WIKIDATA_HEADERS, timeout=10)
+        if resp.status_code == 200:
+            sdata = resp.json()
+            wikidata_id = sdata.get('wikibase_item')
+            source_url = sdata.get('content_urls', {}).get('desktop', {}).get('page', '')
+        elif resp.status_code == 404:
+            # Fallback: search Wikipedia
+            search_url = (
+                "https://en.wikipedia.org/w/api.php"
+                f"?action=query&list=search&srsearch={name}&format=json&srlimit=3"
+            )
+            sresp = requests.get(search_url, headers=WIKIDATA_HEADERS, timeout=10)
+            if sresp.status_code == 200:
+                results = sresp.json().get('query', {}).get('search', [])
+                for r in results:
+                    title = r.get('title', '')
+                    # Try the summary endpoint with the search result title
+                    s2 = requests.get(
+                        f"https://en.wikipedia.org/api/rest_v1/page/summary/{title.replace(' ', '_')}",
+                        headers=WIKIDATA_HEADERS, timeout=10
+                    )
+                    if s2.status_code == 200:
+                        s2data = s2.json()
+                        wikidata_id = s2data.get('wikibase_item')
+                        source_url = s2data.get('content_urls', {}).get('desktop', {}).get('page', '')
+                        break
+    except Exception:
+        pass
+
+    if not wikidata_id:
+        return None
+
+    # Step 2: Get P27 (country of citizenship) from Wikidata
+    try:
+        wd_url = (
+            f"https://www.wikidata.org/w/api.php"
+            f"?action=wbgetentities&ids={wikidata_id}&props=claims&format=json"
+        )
+        resp = requests.get(wd_url, headers=WIKIDATA_HEADERS, timeout=10)
+        if resp.status_code != 200:
+            return None
+
+        entities = resp.json().get('entities', {})
+        entity = entities.get(wikidata_id, {})
+        claims = entity.get('claims', {})
+        p27 = claims.get('P27', [])
+        if not p27:
+            return None
+
+        # Take the first (or last, most recent) citizenship
+        country_claim = p27[-1]  # last = most recent
+        country_id = (
+            country_claim.get('mainsnak', {})
+            .get('datavalue', {})
+            .get('value', {})
+            .get('id', '')
+        )
+        if not country_id:
+            return None
+    except Exception:
+        return None
+
+    # Step 3: Resolve country entity ID to English name
+    try:
+        label_url = (
+            f"https://www.wikidata.org/w/api.php"
+            f"?action=wbgetentities&ids={country_id}&props=labels&languages=en&format=json"
+        )
+        resp = requests.get(label_url, headers=WIKIDATA_HEADERS, timeout=10)
+        if resp.status_code != 200:
+            return None
+
+        entities = resp.json().get('entities', {})
+        country_entity = entities.get(country_id, {})
+        country_name = country_entity.get('labels', {}).get('en', {}).get('value', '')
+        if country_name:
+            return {
+                'country': country_name,
+                'source': 'Wikipedia',
+                'source_url': source_url,
+            }
+    except Exception:
+        pass
+
+    return None
+
+
+def get_country_for_person(name: str, won_prize: bool, person_id: str = '',
+                           precomputed: dict = None) -> Optional[dict]:
+    """Get country for a person, checking cache first.
+
+    Args:
+        name: Full name.
+        won_prize: Whether this person won a Nobel Prize.
+        person_id: Archive person ID (used as cache key).
+        precomputed: The precomputed stats dict (for reading/writing cache).
+
+    Returns:
+        dict with 'country', 'source', 'source_url' or None.
+    """
+    # Check cache
+    if precomputed is not None and person_id:
+        country_cache = precomputed.get(COUNTRY_CACHE_KEY, {})
+        if person_id in country_cache:
+            return country_cache[person_id]
+
+    result = None
+    if won_prize:
+        result = get_country_from_nobel_api(name)
+        if not result:
+            result = get_country_from_wikipedia(name)
+    else:
+        result = get_country_from_wikipedia(name)
+
+    # Save to cache
+    if result and precomputed is not None and person_id:
+        if COUNTRY_CACHE_KEY not in precomputed:
+            precomputed[COUNTRY_CACHE_KEY] = {}
+        precomputed[COUNTRY_CACHE_KEY][person_id] = result
+        save_precomputed_stats(precomputed)
+
+    return result
 
 
 DISTRIBUTION_NAMES = [
@@ -1400,7 +1595,52 @@ def main():
                 STATS_SUBTYPES,
                 label_visibility="collapsed"
             )
-    
+
+    # Enrich with Country Data button
+    st.sidebar.markdown("---")
+    st.sidebar.header("Country Data")
+    country_cache = precomputed.get(COUNTRY_CACHE_KEY, {})
+    st.sidebar.caption(f"{len(country_cache)} people cached")
+    if st.sidebar.button("Enrich with Country Data"):
+        # Collect all person IDs + names from precomputed data
+        persons_to_enrich = {}  # id -> (name, won_prize)
+
+        # Laureates from precomputed categories
+        for cat_key in ['physics', 'chemistry', 'medicine', 'literature', 'peace']:
+            if cat_key in precomputed:
+                for laureate in precomputed[cat_key]:
+                    pid = str(laureate.get('ID', ''))
+                    if pid and pid not in country_cache:
+                        persons_to_enrich[pid] = (laureate.get('Name', ''), True)
+
+        # Non-winners from precomputed data
+        for cat_key in ['physics', 'chemistry', 'medicine', 'literature', 'peace']:
+            nw_key = f"non_winners_{cat_key}"
+            if nw_key in precomputed:
+                for nw in precomputed[nw_key]:
+                    pid = str(nw.get('ID', ''))
+                    if pid and pid not in country_cache:
+                        persons_to_enrich[pid] = (nw.get('Name', ''), False)
+
+        if not persons_to_enrich:
+            st.sidebar.success("All cached people already have country data!")
+        else:
+            progress = st.sidebar.progress(0)
+            status = st.sidebar.empty()
+            total = len(persons_to_enrich)
+            enriched = 0
+
+            for i, (pid, (pname, won)) in enumerate(persons_to_enrich.items()):
+                status.text(f"Looking up {i+1}/{total}: {pname[:30]}...")
+                get_country_for_person(pname, won, person_id=pid, precomputed=precomputed)
+                enriched += 1
+                progress.progress((i + 1) / total)
+                time.sleep(0.15)  # Rate limit
+
+            progress.empty()
+            status.empty()
+            st.sidebar.success(f"Enriched {enriched} people with country data!")
+
     if search_type == "By Name":
         st.header("Search by Name")
         
@@ -1491,6 +1731,17 @@ def main():
                             if laureate.get('Note'):
                                 st.info(f"Note: {laureate['Note']}")
 
+                            # Country info from cache
+                            country_cache = precomputed.get(COUNTRY_CACHE_KEY, {})
+                            lid = laureate.get('ID', '')
+                            if lid and lid in country_cache:
+                                cinfo = country_cache[lid]
+                                st.markdown(f"**Country:** {cinfo['country']}")
+                                if cinfo.get('source') == 'Wikipedia' and cinfo.get('source_url'):
+                                    st.caption(f"*Country data from [Wikipedia]({cinfo['source_url']})*")
+                                elif cinfo.get('source') == 'Nobel Prize':
+                                    st.caption("*Country data from the Nobel Prize API*")
+
                     st.markdown("---")
                     st.caption("Want more details? Use the live archive search below for full nomination history.")
 
@@ -1572,6 +1823,18 @@ def main():
                                     elif result.nominee_count > 0:
                                         st.info("Did not win Nobel Prize")
 
+                                # Country info
+                                cinfo = get_country_for_person(
+                                    result.name, result.won_prize,
+                                    person_id=result.person_id, precomputed=precomputed
+                                )
+                                if cinfo:
+                                    st.markdown(f"**Country:** {cinfo['country']}")
+                                    if cinfo.get('source') == 'Wikipedia' and cinfo.get('source_url'):
+                                        st.caption(f"*Country data from [Wikipedia]({cinfo['source_url']})*")
+                                    elif cinfo.get('source') == 'Nobel Prize':
+                                        st.caption("*Country data from the Nobel Prize API*")
+
                                 # Show nominations based on search role
                                 if search_role in ["Nominee", "Both"] and result.nominations_as_nominee:
                                     st.subheader(f"Nominated by ({len(result.nominations_as_nominee)} nominations)")
@@ -1601,9 +1864,12 @@ def main():
                     if len(detailed_results) > 1:
                         st.subheader("Summary Table")
                         summary_data = []
+                        country_cache = precomputed.get(COUNTRY_CACHE_KEY, {})
                         for r in detailed_results:
+                            cinfo = country_cache.get(r.person_id, {})
                             summary_data.append({
                                 "Name": r.name,
+                                "Country": cinfo.get('country', ''),
                                 "As Nominee (filtered)": len(r.nominations_as_nominee),
                                 "As Nominator (filtered)": len(r.nominations_as_nominator),
                                 "Total Nominee": r.nominee_count,
@@ -1868,6 +2134,9 @@ def main():
                 # Display laureate table
                 st.subheader("Laureate Details")
                 display_df = df[['Name', 'Prize Category', 'Year Won', 'Nominations Before Win', 'First Nominated', 'Years Nominated']].copy()
+                country_cache = precomputed.get(COUNTRY_CACHE_KEY, {})
+                if 'ID' in df.columns:
+                    display_df.insert(1, 'Country', df['ID'].map(lambda pid: country_cache.get(str(pid), {}).get('country', '')))
                 display_df = display_df.sort_values('Year Won')
                 st.dataframe(display_df, hide_index=True, width='stretch')
 
@@ -2134,8 +2403,10 @@ def main():
                             plt.close(fig)
 
                         # Show table
+                        country_cache = precomputed.get(COUNTRY_CACHE_KEY, {})
                         nw_df = pd.DataFrame([{
                             'Name': nw['Name'],
+                            'Country': country_cache.get(nw.get('ID', ''), {}).get('country', ''),
                             'Total Nominations': nw['Total Nominations'],
                             'Categories': ', '.join([f"{k}: {v}" for k, v in nw.get('Nominations by Category', {}).items()])
                         } for nw in non_winners])
@@ -2175,8 +2446,10 @@ def main():
                             plt.close(fig)
 
                         # Show table
+                        country_cache = precomputed.get(COUNTRY_CACHE_KEY, {})
                         nw_df = pd.DataFrame([{
                             'Name': nw['Name'],
+                            'Country': country_cache.get(nw.get('ID', ''), {}).get('country', ''),
                             'Total Nominations': nw['Total Nominations'],
                             'Categories': ', '.join([f"{k}: {v}" for k, v in nw.get('Nominations by Category', {}).items()])
                         } for nw in non_winners[:nw_top_n]])
@@ -2241,6 +2514,7 @@ def main():
 
                                     # Show combined table
                                     st.subheader("Non-Winners Data")
+                                    country_cache = precomputed.get(COUNTRY_CACHE_KEY, {})
                                     all_nw_data = []
                                     for cat_name, non_winners in category_data.items():
                                         for i, nw in enumerate(non_winners[:top_n_per_cat]):
@@ -2248,6 +2522,7 @@ def main():
                                                 'Rank': i + 1,
                                                 'Category': cat_name,
                                                 'Name': nw['Name'],
+                                                'Country': country_cache.get(nw.get('ID', ''), {}).get('country', ''),
                                                 'Total Nominations': nw['Total Nominations'],
                                                 'Breakdown': ', '.join([f"{k}: {v}" for k, v in nw.get('Nominations by Category', {}).items()])
                                             })
@@ -2330,7 +2605,10 @@ def main():
     # Footer
     st.markdown("---")
     st.markdown("""
-    **Data Source:** [Nobel Prize Nomination Archive](https://www.nobelprize.org/nomination/archive/)
+    **Data Sources:**
+    - **Nominations:** [Nobel Prize Nomination Archive](https://www.nobelprize.org/nomination/archive/)
+    - **Country data for laureates:** [Official Nobel Prize API](https://api.nobelprize.org/) (birth country)
+    - **Country data for non-winners:** [Wikipedia](https://en.wikipedia.org/) / [Wikidata](https://www.wikidata.org/) (country of citizenship — community-sourced, may not be fully verified)
 
     **Limitations:**
     - Archive data is only available through 1974 (50-year secrecy rule)
