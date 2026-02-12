@@ -466,13 +466,13 @@ def save_precomputed_stats(stats: dict):
 
 
 def get_country_from_nobel_api(name: str) -> Optional[dict]:
-    """Look up birth country from the official Nobel Prize API.
+    """Look up birth country and institution from the official Nobel Prize API.
 
     Args:
         name: Full name of the laureate.
 
     Returns:
-        dict with 'country', 'source', 'source_url' or None.
+        dict with 'country', 'institution', 'source', 'source_url' or None.
     """
     # Use last word of name as surname for the API search
     parts = name.strip().split()
@@ -495,9 +495,19 @@ def get_country_from_nobel_api(name: str) -> Optional[dict]:
                 place = birth.get('place', {})
                 country = place.get('countryNow', {}).get('en', '')
                 wiki_url = laureate.get('wikipedia', {}).get('english', '')
+
+                # Extract institution from first Nobel Prize affiliation
+                institution = ''
+                for prize in laureate.get('nobelPrizes', []):
+                    affiliations = prize.get('affiliations', [])
+                    if affiliations:
+                        institution = affiliations[0].get('name', {}).get('en', '')
+                        break
+
                 if country:
                     return {
                         'country': country,
+                        'institution': institution,
                         'source': 'Nobel Prize',
                         'source_url': wiki_url or '',
                     }
@@ -1524,13 +1534,15 @@ def get_nominations_to_win_stats(category: str, year_from: int, year_to: int, pr
                                         if n.year <= prize_year
                                     ]
 
-                                    # Fetch birth country from Nobel API
+                                    # Fetch birth country and institution from Nobel API
                                     country_info = get_country_from_nobel_api(details.name)
                                     country = country_info['country'] if country_info else ''
+                                    institution = country_info.get('institution', '') if country_info else ''
 
                                     stats.append({
                                         'Name': details.name,
                                         'Country': country,
+                                        'Institution': institution,
                                         'Prize Category': prize_cat,
                                         'Year Won': prize_year,
                                         'Nominations Before Win': len(nominations_before_win),
@@ -2099,7 +2111,7 @@ def main():
 
                 # Display laureate table
                 st.subheader("Laureate Details")
-                cols = ['Name', 'Country', 'Prize Category', 'Year Won', 'Nominations Before Win', 'First Nominated', 'Years Nominated']
+                cols = ['Name', 'Country', 'Institution', 'Prize Category', 'Year Won', 'Nominations Before Win', 'First Nominated', 'Years Nominated']
                 available_cols = [c for c in cols if c in df.columns]
                 display_df = df[available_cols].copy()
                 display_df = display_df.sort_values('Year Won')
@@ -2132,14 +2144,18 @@ def main():
                                 for cat in individual_cats:
                                     all_stats.extend(precomputed[cat])
                                 stats = [s for s in all_stats if stats_year_from <= s['Year Won'] <= stats_year_to]
-                                # Backfill country for entries saved before the country feature
-                                missing_country = [s for s in stats if not s.get('Country')]
-                                if missing_country:
-                                    prog = st.progress(0, text="Fetching country data...")
-                                    for i, s in enumerate(missing_country):
+                                # Backfill country/institution for entries saved before these features
+                                missing_data = [s for s in stats if not s.get('Country') or not s.get('Institution')]
+                                if missing_data:
+                                    prog = st.progress(0, text="Fetching country & institution data...")
+                                    for i, s in enumerate(missing_data):
                                         info = get_country_from_nobel_api(s['Name'])
-                                        s['Country'] = info['country'] if info else ''
-                                        prog.progress((i + 1) / len(missing_country))
+                                        if info:
+                                            if not s.get('Country'):
+                                                s['Country'] = info['country']
+                                            if not s.get('Institution'):
+                                                s['Institution'] = info.get('institution', '')
+                                        prog.progress((i + 1) / len(missing_data))
                                         time.sleep(0.15)
                                     prog.empty()
                                     save_precomputed_stats(precomputed)
