@@ -1709,16 +1709,14 @@ def main():
                             if laureate.get('Note'):
                                 st.info(f"Note: {laureate['Note']}")
 
-                            # Country info from cache
-                            country_cache = precomputed.get(COUNTRY_CACHE_KEY, {})
-                            lid = laureate.get('ID', '')
-                            if lid and lid in country_cache:
-                                cinfo = country_cache[lid]
-                                st.markdown(f"**Country:** {cinfo['country']}")
-                                if cinfo.get('source') == 'Wikipedia' and cinfo.get('source_url'):
-                                    st.caption(f"*Country data from [Wikipedia]({cinfo['source_url']})*")
-                                elif cinfo.get('source') == 'Nobel Prize':
-                                    st.caption("*Country data from the Nobel Prize API*")
+                            # Country and institution from precomputed data
+                            if laureate.get('Country') or laureate.get('Institution'):
+                                info_parts = []
+                                if laureate.get('Country'):
+                                    info_parts.append(f"**Country:** {laureate['Country']}")
+                                if laureate.get('Institution'):
+                                    info_parts.append(f"**Institution:** {laureate['Institution']}")
+                                st.markdown(" · ".join(info_parts))
 
                     st.markdown("---")
                     st.caption("Want more details? Use the live archive search below for full nomination history.")
@@ -1801,17 +1799,21 @@ def main():
                                     elif result.nominee_count > 0:
                                         st.info("Did not win Nobel Prize")
 
-                                # Country info
+                                # Country and institution info
                                 cinfo = get_country_for_person(
                                     result.name, result.won_prize,
                                     person_id=result.person_id, precomputed=precomputed
                                 )
                                 if cinfo:
-                                    st.markdown(f"**Country:** {cinfo['country']}")
+                                    info_parts = []
+                                    if cinfo.get('country'):
+                                        info_parts.append(f"**Country:** {cinfo['country']}")
+                                    if cinfo.get('institution'):
+                                        info_parts.append(f"**Institution:** {cinfo['institution']}")
+                                    if info_parts:
+                                        st.markdown(" · ".join(info_parts))
                                     if cinfo.get('source') == 'Wikipedia' and cinfo.get('source_url'):
-                                        st.caption(f"*Country data from [Wikipedia]({cinfo['source_url']})*")
-                                    elif cinfo.get('source') == 'Nobel Prize':
-                                        st.caption("*Country data from the Nobel Prize API*")
+                                        st.caption(f"*Data from [Wikipedia]({cinfo['source_url']})*")
 
                                 # Show nominations based on search role
                                 if search_role in ["Nominee", "Both"] and result.nominations_as_nominee:
