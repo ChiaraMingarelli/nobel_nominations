@@ -1377,19 +1377,29 @@ def main():
         ["By Name", "Browse by Category/Year", "Statistics"]
     )
 
-    # Show statistics sub-menu indented under Statistics
+    # Show statistics sub-menu as indented tree under Statistics
     stats_type = None
     if search_type == "Statistics":
+        # CSS: restyle the bordered container as a left-border tree connector
         st.sidebar.markdown(
-            "<style>[data-testid='stSidebar'] .stRadio:nth-of-type(2) "
-            "{margin-left: 1.2rem; font-size: 0.9rem;}</style>",
+            "<style>"
+            "[data-testid='stSidebar'] "
+            "[data-testid='stVerticalBlockBorderWrapper'] {"
+            "  border: none !important;"
+            "  border-left: 2px solid #999 !important;"
+            "  border-radius: 0 !important;"
+            "  margin-left: 0.9rem;"
+            "  padding: 0 0 0 0.6rem !important;"
+            "}"
+            "</style>",
             unsafe_allow_html=True
         )
-        stats_type = st.sidebar.radio(
-            "Statistics",
-            STATS_SUBTYPES,
-            label_visibility="collapsed"
-        )
+        with st.sidebar.container(border=True):
+            stats_type = st.radio(
+                "Statistics",
+                STATS_SUBTYPES,
+                label_visibility="collapsed"
+            )
     
     if search_type == "By Name":
         st.header("Search by Name")
