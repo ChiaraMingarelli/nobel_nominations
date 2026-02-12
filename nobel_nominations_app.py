@@ -2132,12 +2132,34 @@ def main():
                                 for cat in individual_cats:
                                     all_stats.extend(precomputed[cat])
                                 stats = [s for s in all_stats if stats_year_from <= s['Year Won'] <= stats_year_to]
+                                # Backfill country for entries saved before the country feature
+                                missing_country = [s for s in stats if not s.get('Country')]
+                                if missing_country:
+                                    prog = st.progress(0, text="Fetching country data...")
+                                    for i, s in enumerate(missing_country):
+                                        info = get_country_from_nobel_api(s['Name'])
+                                        s['Country'] = info['country'] if info else ''
+                                        prog.progress((i + 1) / len(missing_country))
+                                        time.sleep(0.15)
+                                    prog.empty()
+                                    save_precomputed_stats(precomputed)
                                 st.session_state['ntw_stats'] = stats
                                 st.session_state['ntw_category'] = stats_category
                         elif category_key in precomputed:
                             can_use_precomputed = True
                             all_stats = precomputed[category_key]
                             stats = [s for s in all_stats if stats_year_from <= s['Year Won'] <= stats_year_to]
+                            # Backfill country for entries saved before the country feature
+                            missing_country = [s for s in stats if not s.get('Country')]
+                            if missing_country:
+                                prog = st.progress(0, text="Fetching country data...")
+                                for i, s in enumerate(missing_country):
+                                    info = get_country_from_nobel_api(s['Name'])
+                                    s['Country'] = info['country'] if info else ''
+                                    prog.progress((i + 1) / len(missing_country))
+                                    time.sleep(0.15)
+                                prog.empty()
+                                save_precomputed_stats(precomputed)
                             st.session_state['ntw_stats'] = stats
                             st.session_state['ntw_category'] = stats_category
 
@@ -2338,6 +2360,19 @@ def main():
                     if use_precomputed_nw and nw_key in precomputed:
                         st.info("Using precomputed data...")
                         non_winners = precomputed[nw_key][:nw_top_n]
+
+                        # Backfill country data for entries saved before the country feature
+                        nw_missing_country = [nw for nw in non_winners if not nw.get('Country')]
+                        if nw_missing_country:
+                            prog = st.progress(0, text="Fetching country data...")
+                            for i, nw in enumerate(nw_missing_country):
+                                info = get_country_from_wikipedia(nw['Name'])
+                                nw['Country'] = info['country'] if info else ''
+                                prog.progress((i + 1) / len(nw_missing_country))
+                                time.sleep(0.15)
+                            prog.empty()
+                            # Save backfilled data
+                            save_precomputed_stats(precomputed)
                     else:
                         progress_bar = st.progress(0)
                         status_text = st.empty()
@@ -2467,6 +2502,20 @@ def main():
                                 nw_key = f"non_winners_{cat}"
                                 if nw_key in precomputed:
                                     category_data[cat_name_map.get(cat, cat.title())] = precomputed[nw_key]
+
+                            # Backfill country for entries saved before the country feature
+                            all_to_backfill = []
+                            for nws in category_data.values():
+                                all_to_backfill.extend([nw for nw in nws[:top_n_per_cat] if not nw.get('Country')])
+                            if all_to_backfill:
+                                prog = st.progress(0, text="Fetching country data...")
+                                for i, nw in enumerate(all_to_backfill):
+                                    info = get_country_from_wikipedia(nw['Name'])
+                                    nw['Country'] = info['country'] if info else ''
+                                    prog.progress((i + 1) / len(all_to_backfill))
+                                    time.sleep(0.15)
+                                prog.empty()
+                                save_precomputed_stats(precomputed)
 
                             if category_data:
                                 fig = create_multi_non_winners_plot(category_data, top_n=top_n_per_cat)
