@@ -1367,18 +1367,22 @@ def main():
     # Sidebar for search options
     st.sidebar.header("Search Options")
 
+    STATS_SUBTYPES = [
+        "Nominations to Win", "Compare Categories",
+        "Top Non-Winners", "Compare Non-Winners", "Anonymous Nominators (N.N.)"
+    ]
+
     search_type = st.sidebar.radio(
         "Search Type",
         ["By Name", "Browse by Category/Year", "Statistics"]
     )
 
     # Show statistics sub-menu when Statistics is selected
+    stats_type = None
     if search_type == "Statistics":
-        st.sidebar.markdown("---")
-        st.sidebar.subheader("Statistics Type")
         stats_type = st.sidebar.radio(
-            "Select analysis",
-            ["Nominations to Win", "Compare Categories", "Top Non-Winners", "Compare Non-Winners", "Anonymous Nominators (N.N.)"],
+            "Statistics",
+            STATS_SUBTYPES,
             label_visibility="collapsed"
         )
     
