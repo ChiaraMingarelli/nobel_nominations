@@ -2145,7 +2145,7 @@ def main():
                                     all_stats.extend(precomputed[cat])
                                 stats = [s for s in all_stats if stats_year_from <= s['Year Won'] <= stats_year_to]
                                 # Backfill country/institution for entries saved before these features
-                                missing_data = [s for s in stats if not s.get('Country') or not s.get('Institution')]
+                                missing_data = [s for s in stats if 'Country' not in s or 'Institution' not in s]
                                 if missing_data:
                                     prog = st.progress(0, text="Fetching country & institution data...")
                                     for i, s in enumerate(missing_data):
@@ -2378,7 +2378,7 @@ def main():
                         non_winners = precomputed[nw_key][:nw_top_n]
 
                         # Backfill country data for entries saved before the country feature
-                        nw_missing_country = [nw for nw in non_winners if not nw.get('Country')]
+                        nw_missing_country = [nw for nw in non_winners if 'Country' not in nw]
                         if nw_missing_country:
                             prog = st.progress(0, text="Fetching country data...")
                             for i, nw in enumerate(nw_missing_country):
@@ -2522,7 +2522,7 @@ def main():
                             # Backfill country for entries saved before the country feature
                             all_to_backfill = []
                             for nws in category_data.values():
-                                all_to_backfill.extend([nw for nw in nws[:top_n_per_cat] if not nw.get('Country')])
+                                all_to_backfill.extend([nw for nw in nws[:top_n_per_cat] if 'Country' not in nw])
                             if all_to_backfill:
                                 prog = st.progress(0, text="Fetching country data...")
                                 for i, nw in enumerate(all_to_backfill):
