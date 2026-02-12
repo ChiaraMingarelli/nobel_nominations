@@ -1369,7 +1369,7 @@ def main():
 
     STATS_SUBTYPES = [
         "Nominations to Win", "Compare Categories",
-        "Top Non-Winners", "Compare Non-Winners", "Anonymous Nominators (N.N.)"
+        "Non-Winners", "Anonymous Nominators (N.N.)"
     ]
 
     search_type = st.sidebar.radio(
@@ -2061,49 +2061,92 @@ def main():
                         else:
                             st.error("No valid data found for selected categories.")
 
-        elif stats_type == "Top Non-Winners":
-            st.subheader("Top Nominated Non-Winners")
-            st.markdown("Find the most nominated people who never won the Nobel Prize.")
+        elif stats_type == "Non-Winners":
+            st.subheader("Most Nominated Non-Winners")
 
-            col_nw1, col_nw2 = st.columns(2)
-            with col_nw1:
-                nw_category = st.selectbox(
-                    "Category",
-                    options=[k for k in CATEGORIES.keys() if k != 'all'],
-                    format_func=lambda x: x.title(),
-                    key="nw_category"
-                )
-            with col_nw2:
-                nw_top_n = st.number_input(
-                    "Top N",
-                    min_value=5,
-                    max_value=20,
-                    value=8,
-                    key="nw_top_n"
-                )
+            nw_view = st.radio("View", ["Single Category", "Compare Categories"], horizontal=True, key="nw_view")
 
-            # Check for precomputed non-winners data
-            nw_key = f"non_winners_{nw_category}"
-            if nw_key in precomputed:
-                st.success(f"Precomputed data available for {nw_category.title()} non-winners")
-                use_precomputed_nw = st.checkbox("Use precomputed non-winners data", value=True, key="use_precomputed_nw")
-            else:
-                use_precomputed_nw = False
+            if nw_view == "Single Category":
+                st.markdown("Find the most nominated people who never won the Nobel Prize.")
 
-            col_nw_btn1, col_nw_btn2 = st.columns(2)
-            with col_nw_btn1:
-                get_nw_btn = st.button("Get Top Non-Winners", type="primary", key="get_nw_btn")
-            with col_nw_btn2:
-                save_nw_btn = st.button("Compute & Save Non-Winners", key="save_nw_btn")
+                col_nw1, col_nw2 = st.columns(2)
+                with col_nw1:
+                    nw_category = st.selectbox(
+                        "Category",
+                        options=[k for k in CATEGORIES.keys() if k != 'all'],
+                        format_func=lambda x: x.title(),
+                        key="nw_category"
+                    )
+                with col_nw2:
+                    nw_top_n = st.number_input(
+                        "Top N",
+                        min_value=5,
+                        max_value=20,
+                        value=8,
+                        key="nw_top_n"
+                    )
 
-            if get_nw_btn:
-                if use_precomputed_nw and nw_key in precomputed:
-                    st.info("Using precomputed data...")
-                    non_winners = precomputed[nw_key][:nw_top_n]
+                # Check for precomputed non-winners data
+                nw_key = f"non_winners_{nw_category}"
+                if nw_key in precomputed:
+                    st.success(f"Precomputed data available for {nw_category.title()} non-winners")
+                    use_precomputed_nw = st.checkbox("Use precomputed non-winners data", value=True, key="use_precomputed_nw")
                 else:
+                    use_precomputed_nw = False
+
+                col_nw_btn1, col_nw_btn2 = st.columns(2)
+                with col_nw_btn1:
+                    get_nw_btn = st.button("Get Top Non-Winners", type="primary", key="get_nw_btn")
+                with col_nw_btn2:
+                    save_nw_btn = st.button("Compute & Save Non-Winners", key="save_nw_btn")
+
+                if get_nw_btn:
+                    if use_precomputed_nw and nw_key in precomputed:
+                        st.info("Using precomputed data...")
+                        non_winners = precomputed[nw_key][:nw_top_n]
+                    else:
+                        progress_bar = st.progress(0)
+                        status_text = st.empty()
+                        status_text.text(f"Finding top non-winners in {nw_category.title()}... This may take a while.")
+
+                        def update_nw_progress(pct):
+                            progress_bar.progress(pct)
+
+                        non_winners = get_top_non_winners(
+                            CATEGORIES.get(nw_category, ''),
+                            1901,
+                            1974,
+                            top_n=nw_top_n,
+                            progress_callback=update_nw_progress
+                        )
+
+                        progress_bar.empty()
+                        status_text.empty()
+
+                    if non_winners:
+                        st.success(f"Found {len(non_winners)} top non-winners")
+
+                        # Create the plot
+                        fig = create_non_winners_plot(non_winners, nw_category.title())
+                        if fig:
+                            st.pyplot(fig)
+                            add_download_buttons(fig, f"non_winners_{nw_category}", "precomputed")
+                            plt.close(fig)
+
+                        # Show table
+                        nw_df = pd.DataFrame([{
+                            'Name': nw['Name'],
+                            'Total Nominations': nw['Total Nominations'],
+                            'Categories': ', '.join([f"{k}: {v}" for k, v in nw.get('Nominations by Category', {}).items()])
+                        } for nw in non_winners])
+                        st.dataframe(nw_df, hide_index=True, width='stretch')
+                    else:
+                        st.warning("No non-winners found")
+
+                if save_nw_btn:
                     progress_bar = st.progress(0)
                     status_text = st.empty()
-                    status_text.text(f"Finding top non-winners in {nw_category.title()}... This may take a while.")
+                    status_text.text(f"Computing top non-winners for {nw_category.title()}...")
 
                     def update_nw_progress(pct):
                         progress_bar.progress(pct)
@@ -2112,151 +2155,111 @@ def main():
                         CATEGORIES.get(nw_category, ''),
                         1901,
                         1974,
-                        top_n=nw_top_n,
+                        top_n=50,  # Save more for future filtering
                         progress_callback=update_nw_progress
                     )
 
                     progress_bar.empty()
                     status_text.empty()
 
-                if non_winners:
-                    st.success(f"Found {len(non_winners)} top non-winners")
+                    if non_winners:
+                        precomputed[nw_key] = non_winners
+                        save_precomputed_stats(precomputed)
+                        st.success(f"Saved {len(non_winners)} non-winners for {nw_category.title()}")
 
-                    # Create the plot
-                    fig = create_non_winners_plot(non_winners, nw_category.title())
-                    if fig:
-                        st.pyplot(fig)
-                        add_download_buttons(fig, f"non_winners_{nw_category}", "precomputed")
-                        plt.close(fig)
+                        # Show the plot
+                        fig = create_non_winners_plot(non_winners[:nw_top_n], nw_category.title())
+                        if fig:
+                            st.pyplot(fig)
+                            add_download_buttons(fig, f"non_winners_{nw_category}", "fresh")
+                            plt.close(fig)
 
-                    # Show table
-                    nw_df = pd.DataFrame([{
-                        'Name': nw['Name'],
-                        'Total Nominations': nw['Total Nominations'],
-                        'Categories': ', '.join([f"{k}: {v}" for k, v in nw.get('Nominations by Category', {}).items()])
-                    } for nw in non_winners])
-                    st.dataframe(nw_df, hide_index=True, width='stretch')
-                else:
-                    st.warning("No non-winners found")
-
-            if save_nw_btn:
-                progress_bar = st.progress(0)
-                status_text = st.empty()
-                status_text.text(f"Computing top non-winners for {nw_category.title()}...")
-
-                def update_nw_progress(pct):
-                    progress_bar.progress(pct)
-
-                non_winners = get_top_non_winners(
-                    CATEGORIES.get(nw_category, ''),
-                    1901,
-                    1974,
-                    top_n=50,  # Save more for future filtering
-                    progress_callback=update_nw_progress
-                )
-
-                progress_bar.empty()
-                status_text.empty()
-
-                if non_winners:
-                    precomputed[nw_key] = non_winners
-                    save_precomputed_stats(precomputed)
-                    st.success(f"Saved {len(non_winners)} non-winners for {nw_category.title()}")
-
-                    # Show the plot
-                    fig = create_non_winners_plot(non_winners[:nw_top_n], nw_category.title())
-                    if fig:
-                        st.pyplot(fig)
-                        add_download_buttons(fig, f"non_winners_{nw_category}", "fresh")
-                        plt.close(fig)
-
-                    # Show table
-                    nw_df = pd.DataFrame([{
-                        'Name': nw['Name'],
-                        'Total Nominations': nw['Total Nominations'],
-                        'Categories': ', '.join([f"{k}: {v}" for k, v in nw.get('Nominations by Category', {}).items()])
-                    } for nw in non_winners[:nw_top_n]])
-                    st.dataframe(nw_df, hide_index=True, width='stretch')
-                else:
-                    st.warning("No non-winners found")
-
-        elif stats_type == "Compare Non-Winners":
-            st.subheader("Compare Non-Winners Across Categories")
-            st.markdown("Compare the most nominated non-winners across different Nobel Prize categories.")
-
-            # Category selection with multiselect
-            available_nw_categories = []
-            for cat in ['physics', 'chemistry', 'medicine', 'literature', 'peace']:
-                nw_key = f"non_winners_{cat}"
-                if nw_key in precomputed and precomputed[nw_key]:
-                    available_nw_categories.append(cat)
-
-            if not available_nw_categories:
-                st.warning("No precomputed non-winners data available. Please compute non-winners for individual categories first.")
-            else:
-                selected_nw_cats = st.multiselect(
-                    "Select categories to compare",
-                    options=available_nw_categories,
-                    default=available_nw_categories,
-                    format_func=lambda x: x.title(),
-                    key="compare_nw_categories"
-                )
-
-                top_n_per_cat = st.slider(
-                    "Number of non-winners per category",
-                    min_value=1,
-                    max_value=5,
-                    value=3,
-                    key="nw_compare_top_n"
-                )
-
-                if st.button("Compare Non-Winners", type="primary", key="compare_nw_btn"):
-                    if len(selected_nw_cats) < 2:
-                        st.warning("Please select at least 2 categories to compare.")
+                        # Show table
+                        nw_df = pd.DataFrame([{
+                            'Name': nw['Name'],
+                            'Total Nominations': nw['Total Nominations'],
+                            'Categories': ', '.join([f"{k}: {v}" for k, v in nw.get('Nominations by Category', {}).items()])
+                        } for nw in non_winners[:nw_top_n]])
+                        st.dataframe(nw_df, hide_index=True, width='stretch')
                     else:
-                        # Gather data from precomputed
-                        category_data = {}
-                        cat_name_map = {
-                            'physics': 'Physics',
-                            'chemistry': 'Chemistry',
-                            'medicine': 'Medicine',
-                            'literature': 'Literature',
-                            'peace': 'Peace'
-                        }
+                        st.warning("No non-winners found")
 
-                        for cat in selected_nw_cats:
-                            nw_key = f"non_winners_{cat}"
-                            if nw_key in precomputed:
-                                category_data[cat_name_map.get(cat, cat.title())] = precomputed[nw_key]
+            else:  # Compare Categories
+                st.markdown("Compare the most nominated non-winners across different Nobel Prize categories.")
 
-                        if category_data:
-                            fig = create_multi_non_winners_plot(category_data, top_n=top_n_per_cat)
-                            if fig:
-                                st.pyplot(fig)
-                                add_download_buttons(fig, "non_winners_comparison", "compare")
-                                plt.close(fig)
+                # Category selection with multiselect
+                available_nw_categories = []
+                for cat in ['physics', 'chemistry', 'medicine', 'literature', 'peace']:
+                    nw_key = f"non_winners_{cat}"
+                    if nw_key in precomputed and precomputed[nw_key]:
+                        available_nw_categories.append(cat)
 
-                                # Show combined table
-                                st.subheader("Non-Winners Data")
-                                all_nw_data = []
-                                for cat_name, non_winners in category_data.items():
-                                    for i, nw in enumerate(non_winners[:top_n_per_cat]):
-                                        all_nw_data.append({
-                                            'Rank': i + 1,
-                                            'Category': cat_name,
-                                            'Name': nw['Name'],
-                                            'Total Nominations': nw['Total Nominations'],
-                                            'Breakdown': ', '.join([f"{k}: {v}" for k, v in nw.get('Nominations by Category', {}).items()])
-                                        })
+                if not available_nw_categories:
+                    st.warning("No precomputed non-winners data available. Please compute non-winners for individual categories first.")
+                else:
+                    selected_nw_cats = st.multiselect(
+                        "Select categories to compare",
+                        options=available_nw_categories,
+                        default=available_nw_categories,
+                        format_func=lambda x: x.title(),
+                        key="compare_nw_categories"
+                    )
 
-                                # Sort by total nominations
-                                all_nw_data.sort(key=lambda x: x['Total Nominations'], reverse=True)
-                                nw_comp_df = pd.DataFrame(all_nw_data)
-                                st.dataframe(nw_comp_df, hide_index=True, width='stretch')
-                            else:
-                                st.error("Could not generate comparison plot.")
+                    top_n_per_cat = st.slider(
+                        "Number of non-winners per category",
+                        min_value=1,
+                        max_value=5,
+                        value=3,
+                        key="nw_compare_top_n"
+                    )
+
+                    if st.button("Compare Non-Winners", type="primary", key="compare_nw_btn"):
+                        if len(selected_nw_cats) < 2:
+                            st.warning("Please select at least 2 categories to compare.")
                         else:
-                            st.error("No data available for selected categories.")
+                            # Gather data from precomputed
+                            category_data = {}
+                            cat_name_map = {
+                                'physics': 'Physics',
+                                'chemistry': 'Chemistry',
+                                'medicine': 'Medicine',
+                                'literature': 'Literature',
+                                'peace': 'Peace'
+                            }
+
+                            for cat in selected_nw_cats:
+                                nw_key = f"non_winners_{cat}"
+                                if nw_key in precomputed:
+                                    category_data[cat_name_map.get(cat, cat.title())] = precomputed[nw_key]
+
+                            if category_data:
+                                fig = create_multi_non_winners_plot(category_data, top_n=top_n_per_cat)
+                                if fig:
+                                    st.pyplot(fig)
+                                    add_download_buttons(fig, "non_winners_comparison", "compare")
+                                    plt.close(fig)
+
+                                    # Show combined table
+                                    st.subheader("Non-Winners Data")
+                                    all_nw_data = []
+                                    for cat_name, non_winners in category_data.items():
+                                        for i, nw in enumerate(non_winners[:top_n_per_cat]):
+                                            all_nw_data.append({
+                                                'Rank': i + 1,
+                                                'Category': cat_name,
+                                                'Name': nw['Name'],
+                                                'Total Nominations': nw['Total Nominations'],
+                                                'Breakdown': ', '.join([f"{k}: {v}" for k, v in nw.get('Nominations by Category', {}).items()])
+                                            })
+
+                                    # Sort by total nominations
+                                    all_nw_data.sort(key=lambda x: x['Total Nominations'], reverse=True)
+                                    nw_comp_df = pd.DataFrame(all_nw_data)
+                                    st.dataframe(nw_comp_df, hide_index=True, width='stretch')
+                                else:
+                                    st.error("Could not generate comparison plot.")
+                            else:
+                                st.error("No data available for selected categories.")
 
         else:  # Anonymous Nominators (N.N.)
             st.subheader("Anonymous Nominators (N.N.)")
