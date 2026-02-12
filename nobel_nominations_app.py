@@ -1518,8 +1518,13 @@ def get_nominations_to_win_stats(category: str, year_from: int, year_to: int, pr
                                         if n.year <= prize_year
                                     ]
 
+                                    # Fetch birth country from Nobel API
+                                    country_info = get_country_from_nobel_api(details.name)
+                                    country = country_info['country'] if country_info else ''
+
                                     stats.append({
                                         'Name': details.name,
+                                        'Country': country,
                                         'Prize Category': prize_cat,
                                         'Year Won': prize_year,
                                         'Nominations Before Win': len(nominations_before_win),
@@ -2088,38 +2093,20 @@ def main():
 
                 # Display laureate table
                 st.subheader("Laureate Details")
-                display_df = df[['Name', 'Prize Category', 'Year Won', 'Nominations Before Win', 'First Nominated', 'Years Nominated']].copy()
-                country_cache = precomputed.get(COUNTRY_CACHE_KEY, {})
-                if 'ID' in df.columns:
-                    display_df.insert(1, 'Country', df['ID'].map(lambda pid: country_cache.get(str(pid), {}).get('country', '')))
+                cols = ['Name', 'Country', 'Prize Category', 'Year Won', 'Nominations Before Win', 'First Nominated', 'Years Nominated']
+                available_cols = [c for c in cols if c in df.columns]
+                display_df = df[available_cols].copy()
                 display_df = display_df.sort_values('Year Won')
                 st.dataframe(display_df, hide_index=True, width='stretch')
 
-                # Download and enrich buttons
-                dl_col, enrich_col = st.columns(2)
-                with dl_col:
-                    csv = display_df.to_csv(index=False)
-                    st.download_button(
-                        "Download as CSV",
-                        csv,
-                        f"nominations_to_win_{category_name}_{stats_year_from}-{stats_year_to}.csv",
-                        "text/csv"
-                    )
-                with enrich_col:
-                    if 'ID' in df.columns:
-                        missing = [str(pid) for pid in df['ID'] if str(pid) not in country_cache]
-                        if missing:
-                            if st.button(f"Fetch Country Data ({len(missing)} missing)", key="enrich_laureates"):
-                                prog = st.progress(0)
-                                for i, pid in enumerate(missing):
-                                    row = df[df['ID'].astype(str) == pid].iloc[0]
-                                    get_country_for_person(row['Name'], True, person_id=pid, precomputed=precomputed)
-                                    prog.progress((i + 1) / len(missing))
-                                    time.sleep(0.15)
-                                prog.empty()
-                                st.rerun()
-                        else:
-                            st.caption("All country data loaded")
+                # Download button
+                csv = display_df.to_csv(index=False)
+                st.download_button(
+                    "Download as CSV",
+                    csv,
+                    f"nominations_to_win_{category_name}_{stats_year_from}-{stats_year_to}.csv",
+                    "text/csv"
+                )
 
             if get_stats_btn:
                 if stats_year_from > stats_year_to:
