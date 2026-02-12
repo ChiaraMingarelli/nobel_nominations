@@ -580,7 +580,8 @@ CATEGORY_NAME_TO_CODE = {
 }
 
 
-def create_distribution_plot(data: list, category_name: str, dist_name: str = "Log-Normal"):
+def create_distribution_plot(data: list, category_name: str, dist_name: str = "Log-Normal",
+                             precomputed_fits: dict = None):
     """
     Create a publication-quality histogram with a fitted distribution overlay.
 
@@ -588,6 +589,7 @@ def create_distribution_plot(data: list, category_name: str, dist_name: str = "L
         data: List of nomination counts
         category_name: Name of the category for the title
         dist_name: Which distribution to plot (must be one of DISTRIBUTION_NAMES)
+        precomputed_fits: Optional pre-computed fit_distributions() result to avoid recomputation
 
     Returns:
         tuple: (matplotlib Figure object, dict with fit info including params,
@@ -599,7 +601,7 @@ def create_distribution_plot(data: list, category_name: str, dist_name: str = "L
     if len(x) < 3:
         return None, None
 
-    all_fits = fit_distributions(data)
+    all_fits = precomputed_fits if precomputed_fits else fit_distributions(data)
     if dist_name not in all_fits:
         return None, None
 
@@ -646,13 +648,15 @@ def create_distribution_plot(data: list, category_name: str, dist_name: str = "L
     }
 
 
-def create_multi_distribution_plot(category_data: dict, dist_name: str = "Log-Normal"):
+def create_multi_distribution_plot(category_data: dict, dist_name: str = "Log-Normal",
+                                    precomputed_fits_by_cat: dict = None):
     """
     Create a plot with multiple category distributions overlaid.
 
     Args:
         category_data: Dict mapping category name to list of nomination counts
         dist_name: Which distribution to fit (must be one of DISTRIBUTION_NAMES)
+        precomputed_fits_by_cat: Optional dict mapping category name to fit_distributions() result
 
     Returns:
         tuple: (matplotlib Figure object, dict of fit parameters by category)
@@ -691,7 +695,10 @@ def create_multi_distribution_plot(category_data: dict, dist_name: str = "Log-No
         if len(x) < 3:
             continue
 
-        fits = fit_distributions(data)
+        if precomputed_fits_by_cat and cat_name in precomputed_fits_by_cat:
+            fits = precomputed_fits_by_cat[cat_name]
+        else:
+            fits = fit_distributions(data)
         if dist_name not in fits:
             continue
 
@@ -1767,6 +1774,9 @@ def main():
 
                 # Distribution Fit Visualization
                 if len(nom_data) >= 3:
+                    # Fit all distributions once, reuse everywhere
+                    all_fits = fit_distributions(nom_data)
+
                     selected_dist = st.selectbox(
                         "Distribution to fit",
                         options=DISTRIBUTION_NAMES,
@@ -1777,7 +1787,8 @@ def main():
                     st.subheader(f"{selected_dist} Distribution Fit")
 
                     fig, fit_params = create_distribution_plot(
-                        nom_data, category_name.title(), dist_name=selected_dist
+                        nom_data, category_name.title(), dist_name=selected_dist,
+                        precomputed_fits=all_fits
                     )
 
                     if fig is not None and fit_params is not None:
@@ -1788,7 +1799,6 @@ def main():
                         # Display fit parameters dynamically
                         param_items = list(fit_params['params'].items())
                         n_params = len(param_items)
-                        # Always show params + KS p-value
                         cols = st.columns(n_params + 1)
                         for i, (pname, pval) in enumerate(param_items):
                             with cols[i]:
@@ -1800,40 +1810,36 @@ def main():
                         st.caption(f"68% of laureates received between {fit_params['lo68']:.1f} and {fit_params['hi68']:.1f} total nominations.")
 
                         # Note best-fitting distribution
-                        all_fits = fit_params['all_fits']
                         best_name = min(all_fits, key=lambda n: all_fits[n]['aic'])
                         if best_name != selected_dist:
                             st.info(f"**Tip:** {best_name} has the lowest AIC ({all_fits[best_name]['aic']}) for this data. Try selecting it above.")
                     else:
                         st.warning("Insufficient data for distribution fitting (need at least 3 positive values).")
 
-                # Distribution Fitting Comparison
-                st.subheader("Distribution Comparison")
-                fit_results = fit_distributions(nom_data)
+                    # Distribution Fitting Comparison (reuse all_fits)
+                    st.subheader("Distribution Comparison")
 
-                if fit_results:
-                    best_fit = min(fit_results.items(), key=lambda x: x[1]['aic'])
-                    st.info(f"**Best fit:** {best_fit[0]} (lowest AIC = {best_fit[1]['aic']})")
+                    if all_fits:
+                        best_fit = min(all_fits.items(), key=lambda x: x[1]['aic'])
+                        st.info(f"**Best fit:** {best_fit[0]} (lowest AIC = {best_fit[1]['aic']})")
 
-                    fit_data = []
-                    for name, result in sorted(fit_results.items(), key=lambda x: x[1]['aic']):
-                        params_str = ", ".join([f"{k}={v}" for k, v in result['params'].items()])
-                        ks_stat, ks_pval = scipy_stats.kstest(
-                            np.array(nom_data, dtype=float),
-                            result['scipy_dist'].cdf
-                        )
-                        fit_data.append({
-                            'Distribution': name,
-                            'Parameters': params_str,
-                            'Log-Likelihood': result['log_likelihood'],
-                            'AIC': result['aic'],
-                            'KS p-value': round(ks_pval, 4),
-                        })
+                        x_arr = np.array(nom_data, dtype=float)
+                        fit_data = []
+                        for name, result in sorted(all_fits.items(), key=lambda x: x[1]['aic']):
+                            params_str = ", ".join([f"{k}={v}" for k, v in result['params'].items()])
+                            ks_stat, ks_pval = scipy_stats.kstest(x_arr, result['scipy_dist'].cdf)
+                            fit_data.append({
+                                'Distribution': name,
+                                'Parameters': params_str,
+                                'Log-Likelihood': result['log_likelihood'],
+                                'AIC': result['aic'],
+                                'KS p-value': round(ks_pval, 4),
+                            })
 
-                    fit_df = pd.DataFrame(fit_data)
-                    st.dataframe(fit_df, hide_index=True, width='stretch')
+                        fit_df = pd.DataFrame(fit_data)
+                        st.dataframe(fit_df, hide_index=True, width='stretch')
 
-                    st.caption("AIC (Akaike Information Criterion): Lower is better. Balances fit quality with model complexity.")
+                        st.caption("AIC (Akaike Information Criterion): Lower is better. Balances fit quality with model complexity.")
 
                 # Display laureate table
                 st.subheader("Laureate Details")
@@ -1995,8 +2001,14 @@ def main():
                                     category_data[display_name] = nom_data
 
                         if category_data:
+                            # Pre-compute fits once for all categories
+                            precomputed_fits_by_cat = {}
+                            for cat_name, cat_data in category_data.items():
+                                precomputed_fits_by_cat[cat_name] = fit_distributions(cat_data)
+
                             fig, fit_params = create_multi_distribution_plot(
-                                category_data, dist_name=compare_dist
+                                category_data, dist_name=compare_dist,
+                                precomputed_fits_by_cat=precomputed_fits_by_cat
                             )
 
                             if fig is not None:
