@@ -1828,7 +1828,7 @@ def main():
                 for cat_key in ['physics', 'chemistry', 'medicine', 'literature', 'peace']:
                     if cat_key in precomputed:
                         for laureate in precomputed[cat_key]:
-                            if search_name_lower in laureate.get('Name', '').lower():
+                            if search_name_lower in ' '.join(laureate.get('Name', '').split()).lower():
                                 # Check category filter
                                 if category == 'all' or cat_key == category:
                                     cached_results.append(laureate)
