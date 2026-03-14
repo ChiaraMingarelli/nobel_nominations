@@ -92,7 +92,8 @@ class NominationResult:
     nominations_as_nominee: list  # List of NominationEntry
     nominations_as_nominator: list  # List of NominationEntry
     won_prize: bool
-    prize_info: Optional[dict] = None
+    prize_info: Optional[dict] = None  # First prize (backward compat)
+    all_prizes: Optional[list] = None  # All prizes for multi-prize laureates
     country: Optional[str] = None
     country_source: Optional[str] = None
     country_source_url: Optional[str] = None
@@ -331,23 +332,32 @@ def get_person_details(person_id: str, year_from: str = '', year_to: str = '') -
 
         # Check if they won
         won_prize = "Awarded the Nobel" in page_text
-        prize_info = None
+        all_prizes = []
         if won_prize:
-            # Try standard format: "Awarded the Nobel Prize in Physics 1921"
-            prize_match = re.search(r'Awarded the Nobel Prize in (\w+(?:\s+\w+)*)\s+(\d{4})', page_text)
-            if prize_match:
-                prize_info = {
-                    'category': prize_match.group(1),
-                    'year': int(prize_match.group(2))
-                }
-            else:
+            KNOWN_CATEGORIES = (
+                'Physics|Chemistry|Physiology or Medicine|Literature'
+                '|Peace|Economic Sciences'
+            )
+            # Find all prizes (handles multi-prize laureates like Marie Curie)
+            for m in re.finditer(
+                rf'Awarded the Nobel Prize in ({KNOWN_CATEGORIES})\s+(\d{{4}})',
+                page_text
+            ):
+                all_prizes.append({
+                    'category': m.group(1),
+                    'year': int(m.group(2))
+                })
+
+            if not all_prizes:
                 # Try Peace Prize format: "Awarded the Nobel Peace Prize 1920"
                 peace_match = re.search(r'Awarded the Nobel Peace Prize\s+(\d{4})', page_text)
                 if peace_match:
-                    prize_info = {
+                    all_prizes.append({
                         'category': 'Peace',
                         'year': int(peace_match.group(1))
-                    }
+                    })
+
+        prize_info = all_prizes[0] if all_prizes else None
 
         return NominationResult(
             person_id=person_id,
@@ -358,7 +368,8 @@ def get_person_details(person_id: str, year_from: str = '', year_to: str = '') -
             nominations_as_nominee=nominations_as_nominee,
             nominations_as_nominator=nominations_as_nominator,
             won_prize=won_prize,
-            prize_info=prize_info
+            prize_info=prize_info,
+            all_prizes=all_prizes or None
         )
 
     except Exception as e:
@@ -1640,45 +1651,48 @@ def get_nominations_to_win_stats(category: str, year_from: int, year_to: int, pr
 
                             # Get person details to check if they won
                             details = get_person_details(pid)
-                            if details and details.won_prize and details.prize_info:
-                                prize_year = details.prize_info.get('year', 0)
-                                prize_cat = details.prize_info.get('category', '')
+                            if details and details.won_prize and details.all_prizes:
+                                # Check all prizes (handles multi-prize laureates like Marie Curie)
+                                for prize in details.all_prizes:
+                                    prize_year = prize.get('year', 0)
+                                    prize_cat = prize.get('category', '')
 
-                                # Filter by category if specified
-                                if allowed_categories and prize_cat not in allowed_categories:
-                                    continue
+                                    # Filter by category if specified
+                                    if allowed_categories and prize_cat not in allowed_categories:
+                                        continue
 
-                                # Only include if they won within our year range
-                                if year_from <= prize_year <= year_to:
-                                    processed_laureates.add(pid)
+                                    # Only include if they won within our year range
+                                    if year_from <= prize_year <= year_to:
+                                        processed_laureates.add(pid)
 
-                                    # Count nominations up to and including winning year
-                                    nominations_up_to_win = [
-                                        n for n in details.nominations_as_nominee
-                                        if n.year <= prize_year
-                                    ]
-                                    # Use nominee_count when all nominations fall within
-                                    # the prize year range, since the page parser may not
-                                    # capture every link
-                                    nom_count = max(len(nominations_up_to_win), details.nominee_count)
+                                        # Count nominations up to and including winning year
+                                        nominations_up_to_win = [
+                                            n for n in details.nominations_as_nominee
+                                            if n.year <= prize_year
+                                        ]
+                                        # Use nominee_count when all nominations fall within
+                                        # the prize year range, since the page parser may not
+                                        # capture every link
+                                        nom_count = max(len(nominations_up_to_win), details.nominee_count)
 
-                                    # Fetch birth country and institution from Nobel API
-                                    country_info = get_country_from_nobel_api(details.name)
-                                    country = country_info['country'] if country_info else ''
-                                    institution = country_info.get('institution', '') if country_info else ''
+                                        # Fetch birth country and institution from Nobel API
+                                        country_info = get_country_from_nobel_api(details.name)
+                                        country = country_info['country'] if country_info else ''
+                                        institution = country_info.get('institution', '') if country_info else ''
 
-                                    stats.append({
-                                        'Name': details.name,
-                                        'Country': country,
-                                        'Institution': institution,
-                                        'Prize Category': prize_cat,
-                                        'Year Won': prize_year,
-                                        'Nominations Before Win': nom_count,
-                                        'Total Nominations': details.nominee_count,
-                                        'First Nominated': min([n.year for n in details.nominations_as_nominee]) if details.nominations_as_nominee else None,
-                                        'Years Nominated': prize_year - min([n.year for n in details.nominations_as_nominee]) if details.nominations_as_nominee else 0,
-                                        'ID': pid
-                                    })
+                                        stats.append({
+                                            'Name': details.name,
+                                            'Country': country,
+                                            'Institution': institution,
+                                            'Prize Category': prize_cat,
+                                            'Year Won': prize_year,
+                                            'Nominations Before Win': nom_count,
+                                            'Total Nominations': details.nominee_count,
+                                            'First Nominated': min([n.year for n in details.nominations_as_nominee]) if details.nominations_as_nominee else None,
+                                            'Years Nominated': prize_year - min([n.year for n in details.nominations_as_nominee]) if details.nominations_as_nominee else 0,
+                                            'ID': pid
+                                        })
+                                        break  # Only add once per person per category
 
                             time.sleep(0.1)  # Rate limiting
 
@@ -1956,8 +1970,9 @@ def main():
                                     st.metric("Total Nominations as Nominator", result.nominator_count)
 
                                 with col2:
-                                    if result.won_prize and result.prize_info:
-                                        st.success(f"Won Nobel Prize in {result.prize_info['category']} ({result.prize_info['year']})")
+                                    if result.won_prize and result.all_prizes:
+                                        for p in result.all_prizes:
+                                            st.success(f"Won Nobel Prize in {p['category']} ({p['year']})")
                                     elif result.nominee_count > 0:
                                         st.info("Did not win Nobel Prize")
 
