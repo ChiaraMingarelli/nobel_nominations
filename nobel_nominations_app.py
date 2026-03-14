@@ -1747,6 +1747,10 @@ def main():
                 label_visibility="collapsed"
             )
 
+    # Clear search state when not on the "By Name" tab
+    if search_type != "By Name":
+        st.session_state.pop('search_name', None)
+
     if search_type == "By Name":
         st.header("Search by Name")
         
@@ -1780,6 +1784,23 @@ def main():
             name = name.strip() if name else ""
             year_from = year_from.strip() if year_from else ""
             year_to = year_to.strip() if year_to else ""
+
+            # Persist search state so it survives checkbox/widget reruns
+            st.session_state['search_name'] = name
+            st.session_state['search_year_from'] = year_from
+            st.session_state['search_year_to'] = year_to
+            st.session_state['search_category'] = category
+            st.session_state['search_role'] = search_role
+            # Reset live search checkbox state so it defaults correctly for new search
+            st.session_state.pop('live_search_checkbox', None)
+
+        # Use persisted search state (survives reruns from checkbox interactions)
+        if 'search_name' in st.session_state and st.session_state['search_name']:
+            name = st.session_state['search_name']
+            year_from = st.session_state.get('search_year_from', '')
+            year_to = st.session_state.get('search_year_to', '')
+            category = st.session_state.get('search_category', 'all')
+            search_role = st.session_state.get('search_role', 'Both')
 
             if not name:
                 st.warning("Please enter a name to search")
