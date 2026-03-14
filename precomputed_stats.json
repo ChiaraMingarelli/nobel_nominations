@@ -1178,6 +1178,18 @@
       "ID": "15490",
       "Country": "United Kingdom",
       "Institution": "University of Cambridge"
+    },
+    {
+      "Name": "Marie  Curie",
+      "Country": "France",
+      "Institution": "Sorbonne University",
+      "Prize Category": "Physics",
+      "Year Won": 1903,
+      "Nominations Before Win": 5,
+      "Total Nominations": 5,
+      "First Nominated": 1902,
+      "Years Nominated": 1,
+      "ID": "2051"
     }
   ],
   "chemistry": [
@@ -2176,6 +2188,18 @@
       "ID": "16045",
       "Country": "USA",
       "Institution": "National Institutes of Health"
+    },
+    {
+      "Name": "Marie  Curie",
+      "Country": "France",
+      "Institution": "Sorbonne University",
+      "Prize Category": "Chemistry",
+      "Year Won": 1911,
+      "Nominations Before Win": 5,
+      "Total Nominations": 5,
+      "First Nominated": 1902,
+      "Years Nominated": 9,
+      "ID": "2051"
     }
   ],
   "medicine": [
