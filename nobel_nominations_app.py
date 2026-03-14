@@ -1652,11 +1652,15 @@ def get_nominations_to_win_stats(category: str, year_from: int, year_to: int, pr
                                 if year_from <= prize_year <= year_to:
                                     processed_laureates.add(pid)
 
-                                    # Count nominations before winning
-                                    nominations_before_win = [
+                                    # Count nominations up to and including winning year
+                                    nominations_up_to_win = [
                                         n for n in details.nominations_as_nominee
                                         if n.year <= prize_year
                                     ]
+                                    # Use nominee_count when all nominations fall within
+                                    # the prize year range, since the page parser may not
+                                    # capture every link
+                                    nom_count = max(len(nominations_up_to_win), details.nominee_count)
 
                                     # Fetch birth country and institution from Nobel API
                                     country_info = get_country_from_nobel_api(details.name)
@@ -1669,7 +1673,7 @@ def get_nominations_to_win_stats(category: str, year_from: int, year_to: int, pr
                                         'Institution': institution,
                                         'Prize Category': prize_cat,
                                         'Year Won': prize_year,
-                                        'Nominations Before Win': len(nominations_before_win),
+                                        'Nominations Before Win': nom_count,
                                         'Total Nominations': details.nominee_count,
                                         'First Nominated': min([n.year for n in details.nominations_as_nominee]) if details.nominations_as_nominee else None,
                                         'Years Nominated': prize_year - min([n.year for n in details.nominations_as_nominee]) if details.nominations_as_nominee else 0,
